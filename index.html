@@ -168,8 +168,7 @@
 <!-- Contact Form section -->
 <section id="contact" class="py-8">
   <div class="container mx-auto px-4">
-    <button id="contact-button" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-600">Contact</button>
-    <form id="contact-form" action="/submit-contact-form" method="POST" class="w-full max-w-lg hidden">
+    <form action="/submit-contact-form" method="POST" class="w-full max-w-lg">
       <div class="flex flex-wrap -mx-3 mb-6">
         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="name">
@@ -198,18 +197,6 @@
     </form>
   </div>
 </section>
-
-<!-- JavaScript code for showing the contact form -->
-<script>
-  function showContactForm() {
-    var contactForm = document.getElementById('contact');
-    contactForm.style.display = 'block';
-  }
-
-  var contactButton = document.getElementById('contact-button');
-  contactButton.addEventListener('click', showContactForm);
-</script>
-
 <!-- Company Header -->
   <footer class="bg-gray-900 text-white py-4">
     <div class="container mx-auto px-4">
@@ -244,5 +231,4 @@
     </div>
   </div>
 </section>
-
 
