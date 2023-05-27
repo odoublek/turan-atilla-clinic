@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hair Transplant Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    /* Add CSS for the background color transition */
+    body {
+      transition: background-color 0.5s ease;
+    }
+  </style>
+</head>
+
+<!-- Header -->
+  <header class="bg-blue-100 text-gray-800 py-4">
+    <div class="container mx-auto px-4 flex items-center justify-between">
+      <div>
+        <p class="text-sm"><span class="text-blue-700">Contact:</span> contact@example.com</p>
+      </div>
+      <div>
+        <a href="#" class="text-gray-800 mr-4 hover:text-blue-700"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-gray-800 mr-4 hover:text-blue-700"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-gray-800 mr-4 hover:text-blue-700"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </header>
+<!-- Top Slim Header -->
+  <header class="bg-blue-900 text-white py-4">
+    <div class="container mx-auto px-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="images/logo.png" alt="Company Logo" class="h-10 mr-2">
+        <p class="text-lg hidden md:block">Providing quality hair transplant services</p>
+      </div>
+      <div class="flex items-center">
+        <a href="#slider" class="button-link mr-4">Products</a>
+        <a href="#services" class="button-link mr-4">Our Services</a>
+        <a href="#testimonials" class="button-link mr-4">Testimonials</a>
+        <a href="#contact" class="button-link mr-4">Contact</a>
+      </div>
+    </div>
+  </header>
+
+<!-- Featured Products section -->
+  <section id="slider" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-4">Featured Products</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide bg-blue-100 text-gray-800 p-6">
+            <h3 class="text-xl font-bold">Explanation Slide</h3>
+            <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
+            <button class="bg-blue-700 text-white px-4 py-2 mt-4 rounded">Contact Us</button>
+          </div>
+          <div class="swiper-slide bg-blue-100 text-gray-800 p-6">
+            <h3 class="text-xl font-bold">Successful Operations Slide</h3>
+            <p class="mt-4">We have successfully performed 1000+ hair transplant operations.</p>
+          </div>
+          <div class="swiper-slide bg-blue-100 text-gray-800 p-6">
+            <h3 class="text-xl font-bold">Different Operations Slide</h3>
+            <p class="mt-4">Apart from hair transplants, we also offer scalp micropigmentation and hair restoration services.</p>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Slide script -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>
+
+<!-- Our Services section -->
+<section id="services" class="py-8">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-4">Our Services</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="bg-gray-100 p-6">
+        <h3 class="text-xl font-bold">Hair Transplantation</h3>
+        <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
+        <img src="images/hair-transplantation.jpg" alt="Hair Transplantation" class="mt-4">
+      </div>
+      <div class="bg-gray-100 p-6">
+        <h3 class="text-xl font-bold">Scalp Micropigmentation</h3>
+        <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
+        <img src="images/scalp-micropigmentation.jpg" alt="Scalp Micropigmentation" class="mt-4">
+      </div>
+      <div class="bg-gray-100 p-6">
+        <h3 class="text-xl font-bold">Hair Restoration</h3>
+        <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
+        <img src="images/hair-restoration.jpg" alt="Hair Restoration" class="mt-4">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Testimonials section -->
+<section id="testimonials" class="py-8">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-4">Testimonials</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-gray-100 p-6">
+          <img src="images/photo2.jpg" alt="Customer 1" class="customer-image w-96 h-auto">
+          <h3 class="text-xl font-bold mt-4 text-center">John Doe</h3>
+          <p class="mt-2 text-center">"I had a great experience with Hair Transplant Company. The results exceeded my expectations."</p>
+        </div>
+        <div class="bg-gray-100 p-6">
+          <img src="images/photo2.jpg" alt="Customer 2" class="customer-image w-96 h-auto">
+          <h3 class="text-xl font-bold mt-4 text-center">Jane Smith</h3>
+          <p class="mt-2 text-center">"I highly recommend Hair Transplant Company to anyone looking for hair restoration services."</p>
+        </div>
+        <div class="bg-gray-100 p-6">
+          <img src="images/photo2.jpg" alt="Customer 3" class="customer-image w-96 h-auto">
+          <h3 class="text-xl font-bold mt-4 text-center">Mike Johnson</h3>
+          <p class="mt-2 text-center">"The team at Hair Transplant Company is professional and skilled. I am satisfied with my hair transplant results."</p>
+        </div>
+      </div>
+    </div>
+</section>
+  
+<!-- Before & After section -->
+<section id="before-after" class="py-8">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-4">Before & After</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="bg-gray-100 p-6">
+        <h3 class="text-xl font-bold">Patient A</h3>
+        <div class="before-after-container mt-4">
+          <img src="images/photo1.jpg" alt="Before" class="before-image w-64 h-64">
+          <img src="images/photo2.jpg" alt="After" class="after-image w-64 h-64">
+        </div>
+      </div>
+      <div class="bg-gray-100 p-6">
+        <h3 class="text-xl font-bold">Patient B</h3>
+        <div class="before-after-container mt-4">
+          <img src="images/photo1.jpg" alt="Before" class="before-image w-64 h-64">
+          <img src="images/photo2.jpg" alt="After" class="after-image w-64 h-64">
+        </div>
+      </div>
+      <div class="bg-gray-100 p-6">
+        <h3 class="text-xl font-bold">Patient C</h3>
+        <div class="before-after-container mt-4">
+          <img src="images/photo2.jpg" alt="Before" class="before-image w-64 h-64">
+          <img src="images/photo2.jpg" alt="After" class="after-image w-64 h-64">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form section -->
+<section id="contact" class="py-8">
+  <div class="container mx-auto px-4">
+    <button id="contact-button" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-600">Contact</button>
+    <form id="contact-form" action="/submit-contact-form" method="POST" class="w-full max-w-lg hidden">
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="name">
+            Name
+          </label>
+          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="name" name="name" type="text" placeholder="Your Name">
+        </div>
+        <div class="w-full md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
+            Email
+          </label>
+          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="email" name="email" type="email" placeholder="Your Email">
+        </div>
+      </div>
+      <div class="mb-6">
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="message">
+          Message
+        </label>
+        <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="message" name="message" rows="5" placeholder="Your Message"></textarea>
+      </div>
+      <div class="flex justify-end">
+        <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-600" type="submit">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- JavaScript code for showing the contact form -->
+<script>
+  function showContactForm() {
+    var contactForm = document.getElementById('contact');
+    contactForm.style.display = 'block';
+  }
+
+  var contactButton = document.getElementById('contact-button');
+  contactButton.addEventListener('click', showContactForm);
+</script>
+
+<!-- Company Header -->
+  <footer class="bg-gray-900 text-white py-4">
+    <div class="container mx-auto px-4">
+      <p>&copy; 2023 Hair Transplant Company. All rights reserved.</p>
+    </div>
+  </footer>
+
+<!-- Bottom Footer content -->
+<section id="footer" class="bg-blue-500 py-8">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="text-white">
+        <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+        <p>Stay updated with our latest news and offers:</p>
+        <div class="flex mt-4">
+          <a href="#" class="mr-4"><img src="facebook-logo.png" alt="Facebook"></a>
+          <a href="#" class="mr-4"><img src="twitter-logo.png" alt="Twitter"></a>
+          <a href="#"><img src="instagram-logo.png" alt="Instagram"></a>
+        </div>
+      </div>
+      <div class="text-white">
+        <h3 class="text-xl font-bold mb-4">Address</h3>
+        <p>123 Main Street<br>City, State ZIP<br>Country</p>
+      </div>
+      <div class="text-white">
+        <h3 class="text-xl font-bold mb-4">Personal Data Protection Law</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque euismod suscipit velit, vel posuere justo condimentum a.</p>
+      </div>
+    </div>
+    <div class="mt-8 text-white text-sm">
+      <p>© 2023 Hair Transplant Company. All rights reserved.</p>
+    </div>
+  </div>
+</section>
+
+
