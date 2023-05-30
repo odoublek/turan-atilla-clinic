@@ -8,82 +8,122 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <style>
     /* Add CSS for the background color transition */
+    #hero {
+      background-color: #f5f5f5;
+    }
+    #contact-header {
+      background-color: #f90909;
+    }
+
+    #services {
+      background-color: #ebebeb;
+    }
+
+    #doctors {
+      background-color: #ebebeb;
+    }
+
+    #testimonials {
+      background-color: #ebebeb;
+    }
+
+    #contact {
+      background-color: #b5b5b5;
+    }
+
     body {
       transition: background-color 0.5s ease;
     }
   </style>
 </head>
-
-<!-- Header -->
-  <header class="bg-blue-100 text-gray-800 py-4">
-    <div class="container mx-auto px-4 flex items-center justify-between">
-      <div>
-        <p class="text-sm"><span class="text-blue-700">Contact:</span> contact@example.com</p>
-      </div>
-      <div>
-        <a href="#" class="text-gray-800 mr-4 hover:text-blue-700"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="text-gray-800 mr-4 hover:text-blue-700"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="text-gray-800 mr-4 hover:text-blue-700"><i class="fab fa-instagram"></i></a>
-      </div>
+<body>
+  
+<!-- Top contact header -->
+<div id="contact-header"  class="bg-blue-500 py-1">
+  <div class="container mx-auto flex items-center justify-between px-4">
+    <div class="text-white">
+      <span class="mr-2">
+        <i class="fas fa-envelope"></i> info@example.com
+      </span>
+      <span>
+        <i class="fas fa-phone"></i> +123456789
+      </span>
     </div>
-  </header>
+    <div class="flex items-center">
+      <a href="https://www.facebook.com/example" class="text-white mr-4">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.twitter.com/example" class="text-white mr-4">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/example" class="text-white">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</div>
+  
 <!-- Top Slim Header -->
-  <header class="bg-blue-900 text-white py-4">
-    <div class="container mx-auto px-4 flex items-center justify-between">
+  <header id="top-header" class="bg-blue-900 text-white py-4">
+    <div class="container mx-auto px-2 flex items-center justify-between">
       <div class="flex items-center">
-        <img src="images/logo.png" alt="Company Logo" class="h-10 mr-2">
+        <a href="index.html"><img src="images/logo.png" alt="Company Logo" class="h-10 mr-2"></a>
         <p class="text-lg hidden md:block">Providing quality hair transplant services</p>
       </div>
-      <div class="flex items-center">
-        <a href="#slider" class="button-link mr-4">Products</a>
-        <a href="#services" class="button-link mr-4">Our Services</a>
-        <a href="#testimonials" class="button-link mr-4">Testimonials</a>
-        <a href="#contact" class="button-link mr-4">Contact</a>
-      </div>
-    </div>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#slider" class="button-link">Products</a></li>
+          <li><a href="#services" class="button-link">Our Services</a></li>
+          <li><a href="#testimonials" class="button-link">Testimonials</a></li>
+          <li><a href="#contact" class="button-link">Contact</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+        </ul>
+      </nav>
   </header>
 
-<!-- Featured Products section -->
-  <section id="slider" class="py-12">
-    <div class="container mx-auto px-4 text-center">
-      <!-- <h2 class="text-2xl font-bold mb-4">Featured Products</h2>-->
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide bg-blue-100 text-gray-800 p-6">
-            <h3 class="text-xl font-bold">Explanation Slide</h3>
-            <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
-            <button class="bg-blue-700 text-white px-4 py-2 mt-4 rounded">Contact Us</button>
-          </div>
-          <div class="swiper-slide bg-blue-100 text-gray-800 p-6">
-            <h3 class="text-xl font-bold">Successful Operations Slide</h3>
-            <p class="mt-4">We have successfully performed 1000+ hair transplant operations.</p>
-          </div>
-          <div class="swiper-slide bg-blue-100 text-gray-800 p-6">
-            <h3 class="text-xl font-bold">Different Operations Slide</h3>
-            <p class="mt-4">Apart from hair transplants, we also offer scalp micropigmentation and hair restoration services.</p>
-          </div>
-          <div class="swiper-pagination"></div>
+<!-- Hero slider section -->
+<section id="slider" class="py-12">
+  <div class="container mx-auto px-4 text-center">
+    <!-- <h2 class="text-2xl font-bold mb-4">Featured Products</h2>-->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide bg-blue-100 text-gray-800 p-8">
+          <h3 class="text-3xl font-bold">Explanation Slide</h3>
+          <p class="mt-5 text-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
+          <a href="#contact" class="bg-blue-700 text-white px-4 py-2 mt- rounded-md">Contact Us</a>
         </div>
+        <div class="swiper-slide bg-blue-100 text-gray-800 p-8">
+          <h3 class="text-3xl font-bold">Successful Operations Slide</h3>
+          <p class="mt-5 text-lg mb-4">We have successfully performed 1000+ hair transplant operations.</p>
+          <a href="#contact" class="bg-blue-700 text-white px-4 py-2 mt-4 rounded-md">Contact Us</a>
+        </div>
+        <div class="swiper-slide bg-blue-100 text-gray-800 p-8">
+          <h3 class="text-3xl font-bold">Different Operations Slide</h3>
+          <p class="mt-4 text-lg mb-4">Apart from hair transplants, we also offer scalp micropigmentation and hair restoration services.</p>
+          <a href="#contact" class="bg-blue-700 text-white px-4 py-2 mt-4 rounded-md">Contact Us</a>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 <!-- Slide script -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  </script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
 </body>
 </html>
 
@@ -108,6 +148,9 @@
         <img src="images/hair-restoration.jpg" alt="Hair Restoration" class="mt-4">
       </div>
     </div>
+    <div class="flex justify-center mt-8">
+      <a href="all-services.html" class="bg-blue-700 text-white px-4 py-2 rounded-full">See More</a>
+    </div>
   </div>
 </section>
 
@@ -117,7 +160,7 @@
       <h2 class="text-2xl font-bold mb-4 text-center">Testimonials</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         <div class="bg-gray-100 p-6">
-          <img src="images/photo2.jpg" alt="Customer 1" class="customer-image w-96 h-auto">
+          <img src="images/photo1.jpg" alt="Customer 1" class="customer-image w-96 h-auto">
           <h3 class="text-xl font-bold mt-4 text-center">John Doe</h3>
           <p class="mt-2 text-center">"I had a great experience with Hair Transplant Company. The results exceeded my expectations."</p>
         </div>
@@ -139,7 +182,7 @@
 <section id="locations" class="py-8">
   <div class="container mx-auto px-4">
     <h2 class="text-2xl font-bold mb-4 text-center">Our Locations</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-8 ">
       <div class="bg-gray-100 p-6">
         <h3 class="text-xl font-bold">Location A</h3>
         <img src="images/location-a.jpg" alt="Location A" class="location-image w-full mt-4">
@@ -243,45 +286,68 @@
   </div>
 </section>
 
-<!-- Contact Form section -->
+<!-- Contact section -->
 <section id="contact" class="py-8">
-  <div class="container mx-auto px-4">
-    <form action="/submit-contact-form" method="POST" class="w-full max-w-lg">
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="name">
-            Name
-          </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="name" name="name" type="text" placeholder="Your Name">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-2xl font-bold mb-4">Contact Us  <a href="https://wa.me/1234567890" class="ml-2 text-blue-500 hover:text-blue-600">
+      <i class="fab fa-whatsapp"></i>
+    </a></h2>
+    <div id="contact-form" style="display: none;">
+       <!-- Contact form -->
+      <form>
+        <div class="mb-4">
+          <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
         </div>
-        <div class="w-full md:w-1/2 px-3">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
-            Email
-          </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="email" name="email" type="email" placeholder="Your Email">
+        <div class="mb-4">
+          <label for="phone" class="block text-lg font-medium text-gray-700 mb-2">Phone Number</label>
+          <input type="text" id="phone" name="phone" placeholder="Your Phone Number" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
         </div>
-      </div>
-      <div class="mb-6">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="message">
-          Message
-        </label>
-        <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="message" name="message" rows="5" placeholder="Your Message"></textarea>
-      </div>
-      <div class="flex justify-end">
-        <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-600" type="submit">
-          Submit
-        </button>
-      </div>
-    </form>
+        <div class="mb-4">
+          <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+        </div>
+        <div class="mb-8">
+          <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full">Submit</button>
+      </form>
+    </div>
+    <button id="contact-toggle" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full">Let us call you</button>
+  
   </div>
 </section>
+<script>
+  // Toggle for contact 
+  document.getElementById("contact-toggle").addEventListener("click", function() {
+    var contactForm = document.getElementById("contact-form");
+    var contactToggle = document.getElementById("contact-toggle");
 
-<!-- Company Header -->
-  <footer class="bg-gray-900 text-white py-4">
-    <div class="container mx-auto px-4">
-      <p>&copy; 2023 Hair Transplant Company. All rights reserved.</p>
-    </div>
-  </footer>
+    if (contactForm.style.display === "none") {
+      contactForm.style.display = "block";
+      contactToggle.textContent = "Hide";
+    } else {
+      contactForm.style.display = "none";
+      contactToggle.textContent = "Contact";
+    }
+  });
+
+  // Automatically show and scroll to contact form when "Contact Us" button on slider is clicked
+  document.querySelector("#slider .swiper-slide .contact-us-button").addEventListener("click", function() {
+    var contactForm = document.getElementById("contact-form");
+    var contactToggle = document.getElementById("contact-toggle");
+
+    if (contactForm.style.display === "none") {
+      contactForm.style.display = "block";
+      contactToggle.textContent = "Hide";
+      contactForm.scrollIntoView({ behavior: "smooth" });
+    } else {
+      contactForm.style.display = "none";
+      contactToggle.textContent = "Contact";
+    }
+  }); 
+</script>
 
 <!-- Bottom Footer content -->
 <section id="footer" class="bg-blue-500 py-8">
@@ -291,18 +357,27 @@
         <h3 class="text-xl font-bold mb-4">Follow Us</h3>
         <p>Stay updated with our latest news and offers:</p>
         <div class="flex mt-4">
-          <a href="#" class="mr-4"><img src="facebook-logo.png" alt="Facebook"></a>
-          <a href="#" class="mr-4"><img src="twitter-logo.png" alt="Twitter"></a>
-          <a href="#"><img src="instagram-logo.png" alt="Instagram"></a>
+          <a href="https://www.facebook.com/example" class="mr-4">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.twitter.com/example" class="mr-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/example">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
-      </div>
+        </div>
       <div class="text-white">
         <h3 class="text-xl font-bold mb-4">Address</h3>
         <p>123 Main Street<br>City, State ZIP<br>Country</p>
       </div>
       <div class="text-white">
-        <h3 class="text-xl font-bold mb-4">Personal Data Protection Law</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque euismod suscipit velit, vel posuere justo condimentum a.</p>
+        <div class="flex mt-2 flex-col">
+          <a href="privacy-policy.html" class="text-blue-300 hover:text-blue-200 ">Privacy Policy</a>
+          <a href="data-protection-law.html" class="text-blue-300 hover:text-blue-200 mt-2">Personal Data Protection Law</a>
+          <a href="cookie-policy.html" class="text-blue-300 hover:text-blue-200 mt-2">Cookie Policy</a>
+        </div>
       </div>
     </div>
     <div class="mt-8 text-white text-sm">
@@ -310,4 +385,7 @@
     </div>
   </div>
 </section>
+
+</body>
+</html>
 
