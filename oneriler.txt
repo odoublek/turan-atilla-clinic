@@ -1,15 +1,18 @@
-Services Section: Include a section that highlights the services you offer. You can provide a brief description of each service along with relevant images or icons.
+sik sorulan sorular kismi ekle    
 
-Testimonials Section: Create a section where you showcase testimonials or reviews from satisfied clients. Include their names, photos (if available), and their positive feedback about your services.
+paket onerileri sayfasi
 
-Pricing or Packages Section: If applicable, you can include a section that outlines your pricing or different packages available. Provide details about what each package includes and any special offers or discounts.
+mobil ayarlar
 
-Frequently Asked Questions (FAQ) Section: Create a section where you address common questions or concerns that potential clients may have. This can help provide clarity and build trust with your audience.
+saglik turizm konsept
 
-Appointment Booking Form: Add a form or call-to-action button that allows visitors to easily schedule appointments or consultations. Collect necessary information like name, contact details, and preferred dates/times.
+medivoyage sirket adi
 
-Gallery or Portfolio Section: Showcase your work or past projects through a gallery or portfolio section. Include high-quality images or videos to demonstrate the quality of your services.
+before after ati hocayla konusmasi lazim fotolar icin
 
-About Us Section: Provide information about your clinic or practice, including your mission, values, and background. This can help visitors get to know your team and establish trust.
+why choose us , the team,homepage, ekle top footer
 
-Blog or News Section: If you plan to regularly share updates, articles, or news related to your field, consider adding a blog or news section. This can help drive traffic to your website and position you as an industry expert.
+bottom footer adres degis
+
+siteye dil ekle
+

@@ -6,6 +6,9 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
   <style>
     /* Add CSS for the background color transition */
     #hero {
@@ -30,16 +33,16 @@
     #contact {
       background-color: #b5b5b5;
     }
-
+    
     body {
       transition: background-color 0.5s ease;
     }
   </style>
 </head>
 <body>
-  
+
 <!-- Top contact header -->
-<div id="contact-header"  class="bg-blue-500 py-1">
+<div id="contact-header" class="bg-blue-500 py-1">
   <div class="container mx-auto flex items-center justify-between px-4">
     <div class="text-white">
       <span class="mr-2">
@@ -59,16 +62,76 @@
       <a href="https://www.instagram.com/example" class="text-white">
         <i class="fab fa-instagram"></i>
       </a>
+      <div id="language-switcher" class="relative ml-4">
+        <div id="current-language" class="flex items-center cursor-pointer">
+          <i class="fas fa-globe mr-2"></i>
+          <span class="text-white">English</span>
+        </div>
+        <div id="language-list" class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden">
+          <ul>
+            <li>
+              <a href="#" onclick="changeLanguage('de'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>German</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="changeLanguage('fr'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>French</span>
+              </a>
+            </li>
+            <!-- Add more languages as needed -->
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-  
+<!-- Google Translate API -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'en',
+        includedLanguages: 'en,de,fr,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false,
+        multilanguagePage: true
+      },
+      'google_translate_element'
+    );
+  }
+
+  function changeLanguage(languageCode) {
+    var select = document.querySelector("#google_translate_element select");
+    select.value = languageCode;
+    select.dispatchEvent(new Event("change"));
+    select.dispatchEvent(new Event("click"));
+  }
+
+  function setupLanguageSwitcher() {
+    var languageSwitcher = document.getElementById("language-switcher");
+    var currentLanguage = document.getElementById("current-language");
+    var languageList = document.getElementById("language-list");
+
+    currentLanguage.addEventListener("click", function () {
+      languageList.classList.toggle("hidden");
+    });
+  }
+
+  // Call the setupLanguageSwitcher function once the Google Translate script is loaded
+  window.addEventListener("DOMContentLoaded", function () {
+    setupLanguageSwitcher();
+  });
+</script>
+
 <!-- Top Slim Header -->
   <header id="top-header" class="bg-blue-900 text-white py-4">
     <div class="container mx-auto px-2 flex items-center justify-between">
       <div class="flex items-center">
         <a href="index.html"><img src="images/logo.png" alt="Company Logo" class="h-10 mr-2"></a>
-        <p class="text-lg hidden md:block">Providing quality hair transplant services</p>
+        <p class="text-lg hidden md:block">Medivoyage</p>
       </div>
       <nav>
         <ul class="flex space-x-4">
@@ -77,7 +140,7 @@
           <li><a href="#testimonials" class="button-link">Testimonials</a></li>
           <li><a href="#contact" class="button-link">Contact</a></li>
           <li><a href="about-us.html">About Us</a></li>
-        </ul>
+          <li><a href="why-us.html">Why Us</a></li>
       </nav>
   </header>
 
@@ -99,33 +162,34 @@
         </div>
         <div class="swiper-slide bg-blue-100 text-gray-800 p-8">
           <h3 class="text-3xl font-bold">Different Operations Slide</h3>
-          <p class="mt-4 text-lg mb-4">Apart from hair transplants, we also offer scalp micropigmentation and hair restoration services.</p>
+          <p class="mt-5 text-lg mb-4">Apart from hair transplants, we also offer scalp micropigmentation and hair restoration services.</p>
           <a href="#contact" class="bg-blue-700 text-white px-4 py-2 mt-4 rounded-md">Contact Us</a>
         </div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
+
+    <!-- Slide script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      (function() {
+        var swiper = new Swiper('.swiper-container', {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        });
+      })();
+    </script>
   </div>
 </section>
-<!-- Slide script -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-</script>
-</body>
-</html>
 
 <!-- Our Services section -->
 <section id="services" class="py-8">
@@ -156,43 +220,107 @@
 
 <!-- Testimonials section -->
 <section id="testimonials" class="py-8">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-4 text-center">Testimonials</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <div class="bg-gray-100 p-6">
-          <img src="images/photo1.jpg" alt="Customer 1" class="customer-image w-96 h-auto">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-4 text-center">Testimonials</h2>
+    <div id="testimonials-slider" class="swiper-container">
+      <div class="swiper-wrapper grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+        <div class="swiper-slide bg-gray-100 p-6 flex flex-col items-center">
+          <img src="images/photo1.jpg" alt="Customer 1" class="customer-image w-48 h-auto mx-auto">
           <h3 class="text-xl font-bold mt-4 text-center">John Doe</h3>
           <p class="mt-2 text-center">"I had a great experience with Hair Transplant Company. The results exceeded my expectations."</p>
         </div>
-        <div class="bg-gray-100 p-6">
-          <img src="images/photo2.jpg" alt="Customer 2" class="customer-image w-96 h-auto">
+        <div class="swiper-slide bg-gray-100 p-6 flex flex-col items-center">
+          <img src="images/photo1.jpg" alt="Customer 2" class="customer-image w-48 h-auto mx-auto">
           <h3 class="text-xl font-bold mt-4 text-center">Jane Smith</h3>
           <p class="mt-2 text-center">"I highly recommend Hair Transplant Company to anyone looking for hair restoration services."</p>
         </div>
-        <div class="bg-gray-100 p-6">
-          <img src="images/photo2.jpg" alt="Customer 3" class="customer-image w-96 h-auto">
+        <div class="swiper-slide bg-gray-100 p-6 flex flex-col items-center">
+          <img src="images/photo1.jpg" alt="Customer 3" class="customer-image w-48 h-auto mx-auto">
           <h3 class="text-xl font-bold mt-4 text-center">Mike Johnson</h3>
           <p class="mt-2 text-center">"The team at Hair Transplant Company is professional and skilled. I am satisfied with my hair transplant results."</p>
         </div>
+        <div class="swiper-slide bg-gray-100 p-6 flex flex-col items-center">
+          <img src="images/photo1.jpg" alt="Customer 4" class="customer-image w-48 h-auto mx-auto">
+          <h3 class="text-xl font-bold mt-4 text-center">Lisa Thompson</h3>
+          <p class="mt-2 text-center">"The service provided by Hair Transplant Company was exceptional. I'm thrilled with my new hair."</p>
+        </div>
+        <div class="swiper-slide bg-gray-100 p-6 flex flex-col items-center">
+          <img src="images/photo1.jpg" alt="Customer 5" class="customer-image w-48 h-auto mx-auto">
+          <h3 class="text-xl font-bold mt-4 text-center">David Wilson</h3>
+          <p class="mt-2 text-center">"I never thought I would regain my confidence, but Hair Transplant Company made it possible. Thank you!"</p>
+        </div>
+        <div class="swiper-slide bg-gray-100 p-6 flex flex-col items-center">
+          <img src="images/photo1.jpg" alt="Customer 6" class="customer-image w-48 h-auto mx-auto">
+          <h3 class="text-xl font-bold mt-4 text-center">David Wilson</h3>
+          <p class="mt-2 text-center">"I never thought I would regain my confidence, but Hair Transplant Company made it possible. Thank you!"</p>
+        </div>
+        <div class="swiper-slide bg-gray-100 p-6 flex flex-col items-center">
+          <img src="images/photo1.jpg" alt="Customer " class="customer-image w-48 h-auto mx-auto">
+          <h3 class="text-xl font-bold mt-4 text-center">David Wilson</h3>
+          <p class="mt-2 text-center">"I never thought I would regain my confidence, but Hair Transplant Company made it possible. Thank you!"</p>
+        </div>
+        <div class="swiper-slide bg-gray-100 p-6 flex flex-col items-center">
+          <img src="images/photo1.jpg" alt="Customer 8" class="customer-image w-48 h-auto mx-auto">
+          <h3 class="text-xl font-bold mt-4 text-center">David Wilson</h3>
+          <p class="mt-2 text-center">"I never thought I would regain my confidence, but Hair Transplant Company made it possible. Thank you!"</p>
+        </div>
+        <div class="swiper-slide bg-gray-100 p-6 flex flex-col items-center">
+          <img src="images/photo1.jpg" alt="Customer 9" class="customer-image w-48 h-auto mx-auto">
+          <h3 class="text-xl font-bold mt-4 text-center">David Wilson</h3>
+          <p class="mt-2 text-center">"I never thought I would regain my confidence, but Hair Transplant Company made it possible. Thank you!"</p>
+        </div>
       </div>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var testimonialsSwiper = new Swiper("#testimonials-slider", {
+          slidesPerView: 3, // Number of testimonials to show at once
+          slidesPerGroup: 3, // Number of testimonials to move per slide
+          loop: true, // Enable loop mode
+          spaceBetween: 16, // Spacing between testimonials
+          navigation: {
+            nextEl: "#testimonials-slider .swiper-button-next", // Next button class or element
+            prevEl: "#testimonials-slider .swiper-button-prev", // Previous button class or element
+          },
+        });
+      });
+    </script>
+  </div>
 </section>
 
-<!-- Our Locations section -->
-<section id="locations" class="py-8">
+<!-- Frequently Asked Questions section -->
+<section id="faq" class="py-8">
   <div class="container mx-auto px-4">
-    <h2 class="text-2xl font-bold mb-4 text-center">Our Locations</h2>
+    <h2 class="text-2xl font-bold mb-4 text-center">Frequently Asked Questions</h2>
     <div class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-8 ">
-      <div class="bg-gray-100 p-6">
-        <h3 class="text-xl font-bold">Location A</h3>
-        <img src="images/location-a.jpg" alt="Location A" class="location-image w-full mt-4">
-        <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
+      <div class="bg-blue-500 text-white p-6">
+        <h3 class="text-xl font-bold">Q: Do you provide travel arrangements for medical treatments?</h3>
+        <p class="mt-4">Yes, we offer comprehensive travel packages that include flights, accommodation, and transportation for our clients seeking medical treatments.</p>
       </div>
-      <div class="bg-gray-100 p-6">
-        <h3 class="text-xl font-bold">Location B</h3>
-        <img src="images/location-b.jpg" alt="Location B" class="location-image w-full mt-4">
-        <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
+      <div class="bg-blue-500 text-white p-6">
+        <h3 class="text-xl font-bold">Q: What types of medical procedures do you assist with?</h3>
+        <p class="mt-4">We specialize in arranging travel and accommodation for various medical procedures, including but not limited to hair transplants, cosmetic surgeries, dental treatments, and wellness retreats.</p>
       </div>
+      <div class="bg-blue-500 text-white p-6">
+        <h3 class="text-xl font-bold">Q: Can you help with finding a suitable doctor or clinic?</h3>
+        <p class="mt-4">Absolutely! We have partnerships with reputable doctors and clinics in Istanbul. We will connect you with experienced professionals based on your specific medical needs.</p>
+      </div>
+      <div class="bg-blue-500 text-white p-6">
+        <h3 class="text-xl font-bold">Q: What is included in your travel and health package?</h3>
+        <p class="mt-4">Our travel and health packages typically include round-trip flights, accommodation, airport transfers, medical appointments, and post-treatment care. Additional services can be customized based on your requirements.</p>
+      </div>
+      <div class="bg-blue-500 text-white p-6">
+        <h3 class="text-xl font-bold">Q: How can I request a quote for a travel and health package?</h3>
+        <p class="mt-4">To request a quote, please fill out the inquiry form on our website or contact our customer support team. Provide us with details about your desired procedure and travel preferences, and we will get back to you with a personalized package.</p>
+      </div>
+      <div class="bg-blue-500 text-white p-6">
+        <h3 class="text-xl font-bold">Q: Can I book a travel and health package for someone else?</h3>
+        <p class="mt-4">Yes, you can book a package on behalf of someone else. Simply provide us with the necessary details of the person who will be undergoing the medical treatment, and we will take care of the arrangements accordingly.</p>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <a href="#contact" class="px-4 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-700 transition-colors">Contact Us</a>
     </div>
   </div>
 </section>
@@ -206,21 +334,21 @@
         <h3 class="text-xl font-bold">Patient A</h3>
         <div class="before-after-container mt-4">
           <img src="images/photo1.jpg" alt="Before" class="before-image w-64 h-64">
-          <img src="images/photo2.jpg" alt="After" class="after-image w-64 h-64">
+          <img src="images/photo1.jpg" alt="After" class="after-image w-64 h-64">
         </div>
       </div>
       <div class="bg-gray-100 p-6">
         <h3 class="text-xl font-bold">Patient B</h3>
         <div class="before-after-container mt-4">
           <img src="images/photo1.jpg" alt="Before" class="before-image w-64 h-64">
-          <img src="images/photo2.jpg" alt="After" class="after-image w-64 h-64">
+          <img src="images/photo1.jpg" alt="After" class="after-image w-64 h-64">
         </div>
       </div>
       <div class="bg-gray-100 p-6">
         <h3 class="text-xl font-bold">Patient C</h3>
         <div class="before-after-container mt-4">
-          <img src="images/photo2.jpg" alt="Before" class="before-image w-64 h-64">
-          <img src="images/photo2.jpg" alt="After" class="after-image w-64 h-64">
+          <img src="images/photo1.jpg" alt="Before" class="before-image w-64 h-64">
+          <img src="images/photo1.jpg" alt="After" class="after-image w-64 h-64">
         </div>
       </div>
     </div>
@@ -230,7 +358,7 @@
 <!-- Doctors section -->
 <section id="doctors" class="py-8">
   <div class="container mx-auto px-4 text-center">
-    <h2 class="text-2xl font-bold mb-4">Our Doctors</h2>
+    <h2 class="text-2xl font-bold mb-4">The Team</h2>
     <div class="flex flex-wrap justify-center">
       <!-- Doctor 1 -->
       <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 mb-4">
@@ -316,38 +444,38 @@
     </div>
     <button id="contact-toggle" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full">Let us call you</button>
   
+   <!-- script for contact -->
+    <script>
+      document.getElementById("contact-toggle").addEventListener("click", function() {
+        var contactForm = document.getElementById("contact-form");
+        var contactToggle = document.getElementById("contact-toggle");
+    
+        if (contactForm.style.display === "none") {
+          contactForm.style.display = "block";
+          contactToggle.textContent = "Hide";
+        } else {
+          contactForm.style.display = "none";
+          contactToggle.textContent = "Contact";
+        }
+      });
+    
+      // Automatically show and scroll to contact form when "Contact Us" button on slider is clicked
+      document.querySelector("#slider .swiper-slide .contact-us-button").addEventListener("click", function() {
+        var contactForm = document.getElementById("contact-form");
+        var contactToggle = document.getElementById("contact-toggle");
+    
+        if (contactForm.style.display === "none") {
+          contactForm.style.display = "block";
+          contactToggle.textContent = "Hide";
+          contactForm.scrollIntoView({ behavior: "smooth" });
+        } else {
+          contactForm.style.display = "none";
+          contactToggle.textContent = "Contact";
+        }
+      }); 
+    </script>
   </div>
 </section>
-<script>
-  // Toggle for contact 
-  document.getElementById("contact-toggle").addEventListener("click", function() {
-    var contactForm = document.getElementById("contact-form");
-    var contactToggle = document.getElementById("contact-toggle");
-
-    if (contactForm.style.display === "none") {
-      contactForm.style.display = "block";
-      contactToggle.textContent = "Hide";
-    } else {
-      contactForm.style.display = "none";
-      contactToggle.textContent = "Contact";
-    }
-  });
-
-  // Automatically show and scroll to contact form when "Contact Us" button on slider is clicked
-  document.querySelector("#slider .swiper-slide .contact-us-button").addEventListener("click", function() {
-    var contactForm = document.getElementById("contact-form");
-    var contactToggle = document.getElementById("contact-toggle");
-
-    if (contactForm.style.display === "none") {
-      contactForm.style.display = "block";
-      contactToggle.textContent = "Hide";
-      contactForm.scrollIntoView({ behavior: "smooth" });
-    } else {
-      contactForm.style.display = "none";
-      contactToggle.textContent = "Contact";
-    }
-  }); 
-</script>
 
 <!-- Bottom Footer content -->
 <section id="footer" class="bg-blue-500 py-8">
