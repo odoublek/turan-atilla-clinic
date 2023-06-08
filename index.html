@@ -6,7 +6,8 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js" defer></script>
 
 
   <style>
@@ -14,22 +15,23 @@
     #hero {
       background-color: #f5f5f5;
     }
+    
     #contact-header {
-      background-color: #f90909;
+      background-color: #ebebeb;
     }
-
+  
     #services {
       background-color: #ebebeb;
     }
-
+  
     #doctors {
       background-color: #ebebeb;
     }
-
+  
     #testimonials {
       background-color: #ebebeb;
     }
-
+  
     #contact {
       background-color: #b5b5b5;
     }
@@ -37,13 +39,20 @@
     body {
       transition: background-color 0.5s ease;
     }
+  
+    /* New Colors */
+    #top-header {
+      background-color: #1454a2; /* Blue color */
+    }
+  
+    #top-header a:hover {
+      color: #00b8a9; /* Mint green color */
+    }
   </style>
-</head>
-<body>
 
 <!-- Top contact header -->
-<div id="contact-header" class="bg-blue-500 py-1">
-  <div class="container mx-auto flex items-center justify-between px-4">
+<div id="contact-header" class="bg-blue-900 py-2 px-4">
+  <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
     <div class="text-white">
       <span class="mr-2">
         <i class="fas fa-envelope"></i> info@example.com
@@ -53,13 +62,13 @@
       </span>
     </div>
     <div class="flex items-center">
-      <a href="https://www.facebook.com/example" class="text-white mr-4">
+      <a href="https://www.facebook.com/example" class="text-white mr-4" aria-label="Facebook">
         <i class="fab fa-facebook"></i>
       </a>
-      <a href="https://www.twitter.com/example" class="text-white mr-4">
+      <a href="https://www.twitter.com/example" class="text-white mr-4" aria-label="Twitter">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://www.instagram.com/example" class="text-white">
+      <a href="https://www.instagram.com/example" class="text-white" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
       <div id="language-switcher" class="relative ml-4">
@@ -69,6 +78,12 @@
         </div>
         <div id="language-list" class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden">
           <ul>
+            <li>
+              <a href="#" onclick="changeLanguage('en'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>English</span>
+              </a>
+            </li>
             <li>
               <a href="#" onclick="changeLanguage('de'); return false;">
                 <i class="fas fa-flag mr-2"></i>
@@ -101,56 +116,66 @@
       },
       'google_translate_element'
     );
+
+    // Call the setupLanguageSwitcher function once the Google Translate script is loaded
+    setupLanguageSwitcher();
   }
 
   function changeLanguage(languageCode) {
-    var select = document.querySelector("#google_translate_element select");
+  var select = document.querySelector(".goog-te-combo");
+  var event = new Event("change", { bubbles: true });
+  if (select) {
     select.value = languageCode;
-    select.dispatchEvent(new Event("change"));
-    select.dispatchEvent(new Event("click"));
+    select.dispatchEvent(event);
+  } else {
+    console.error("Google Translate dropdown element not found.");
   }
+}
 
-  function setupLanguageSwitcher() {
-    var languageSwitcher = document.getElementById("language-switcher");
-    var currentLanguage = document.getElementById("current-language");
-    var languageList = document.getElementById("language-list");
 
+
+function setupLanguageSwitcher() {
+  var languageSwitcher = document.getElementById("language-switcher");
+  var currentLanguage = document.getElementById("current-language");
+  var languageList = document.getElementById("language-list");
+
+  if (languageSwitcher && currentLanguage && languageList) {
     currentLanguage.addEventListener("click", function () {
       languageList.classList.toggle("hidden");
     });
+  } else {
+    console.error("Language switcher elements not found.");
   }
+}
 
-  // Call the setupLanguageSwitcher function once the Google Translate script is loaded
-  window.addEventListener("DOMContentLoaded", function () {
-    setupLanguageSwitcher();
-  });
 </script>
 
 <!-- Top Slim Header -->
-  <header id="top-header" class="bg-blue-900 text-white py-4">
-    <div class="container mx-auto px-2 flex items-center justify-between">
-      <div class="flex items-center">
-        <a href="index.html"><img src="images/logo.png" alt="Company Logo" class="h-10 mr-2"></a>
-        <p class="text-lg hidden md:block">Medivoyage</p>
+<header id="top-header" class="bg-blue-900 text-white py-4 px-2">
+  <div class="container mx-auto flex items-center justify-between">
+    <div class="flex items-center">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Company Logo" class="h-12 md:h-16 mr-2">
+      </a>
       </div>
       <nav>
         <ul class="flex space-x-4">
-          <li><a href="#slider" class="button-link">Products</a></li>
-          <li><a href="#services" class="button-link">Our Services</a></li>
-          <li><a href="#testimonials" class="button-link">Testimonials</a></li>
-          <li><a href="#contact" class="button-link">Contact</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="why-us.html">Why Us</a></li>
+          <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li> <!-- Added hover effect -->
+          <li><a href="index.html" class="button-link hover:text-gray-300">Products</a></li>
+          <li><a href="index.html#services" class="button-link hover:text-gray-300">Our Services</a></li>
+          <li><a href="index.html#testimonials" class="button-link hover:text-gray-300">Testimonials</a></li>
+          <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
+          <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
+          <li><a href="why-us.html" class="button-link hover:text-gray-300">Why Us</a></li>
       </nav>
-  </header>
+</header>
 
 <!-- Hero slider section -->
-<section id="slider" class="py-12">
-  <div class="container mx-auto px-4 text-center">
-    <!-- <h2 class="text-2xl font-bold mb-4">Featured Products</h2>-->
+<section id="slider" class="py-16">
+  <div class="container mx-auto px-4 text-center bg-cover bg-center py-16">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide bg-blue-100 text-gray-800 p-8">
+        <div class="swiper-slide bg-blue-100 text-gray-800 p-12">
           <h3 class="text-3xl font-bold">Explanation Slide</h3>
           <p class="mt-5 text-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
           <a href="#contact" class="bg-blue-700 text-white px-4 py-2 mt- rounded-md">Contact Us</a>
@@ -165,7 +190,7 @@
           <p class="mt-5 text-lg mb-4">Apart from hair transplants, we also offer scalp micropigmentation and hair restoration services.</p>
           <a href="#contact" class="bg-blue-700 text-white px-4 py-2 mt-4 rounded-md">Contact Us</a>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination mt-4"></div>
       </div>
     </div>
 
@@ -192,28 +217,40 @@
 </section>
 
 <!-- Our Services section -->
-<section id="services" class="py-8">
+<<section id="services" class="py-8">
   <div class="container mx-auto px-4">
     <h2 class="text-2xl font-bold mb-4 text-center">Our Services</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <div class="bg-gray-100 p-6">
-        <h3 class="text-xl font-bold">Hair Transplantation</h3>
-        <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
-        <img src="images/hair-transplantation.jpg" alt="Hair Transplantation" class="mt-4">
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+        <img src="images/hair-transplantt.jpg" alt="Hair Transplantation" class="w-48 h-auto mx-auto mb-4">
+        <h3 class="text-xl font-bold mt-4">Hair Transplantation</h3>
+        <p class="mt-4">We offer advanced hair transplantation services to restore your natural hairline and help you regain your confidence. Our team of experienced surgeons uses state-of-the-art techniques for optimal results.</p>
       </div>
-      <div class="bg-gray-100 p-6">
-        <h3 class="text-xl font-bold">Scalp Micropigmentation</h3>
-        <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
-        <img src="images/scalp-micropigmentation.jpg" alt="Scalp Micropigmentation" class="mt-4">
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+        <img src="images/cosmetic-surgeries.jpg" alt="Cosmetic Surgeries" class="w-48 h-auto mx-auto mb-4">
+        <h3 class="text-xl font-bold mt-4">Cosmetic Surgeries</h3>
+        <p class="mt-4">Enhance your appearance and achieve your aesthetic goals with our range of cosmetic surgery procedures. From facelifts to breast augmentations, our skilled surgeons deliver personalized and natural-looking results.</p>
       </div>
-      <div class="bg-gray-100 p-6">
-        <h3 class="text-xl font-bold">Hair Restoration</h3>
-        <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
-        <img src="images/hair-restoration.jpg" alt="Hair Restoration" class="mt-4">
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+        <img src="images/dental-treatments.jpg" alt="Dental Treatments" class="w-48 h-auto mx-auto mb-4">
+        <h3 class="text-xl font-bold mt-4">Dental Treatments</h3>
+        <p class="mt-4">Maintain a healthy and beautiful smile with our comprehensive dental treatments. Whether you need routine cleanings, teeth whitening, or complex procedures like dental implants, our experienced dentists are here to help.</p>
       </div>
-    </div>
-    <div class="flex justify-center mt-8">
-      <a href="all-services.html" class="bg-blue-700 text-white px-4 py-2 rounded-full">See More</a>
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+        <img src="images/wellness-retreats.jpg" alt="Wellness Retreats" class="w-48 h-auto mx-auto mb-4">
+        <h3 class="text-xl font-bold mt-4">Wellness Retreats</h3>
+        <p class="mt-4">Escape the daily stresses and rejuvenate your mind, body, and soul with our wellness retreats. Immerse yourself in serene environments, enjoy holistic therapies, and experience a transformative journey towards wellness.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+        <img src="images/orthopedic-surgery.jpg" alt="Orthopedic Surgery" class="w-48 h-auto mx-auto mb-4">
+        <h3 class="text-xl font-bold mt-4">Orthopedic Surgery</h3>
+        <p class="mt-4">Our orthopedic surgery services aim to address a variety of musculoskeletal conditions and injuries. Whether you require joint replacements, spine surgeries, or minimally invasive procedures, our skilled orthopedic surgeons provide comprehensive care for optimal recovery and improved mobility.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+        <img src="images/medical-checkups.jpg" alt="Medical Check-ups" class="w-48 h-auto mx-auto mb-4">
+        <h3 class="text-xl font-bold mt-4">Medical Check-ups</h3>
+        <p class="mt-4">Our medical check-up packages offer comprehensive assessments of your overall health. With a range of diagnostic tests, consultations with specialists, and personalized health evaluations, we ensure early detection of potential health issues and provide valuable insights for maintaining your well-being.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -273,15 +310,25 @@
     </div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         var testimonialsSwiper = new Swiper("#testimonials-slider", {
-          slidesPerView: 3, // Number of testimonials to show at once
-          slidesPerGroup: 3, // Number of testimonials to move per slide
-          loop: true, // Enable loop mode
+          slidesPerView: 1, // Number of testimonials to show at once
           spaceBetween: 16, // Spacing between testimonials
           navigation: {
-            nextEl: "#testimonials-slider .swiper-button-next", // Next button class or element
-            prevEl: "#testimonials-slider .swiper-button-prev", // Previous button class or element
+            nextEl: ".swiper-button-next", // Next button class or element
+            prevEl: ".swiper-button-prev", // Previous button class or element
+          },
+          breakpoints: {
+            // Responsive breakpoints
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
           },
         });
       });
@@ -293,62 +340,108 @@
 <section id="faq" class="py-8">
   <div class="container mx-auto px-4">
     <h2 class="text-2xl font-bold mb-4 text-center">Frequently Asked Questions</h2>
-    <div class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-8 ">
-      <div class="bg-blue-500 text-white p-6">
-        <h3 class="text-xl font-bold">Q: Do you provide travel arrangements for medical treatments?</h3>
-        <p class="mt-4">Yes, we offer comprehensive travel packages that include flights, accommodation, and transportation for our clients seeking medical treatments.</p>
-      </div>
-      <div class="bg-blue-500 text-white p-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="faq-item bg-blue-500 text-white p-6">
         <h3 class="text-xl font-bold">Q: What types of medical procedures do you assist with?</h3>
-        <p class="mt-4">We specialize in arranging travel and accommodation for various medical procedures, including but not limited to hair transplants, cosmetic surgeries, dental treatments, and wellness retreats.</p>
+        <p class="mt-4">A: We specialize in arranging travel and accommodation for various medical procedures, including but not limited to hair transplants, cosmetic surgeries, dental treatments, and wellness retreats.</p>
+        <div class="flex justify-center mt-4">
+          <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded" onclick="scrollToPackages()">View Packages</button>
+        </div>
       </div>
-      <div class="bg-blue-500 text-white p-6">
-        <h3 class="text-xl font-bold">Q: Can you help with finding a suitable doctor or clinic?</h3>
-        <p class="mt-4">Absolutely! We have partnerships with reputable doctors and clinics in Istanbul. We will connect you with experienced professionals based on your specific medical needs.</p>
+      <div class="faq-item bg-blue-500 text-white p-6">
+        <h3 class="text-xl font-bold">Q: Can you help me find a suitable doctor or clinic?</h3>
+        <p class="mt-4">A: Absolutely! We have partnerships with reputable doctors and clinics in Istanbul. We will connect you with experienced professionals based on your specific medical needs.</p>
+        <div class="flex justify-center mt-4">
+          <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded" onclick="scrollToDoctors()">Our Team</button>
+        </div>
       </div>
-      <div class="bg-blue-500 text-white p-6">
+      <div class="faq-item bg-blue-500 text-white p-6">
         <h3 class="text-xl font-bold">Q: What is included in your travel and health package?</h3>
-        <p class="mt-4">Our travel and health packages typically include round-trip flights, accommodation, airport transfers, medical appointments, and post-treatment care. Additional services can be customized based on your requirements.</p>
+        <p class="mt-4">A: Our travel and health packages typically include round-trip flights, accommodation, airport transfers, medical appointments, and post-treatment care. Additional services can be customized based on your requirements.</p>
+        <div class="flex justify-center mt-4">
+          <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded" onclick="scrollToPackages()">View Packages</button>
+        </div>
       </div>
-      <div class="bg-blue-500 text-white p-6">
+      <div class="faq-item bg-blue-500 text-white p-6">
         <h3 class="text-xl font-bold">Q: How can I request a quote for a travel and health package?</h3>
-        <p class="mt-4">To request a quote, please fill out the inquiry form on our website or contact our customer support team. Provide us with details about your desired procedure and travel preferences, and we will get back to you with a personalized package.</p>
+        <p class="mt-4">A: To request a quote, please fill out the inquiry form on our website or contact our customer support team. Provide us with details about your desired procedure and travel preferences, and we will get back to you with a personalized package.</p>
+        <div class="flex justify-center mt-4">
+          <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded" onclick="scrollToPackages()">View Packages</button>
+        </div>
       </div>
-      <div class="bg-blue-500 text-white p-6">
+      <div class="faq-item bg-blue-500 text-white p-6">
         <h3 class="text-xl font-bold">Q: Can I book a travel and health package for someone else?</h3>
-        <p class="mt-4">Yes, you can book a package on behalf of someone else. Simply provide us with the necessary details of the person who will be undergoing the medical treatment, and we will take care of the arrangements accordingly.</p>
+        <p class="mt-4">A: Yes, you can book a package on behalf of someone else. Simply provide us with the necessary details of the person who will be undergoing the medical treatment, and we will take care of the arrangements accordingly.</p>
+        <div class="flex justify-center mt-4">
+          <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded" onclick="scrollToPackages()">View Packages</button>
+        </div>
       </div>
-    </div>
-    <div class="text-center mt-8">
-      <a href="#contact" class="px-4 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-700 transition-colors">Contact Us</a>
+      <div class="faq-item bg-blue-500 text-white p-6">
+        <h3 class="text-xl font-bold">Q: Are the medical facilities you work with accredited and trustworthy?</h3>
+        <p class="mt-4">A: Yes, we partner with accredited and trustworthy medical facilities that meet international standards. We thoroughly assess their qualifications, experience, and patient reviews to ensure the highest quality of care for our clients.</p>
+        <div class="flex justify-center mt-4">
+          <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded" onclick="scrollToPackages()">View Packages</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Before & After section -->
-<section id="before-after" class="py-8">
+<!-- Scripts for buttons to scroll -->
+<script>
+  function scrollToPackages() {
+    const packagesSection = document.getElementById('packages');
+    packagesSection.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function scrollToDoctors() {
+    const doctorsSection = document.getElementById('doctors');
+    doctorsSection.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+<!-- Packages section -->
+<section id="packages" class="py-8">
   <div class="container mx-auto px-4">
-    <h2 class="text-2xl font-bold mb-4 text-center">Before & After</h2>
+    <h2 class="text-3xl font-bold mb-6 text-center">Packages</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <div class="bg-gray-100 p-6">
-        <h3 class="text-xl font-bold">Patient A</h3>
-        <div class="before-after-container mt-4">
-          <img src="images/photo1.jpg" alt="Before" class="before-image w-64 h-64">
-          <img src="images/photo1.jpg" alt="After" class="after-image w-64 h-64">
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h3 class="text-xl font-bold mb-4">Package 1 (Budget)</h3>
+        <ul class="list-disc pl-6 mb-4">
+          <li>Feature 1</li>
+          <li>Feature 2</li>
+          <li>Feature 3</li>
+          <li>Feature 4</li>
+        </ul>
+        <div class="text-center">
+          <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Select</a>
         </div>
       </div>
-      <div class="bg-gray-100 p-6">
-        <h3 class="text-xl font-bold">Patient B</h3>
-        <div class="before-after-container mt-4">
-          <img src="images/photo1.jpg" alt="Before" class="before-image w-64 h-64">
-          <img src="images/photo1.jpg" alt="After" class="after-image w-64 h-64">
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h3 class="text-xl font-bold mb-4">Package 2 (Standard)</h3>
+        <ul class="list-disc pl-6 mb-4">
+          <li>Feature 1</li>
+          <li>Feature 2</li>
+          <li>Feature 3</li>
+          <li>Feature 4</li>
+          <li>Feature 5</li>
+        </ul>
+        <div class="text-center">
+          <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Select</a>
         </div>
       </div>
-      <div class="bg-gray-100 p-6">
-        <h3 class="text-xl font-bold">Patient C</h3>
-        <div class="before-after-container mt-4">
-          <img src="images/photo1.jpg" alt="Before" class="before-image w-64 h-64">
-          <img src="images/photo1.jpg" alt="After" class="after-image w-64 h-64">
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h3 class="text-xl font-bold mb-4">Package 3 (Premium)</h3>
+        <ul class="list-disc pl-6 mb-4">
+          <li>Feature 1</li>
+          <li>Feature 2</li>
+          <li>Feature 3</li>
+          <li>Feature 4</li>
+          <li>Feature 5</li>
+          <li>Feature 6</li>
+        </ul>
+        <div class="text-center">
+          <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Select</a>
         </div>
       </div>
     </div>
@@ -379,7 +472,7 @@
 
       <!-- Doctor 2 -->
       <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 mb-4">
-        <img src="images/photo1.jpg" alt="Doctor 2" class="mx-auto mb-2 rounded-full w-24 h-24">
+        <img src="images/doctor2.jpg" alt="Doctor 2" class="mx-auto mb-2 rounded-full w-24 h-24">
         <h3 class="text-lg font-bold">Dr. Jane Smith</h3>
         <div class="flex justify-center">
           <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
@@ -396,7 +489,7 @@
 
       <!-- Doctor 3 -->
       <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 mb-4">
-        <img src="images/photo1.jpg" alt="Doctor 3" class="mx-auto mb-2 rounded-full w-24 h-24">
+        <img src="images/doctor3.jpg" alt="Doctor 3" class="mx-auto mb-2 rounded-full w-24 h-24">
         <h3 class="text-lg font-bold">Dr. David Johnson</h3>
         <div class="flex justify-center">
           <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
@@ -411,69 +504,6 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Contact section -->
-<section id="contact" class="py-8">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-2xl font-bold mb-4">Contact Us  <a href="https://wa.me/1234567890" class="ml-2 text-blue-500 hover:text-blue-600">
-      <i class="fab fa-whatsapp"></i>
-    </a></h2>
-    <div id="contact-form" style="display: none;">
-       <!-- Contact form -->
-      <form>
-        <div class="mb-4">
-          <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-        </div>
-        <div class="mb-4">
-          <label for="phone" class="block text-lg font-medium text-gray-700 mb-2">Phone Number</label>
-          <input type="text" id="phone" name="phone" placeholder="Your Phone Number" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-        </div>
-        <div class="mb-4">
-          <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-        </div>
-        <div class="mb-8">
-          <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
-        </div>
-        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full">Submit</button>
-      </form>
-    </div>
-    <button id="contact-toggle" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full">Let us call you</button>
-  
-   <!-- script for contact -->
-    <script>
-      document.getElementById("contact-toggle").addEventListener("click", function() {
-        var contactForm = document.getElementById("contact-form");
-        var contactToggle = document.getElementById("contact-toggle");
-    
-        if (contactForm.style.display === "none") {
-          contactForm.style.display = "block";
-          contactToggle.textContent = "Hide";
-        } else {
-          contactForm.style.display = "none";
-          contactToggle.textContent = "Contact";
-        }
-      });
-    
-      // Automatically show and scroll to contact form when "Contact Us" button on slider is clicked
-      document.querySelector("#slider .swiper-slide .contact-us-button").addEventListener("click", function() {
-        var contactForm = document.getElementById("contact-form");
-        var contactToggle = document.getElementById("contact-toggle");
-    
-        if (contactForm.style.display === "none") {
-          contactForm.style.display = "block";
-          contactToggle.textContent = "Hide";
-          contactForm.scrollIntoView({ behavior: "smooth" });
-        } else {
-          contactForm.style.display = "none";
-          contactToggle.textContent = "Contact";
-        }
-      }); 
-    </script>
   </div>
 </section>
 
@@ -495,7 +525,7 @@
             <i class="fab fa-instagram"></i>
           </a>
         </div>
-        </div>
+      </div>
       <div class="text-white">
         <h3 class="text-xl font-bold mb-4">Address</h3>
         <p>123 Main Street<br>City, State ZIP<br>Country</p>
@@ -504,12 +534,10 @@
         <div class="flex mt-2 flex-col">
           <a href="privacy-policy.html" class="text-blue-300 hover:text-blue-200 ">Privacy Policy</a>
           <a href="data-protection-law.html" class="text-blue-300 hover:text-blue-200 mt-2">Personal Data Protection Law</a>
-          <a href="cookie-policy.html" class="text-blue-300 hover:text-blue-200 mt-2">Cookie Policy</a>
+          <a href="terms-of-service.html" class="text-blue-300 hover:text-blue-200 mt-2">Terms of Service</a>
+          <a href="#faq" class="text-blue-300 hover:text-blue-200 mt-2">F.A.Q</a>
         </div>
       </div>
-    </div>
-    <div class="mt-8 text-white text-sm">
-      <p>© 2023 Hair Transplant Company. All rights reserved.</p>
     </div>
   </div>
 </section>
