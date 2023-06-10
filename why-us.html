@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Why Us - Hair Transplant Company</title>
+  <title>Hair Transplant Company</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script type="text/javascript"
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js" defer></script>
+
+
   <style>
     /* Add CSS for the background color transition */
-    #hero {
-      background-color: #f5f5f5;
-    }
-
-    #contact-header {
-      background-color: #f90909;
-    }
-
-    #services {
-      background-color: #ebebeb;
+    body {
+      overflow-x: hidden;
     }
 
     #doctors {
       background-color: #ebebeb;
     }
-    
+
     #testimonials {
       background-color: #ebebeb;
     }
@@ -35,54 +32,141 @@
     body {
       transition: background-color 0.5s ease;
     }
+
+    /* New Colors */
+    #top-header {
+      background-color: #1454a2;
+      /* Blue color */
+    }
+
+    #top-header a:hover {
+      color: #00b8a9;
+      /* Mint green color */
+    }
   </style>
 </head>
-<body>
-  
-<!-- Top contact header -->
-<div id="contact-header" class="bg-red-600 py-2">
-  <div class="container mx-auto flex items-center justify-between px-4">
-    <div class="text-white">
-      <span class="mr-2">
-        <i class="fas fa-envelope"></i> info@example.com
-      </span>
-      <span>
-        <i class="fas fa-phone"></i> +123456789
-      </span>
-    </div>
-    <div class="flex items-center">
-      <a href="https://www.facebook.com/example" class="text-white mr-4">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://www.twitter.com/example" class="text-white mr-4">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://www.instagram.com/example" class="text-white">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-  </div>
-</div>
 
-<!-- Top Slim Header -->
-<header id="top-header" class="bg-blue-900 text-white py-3">
-  <div class="container mx-auto px-2 flex items-center justify-between">
-    <div class="flex items-center">
-      <a href="index.html"><img src="images/logo.png" alt="Company Logo" class="h-10 mr-2"></a>
-      <p class="text-lg hidden md:block">Providing quality hair transplant services</p>
+  <!-- Top contact header -->
+  <div id="contact-header" class="bg-blue-700 py-2 px-4">
+    <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
+      <div class="text-white">
+        <span class="mr-2">
+          <i class="fas fa-envelope"></i> info@example.com
+        </span>
+        <span>
+          <i class="fas fa-phone"></i> +123456789
+        </span>
+      </div>
+      <div class="flex items-center">
+        <a href="https://www.facebook.com/example" class="text-white mr-4" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com/example" class="text-white mr-4" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/example" class="text-white" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <div id="language-switcher" class="relative ml-4">
+          <div id="current-language" class="flex items-center cursor-pointer">
+            <i class="fas fa-globe mr-2"></i>
+            <span class="text-white">English</span>
+          </div>
+          <div id="language-list" class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden">
+            <ul>
+              <li>
+                <a href="#" onclick="changeLanguage('en'); return false;">
+                  <i class="fas fa-flag mr-2"></i>
+                  <span>English</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changeLanguage('de'); return false;">
+                  <i class="fas fa-flag mr-2"></i>
+                  <span>German</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changeLanguage('fr'); return false;">
+                  <i class="fas fa-flag mr-2"></i>
+                  <span>French</span>
+                </a>
+              </li>
+              <!-- Add more languages as needed -->
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <nav>
-      <ul class="flex space-x-4">
-        <li><a href="index.html" class="mr-4 button-link">Products</a></li>
-        <li><a href="index.html#services" class="button-link">Our Services</a></li>
-        <li><a href="index.html#testimonials" class="button-link">Testimonials</a></li>
-        <li><a href="index.html#contact" class="button-link">Contact</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="why-us.html">Why Us</a></li>
-      </ul>
-    </nav>
   </div>
-</header>
+  <!-- Google Translate API -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,de,fr,es',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false,
+          multilanguagePage: true
+        },
+        'google_translate_element'
+      );
+
+      // Call the setupLanguageSwitcher function once the Google Translate script is loaded
+      setupLanguageSwitcher();
+    }
+
+    function changeLanguage(languageCode) {
+      var select = document.querySelector(".goog-te-combo");
+      var event = new Event("change", { bubbles: true });
+      if (select) {
+        select.value = languageCode;
+        select.dispatchEvent(event);
+      } else {
+        console.error("Google Translate dropdown element not found.");
+      }
+    }
+
+
+
+    function setupLanguageSwitcher() {
+      var languageSwitcher = document.getElementById("language-switcher");
+      var currentLanguage = document.getElementById("current-language");
+      var languageList = document.getElementById("language-list");
+
+      if (languageSwitcher && currentLanguage && languageList) {
+        currentLanguage.addEventListener("click", function () {
+          languageList.classList.toggle("hidden");
+        });
+      } else {
+        console.error("Language switcher elements not found.");
+      }
+    }
+
+  </script>
+
+  <!-- Top Slim Header -->
+  <header id="top-header" class="bg-blue-700 text-white py-4 px-2">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="flex items-center">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Company Logo" class="h-12 md:h-16 mr-2">
+        </a>
+      </div>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
+          <li><a href="index.html#services" class="button-link hover:text-gray-300">Our Services</a></li>
+          <li><a href="index.html#testimonials" class="button-link hover:text-gray-300">Testimonials</a></li>
+          <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
+          <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
+          <li><a href="why-us.html" class="button-link hover:text-gray-300">Why Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
 
 <!-- Page Header -->
 <section id="page-header" class="bg-blue-900 text-white py-48 bg-cover bg-center" style="background-image: url(images/wallpaper.jpg);">
