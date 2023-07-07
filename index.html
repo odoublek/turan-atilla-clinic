@@ -1,569 +1,483 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hair Transplant Company</title>
+  <title>Vital Voyages</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <script type="text/javascript"
-    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js" defer></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  
-  <style>
-    body {
-      overflow-x: hidden;
-      transition: background-color 0.5s ease;
-    }
-    #top-header {
-      background-color: #1454a2;
-    
-    }
-    #top-header a:hover {
-      color: #00b8a9;
-      /* Mint green color */
-    }
-    #slider .swiper-slide {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    }
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    #slider .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 40rem;
-    }
-
-    #slider .swiper-slide-active {
-      opacity: 1;
-    }
-
-    .testimonial-fade-in {
-    animation: fade-in 1s ease-in-out;
-    opacity: 1;
-    }
-
-    @keyframes fade-in {
-      from {
-        opacity: 0;
-        transform: translateX(-100px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-
-  </style>
 </head>
 
-
-  <!-- Top contact header -->
-  <div id="contact-header" class="bg-blue-700 py-2 px-4">
-    <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
-      <div class="text-white">
-        <span class="mr-2">
-          <i class="fas fa-envelope"></i> info@example.com
-        </span>
-        <span>
-          <i class="fas fa-phone"></i> +123456789
-        </span>
-      </div>
-      <div class="flex items-center">
-        <a href="https://www.facebook.com/example" class="text-white mr-4" aria-label="Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.twitter.com/example" class="text-white mr-4" aria-label="Twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/example" class="text-white" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <div id="language-switcher" class="relative ml-4">
-          <div id="current-language" class="flex items-center cursor-pointer">
-            <i class="fas fa-globe mr-2"></i>
-            <span class="text-white">English</span>
-          </div>
-          <div id="language-list" class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden">
-            <ul>
-              <li>
-                <a href="#" onclick="changeLanguage('en'); return false;">
-                  <i class="fas fa-flag mr-2"></i>
-                  <span>English</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" onclick="changeLanguage('de'); return false;">
-                  <i class="fas fa-flag mr-2"></i>
-                  <span>German</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" onclick="changeLanguage('fr'); return false;">
-                  <i class="fas fa-flag mr-2"></i>
-                  <span>French</span>
-                </a>
-              </li>
-              <!-- Add more languages as needed -->
-            </ul>
-          </div>
+<body>
+  
+<!-- Top contact header -->
+<div id="contact-header" >
+  <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
+    <div class="text-white">
+      <span class="mr-2">
+        <i class="fas fa-envelope"></i> info@example.com
+      </span>
+      <span>
+        <i class="fas fa-phone"></i> +123456789
+      </span>
+    </div>
+    <div class="flex items-center">
+      <a href="https://www.facebook.com/example" class="text-white mr-4" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.twitter.com/example" class="text-white mr-4" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/example" class="text-white" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <div id="language-switcher" class="relative ml-4">
+        <div id="current-language" class="flex items-center cursor-pointer">
+          <i class="fas fa-globe mr-2"></i>
+          <span class="text-white">English</span>
+        </div>
+        <div id="language-list" class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden">
+          <ul>
+            <li>
+              <a href="#" onclick="changeLanguage('en'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>English</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="changeLanguage('de'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>German</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="changeLanguage('fr'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>French</span>
+              </a>
+            </li>
+            <!-- Add more languages as needed -->
+          </ul>
         </div>
       </div>
     </div>
   </div>
-  <!-- Google Translate API -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        {
-          pageLanguage: 'en',
-          includedLanguages: 'en,de,fr,es',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false,
-          multilanguagePage: true
-        },
-        'google_translate_element'
-      );
+</div>
 
-      // Call the setupLanguageSwitcher function once the Google Translate script is loaded
-      setupLanguageSwitcher();
-    }
-
-    function changeLanguage(languageCode) {
-      var select = document.querySelector(".goog-te-combo");
-      var event = new Event("change", { bubbles: true });
-      if (select) {
-        select.value = languageCode;
-        select.dispatchEvent(event);
-      } else {
-        console.error("Google Translate dropdown element not found.");
-      }
-    }
-
-
-
-    function setupLanguageSwitcher() {
-      var languageSwitcher = document.getElementById("language-switcher");
-      var currentLanguage = document.getElementById("current-language");
-      var languageList = document.getElementById("language-list");
-
-      if (languageSwitcher && currentLanguage && languageList) {
-        currentLanguage.addEventListener("click", function () {
-          languageList.classList.toggle("hidden");
-        });
-      } else {
-        console.error("Language switcher elements not found.");
-      }
-    }
-
-  </script>
-
-  <!-- Top Slim Header -->
-  <header id="top-header" class="bg-blue-700 text-white py-4 px-2">
-    <div class="container mx-auto flex items-center justify-between">
-      <div class="flex items-center">
-        <a href="index.html">
-          <img src="images/logo.png" alt="Company Logo" class="h-12 md:h-16 mr-2">
-        </a>
-      </div>
-      <nav>
-        <ul class="flex space-x-4">
-          <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
-          <li><a href="index.html#services" class="button-link hover:text-gray-300">Our Services</a></li>
-          <li><a href="index.html#testimonials" class="button-link hover:text-gray-300">Testimonials</a></li>
-          <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
-          <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
-          <li><a href="why-us.html" class="button-link hover:text-gray-300">Why Us</a></li>
-        </ul>
-      </nav>
+<!-- Navbar -->
+<header id="navbar" class="py-4 px-2">
+  <div class="container mx-auto flex items-center justify-between">
+    <div class="flex items-center">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Company Logo" class="h-12 md:h-16 mr-2">
+      </a>
     </div>
-  </header>
-  
-  <!-- Hero slider section -->
-  <section id="slider" class="py-16">
+    <nav>
+      <ul class="flex space-x-4">
+        <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
+        <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
+        <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
+        <li><a href="why-us.html" class="button-link hover:text-gray-300">Why Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero slider section -->
+<section id="hero-section">
+  <div id="slider-container" class="py-16">
     <div class="container mx-auto px-4">
       <div class="swiper-container" style="width: 100%; height: 500px;">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="bg-blue-100 text-gray-800 p-12" style="background-image:url(images/wallpaper.jpg); background-position: center center; height: 500px; object-fit: cover;">
-              <h3 class="text-3xl font-bold">Explanation Slide</h3>
+            <div class="slide-content">
+              <h3 class="text-3xl font-bold">Slide 1</h3>
               <p class="mt-5 text-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
               <a href="contact-us.html" class="bg-blue-700 text-white px-4 py-2 mt- rounded-md">Contact Us</a>
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="bg-blue-100 text-gray-800 p-12" style="background-image:url(images/wallpaper.jpg); background-position: center center; height: 500px; object-fit: cover;">
-              <h3 class="text-3xl font-bold">Explanation Slide</h3>
+            <div class="slide-content">
+              <h3 class="text-3xl font-bold">Slide 2</h3>
               <p class="mt-5 text-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
               <a href="contact-us.html" class="bg-blue-700 text-white px-4 py-2 mt- rounded-md">Contact Us</a>
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="bg-blue-100 text-gray-800 p-12" style="background-image:url(images/wallpaper.jpg); background-position: center center; height: 500px; object-fit: cover;">
-              <h3 class="text-3xl font-bold">Explanation Slide</h3>
+            <div class="slide-content">
+              <h3 class="text-3xl font-bold">Slide 3</h3>
               <p class="mt-5 text-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac mauris eget urna tincidunt vestibulum.</p>
               <a href="contact-us.html" class="bg-blue-700 text-white px-4 py-2 mt- rounded-md">Contact Us</a>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- Slide script -->
-    <script>
-      (function () {
-        var swiper = new Swiper('.swiper-container', {
-          slidesPerView: 1,
-          spaceBetween: 10,
-          loop: true,
-          autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        });
-      })();
-    </script>
-  </section>
 
-  <!--Services section -->
-  <section id="services" class="py-8 bg-blue-700">
-    <div class="container mx-auto px-4 ">
-      <h2 class="text-2xl font-bold mb-4 text-center text-white">Our Services</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-          <img src="images/hair-transplant.jpg" alt="Hair Transplantation" class="w-48 h-auto mx-auto mb-4">
-          <h3 class="text-xl font-bold mt-4 text-blue-700">Hair Transplantation</h3>
-          <p class="mt-4 text-blue-700">We offer advanced hair transplantation services to restore your natural hairline and help you regain your confidence. Our team of experienced surgeons uses state-of-the-art techniques for optimal results.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-          <img src="images/cosmetic.jpg" alt="Cosmetic Surgeries" class="w-48 h-auto mx-auto mb-4">
-          <h3 class="text-xl font-bold mt-4 text-blue-700">Cosmetic Surgeries</h3>
-          <p class="mt-4 text-blue-700">Enhance your appearance and achieve your aesthetic goals with our range of cosmetic surgery procedures. From facelifts to breast augmentations, our skilled surgeons deliver personalized and natural-looking results.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-          <img src="images/dental.jpg" alt="Dental Treatments" class="w-48 h-auto mx-auto mb-4">
-          <h3 class="text-xl font-bold mt-4 text-blue-700">Dental Treatments</h3>
-          <p class="mt-4 text-blue-700">Maintain a healthy and beautiful smile with our comprehensive dental treatments. Whether you need routine cleanings, teeth whitening, or complex procedures like dental implants, our experienced dentists are here to help.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-          <img src="images/wellness-retreats.jpg" alt="Wellness Retreats" class="w-48 h-auto mx-auto mb-4">
-          <h3 class="text-xl font-bold mt-4 text-blue-700">Wellness Retreats</h3>
-          <p class="mt-4 text-blue-700">Escape the daily stresses and rejuvenate your mind, body, and soul with our wellness retreats. Immerse yourself in serene environments, enjoy holistic therapies, and experience a transformative journey towards wellness.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-          <img src="images/orthopedic-surgery.jpg" alt="Orthopedic Surgery" class="w-48 h-auto mx-auto mb-4">
-          <h3 class="text-xl font-bold mt-4 text-blue-700">Orthopedic Surgery</h3>
-          <p class="mt-4 text-blue-700">Our orthopedic surgery services aim to address a variety of musculoskeletal conditions and injuries. Whether you require joint replacements, spine surgeries, or minimally invasive procedures, our skilled orthopedic surgeons provide comprehensive care for optimal recovery and improved mobility.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-          <img src="images/medical-checkups.jpg" alt="Medical Check-ups" class="w-48 h-auto mx-auto mb-4">
-          <h3 class="text-xl font-bold mt-4 text-blue-700">Medical Check-ups</h3>
-          <p class="mt-4 text-blue-700">Our medical check-up packages offer comprehensive assessments of your overall health. With a range of diagnostic tests, consultations with specialists, and personalized health evaluations, we ensure early detection of potential health issues and provide valuable insights for maintaining your well-being.</p>
-        </div>
+<!-- Services Overview section -->
+<section id="services-overview" class="py-8">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="service-box">
+        <i class="fas fa-syringe text-4xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Plastic Surgeries</h3>
+        <p class="text-gray-600">Performing plastic surgeries with the best professional doctors, using the latest technologies to help you go through safe and fast recovery plastic surgeries.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-spa text-4xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Cosmetic Treatments</h3>
+        <p class="text-gray-600">Simple cosmetic treatments are performed in a very short time. They work to improve the appearance of your skin, giving you a fresh, healthy, and younger look.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-cut text-4xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Hair Transplantation</h3>
+        <p class="text-gray-600">Using the latest technologies in the hair transplant field by the most qualified experts to give you the results you want.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-tooth text-4xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Cosmetic Dentistry</h3>
+        <p class="text-gray-600">Providing the best cosmetic dentistry treatments for your oral health, using one of the best German and Swiss materials recommended in the field of dentistry.</p>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
+
+
   <!-- Testimonials section -->
-  <section id="testimonials" class="py-8">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-4 text-center">Testimonials</h2>
-      <div id="testimonials-slider" class="swiper-container">
-        <div class="swiper-wrapper grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-          <div class="swiper-slide bg-white p-6 shadow-md flex flex-col items-center">
-            <img src="images/photo1.jpg" alt="Customer 1" class="customer-image w-48 h-auto mx-auto">
-            <h3 class="text-xl font-bold mt-4 text-center">John Doe</h3>
-            <p class="mt-2 text-center">"I had a great experience with Hair Transplant Company. The results exceeded my
-              expectations."</p>
+  <section id="testimonials" class="py-8 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-4">Client Testimonials</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget libero ac lorem pretium semper. Curabitur ullamcorper felis non turpis malesuada fermentum."</p>
+              <p class="testimonial-author">- John Doe</p>
+            </div>
           </div>
-          <div class="swiper-slide bg-white p-6 shadow-md flex flex-col items-center">
-            <img src="images/photo1.jpg" alt="Customer 1" class="customer-image w-48 h-auto mx-auto">
-            <h3 class="text-xl font-bold mt-4 text-center">Jane Smith</h3>
-            <p class="mt-2 text-center">"I highly recommend Hair Transplant Company to anyone looking for hair
-              restoration services."</p>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"Nullam ultrices justo ac est aliquet, id interdum mauris convallis. Duis iaculis tellus justo, sed suscipit nunc fringilla id."</p>
+              <p class="testimonial-author">- Jane Smith</p>
+            </div>
           </div>
-          <div class="swiper-slide bg-white p-6 shadow-md flex flex-col items-center">
-            <img src="images/photo1.jpg" alt="Customer 1" class="customer-image w-48 h-auto mx-auto">
-            <h3 class="text-xl font-bold mt-4 text-center">Mike Johnson</h3>
-            <p class="mt-2 text-center">"The team at Hair Transplant Company is professional and skilled. I am satisfied
-              with my hair transplant results."</p>
-          </div>
-          <div class="swiper-slide bg-white p-6 shadow-md flex flex-col items-center">
-            <img src="images/photo1.jpg" alt="Customer 1" class="customer-image w-48 h-auto mx-auto">
-            <h3 class="text-xl font-bold mt-4 text-center">Lisa Thompson</h3>
-            <p class="mt-2 text-center">"The service provided by Hair Transplant Company was exceptional. I'm thrilled
-              with my new hair."</p>
-          </div>
-          <div class="swiper-slide bg-white p-6 shadow-md flex flex-col items-center">
-            <img src="images/photo1.jpg" alt="Customer 1" class="customer-image w-48 h-auto mx-auto">
-            <h3 class="text-xl font-bold mt-4 text-center">David Wilson</h3>
-            <p class="mt-2 text-center">"I never thought I would regain my confidence, but Hair Transplant Company made
-              it possible. Thank you!"</p>
-          </div>
-          <div class="swiper-slide bg-white p-6 shadow-md flex flex-col items-center">
-            <img src="images/photo1.jpg" alt="Customer 1" class="customer-image w-48 h-auto mx-auto">
-            <h3 class="text-xl font-bold mt-4 text-center">David Wilson</h3>
-            <p class="mt-2 text-center">"I never thought I would regain my confidence, but Hair Transplant Company made
-              it possible. Thank you!"</p>
-          </div>
-          <div class="swiper-slide bg-white p-6 shadow-md flex flex-col items-center">
-            <img src="images/photo1.jpg" alt="Customer 1" class="customer-image w-48 h-auto mx-auto">
-            <h3 class="text-xl font-bold mt-4 text-center">David Wilson</h3>
-            <p class="mt-2 text-center">"I never thought I would regain my confidence, but Hair Transplant Company made
-              it possible. Thank you!"</p>
-          </div>
-          <div class="swiper-slide bg-gray-100 p-6 flex flex-col items-center">
-            <img src="images/photo1.jpg" alt="Customer 8" class="customer-image w-48 h-auto mx-auto">
-            <h3 class="text-xl font-bold mt-4 text-center">David Wilson</h3>
-            <p class="mt-2 text-center">"I never thought I would regain my confidence, but Hair Transplant Company made
-              it possible. Thank you!"</p>
-          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"Praesent rhoncus velit non ex bibendum, nec vestibulum risus lobortis. Integer interdum facilisis massa vel posuere."</p>
+              <p class="testimonial-author">- David Johnson</p>
+            </div>
           </div>
         </div>
-      </div>
-
-    </div>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var testimonialsSwiper = new Swiper("#testimonials-slider", {
-            slidesPerView: 1, // Number of testimonials to show at once
-            spaceBetween: 16, // Spacing between testimonials
-            navigation: {
-              nextEl: ".swiper-button-next", // Next button class or element
-              prevEl: ".swiper-button-prev", // Previous button class or element
-            },
-            breakpoints: {
-              // Responsive breakpoints
-              640: {
-                slidesPerView: 2,
-              },
-              768: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
-            },
-          });
-        });
-      </script>
-    </div>
-  </section>
-
-  <!-- Frequently Asked Questions section -->
-  <section id="faq" class="py-8 bg-blue-700">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-4 text-center text-white">Frequently Asked Questions</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-700">Q: What types of medical procedures do you assist with?</h3>
-          <p class="mt-4 text-gray-800">A: We specialize in arranging travel and accommodation for various medical procedures, including but not limited to hair transplants, cosmetic surgeries, dental treatments, and wellness retreats.</p>
-          <div class="flex justify-center mt-4">
-            <button class="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" onclick="scrollToPackages()">View Packages</button>
-          </div>
-        </div>
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-700">Q: Can you help me find a suitable doctor or clinic?</h3>
-          <p class="mt-4 text-gray-800">A: Absolutely! We have partnerships with reputable doctors and clinics in Istanbul. We will connect you with experienced professionals based on your specific medical needs.</p>
-          <div class="flex justify-center mt-4">
-            <button class="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" onclick="scrollToDoctors()">Our Team</button>
-          </div>
-        </div>
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-700">Q: What is included in your travel and health package?</h3>
-          <p class="mt-4 text-gray-800">A: Our travel and health packages typically include round-trip flights, accommodation, airport transfers, medical appointments, and post-treatment care. Additional services can be customized based on your requirements.</p>
-          <div class="flex justify-center mt-4">
-            <button class="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" onclick="scrollToPackages()">View Packages</button>
-          </div>
-        </div>
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-700">Q: How can I request a quote for a travel and health package?</h3>
-          <p class="mt-4 text-gray-800">A: To request a quote, please fill out the inquiry form on our website or contact our customer support team. Provide us with details about your desired procedure and travel preferences, and we will get back to you with a personalized package.</p>
-          <div class="flex justify-center mt-4">
-            <button class="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" onclick="scrollToPackages()">View Packages</button>
-          </div>
-        </div>
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-700">Q: Can I book a travel and health package for someone else?</h3>
-          <p class="mt-4 text-gray-800">A: Yes, you can book a package on behalf of someone else. Simply provide us with the necessary details of the person who will be undergoing the medical treatment, and we will take care of the arrangements accordingly.</p>
-          <div class="flex justify-center mt-4">
-            <button class="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" onclick="scrollToPackages()">View Packages</button>
-          </div>
-        </div>
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-700">Q: Are the medical facilities you work with accredited and trustworthy?</h3>
-          <p class="mt-4 text-gray-800">A: Yes, we partner with accredited and trustworthy medical facilities that meet international standards. We thoroughly assess their qualifications, experience, and patient reviews to ensure the highest quality of care for our clients.</p>
-          <div class="flex justify-center mt-4">
-            <button class="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" onclick="scrollToPackages()">View Packages</button>
-          </div>
-        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
   
-  <!-- Scripts for buttons to scroll -->
-  <script>
-    function scrollToPackages() {
-      const packagesSection = document.getElementById('packages');
-      packagesSection.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function scrollToDoctors() {
-      const doctorsSection = document.getElementById('doctors');
-      doctorsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
-
-  <!-- Packages section -->
-  <section id="packages" class="py-8">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">Packages</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <h3 class="text-xl font-bold mb-4">Package 1 (Budget)</h3>
-          <ul class="list-disc pl-6 mb-4">
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-            <li>Feature 4</li>
-          </ul>
-          <div class="text-center">
-            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Select</a>
-          </div>
+ <!-- FAQ section -->
+  <section id="faq" class="py-8 bg-blue-100">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-4">Frequently Asked Questions</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-title bg-white">
+          <h3 class="text-xl font-bold hover:text-blue-500">What types of medical procedures do you assist with?</h3>
+          <i class="fas fa-plus"></i>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <h3 class="text-xl font-bold mb-4">Package 2 (Standard)</h3>
-          <ul class="list-disc pl-6 mb-4">
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-            <li>Feature 4</li>
-            <li>Feature 5</li>
-          </ul>
-          <div class="text-center">
-            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Select</a>
-          </div>
+        <div class="accordion-content hidden bg-white">
+          <p>We specialize in arranging travel and accommodation for various medical procedures, including but not limited to hair transplants, cosmetic surgeries, dental treatments, and wellness retreats.</p>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <h3 class="text-xl font-bold mb-4">Package 3 (Premium)</h3>
-          <ul class="list-disc pl-6 mb-4">
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-            <li>Feature 4</li>
-            <li>Feature 5</li>
-            <li>Feature 6</li>
-          </ul>
-          <div class="text-center">
-            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Select</a>
-          </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title bg-white">
+          <h3 class="text-xl font-bold hover:text-blue-500">Can you help me find a suitable doctor or clinic?</h3>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="accordion-content hidden bg-white">
+          <p>Absolutely! We have partnerships with reputable doctors and clinics in Istanbul. We will connect you with experienced professionals based on your specific medical needs.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title bg-white">
+          <h3 class="text-xl font-bold hover:text-blue-500">What is included in your travel and health package?</h3>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="accordion-content hidden bg-white">
+          <p>Our travel and health packages typically include round-trip flights, accommodation, airport transfers, medical appointments, and post-treatment care. Additional services can be customized based on your requirements.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title bg-white">
+          <h3 class="text-xl font-bold hover:text-blue-500">How can I request a quote for a travel and health package?</h3>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="accordion-content hidden bg-white">
+          <p>To request a quote, please fill out the inquiry form on our website or contact our customer support team. Provide us with details about your desired procedure and travel preferences, and we will get back to you with a personalized package.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title bg-white">
+          <h3 class="text-xl font-bold hover:text-blue-500">Can I book a travel and health package for someone else?</h3>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="accordion-content hidden bg-white">
+          <p>Yes, you can book a package on behalf of someone else. Simply provide us with the necessary details of the person who will be undergoing the medical treatment, and we will take care of the arrangements accordingly.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title bg-white">
+          <h3 class="text-xl font-bold hover:text-blue-500">Are the medical facilities you work with accredited and trustworthy?</h3>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="accordion-content hidden bg-white">
+          <p>Yes, we partner with accredited and trustworthy medical facilities that meet international standards. We thoroughly assess their qualifications, experience, and patient reviews to ensure the highest quality of care for our clients.</p>
         </div>
       </div>
     </div>
+  </div>
   </section>
 
-  <!-- Doctors section -->
-  <section id="doctors" class="py-8">
+  <!-- Additional Services section -->
+<section id="additional-services" class="py-8 bg-gray-100">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="service-box">
+        <i class="fas fa-suitcase text-4xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Multi packages</h3>
+        <p class="text-gray-600">From affordable packages to VIP packages, we provide a range of options to suit different budgets and needs. If you're looking for a customized package, please <a href="contact-us.html" class="font-bold text-blue-600">contact our customer support</a>.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-language text-4xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Multilingual staff</h3>
+        <p class="text-gray-600">Our team of professionals can assist you in multiple languages, ensuring effective communication and personalized care.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-handshake text-4xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Satisfaction guaranteed</h3>
+        <p class="text-gray-600">We are committed to providing exceptional service and ensuring your complete satisfaction throughout your medical journey.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-user-md text-4xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Experienced doctors</h3>
+        <p class="text-gray-600">Our experienced doctors specialize in their respective fields, ensuring the highest quality care and successful outcomes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Packages section -->
+<section id="packages" class="py-8">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6 text-center">Packages</h2>
+    <div class="packages-container">
+      <!-- Package 1 -->
+      <div class="package package-gold">
+        <h3 class="text-xl font-bold mb-4">Gold Package</h3>
+        <p class="mb-4">This package is designed for people who want to have their medical surgery and keep other costs minimal.</p>
+        <ul class="list-disc pl-6 mb-4">
+          <li>3-star accommodation</li>
+          <li>Plane tickets</li>
+          <li>VIP transport</li>
+          <li>3-star hotel</li>
+          <li>Additional features...</li>
+        </ul>
+        <div class="text-center">
+          <a href="contact-us.html" class="select-button">Select</a>
+        </div>
+      </div>
+      <!-- Package 2 -->
+      <div class="package package-platinum">
+        <h3 class="text-xl font-bold mb-4">Platinum Package</h3>
+        <p class="mb-4">This package offers a higher level of comfort and includes all the features of the Gold Package.</p>
+        <ul class="list-disc pl-6 mb-4">
+          <li>4-star accommodation</li>
+          <li>All features from Gold Package</li>
+          <li>Additional features...</li>
+        </ul>
+        <div class="text-center">
+          <a href="contact-us.html" class="select-button">Select</a>
+        </div>
+      </div>
+      <!-- Package 3 -->
+      <div class="package package-diamond">
+        <h3 class="text-xl font-bold mb-4">Diamond Package</h3>
+        <p class="mb-4">This package is tailored for those who want to have their surgery with VIP luxury services and explore the beauty of Istanbul.</p>
+        <ul class="list-disc pl-6 mb-4">
+          <li>5-star accommodation</li>
+          <li>VIP transport</li>
+          <li>Customized offers to explore Istanbul</li>
+          <li>Additional features...</li>
+        </ul>
+        <div class="text-center">
+          <a href="contact-us.html" class="select-button">Select</a>
+        </div>
+      </div>
+      <!-- Package 4 -->
+      <div class="package package-custom">
+        <h3 class="text-xl font-bold mb-4">Customized Package</h3>
+        <p class="mb-4">This package is designed for people who only need specific medical surgery or accommodation based on their individual needs.</p>
+        <ul class="list-disc pl-6 mb-4">
+          <li>Customized features based on customer needs</li>
+          <li>Additional features...</li>
+        </ul>
+        <div class="text-center">
+          <a href="contact-us.html" class="select-button">Select</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- the team section -->
+  <section id="the-team" class="py-8">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-2xl font-bold mb-4">The Team</h2>
       <div class="flex flex-wrap justify-center">
+        
         <!-- Doctor 1 -->
-        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 mb-4">
-          <img src="images/photo1.jpg" alt="Doctor 1" class="mx-auto mb-2 rounded-full w-24 h-24">
-          <h3 class="text-lg font-bold">Dr. John Doe</h3>
-          <p class="text-gray-600">Hair Transplant Specialist</p>
-          <div class="flex justify-center mt-2">
-            <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
-              <i class="fab fa-linkedin"></i>
-            </a>
+        <div class="p-3 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 mb-4">
+          <div class="bg-white rounded-lg shadow-lg p-6 h-210"">
+            <img src="images/emre.jpeg" alt="Doctor 1" class="mx-auto mb-2 rounded-full doctor-image">
+            <h3 class="text-lg font-bold">Dr. Emre Güvercin</h3>
+            <p class="text-gray-600">Assistant Professor</p>
+            <hr class="doctor-divider">
+            <div class="flex justify-center mt-2">
+              <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+            <div id="doctor1-details" class="mt-4">
+              <p>Dr. Emre Güvercin is our team's leading plastic surgeon. Graduating from the well-respected Ankara University Medical School - scoring a much-needed high grade to begin specializing in plastic surgery in Dr. Lütfi Kırdar Education and Research Hospital. He continues to excel in his work, providing academic lessons and practical lessons in Maltepe University teaching the art of Plastic and Reconstructive surgery.</p>
+              <button onclick="toggleOperations('doctor1-operations', 'doctor1-details', this)" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">Check Operations</button>
+              <a href="contact-us.html" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">Schedule an Appointment</a>
+            </div>
+            <div id="doctor1-operations" class="hidden mt-4">
+              <p> OPERATIONS</p>
+              <ul class="text-left">
+                <li>Post Bariatric Surgery (reforming deformities after rapid weight loss)</li>
+                <li>Rhinoplasty</li>
+                <li>Facial aesthetics</li>
+                <li>Breast surgery (implants, reduction, upper body lift)</li>
+                <li>Temporal lift</li>
+                <li>Blepharoplasty (eyelid surgery)</li>
+                <li>Liposuction & body reformation (abdominal, waist and buttocks aesthetics)</li>
+                <li>Mommy makeover (Abdominal and breast reformation)</li>
+                <li>Birth deformities (cleft lip & cleft palate)</li>
+                <li>Burn treatment</li>
+                <li>Hand surgery</li>
+              </ul>
+              <a href="contact-us.html" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">Schedule an Appointment</a>
+            </div>
           </div>
-          <div id="doctor1-details" class="hidden mt-4">
-            <p>Dr. John Doe is a highly experienced hair transplant specialist with over 10 years of practice. He has successfully performed thousands of hair restoration procedures, helping patients regain their confidence and achieve natural-looking results.</p>
-            <a href="contact-us.html" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">Schedule an Appointment</a>
-          </div>
-          <button onclick="toggleDetails('doctor1-details', this)" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">See Doctor Details</button>
         </div>
-
+        
         <!-- Doctor 2 -->
-        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 mb-4">
-          <img src="images/doctor2.jpg" alt="Doctor 2" class="mx-auto mb-2 rounded-full w-24 h-24">
-          <h3 class="text-lg font-bold">Dr. Jane Smith</h3>
-          <p class="text-gray-600">Hair Restoration Surgeon</p>
-          <div class="flex justify-center mt-2">
-            <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
-              <i class="fab fa-linkedin"></i>
-            </a>
+        <div class="p-3 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 mb-4">
+          <div class="bg-white rounded-lg shadow-lg p-6 h-210"">
+            <img src="images/eren.jpeg" alt="Doctor 2" class="mx-auto mb-2 rounded-full doctor-image">
+            <h3 class="text-lg font-bold">Dr. Emre Güvercin</h3>
+            <p class="text-gray-600">Assistant Professor</p>
+            <hr class="doctor-divider">
+            <div class="flex justify-center mt-2">
+              <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+            <div id="doctor2-details" class="mt-4">
+              <p class="mt-">Dr. Halit Eren Taşkın is our team's leading bariatric surgeon. Graduating from the prestigious Cerrhapaşa university - he continued his practices in Cleveland Clinic, USA in the endocrinologic surgery department. During his stay there he released 3 books and many research articles. Dr. Eren Taşkın has thousands of gastric bypass and revision surgeries under his sleeve. He continues to be a chair of committee in the International Federation for the Surgery of Obesity and Metabolic </p>
+              <button onclick="toggleOperations('doctor1-operations', 'doctor1-details', this)" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">Check Operations</button>
+              <a href="contact-us.html" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">Schedule an Appointment</a>
+            </div>
+            <div id="doctor1-operations" class="hidden mt-4">
+              <p> OPERATIONS</p>
+              <ul class="text-left">
+                <li>Sleeve Gastrectomy (Through laparoscopy, ⅔ of the stomach is removed)</li>
+                <li>Gastric bypass (Through laparoscopy, surgical staples are used)</li>
+                <li>Intragastric balloon (Saline-filled silicone balloon placement)</li>
+                <li>Gastric Botox (temporarily relaxes muscles and slows stomach emptying)</li>
+                <li>Revisional surgery (Post-op weight gain)
+              <a href="contact-us.html" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">Schedule an Appointment</a>
+            </div>
           </div>
-          <div id="doctor2-details" class="hidden mt-4">
-            <p>Dr. Jane Smith is a renowned hair restoration surgeon specializing in advanced techniques. With a compassionate approach and exceptional surgical skills, she has helped numerous patients achieve natural-looking hair transformations.</p>
-            <a href="contact-us.html"   class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">Schedule an Appointment</a>
-          </div>
-          <button onclick="toggleDetails('doctor2-details', this)" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">See Doctor Details</button>
         </div>
 
         <!-- Doctor 3 -->
-        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 mb-4">
-          <img src="images/doctor3.jpg" alt="Doctor 3" class="mx-auto mb-2 rounded-full w-24 h-24">
-          <h3 class="text-lg font-bold">Dr. David Johnson</h3>
-          <p class="text-gray-600">Hair Transplant Specialist</p>
-          <div class="flex justify-center mt-2">
-            <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
-              <i class="fab fa-linkedin"></i>
-            </a>
+        <div class="p-3 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 mb-4">
+          <div class="bg-white rounded-lg shadow-lg p-6 h-210"">
+            <img src="images/emre.jpeg" alt="Doctor 3" class="mx-auto mb-2 rounded-full doctor-image">
+            <h3 class="text-lg font-bold">Dr. Emre Güvercin</h3>
+            <p class="text-gray-600">Assistant Professor</p>
+            <hr class="doctor-divider">
+            <div class="flex justify-center mt-2">
+              <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-700 mx-2">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+            <div id="doctor1-details" class="mt-4">
+              <p>Dr. Emre Güvercin is our team's leading plastic surgeon. Graduating from the well-respected Ankara University Medical School - scoring a much-needed high grade to begin specializing in plastic surgery in Dr. Lütfi Kırdar Education and Research Hospital. He continues to excel in his work, providing academic lessons and practical lessons in Maltepe University teaching the art of Plastic and Reconstructive surgery.</p>
+              <button onclick="toggleOperations('doctor1-operations', 'doctor1-details', this)" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">Check Operations</button>
+              <a href="contact-us.html" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">Schedule an Appointment</a>
+            </div>
+            <div id="doctor1-operations" class="hidden mt-4">
+              <p> OPERATIONS</p>
+              <ul class="text-left">
+                <li>Post Bariatric Surgery (reforming deformities after rapid weight loss)</li>
+                <li>Rhinoplasty</li>
+                <li>Facial aesthetics</li>
+                <li>Breast surgery (implants, reduction, upper body lift)</li>
+                <li>Temporal lift</li>
+                <li>Blepharoplasty (eyelid surgery)</li>
+                <li>Liposuction & body reformation (abdominal, waist and buttocks aesthetics)</li>
+                <li>Mommy makeover (Abdominal and breast reformation)</li>
+                <li>Birth deformities (cleft lip & cleft palate)</li>
+                <li>Burn treatment</li>
+                <li>Hand surgery</li>
+              </ul>
+              <a href="contact-us.html" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">Schedule an Appointment</a>
+            </div>
           </div>
-          <div id="doctor3-details" class="hidden mt-4">
-            <p>Dr. David Johnson is a dedicated hair transplant specialist known for his artistic approach to hair restoration. With a passion for creating natural-looking results, he has transformed the lives of many patients struggling with hair loss.</p>
-            <a href="contact-us.html"  class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">Schedule an Appointment</a>
-          </div>
-          <button onclick="toggleDetails('doctor3-details', this)" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded">See Doctor Details</button>
         </div>
       </div>
     </div>
   </section>
-  <!-- JS -->
-  <script>
-    function toggleDetails(doctorId, button) {
-      var details = document.getElementById(doctorId);
-      details.classList.toggle('hidden');
-      button.style.display = 'none';
-    }
-  </script>
 
   <!-- Bottom Footer content -->
   <section id="footer" class="bg-blue-500 py-8">

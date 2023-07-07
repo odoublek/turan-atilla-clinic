@@ -9,3 +9,20 @@ siteye dil ekle
 
 1473 576
 
+packagelar basic-gold-diamond
+
+
+main color
+#003366
+secondary color
+#FFFFFF 
+
+
+treatment from the customer. We have plenty offers for the customers. This website has a contact header on top, than a navbar, a slider, why us section, faq section, the team section, packages section and bottom footer. I build this website on html, tailwind, additional css and javascript for some stuff.
+
+
+
+
+hero slider why choose turkey ekle https://hairlinetransplantturkey.com/cost/?gclid=Cj0KCQjwwISlBhD6ARIsAESAmp7JF61dDDIJn_BUMqcAPb2sSjwAeCZxm3VpBB_dugSHLMSCjCPJqmwaArejEALw_wcB
+google trustpilot ekle hero slider altina
+navbar separater

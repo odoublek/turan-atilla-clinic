@@ -9,45 +9,13 @@
   <script type="text/javascript"
     src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js" defer></script>
-
-
-  <style>
-    /* Add CSS for the background color transition */
-    body {
-      overflow-x: hidden;
-    }
-
-    #doctors {
-      background-color: #ebebeb;
-    }
-
-    #testimonials {
-      background-color: #ebebeb;
-    }
-
-    #contact {
-      background-color: #b5b5b5;
-    }
-
-    body {
-      transition: background-color 0.5s ease;
-    }
-
-    /* New Colors */
-    #top-header {
-      background-color: #1454a2;
-      /* Blue color */
-    }
-
-    #top-header a:hover {
-      color: #00b8a9;
-      /* Mint green color */
-    }
-  </style>
-</head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/css/intlTelInput.css">
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/intlTelInput.min.js"></script>
+  </head>
 
   <!-- Top contact header -->
-  <div id="contact-header" class="bg-blue-700 py-2 px-4">
+  <div id="contact-header" class="py-2 px-4">
     <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
       <div class="text-white">
         <span class="mr-2">
@@ -116,7 +84,6 @@
       // Call the setupLanguageSwitcher function once the Google Translate script is loaded
       setupLanguageSwitcher();
     }
-
     function changeLanguage(languageCode) {
       var select = document.querySelector(".goog-te-combo");
       var event = new Event("change", { bubbles: true });
@@ -127,9 +94,6 @@
         console.error("Google Translate dropdown element not found.");
       }
     }
-
-
-
     function setupLanguageSwitcher() {
       var languageSwitcher = document.getElementById("language-switcher");
       var currentLanguage = document.getElementById("current-language");
@@ -146,8 +110,8 @@
 
   </script>
 
-  <!-- Top Slim Header -->
-  <header id="top-header" class="bg-blue-700 text-white py-4 px-2">
+  <!-- Navbar -->
+  <header id="navbar" class=" text-white py-4 px-2">
     <div class="container mx-auto flex items-center justify-between">
       <div class="flex items-center">
         <a href="index.html">
@@ -157,8 +121,6 @@
       <nav>
         <ul class="flex space-x-4">
           <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
-          <li><a href="index.html#services" class="button-link hover:text-gray-300">Our Services</a></li>
-          <li><a href="index.html#testimonials" class="button-link hover:text-gray-300">Testimonials</a></li>
           <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
           <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
           <li><a href="why-us.html" class="button-link hover:text-gray-300">Why Us</a></li>
@@ -169,40 +131,66 @@
   
 
 <!-- Page Header -->
-<section id="page-header" class="bg-blue-900 text-white py-48 bg-cover bg-center" style="background-image:url(images/wallpaper.jpg);">
+<section id="page-header" class=" text-white py-64 bg-cover bg-center" style="background-image:url(images/contact-us-bg.jpg);">
+  <div class="container mx-auto px-4 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Contact with us! </h1>
+    <p class="text-xl md:text-2xl font-bold">Welcome! Please do not hesitate to ask your questions freely about how we operate or our services. Our team of highly trained experts will provide you the necessary information.</p>
+  </div>
 </section>
 
 <!-- Contact section -->
-<section id="contact" class="py-8">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-2xl font-bold mb-4">Contact Us
-      <a href="https://wa.me/1234567890" class="ml-2 text-blue-500 hover:text-blue-600">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </h2>
-    <div id="contact-form">
-      <form>
-        <div class="mb-4">
-          <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-        </div>
-        <div class="mb-4">
-          <label for="phone" class="block text-lg font-medium text-gray-700 mb-2">Phone Number</label>
-          <input type="text" id="phone" name="phone" placeholder="Your Phone Number" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-        </div>
-        <div class="mb-4">
-          <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-        </div>
-        <div class="mb-8">
-          <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
-        </div>
-        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full">Submit</button>
-      </form>
+<section id="contact" class="py-8" style="background-color:azure">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row">
+    <!-- Left Side (Video Background) -->
+    <div class="md:w-1/2" style="margin-right: 20px;">
+      <video autoplay loop muted class="h-auto w-full" style="min-height: 400px; width: 1000px;">
+        <source src="images/bogaz-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    <!-- Right Side (Contact Form) -->
+    <div class="container mx-auto px-4 text-center md:w-1/2">
+      <h2 class="text-2xl font-bold mb-4">Contact Us
+        <a href="https://wa.me/1234567890" class="ml-2 text-blue-500 hover:text-blue-600">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </h2>
+      <div id="contact-form">
+        <form>
+          <div class="mb-4">
+            <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div class="mb-4">
+            <label for="phone" class="block text-lg font-medium text-gray-700 mb-2">Phone Number</label>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number" class="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div class="mb-8">
+            <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+          </div>
+          <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  var input = document.querySelector("#phone-number");
+  var iti = window.intlTelInput(input, {
+    preferredCountries: ['pl', 'us'], // Set preferred countries
+    separateDialCode: true, // Show the country dial code separately
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/utils.js" // Include the utility script
+  });
+</script>
+
+
 
 <!-- Bottom Footer content -->
 <section id="footer" class="bg-blue-500 py-8">
