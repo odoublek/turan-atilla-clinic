@@ -67,48 +67,6 @@
       </div>
     </div>
   </div>
-  <!-- Google Translate API -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        {
-          pageLanguage: 'en',
-          includedLanguages: 'en,de,fr,es',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false,
-          multilanguagePage: true
-        },
-        'google_translate_element'
-      );
-
-      // Call the setupLanguageSwitcher function once the Google Translate script is loaded
-      setupLanguageSwitcher();
-    }
-    function changeLanguage(languageCode) {
-      var select = document.querySelector(".goog-te-combo");
-      var event = new Event("change", { bubbles: true });
-      if (select) {
-        select.value = languageCode;
-        select.dispatchEvent(event);
-      } else {
-        console.error("Google Translate dropdown element not found.");
-      }
-    }
-    function setupLanguageSwitcher() {
-      var languageSwitcher = document.getElementById("language-switcher");
-      var currentLanguage = document.getElementById("current-language");
-      var languageList = document.getElementById("language-list");
-
-      if (languageSwitcher && currentLanguage && languageList) {
-        currentLanguage.addEventListener("click", function () {
-          languageList.classList.toggle("hidden");
-        });
-      } else {
-        console.error("Language switcher elements not found.");
-      }
-    }
-
-  </script>
 
   <!-- Navbar -->
   <header id="navbar" class=" text-white py-4 px-2">

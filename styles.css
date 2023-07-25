@@ -1,4 +1,5 @@
 body {
+  max-width: 1600px;
   font-family: Arial, sans-serif;
   line-height: 1.5;
   background-color: #f8f8f8;
@@ -16,6 +17,7 @@ body {
 .text-blue-600 {
   color: #2563eb;
 }
+
 
 /* Top contact header */
 #contact-header {
@@ -88,9 +90,25 @@ body {
 
 /* Hero Section */
 #hero-section {
-  background-image: url(images/blue-bg-istanbul.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  transition: background-image 0.3s ease;
+  height: 650px;
+  padding-top: 10px;
+  padding-bottom: 300px;
+}
+
+#hero-section.slide-1 {
+  background-image: linear-gradient(to bottom, rgba(36, 52, 168, 0.801), rgba(0, 123, 255, 0.2)), url(images/blue-bg-istanbul.jpg);
+}
+
+#hero-section.slide-2 {
+  background-image: linear-gradient(to top, rgba(36, 52, 168, 0.801), rgba(0, 123, 255, 0.2)), url(images/haghia-sophia.jpg);
+ 
+}
+
+#hero-section.slide-3 {
+  background-image: linear-gradient(to bottom, rgba(50, 205, 50, 0.801), rgba(0, 128, 0, 0.2)), url(images/green-bg-istanbul.jpg);
 }
 
 #hero-section .swiper-slide {
@@ -102,8 +120,9 @@ body {
 #hero-section .slide-content {
   color: #FFFFFF;
   text-align: center;
-  padding: 2rem;
+  padding: 7rem;
   max-width: 600px;
+  
 }
 
 #hero-section h3 {
@@ -130,9 +149,29 @@ body {
   background-color: #FFFFFF;
 }
 
-#services-overview {
+.button-container {
+  margin-top: 1rem;
+}
+
+.service-button {
+  display: inline-block;
+  background-color: #3182ce;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.service-button:hover {
+  background-color: #2765c9;
+}
+
+
+/* Additional Services Section */
+#additional-services {
   padding: 2rem 0;
-  background-color: #f9fafb;
+  background-color: #003366;
 }
 
 .service-box {
@@ -141,6 +180,13 @@ body {
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 2rem;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.service-box:hover {
+  background-color: #ebf8ff; /* Light blue background color on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increased box shadow on hover */
+  color: #3182ce; /* Blue text color on hover */
 }
 
 .service-box i {
@@ -159,55 +205,195 @@ body {
   color: #718096;
 }
 
-
-/* Testimonials Section */
-#testimonials {
-  padding: 2rem 0;
-  background-color: #f9fafb;
-}
-
-#testimonials h2 {
-  font-size: 1.875rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
+/* Testimonials section */
 .testimonial-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
   background-color: #ffffff;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial-text {
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.testimonial-photo img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+.testimonial-details {
+  flex: 1;
+}
+
+.testimonial-rating {
+  margin-bottom: 0.5rem;
+}
+
+.rating-icon {
+  color: #FFD700;
+  font-size: 1rem;
+}
+
+.testimonial-comment {
   font-size: 1.125rem;
-  font-style: italic;
-  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: #333333;
+  margin-bottom: 0.5rem;
 }
 
 .testimonial-author {
+  font-size: 1rem;
+  color: #777777;
+}
+
+/* Comparison table */
+#comparison-table {
+  background-color: #003366;
+  color: #FFFFFF;
+  padding: 8rem 0;
+}
+
+#comparison-table h2 {
+  font-size: 2rem;
   font-weight: bold;
-  color: #718096;
+  margin-bottom: 2rem;
+}
+
+#comparison-table p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+#comparison-table p:last-child {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  color: #003366;
+}
+
+.table th, .table td {
+  padding: 1rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.table th {
+  background-color: #0778ea;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tr:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+
+.table tr:hover {
+  background-color: #cce0ff;
+  cursor: pointer;
+}
+
+
+
+/* Packages Section */
+#packages {
+  background-color: #f9f9f9; /* Choose a color that suits your design */
+  padding: 80px 0;
+}
+
+.packages-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  .package-gold {
+    background-color: #FFD700; 
+  }
+  
+  .package-platinum {
+    background-color: #C0C0C0; 
+  }
+  
+  .package-diamond {
+    background-color: #B9F2FF; 
+  }
+
+  .package-custom{
+    background-color: #FFC0CB ;
+  }
+  
+}
+
+.package h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.package p {
+  margin-bottom: 16px;
+}
+
+
+
+.package {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+.package .select-button {
+  display: inline-block;
+  background-color: #4c51bf; /* Choose a color that suits your design */
+  color: #ffffff;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+.package .select-button:hover {
+  background-color: #3740a1; /* Choose a color that suits your design */
 }
 
 /* FAQ Section */
 #faq {
-  background-color: #007BFF;
+  background-color: #003366;
+  color: #FFFFFF;
   padding: 2rem 0;
 }
+
 #faq h2 {
-  color: #FFFFFF;
+  font-size: 2.5rem;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 4rem;
 }
 
-.accordion {
-  margin-top: 1.5rem;
-}
-
-.accordion-item {
-  margin-bottom: 1.5rem;
+.accordion-item:not(:last-child) {
+  border-bottom: 1px solid #edeff2;
 }
 
 .accordion-title {
@@ -215,20 +401,26 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #007BFF;
+  background-color: #0056b3;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .accordion-title:hover {
+  background-color: #007BFF;
+}
+
+.accordion-title.active {
   background-color: #0056b3;
 }
 
-.accordion-title:hover h3 {
-  color: #CCEEFF;
+.accordion-title.active h3 {
+  color: #FFFFFF;
 }
 
 .accordion-title .plus-minus {
+  color: #CCEEFF;
+  font-size: 1rem;
   transition: transform 0.3s ease;
 }
 
@@ -238,22 +430,62 @@ body {
 
 .accordion-content {
   padding: 1.5rem;
-  background-color: #007BFF;
+  background-color: #0056b3;
   transition: max-height 0.3s ease;
   max-height: 0;
   overflow: hidden;
   line-height: 1.5;
 }
 
-.accordion-item.active .accordion-title,
-.accordion-item.active .accordion-content {
-  background-color: #0056b3;
-  color: #FFFFFF;
-}
-
 .accordion-item.active .accordion-content {
   max-height: 1000px;
 }
+
+
+
+/* Bottom Footer Section */
+#footer {
+  background-color: #007BFF;
+  padding: 4rem 0; 
+}
+
+#footer h3 {
+  color: #FFFFFF;
+  font-size: 1.5rem; /* Adjust the font size as desired */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#footer p {
+  color: #FFFFFF;
+  font-size: 1rem; /* Adjust the font size as desired */
+  margin-bottom: 1rem;
+}
+
+#footer a {
+  color: #CCEEFF;
+  transition: color 0.3s ease;
+}
+
+#footer a:hover {
+  color: #A8D8FF;
+}
+
+#footer .flex {
+  margin-top: 1rem;
+}
+
+#footer i {
+  color: #CCEEFF;
+  font-size: 1rem; /* Adjust the font size as desired */
+  margin-right: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+#footer i:hover {
+  color: #A8D8FF;
+}
+
 
 
 /* Footer */
@@ -275,6 +507,8 @@ body {
   margin-right: 0;
 }
 
+
+/* contact-us.html */
 /* Contact section */
 #contact {
   background-color: #b5b5b5;
@@ -353,285 +587,3 @@ body {
 #footer a:hover {
   color: #fff;
 }
-
-
-/* Additional Services Section */
-#additional-services {
-  padding: 2rem 0;
-  background-color: #f9fafb;
-}
-
-.service-box {
-  text-align: center;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-}
-
-.service-box:hover {
-  background-color: #ebf8ff; /* Light blue background color on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increased box shadow on hover */
-  color: #3182ce; /* Blue text color on hover */
-}
-
-.service-box i {
-  font-size: 3rem;
-  color: #3182ce; /* Blue color */
-}
-
-.service-box h3 {
-  font-size: 1.875rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.service-box p {
-  font-size: 1.125rem;
-  color: #718096;
-}
-
-/* Packages Section */
-#packages {
-  background-color: #f9f9f9; /* Choose a color that suits your design */
-  padding: 80px 0;
-}
-
-.packages-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  .package-gold {
-    background-color: #FFD700; 
-  }
-  
-  .package-platinum {
-    background-color: #C0C0C0; 
-  }
-  
-  .package-diamond {
-    background-color: #B9F2FF; 
-  }
-
-  .package-custom{
-    background-color: #FFC0CB ;
-  }
-  
-}
-
-.package h3 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-
-.package p {
-  margin-bottom: 16px;
-}
-
-
-
-.package {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 24px;
-}
-
-.package .select-button {
-  display: inline-block;
-  background-color: #4c51bf; /* Choose a color that suits your design */
-  color: #ffffff;
-  font-weight: bold;
-  padding: 12px 24px;
-  border-radius: 9999px;
-  transition: background-color 0.3s ease;
-}
-
-.package .select-button:hover {
-  background-color: #3740a1; /* Choose a color that suits your design */
-}
-
-
-
-/* Team Section */
-#the-team {
-  background-color: #003366;
-  padding: 8rem 0;
-}
-
-#the-team h2 {
-  color: #FFFFFF;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
-#the-team .team-member {
-  width: 100%;
-  padding: 0 1rem;
-  margin-bottom: 2rem; /* Add margin-bottom to create space */
-}
-
-@media (min-width: 640px) {
-  #the-team .team-member {
-    width: 200%;
-    margin-bottom: 2rem; /* Add margin-bottom to create space */
-  }
-}
-
-@media (min-width: 768px) {
-  #the-team .team-member {
-    width: 200%;
-    margin-bottom: 2rem; /* Add margin-bottom to create space */
-  }
-}
-
-@media (min-width: 1024px) {
-  #the-team .team-member {
-    width: 25%;
-    margin-bottom: 2rem; /* Add margin-bottom to create space */
-  }
-}
-
-.doctor-divider {
-  border-top: 1px solid #00b8a9; 
-  margin: 0.75rem 0;
-}
-
-
-#the-team img#doctor1 {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  width: 10rem;
-  height: 10rem; 
-  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.2);
-
-}
-
-#the-team img#doctor2 {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  width: 10rem;
-  height: 10rem; 
-  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.2);
-
-}
-
-#the-team h3 {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-#the-team p {
-  margin-top: 1rem;
-  color: #4A4A4A;
-  margin-top: 1rem;
-}
-
-#the-team .flex.justify-center {
-  justify-content: center;
-  margin-top: 0.5rem;
-}
-
-#the-team .text-gray-500 {
-  color: #FFFFFF;
-  transition: color 0.3s ease;
-}
-
-#the-team .text-gray-500:hover {
-  color: #FFFFFF;
-}
-
-#the-team .hidden {
-  display: none;
-}
-
-#the-team .mt-4 {
-  margin-top: 1rem;
-}
-
-#the-team .bg-blue-700 {
-  background-color: #003366;
-  transition: background-color 0.3s ease;
-}
-
-#the-team .bg-blue-700:hover {
-  background-color: #0056b3;
-}
-
-#the-team .text-white {
-  color: #FFFFFF;
-}
-
-#the-team .py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-#the-team .px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-#the-team .rounded {
-  border-radius: 0.25rem;
-}
-
-#the-team button {
-  cursor: pointer;
-}
-
-#the-team button:focus {
-  outline: none;
-}
-
-
-/* Bottom Footer Section */
-#footer {
-  background-color: #007BFF;
-  padding: 4rem 0; /* Adjust the padding as desired */
-}
-
-#footer h3 {
-  color: #FFFFFF;
-  font-size: 1.5rem; /* Adjust the font size as desired */
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-#footer p {
-  color: #FFFFFF;
-  font-size: 1rem; /* Adjust the font size as desired */
-  margin-bottom: 1rem;
-}
-
-#footer a {
-  color: #CCEEFF;
-  transition: color 0.3s ease;
-}
-
-#footer a:hover {
-  color: #A8D8FF;
-}
-
-#footer .flex {
-  margin-top: 1rem;
-}
-
-#footer i {
-  color: #CCEEFF;
-  font-size: 1rem; /* Adjust the font size as desired */
-  margin-right: 0.5rem;
-  transition: color 0.3s ease;
-}
-
-#footer i:hover {
-  color: #A8D8FF;
-}
-
-

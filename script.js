@@ -1,19 +1,46 @@
 
 // Hero Slider
 document.addEventListener("DOMContentLoaded", function() {
-  var swiper = new Swiper('#slider-container', {
+  var swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     spaceBetween: 10,
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 300000,
       disableOnInteraction: false,
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
+    on: {
+      slideChange: function() {
+        var activeSlideIndex = this.realIndex;
+        var heroSection = document.getElementById('hero-section');
+        heroSection.className = '';
+        heroSection.classList.add('slide-' + (activeSlideIndex + 1));
+      },
+    },
   });
+});
+
+
+
+// navbar hero script
+window.addEventListener('scroll', function() {
+  var contactHeader = document.getElementById('contact-header');
+  var navbar = document.getElementById('navbar');
+  var heroSection = document.getElementById('hero-section');
+
+  if (window.pageYOffset > 0) {
+    contactHeader.classList.remove('connected');
+    navbar.classList.add('navbar-separate');
+    heroSection.classList.add('navbar-separate');
+  } else {
+    contactHeader.classList.add('connected');
+    navbar.classList.remove('navbar-separate');
+    heroSection.classList.remove('navbar-separate');
+  }
 });
 
 // FAQ
