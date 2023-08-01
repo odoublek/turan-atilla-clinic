@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vital Voyages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<style>
+    
+    </style>
+<body>
+  
+<!-- Top contact header -->
+<div id="contact-header" >
+  <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
+    <div class="text-white">
+      <span class="mr-2">
+        <i class="fas fa-envelope"></i> info@example.com
+      </span>
+      <span>
+        <i class="fas fa-phone"></i> +123456789
+      </span>
+    </div>
+    <div class="flex items-center">
+      <a href="https://www.facebook.com/example" class="text-white mr-4" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.twitter.com/example" class="text-white mr-4" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/example" class="text-white" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <div id="language-switcher" class="relative ml-4">
+        <div id="current-language" class="flex items-center cursor-pointer">
+          <i class="fas fa-globe mr-2"></i>
+          <span class="text-white">English</span>
+        </div>
+        <div id="language-list" class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden">
+          <ul>
+            <li>
+              <a href="#" onclick="changeLanguage('en'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>English</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="changeLanguage('de'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>German</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="changeLanguage('fr'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>French</span>
+              </a>
+            </li>
+            <!-- Add more languages as needed -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<header id="navbar" class="py-4 px-2">
+  <div class="container mx-auto flex items-center justify-between">
+    <div class="flex items-center">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Company Logo" class="h-12 md:h-16 mr-2">
+      </a>
+    </div>
+    <nav>
+      <ul class="flex space-x-4">
+        <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
+        <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
+        <li><a href="contact-us.html" class="button-link hover:text-gray-300">What We Do?</a></li>
+        <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
+        <li><a href="surgeries.html" class="button-link hover:text-gray-300">Why Us</a></li>
+        <li class="relative group">
+          <a class="button-link hover:text-gray-300">Surgeries</a>
+          <ul class="absolute hidden bottom-0 left-0 bg-white border-t border-gray-300 w-full py-2 px-4 group-hover:block">
+            <li><a href="plastic-surgery.html" class="text-blue-600 hover:text-blue-500">Plastic Surgeries</a></li>
+            <li><a href="hair-transplant.html" class="text-blue-600 hover:text-blue-500">Hair Transplantation</a></li>
+            <li><a href="dentistry.html" class="text-blue-600 hover:text-blue-500">Cosmetic Dentistry</a></li>
+
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <!-- Page Header -->
+<section id="page-header" class="bg-blue-900 text-white py-40">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold mb-6">Welcome to Nova Care</h1>
+      <p class="text-xl text-gray-300">Your Path to Excellence in Medical Treatment</p>
+    </div>
+</section>
+
+<!-- Roadmap Section -->
+<section id="roadmap" class="py-12 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-8">Your Medical Travel Journey</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="step">
+          <i class="fas fa-shopping-cart text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Buying a Package from Us</h3>
+          <p class="text-gray-600">Buying a package from us means that you have already begun your satisfaction-guaranteed medical travel journey.</p>
+        </div>
+  
+        <!-- Step 2 -->
+        <div class="step">
+          <i class="fas fa-handshake text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Meeting Up</h3>
+          <p class="text-gray-600">Meet with our team and have an online meeting with the surgeon to discuss your medical travel plans.</p>
+        </div>
+  
+        <!-- Step 3 -->
+        <div class="step">
+          <i class="fas fa-plane-departure text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Transportation</h3>
+          <p class="text-gray-600">Take a flight to Istanbul, where our team will greet you and provide VIP transportation assistance.</p>
+        </div>
+  
+        <!-- Step 4 -->
+        <div class="step">
+          <i class="fas fa-hotel text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Accommodation</h3>
+          <p class="text-gray-600">Our team will guide you to your accommodation, ensuring everything meets your satisfaction and needs.</p>
+        </div>
+  
+        <!-- Step 5 -->
+        <div class="step">
+          <i class="fas fa-procedures text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Operation Day</h3>
+          <p class="text-gray-600">On the day of the operation, our team will accompany you to the clinic and provide support throughout the process.</p>
+        </div>
+  
+        <!-- Step 6 -->
+        <div class="step">
+          <i class="fas fa-smile text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">After Operation</h3>
+          <p class="text-gray-600">After the operation, our team will ensure that your desires are met, and you are satisfied with the entire process.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- What We Do? Section -->
+<section id="what-we-do" class="py-12"
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-8">What We Do?</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Step 2: Accommodation based on package -->
+        <div class="text-center">
+          <i class="fas fa-hotel text-3xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Accommodation Based on Package</h3>
+          <p class="text-gray-600">Our packages include carefully selected accommodations to suit your preferences and needs during your stay.</p>
+        </div>
+  
+        <!-- Step 5: Satisfaction guarantee -->
+        <div class="text-center">
+          <i class="fas fa-check-circle text-3xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Satisfaction Guarantee</h3>
+          <p class="text-gray-600">We stand behind the quality of our services, and your satisfaction is our top priority. If you are not satisfied, we'll make it right.</p>
+        </div>
+
+        <!-- Step 6: Personalized Treatment Plans -->
+      <div class="text-center">
+        <i class="fas fa-file-medical-alt text-3xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Personalized Treatment Plans</h3>
+        <p class="text-gray-600">Each patient is unique, and we believe in providing personalized treatment plans tailored to your specific needs and medical requirements.</p>
+      </div>
+      </div>
+    </div>
+</section>
+  
+  
+<!-- Bottom Footer content -->
+<section id="footer" class="bg-blue-500 py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="text-white">
+          <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+          <p>Stay updated with our latest news and offers:</p>
+          <div class="flex mt-4">
+            <a href="https://www.facebook.com/example" class="mr-4">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.twitter.com/example" class="mr-4">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/example">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="text-white">
+          <h3 class="text-xl font-bold mb-4">Address</h3>
+          <p>123 Main Street<br>City, State ZIP<br>Country</p>
+        </div>
+        <div class="text-white">
+          <div class="flex mt-2 flex-col">
+            <a href="privacy-policy.html" class="text-blue-300 hover:text-blue-200 ">Privacy Policy</a>
+            <a href="data-protection-law.html" class="text-blue-300 hover:text-blue-200 mt-2">Personal Data Protection
+              Law</a>
+            <a href="terms-of-service.html" class="text-blue-300 hover:text-blue-200 mt-2">Terms of Service</a>
+            <a href="#faq" class="text-blue-300 hover:text-blue-200 mt-2">F.A.Q</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+</body>
+</html>

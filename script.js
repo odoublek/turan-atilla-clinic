@@ -76,3 +76,16 @@ function toggleOperations(operationsId, detailsId, button) {
     button.innerText = "Check Operations";
   }
 }
+
+
+//contact form
+  // Attach submit event listener to the form
+  const contactForm = document.querySelector("#contact-form");
+  const successMessage = document.querySelector("#success-message");
+
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    contactForm.classList.add("hidden");
+    successMessage.classList.remove("hidden");
+    // You can add your AJAX/PHP code here to handle form submission on the server-side
+  });

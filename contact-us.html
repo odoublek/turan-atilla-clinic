@@ -1,112 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hair Transplant Company</title>
+  <title>Vital Voyages</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <script type="text/javascript"
-    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js" defer></script>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/css/intlTelInput.css">
-  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/intlTelInput.min.js"></script>
-  </head>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- Top contact header -->
-  <div id="contact-header" class="py-2 px-4">
-    <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
-      <div class="text-white">
-        <span class="mr-2">
-          <i class="fas fa-envelope"></i> info@example.com
-        </span>
-        <span>
-          <i class="fas fa-phone"></i> +123456789
-        </span>
-      </div>
-      <div class="flex items-center">
-        <a href="https://www.facebook.com/example" class="text-white mr-4" aria-label="Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.twitter.com/example" class="text-white mr-4" aria-label="Twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/example" class="text-white" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <div id="language-switcher" class="relative ml-4">
-          <div id="current-language" class="flex items-center cursor-pointer">
-            <i class="fas fa-globe mr-2"></i>
-            <span class="text-white">English</span>
-          </div>
-          <div id="language-list" class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden">
-            <ul>
-              <li>
-                <a href="#" onclick="changeLanguage('en'); return false;">
-                  <i class="fas fa-flag mr-2"></i>
-                  <span>English</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" onclick="changeLanguage('de'); return false;">
-                  <i class="fas fa-flag mr-2"></i>
-                  <span>German</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" onclick="changeLanguage('fr'); return false;">
-                  <i class="fas fa-flag mr-2"></i>
-                  <span>French</span>
-                </a>
-              </li>
-              <!-- Add more languages as needed -->
-            </ul>
-          </div>
+</head>
+<style>
+  #page-header {
+  background-image: url(images/header-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#separator {
+  background-color: #ffffff;
+}
+
+.contact-us-button {
+  background-color: #3b82f6;
+  transition: background-color 0.3s ease;
+}
+
+.contact-us-button:hover {
+  background-color: #2563eb;
+}
+</style>
+
+<body>
+  
+<!-- Top contact header -->
+<div id="contact-header" >
+  <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
+    <div class="text-white">
+      <span class="mr-2">
+        <i class="fas fa-envelope"></i> info@example.com
+      </span>
+      <span>
+        <i class="fas fa-phone"></i> +123456789
+      </span>
+    </div>
+    <div class="flex items-center">
+      <a href="https://www.facebook.com/example" class="text-white mr-4" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.twitter.com/example" class="text-white mr-4" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/example" class="text-white" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <div id="language-switcher" class="relative ml-4">
+        <div id="current-language" class="flex items-center cursor-pointer">
+          <i class="fas fa-globe mr-2"></i>
+          <span class="text-white">English</span>
+        </div>
+        <div id="language-list" class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden">
+          <ul>
+            <li>
+              <a href="#" onclick="changeLanguage('en'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>English</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="changeLanguage('de'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>German</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="changeLanguage('fr'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>French</span>
+              </a>
+            </li>
+            <!-- Add more languages as needed -->
+          </ul>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Navbar -->
-  <header id="navbar" class=" text-white py-4 px-2">
-    <div class="container mx-auto flex items-center justify-between">
-      <div class="flex items-center">
-        <a href="index.html">
-          <img src="images/logo.png" alt="Company Logo" class="h-12 md:h-16 mr-2">
-        </a>
-      </div>
-      <nav>
-        <ul class="flex space-x-4">
-          <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
-          <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
-          <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
-          <li><a href="why-us.html" class="button-link hover:text-gray-300">Why Us</a></li>
-        </ul>
-      </nav>
+<!-- Navbar -->
+<header id="navbar" class="py-4 px-2">
+  <div class="container mx-auto flex items-center justify-between">
+    <div class="flex items-center">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Company Logo" class="h-12 md:h-16 mr-2">
+      </a>
     </div>
-  </header>
-  
-
-<!-- Page Header -->
-<section id="page-header" class=" text-white py-64 bg-cover bg-center" style="background-image:url(images/contact-us-bg.jpg);">
-  <div class="container mx-auto px-4 text-center">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Contact with us! </h1>
-    <p class="text-xl md:text-2xl font-bold">Welcome! Please do not hesitate to ask your questions freely about how we operate or our services. Our team of highly trained experts will provide you the necessary information.</p>
+    <nav>
+      <ul class="flex space-x-4">
+        <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
+        <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
+        <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
+        <li><a href="why-us.html" class="button-link hover:text-gray-300">Why Us</a></li>
+      </ul>
+    </nav>
   </div>
-</section>
+</header>
+
+  <!-- Page Header -->
+  <section id="page-header" class="bg-blue-900 text-white py-40">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold mb-6">Talk to Our Experts - Contact Us</h1>
+      <p class="text-xl text-gray-300">Empowering Lives Through Quality Healthcare </p>
+    </div>
+  </section>
 
 <!-- Contact section -->
-<section id="contact" class="py-8" style="background-color:azure">
+<section id="contact" class="py-8" style="background-color: #b5b5b5;">
   <div class="container mx-auto px-4 flex flex-col md:flex-row">
-    <!-- Left Side (Video Background) -->
-    <div class="md:w-1/2" style="margin-right: 20px;">
-      <video autoplay loop muted class="h-auto w-full" style="min-height: 400px; width: 1000px;">
-        <source src="images/bogaz-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    
     <!-- Right Side (Contact Form) -->
     <div class="container mx-auto px-4 text-center md:w-1/2">
       <h2 class="text-2xl font-bold mb-4">Contact Us
@@ -114,8 +128,8 @@
           <i class="fab fa-whatsapp"></i>
         </a>
       </h2>
-      <div id="contact-form">
-        <form>
+      <div id="contact-form-container">
+        <form id="contact-form">
           <div class="mb-4">
             <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Name</label>
             <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
@@ -135,6 +149,16 @@
           <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full">Submit</button>
         </form>
       </div>
+      <div id="success-message" class="hidden">
+        <p class="text-xl font-bold mb-4">We got your message and we will reach you as soon as possible!</p>
+      </div>
+    </div>
+    <!-- Left Side (Video Background) -->
+    <div class="md:w-1/2 hidden md:block">
+      <video autoplay loop muted class="h-auto w-full" style="min-height: 400px; width: 1000px;">
+        <source src="images/bogaz-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </section>

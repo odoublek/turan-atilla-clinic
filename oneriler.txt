@@ -1,21 +1,38 @@
 
-paket onerileri sayfasi
-
 mobil ayarlar
-
-saglik turizm konsept
 
 siteye dil ekle
 
 1473 576
 
-packagelar basic-gold-diamond
+renk1
+main#003366
+sec#FFFFFF 
+
+renk2
+main#83a8d9
+sec#6c9dd5
+
+3 video slider
+
+what we do page yap
+
+Our surgeries yeirne procedures
+
+customized package ayarla, gold plat diamond ekle
+
+instagram hesabini bagla
+
+trustpilot hesap ac yorum yap
+
+additional services efekt ekle https://zisat.com.tr/en/contact-us/
+
+plastic surgeries, hair Transplantation, Dental procedures, Obesity surgery farkli sayfalar olsun
+
+sayfalar acilinca sol ustte alaklai fotograf, altinda sub kategorisi, saginda aciklama
 
 
-main color
-#003366
-secondary color
-#FFFFFF 
+additional services efekt ekle
 
 
 
@@ -23,15 +40,8 @@ I have a website for a medical company which provides 4-5 star accommodation, pl
 
 Currently this website has  different folders( index.html, styles.css, script.js, why-us.html, about-us.html, contact-us.html) and different section(components) on index.html after body tag like,  top ocntact header, navbar,hero slider section, services overview,additional services,testimonials, team, packages,faq and bottom footer sections. I decided to change the team section into a section that prioritize the cheap and the quality treatment in istanbul,  i will share my the team section with you and we will change it together but before that i want to ask for some tips or recommendation of how should i do it, im thinking about making a graph of total amount of dolar they have to pay in different countries and turkey, than include the price of tickets accomandation and service. Give me 2 or 3 different ways to change this section to make it look good and understanble so we can move with the code.
 
+c vbvbb
 
-
-
-hero slider why choose turkey ekle https://hairlinetransplantturkey.com/cost/?gclid=Cj0KCQjwwISlBhD6ARIsAESAmp7JF61dDDIJn_BUMqcAPb2sSjwAeCZxm3VpBB_dugSHLMSCjCPJqmwaArejEALw_wcB
-google trustpilot ekle hero slider altina
-navbar separater
-
-faq doktorlar yer degistir,
-faq sil, nedne turkiye secilmeli ekle
 slider ilki aciklama ve reklam videosu
 
 

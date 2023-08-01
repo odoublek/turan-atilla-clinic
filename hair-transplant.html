@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vital Voyages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+  <style>
+     body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #surgeries {
+      flex: 1;
+    }
+
+    .custom-image {
+    max-width: 150px;
+    height: auto;
+  }
+    /* Update the layout for the grid container */
+    .grid-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    #surgery-description {
+      flex: 1;
+      height: 100%;
+      padding-bottom: 2rem; /* Add some space at the bottom */
+    }
+
+    .surgery-item:hover {
+      background-color: #f0f7ff; /* Change the background color on hover */
+    }
+    
+  </style>
+</head>
+
+<body>
+  
+<!-- Top contact header -->
+<div id="contact-header" >
+  <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
+    <div class="text-white">
+      <span class="mr-2">
+        <i class="fas fa-envelope"></i> info@example.com
+      </span>
+      <span>
+        <i class="fas fa-phone"></i> +123456789
+      </span>
+    </div>
+    <div class="flex items-center">
+      <a href="https://www.facebook.com/example" class="text-white mr-4" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.twitter.com/example" class="text-white mr-4" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/example" class="text-white" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <div id="language-switcher" class="relative ml-4">
+        <div id="current-language" class="flex items-center cursor-pointer">
+          <i class="fas fa-globe mr-2"></i>
+          <span class="text-white">English</span>
+        </div>
+        <div id="language-list" class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden">
+          <ul>
+            <li>
+              <a href="#" onclick="changeLanguage('en'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>English</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="changeLanguage('de'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>German</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="changeLanguage('fr'); return false;">
+                <i class="fas fa-flag mr-2"></i>
+                <span>French</span>
+              </a>
+            </li>
+            <!-- Add more languages as needed -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<header id="navbar" class="py-4 px-2">
+  <div class="container mx-auto flex items-center justify-between">
+    <div class="flex items-center">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Company Logo" class="h-12 md:h-16 mr-2">
+      </a>
+    </div>
+    <nav>
+      <ul class="flex space-x-4">
+        <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
+        <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
+        <li><a href="contact-us.html" class="button-link hover:text-gray-300">What We Do?</a></li>
+        <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
+        <li><a href="surgeries.html" class="button-link hover:text-gray-300">Why Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Page Header -->
+<section id="page-header" class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center" style="background-image: url(images/hair-transplant.jpg);">
+  <div class="container mx-auto text-center">
+  </div>
+</section>
+
+<!-- Surgeries Section -->
+<section id="surgeries" class="py-8">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">Hair Transplantation</h2>
+    <div class="grid-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Left-side menu -->
+      <div class="bg-white rounded shadow p-6">
+        <ul>
+          <li class="mb-1 hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer" onclick="showDescription('fue');">FUE</li>
+          <li class="mb-1 hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer" onclick="showDescription('fut');">FUT(Sapphire Option)</li>
+          <li class="mb-1 hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer" onclick="showDescription('dhi');">DHI</li>
+        </ul>
+      </div>
+      
+      <!-- Right-side description -->
+      <div id="surgery-description" class="bg-white rounded shadow p-6">
+        <h3 class="text-2xl font-bold mb-4" id="surgery-title">Hair Transplatation</h3>
+        <p class="text-lg text-gray-700" id="surgery-info">
+            Rediscover your confidence with our advanced hair transplantation services. At Nova Care Istanbul, we understand the impact of hair loss on your self-esteem, and our experienced hair transplant specialists are here to help. Using cutting-edge techniques and state-of-the-art technology, we offer personalized solutions to restore your natural hairline and thickness. Say goodbye to hair loss worries and embrace a fuller head of hair with our dedicated team by your side. Regain your youthful look and self-assurance with our trusted hair transplantation services.  </p>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- Bottom Footer content -->
+<section id="footer" class="bg-blue-500 py-8">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="text-white">
+        <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+        <p>Stay updated with our latest news and offers:</p>
+        <div class="flex mt-4">
+          <a href="https://www.facebook.com/example" class="mr-4">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.twitter.com/example" class="mr-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/example">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        </div>
+      <div class="text-white">
+        <h3 class="text-xl font-bold mb-4">Address</h3>
+        <p>123 Main Street<br>City, State ZIP<br>Country</p>
+      </div>
+      <div class="text-white">
+        <div class="flex mt-2 flex-col">
+          <a href="privacy-policy.html" class="text-blue-300 hover:text-blue-200 ">Privacy Policy</a>
+          <a href="data-protection-law.html" class="text-blue-300 hover:text-blue-200 mt-2">Personal Data Protection Law</a>
+          <a href="cookie-policy.html" class="text-blue-300 hover:text-blue-200 mt-2">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 text-white text-sm">
+      <p>© 2023 Hair Transplant Company. All rights reserved.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Scripts -->
+<script>
+  function showDescription(surgery) {
+    const descriptions = {
+      'fue': {
+        title: 'FUE',
+        info: 'Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.'
+      },
+      'fut': {
+        title: 'FUT',
+        info: 'Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.'
+      },
+      'dhi': {
+        title: 'DHI',
+        info: 'Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.Replace this text with the description for Plastic Surgery.'
+      },
+    };
+
+    const surgeryDescription = descriptions[surgery];
+    document.getElementById('surgery-title').innerText = surgeryDescription.title;
+    document.getElementById('surgery-info').innerText = surgeryDescription.info;
+  }
+</script>
+
+</body>
+</html>

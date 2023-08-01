@@ -2,9 +2,7 @@ body {
   max-width: 1600px;
   font-family: Arial, sans-serif;
   line-height: 1.5;
-  background-color: #f8f8f8;
 }
-
 
 .text-gray-700 {
   color: #4b5563;
@@ -18,10 +16,9 @@ body {
   color: #2563eb;
 }
 
-
 /* Top contact header */
 #contact-header {
-  background-color: #3498DB;
+  background-color: #83a8d9;
   padding: 0.5rem;
 }
 
@@ -41,9 +38,10 @@ body {
   margin-right: 0.25rem;
 }
 
+
 /* Navbar */
 #navbar {
-  background-color:#007BFF;
+  background-color: #6c9dd5;
   color: #ffffff;
   padding: 1rem 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -55,7 +53,7 @@ body {
 }
 
 #navbar a:hover {
-  color: #CCEEFF;
+  color: #cce0ff;
 }
 
 #navbar .font-bold {
@@ -99,16 +97,30 @@ body {
 }
 
 #hero-section.slide-1 {
-  background-image: linear-gradient(to bottom, rgba(36, 52, 168, 0.801), rgba(0, 123, 255, 0.2)), url(images/blue-bg-istanbul.jpg);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(36, 52, 168, 0.801),
+      rgba(0, 123, 255, 0.2)
+    ),
+    url(images/blue-bg-istanbul.jpg);
 }
 
 #hero-section.slide-2 {
-  background-image: linear-gradient(to top, rgba(36, 52, 168, 0.801), rgba(0, 123, 255, 0.2)), url(images/haghia-sophia.jpg);
- 
+  background-image: linear-gradient(
+      to top,
+      rgba(36, 52, 168, 0.801),
+      rgba(0, 123, 255, 0.2)
+    ),
+    url(images/haghia-sophia.jpg);
 }
 
 #hero-section.slide-3 {
-  background-image: linear-gradient(to bottom, rgba(50, 205, 50, 0.801), rgba(0, 128, 0, 0.2)), url(images/green-bg-istanbul.jpg);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(50, 205, 50, 0.801),
+      rgba(0, 128, 0, 0.2)
+    ),
+    url(images/green-bg-istanbul.jpg);
 }
 
 #hero-section .swiper-slide {
@@ -118,11 +130,10 @@ body {
 }
 
 #hero-section .slide-content {
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   padding: 7rem;
   max-width: 600px;
-  
 }
 
 #hero-section h3 {
@@ -134,7 +145,7 @@ body {
 }
 
 #hero-section a {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   background-position: 0cm;
   color: #003366;
   padding: 0.5rem 1.5rem;
@@ -146,7 +157,7 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .button-container {
@@ -167,11 +178,10 @@ body {
   background-color: #2765c9;
 }
 
-
-/* Additional Services Section */
-#additional-services {
+/* Services overview Section */
+#services-overview {
   padding: 2rem 0;
-  background-color: #003366;
+  background-color: #83a8d9;
 }
 
 .service-box {
@@ -239,7 +249,7 @@ body {
 }
 
 .rating-icon {
-  color: #FFD700;
+  color: #ffd700;
   font-size: 1rem;
 }
 
@@ -258,7 +268,7 @@ body {
 /* Comparison table */
 #comparison-table {
   background-color: #003366;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 8rem 0;
 }
 
@@ -290,15 +300,16 @@ body {
   color: #003366;
 }
 
-.table th, .table td {
+.table th,
+.table td {
   padding: 1rem 2rem;
   text-align: center;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid #ffffff;
 }
 
 .table th {
   background-color: #0778ea;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -307,15 +318,13 @@ body {
 }
 
 .table tr:nth-child(odd) {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .table tr:hover {
   background-color: #cce0ff;
   cursor: pointer;
 }
-
-
 
 /* Packages Section */
 #packages {
@@ -328,21 +337,20 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
   .package-gold {
-    background-color: #FFD700; 
-  }
-  
-  .package-platinum {
-    background-color: #C0C0C0; 
-  }
-  
-  .package-diamond {
-    background-color: #B9F2FF; 
+    background-color: #ffd700;
   }
 
-  .package-custom{
-    background-color: #FFC0CB ;
+  .package-platinum {
+    background-color: #c0c0c0;
   }
-  
+
+  .package-diamond {
+    background-color: #b9f2ff;
+  }
+
+  .package-custom {
+    background-color: #ffc0cb;
+  }
 }
 
 .package h3 {
@@ -354,8 +362,6 @@ body {
 .package p {
   margin-bottom: 16px;
 }
-
-
 
 .package {
   background-color: #ffffff;
@@ -381,7 +387,7 @@ body {
 /* FAQ Section */
 #faq {
   background-color: #003366;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 2rem 0;
 }
 
@@ -407,7 +413,7 @@ body {
 }
 
 .accordion-title:hover {
-  background-color: #007BFF;
+  background-color: #007bff;
 }
 
 .accordion-title.active {
@@ -415,11 +421,11 @@ body {
 }
 
 .accordion-title.active h3 {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .accordion-title .plus-minus {
-  color: #CCEEFF;
+  color: #cceeff;
   font-size: 1rem;
   transition: transform 0.3s ease;
 }
@@ -441,34 +447,32 @@ body {
   max-height: 1000px;
 }
 
-
-
 /* Bottom Footer Section */
 #footer {
-  background-color: #007BFF;
-  padding: 4rem 0; 
+  background-color: #007bff;
+  padding: 4rem 0;
 }
 
 #footer h3 {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.5rem; /* Adjust the font size as desired */
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 #footer p {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1rem; /* Adjust the font size as desired */
   margin-bottom: 1rem;
 }
 
 #footer a {
-  color: #CCEEFF;
+  color: #cceeff;
   transition: color 0.3s ease;
 }
 
 #footer a:hover {
-  color: #A8D8FF;
+  color: #a8d8ff;
 }
 
 #footer .flex {
@@ -476,17 +480,15 @@ body {
 }
 
 #footer i {
-  color: #CCEEFF;
-  font-size: 1rem; /* Adjust the font size as desired */
+  color: #cceeff;
+  font-size: 1rem; 
   margin-right: 0.5rem;
   transition: color 0.3s ease;
 }
 
 #footer i:hover {
-  color: #A8D8FF;
+  color: #a8d8ff;
 }
-
-
 
 /* Footer */
 #footer {
@@ -506,7 +508,6 @@ body {
 #footer a:last-child {
   margin-right: 0;
 }
-
 
 /* contact-us.html */
 /* Contact section */
