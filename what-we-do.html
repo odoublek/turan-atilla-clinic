@@ -9,14 +9,66 @@
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js" defer></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
   <script src="script.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 <style>
-    
-    </style>
+  .roadmap-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .step {
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  .step::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #6CA1C4;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    line-height: 20px;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .step:nth-child(1)::before {
+    content: "1";
+  }
+
+  .step:nth-child(2)::before {
+    content: "2";
+  }
+
+  .step:nth-child(3)::before {
+    content: "3";
+  }
+
+  .step:nth-child(4)::before {
+    content: "4";
+  }
+
+  .step:nth-child(5)::before {
+    content: "5";
+  }
+
+  .step:nth-child(6)::before {
+    content: "6";
+  }
+
+
+</style>
 <body>
   
 <!-- Top contact header -->
@@ -85,18 +137,17 @@
       <ul class="flex space-x-4">
         <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
         <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
-        <li><a href="contact-us.html" class="button-link hover:text-gray-300">What We Do?</a></li>
-        <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
-        <li><a href="surgeries.html" class="button-link hover:text-gray-300">Why Us</a></li>
+        <li><a href="what-we-do.html" class="button-link hover:text-gray-300">What We Do?</a></li>
         <li class="relative group">
-          <a class="button-link hover:text-gray-300">Surgeries</a>
-          <ul class="absolute hidden bottom-0 left-0 bg-white border-t border-gray-300 w-full py-2 px-4 group-hover:block">
-            <li><a href="plastic-surgery.html" class="text-blue-600 hover:text-blue-500">Plastic Surgeries</a></li>
-            <li><a href="hair-transplant.html" class="text-blue-600 hover:text-blue-500">Hair Transplantation</a></li>
-            <li><a href="dentistry.html" class="text-blue-600 hover:text-blue-500">Cosmetic Dentistry</a></li>
-
+          <a href="#" class="button-link hover:text-gray-300 surgeries-link">Surgeries</a>
+          <ul class="absolute hidden bg-white border-t border-gray-300 w-40 py-2 px-4 ">
+            <li><a href="plastic-surgery.html" class="text-blue-600 ">Plastic Surgeries</a></li>
+            <li><a href="hair-transplant.html" class="text-blue-600 ">Hair Transplantation</a></li>
+            <li><a href="dentistry.html" class="text-blue-600 ">Cosmetic Dentistry</a></li>
           </ul>
         </li>
+        <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
+        <li><a href="surgeries.html" class="button-link hover:text-gray-300">Why Us</a></li>
       </ul>
     </nav>
   </div>
@@ -110,84 +161,80 @@
     </div>
 </section>
 
-<!-- Roadmap Section -->
-<section id="roadmap" class="py-12 bg-gray-100">
+  <!-- Roadmap Section -->
+  <section id="roadmap" class="py-12 bg-gray-100">
     <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-8">Your Medical Travel Journey</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Step 1 -->
-        <div class="step">
-          <i class="fas fa-shopping-cart text-4xl text-blue-500 mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">Buying a Package from Us</h3>
-          <p class="text-gray-600">Buying a package from us means that you have already begun your satisfaction-guaranteed medical travel journey.</p>
-        </div>
-  
-        <!-- Step 2 -->
-        <div class="step">
-          <i class="fas fa-handshake text-4xl text-blue-500 mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">Meeting Up</h3>
-          <p class="text-gray-600">Meet with our team and have an online meeting with the surgeon to discuss your medical travel plans.</p>
-        </div>
-  
-        <!-- Step 3 -->
-        <div class="step">
-          <i class="fas fa-plane-departure text-4xl text-blue-500 mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">Transportation</h3>
-          <p class="text-gray-600">Take a flight to Istanbul, where our team will greet you and provide VIP transportation assistance.</p>
-        </div>
-  
-        <!-- Step 4 -->
-        <div class="step">
-          <i class="fas fa-hotel text-4xl text-blue-500 mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">Accommodation</h3>
-          <p class="text-gray-600">Our team will guide you to your accommodation, ensuring everything meets your satisfaction and needs.</p>
-        </div>
-  
-        <!-- Step 5 -->
-        <div class="step">
-          <i class="fas fa-procedures text-4xl text-blue-500 mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">Operation Day</h3>
-          <p class="text-gray-600">On the day of the operation, our team will accompany you to the clinic and provide support throughout the process.</p>
-        </div>
-  
-        <!-- Step 6 -->
-        <div class="step">
-          <i class="fas fa-smile text-4xl text-blue-500 mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">After Operation</h3>
-          <p class="text-gray-600">After the operation, our team will ensure that your desires are met, and you are satisfied with the entire process.</p>
+      <h2 class="text-4xl font-bold text-center mb-8">We are with you on every step of your journey</h2>
+      <div class="roadmap-container">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Step 1 -->
+          <div class="step text-center">
+            <i class="fas fa-shopping-cart text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Buying a Package from Us</h3>
+            <p class="text-gray-600">Buying a package from us means that you have already begun your satisfaction-guaranteed medical travel journey.</p>
+          </div>
+          <!-- Step 2 -->
+          <div class="step text-center">
+            <i class="fas fa-handshake text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Meeting Up</h3>
+            <p class="text-gray-600">Meet with our team and have an online meeting with the surgeon to discuss your medical travel plans.</p>
+          </div>
+          <!-- Step 3 -->
+          <div class="step text-center">
+            <i class="fas fa-plane-departure text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Transportation</h3>
+            <p class="text-gray-600">Take a flight to Istanbul, where our team will greet you and provide VIP transportation assistance.</p>
+          </div>
+          <!-- Step 4 -->
+          <div class="step text-center">
+            <i class="fas fa-hotel text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2" >Accommodation</h3>
+            <p class="text-gray-600">Our team will guide you to your accommodation, ensuring everything meets your satisfaction and needs.</p>
+          </div>
+          <!-- Step 5 -->
+          <div class="step text-center">
+            <i class="fas fa-procedures text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2 ">Operation Day</h3>
+            <p class="text-gray-600">On the day of the operation, our team will accompany you to the clinic and provide support throughout the process.</p>
+          </div>
+          <!-- Step 6 -->
+          <div class="step text-center">
+            <i class="fas fa-smile text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">After Operation</h3>
+            <p class="text-gray-600 ">After the operation, our team will ensure that your desires are met, and you are satisfied with the entire process.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 <!-- What We Do? Section -->
-<section id="what-we-do" class="py-12"
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-8">What We Do?</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <!-- Step 2: Accommodation based on package -->
-        <div class="text-center">
-          <i class="fas fa-hotel text-3xl mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">Accommodation Based on Package</h3>
-          <p class="text-gray-600">Our packages include carefully selected accommodations to suit your preferences and needs during your stay.</p>
-        </div>
-  
-        <!-- Step 5: Satisfaction guarantee -->
-        <div class="text-center">
-          <i class="fas fa-check-circle text-3xl mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">Satisfaction Guarantee</h3>
-          <p class="text-gray-600">We stand behind the quality of our services, and your satisfaction is our top priority. If you are not satisfied, we'll make it right.</p>
-        </div>
+<section id="what-we-do" class="py-12 bg-gray-100">
+  <div class="container mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-8" style="color: #1D4E89;">Additional Services</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Step 2: Accommodation based on package -->
+      <div class="text-center" style="background-color: #245A9F; padding: 20px;">
+        <i class="fas fa-hotel text-3xl mb-4" style="color: #FFFFFF;"></i>
+        <h3 class="text-xl font-bold mb-2" style="color: #FFFFFF;">Accommodation Based on Package</h3>
+        <p class="text-gray-600">Our packages include carefully selected accommodations to suit your preferences and needs during your stay.</p>
+      </div>
 
-        <!-- Step 6: Personalized Treatment Plans -->
-      <div class="text-center">
-        <i class="fas fa-file-medical-alt text-3xl mb-4"></i>
-        <h3 class="text-xl font-bold mb-2">Personalized Treatment Plans</h3>
+      <!-- Step 5: Satisfaction guarantee -->
+      <div class="text-center" style="background-color: #488B8F; padding: 20px;">
+        <i class="fas fa-check-circle text-3xl mb-4" style="color: #FFFFFF;"></i>
+        <h3 class="text-xl font-bold mb-2" style="color: #FFFFFF;">Satisfaction Guarantee</h3>
+        <p class="text-gray-600">We stand behind the quality of our services, and your satisfaction is our top priority. If you are not satisfied, we'll make it right.</p>
+      </div>
+
+      <!-- Step 6: Personalized Treatment Plans -->
+      <div class="text-center" style="background-color: #6CA1C4; padding: 20px;">
+        <i class="fas fa-file-medical-alt text-3xl mb-4" style="color: #FFFFFF;"></i>
+        <h3 class="text-xl font-bold mb-2" style="color: #FFFFFF;">Personalized Treatment Plans</h3>
         <p class="text-gray-600">Each patient is unique, and we believe in providing personalized treatment plans tailored to your specific needs and medical requirements.</p>
       </div>
-      </div>
     </div>
+  </div>
 </section>
-  
   
 <!-- Bottom Footer content -->
 <section id="footer" class="bg-blue-500 py-8">

@@ -1,3 +1,14 @@
+// Navbar dropdown menu
+  document.addEventListener("DOMContentLoaded", function () {
+    const surgeriesDropdown = document.querySelector(".group");
+    surgeriesDropdown.addEventListener("mouseover", function () {
+      this.querySelector("ul").classList.remove("hidden");
+    });
+    surgeriesDropdown.addEventListener("mouseout", function () {
+      this.querySelector("ul").classList.add("hidden");
+    });
+  });
+
 
 // Hero Slider
 document.addEventListener("DOMContentLoaded", function() {

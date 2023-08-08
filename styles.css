@@ -18,8 +18,11 @@ body {
 
 /* Top contact header */
 #contact-header {
-  background-color: #83a8d9;
+  background-color: #6CA1C4;
   padding: 0.5rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 #contact-header .text-white {
@@ -41,10 +44,14 @@ body {
 
 /* Navbar */
 #navbar {
-  background-color: #6c9dd5;
+  position: fixed;
+  top: 40px;
+  background-color: #1D4E89;
+  width: 100%;
   color: #ffffff;
   padding: 1rem 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 #navbar a {
@@ -85,15 +92,58 @@ body {
   color: #a0aec0;
 }
 
+#navbar .group:hover > ul {
+  display: block;
+}
+
+#navbar .group ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  background-color: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#navbar .group li {
+  padding: 0.5rem 0;
+}
+
+#navbar .group a {
+  color: #1D4E89;
+}
+
+#navbar .group a:hover {
+  color: #cce0ff;
+}
+
+/* Set the background color for the "Surgeries" dropdown */
+#navbar .group:hover > ul {
+  display: block;
+  background-color: #FFFFFF;
+  width: 200px;
+}
+
+/* Set the color for the "Surgeries" link */
+#navbar .group .surgeries-link {
+  color: #FFFFFF;
+}
+
+/* Set the hover color for the "Surgeries" link */
+#navbar .group .surgeries-link:hover {
+  color: #cce0ff;
+}
+
+
 
 /* Hero Section */
 #hero-section {
   background-repeat: no-repeat;
   background-size: cover;
-  transition: background-image 0.3s ease;
+    transition: background-image 0.3s ease;
   height: 650px;
-  padding-top: 10px;
-  padding-bottom: 300px;
+  margin-top: 70px;
 }
 
 #hero-section.slide-1 {

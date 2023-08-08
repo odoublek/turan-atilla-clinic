@@ -29,7 +29,6 @@
     max-width: 150px;
     height: auto;
   }
-    /* Update the layout for the grid container */
     .grid-container {
       display: flex;
       flex-wrap: wrap;
@@ -39,7 +38,7 @@
     #surgery-description {
       flex: 1;
       height: 100%;
-      padding-bottom: 2rem; /* Add some space at the bottom */
+      padding-bottom: 2rem; 
     }
 
     .surgery-item:hover {
@@ -117,7 +116,15 @@
       <ul class="flex space-x-4">
         <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
         <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
-        <li><a href="contact-us.html" class="button-link hover:text-gray-300">What We Do?</a></li>
+        <li><a href="what-we-do.html" class="button-link hover:text-gray-300">What We Do?</a></li>
+        <li class="relative group">
+          <a href="#" class="button-link hover:text-gray-300 surgeries-link">Surgeries</a>
+          <ul class="absolute hidden bg-white border-t border-gray-300 w-40 py-2 px-4 ">
+            <li><a href="plastic-surgery.html" class="text-blue-600 ">Plastic Surgeries</a></li>
+            <li><a href="hair-transplant.html" class="text-blue-600 ">Hair Transplantation</a></li>
+            <li><a href="dentistry.html" class="text-blue-600 ">Cosmetic Dentistry</a></li>
+          </ul>
+        </li>
         <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
         <li><a href="surgeries.html" class="button-link hover:text-gray-300">Why Us</a></li>
       </ul>
@@ -125,14 +132,13 @@
   </div>
 </header>
 
-
 <!-- Page Header -->
 <section id="page-header" class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center" style="background-image: url(images/hair-transplant.jpg);">
   <div class="container mx-auto text-center">
   </div>
 </section>
 
-<!-- Surgeries Section -->
+<!-- Hair transplant Section -->
 <section id="surgeries" class="py-8">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-8">Hair Transplantation</h2>
