@@ -13,10 +13,19 @@
   <link href="styles.css" rel="stylesheet">
   <script src="script.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora&family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
 
 </head>
 <style>
+  
+
+  /* Roadmap */
   .roadmap-container {
+    font-family: 'Lora', serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Slab', serif;
     display: flex;
     justify-content: center;
   }
@@ -66,11 +75,30 @@
   .step:nth-child(6)::before {
     content: "6";
   }
+  #work-with .work-with-item {
+    font-family: 'Lora', serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Slab', serif;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#work-with .work-with-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.work-with-image {
+  height: 190px; /* Adjust this value as needed */
+  border-radius: 8px;
+}
 
 
 </style>
 <body>
-  
 <!-- Top contact header -->
 <div id="contact-header" >
   <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
@@ -161,11 +189,12 @@
     </div>
 </section>
 
-  <!-- Roadmap Section -->
-  <section id="roadmap" class="py-12 bg-gray-100">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-8">We are with you on every step of your journey</h2>
-      <div class="roadmap-container">
+<!-- Roadmap Section -->
+<section id="roadmap" class="py-12 bg-gray-200">
+  <div class="container mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-8">We are with you on every step of your journey</h2>
+    <div class="roadmap-container">
+      <div class="relative">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Step 1 -->
           <div class="step text-center">
@@ -204,38 +233,55 @@
             <p class="text-gray-600 ">After the operation, our team will ensure that your desires are met, and you are satisfied with the entire process.</p>
           </div>
         </div>
+
+    
       </div>
     </div>
   </section>
-<!-- What We Do? Section -->
-<section id="what-we-do" class="py-12 bg-gray-100">
+
+<!-- What we Offer With Section -->
+<section id="work-with" class="py-12 pb-24 bg-gray-100">
   <div class="container mx-auto">
-    <h2 class="text-4xl font-bold text-center mb-8" style="color: #1D4E89;">Additional Services</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <!-- Step 2: Accommodation based on package -->
-      <div class="text-center" style="background-color: #245A9F; padding: 20px;">
-        <i class="fas fa-hotel text-3xl mb-4" style="color: #FFFFFF;"></i>
-        <h3 class="text-xl font-bold mb-2" style="color: #FFFFFF;">Accommodation Based on Package</h3>
-        <p class="text-gray-600">Our packages include carefully selected accommodations to suit your preferences and needs during your stay.</p>
+    <h2 class="text-4xl font-bold text-center mb-8">What We Offer?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- VIP Transportation -->
+      <div class="work-with-item relative">
+        <div class="work-with-image bg-cover bg-center h-96" style="background-image: url(images/transport.jpg);"></div>
+        <h3 class="text-xl font-bold mt-4">VIP Transportation</h3>
       </div>
-
-      <!-- Step 5: Satisfaction guarantee -->
-      <div class="text-center" style="background-color: #488B8F; padding: 20px;">
-        <i class="fas fa-check-circle text-3xl mb-4" style="color: #FFFFFF;"></i>
-        <h3 class="text-xl font-bold mb-2" style="color: #FFFFFF;">Satisfaction Guarantee</h3>
-        <p class="text-gray-600">We stand behind the quality of our services, and your satisfaction is our top priority. If you are not satisfied, we'll make it right.</p>
+      <!-- Accommodation -->
+      <div class="work-with-item relative">
+        <div class="work-with-image bg-cover bg-center h-96" style="background-image: url(images/accommodation.jpg);"></div>
+        <h3 class="text-xl font-bold mt-4">Accommodation</h3>
       </div>
-
-      <!-- Step 6: Personalized Treatment Plans -->
-      <div class="text-center" style="background-color: #6CA1C4; padding: 20px;">
-        <i class="fas fa-file-medical-alt text-3xl mb-4" style="color: #FFFFFF;"></i>
-        <h3 class="text-xl font-bold mb-2" style="color: #FFFFFF;">Personalized Treatment Plans</h3>
-        <p class="text-gray-600">Each patient is unique, and we believe in providing personalized treatment plans tailored to your specific needs and medical requirements.</p>
+      <!-- Experienced docs -->
+      <div class="work-with-item relative">
+        <div class="work-with-image bg-cover bg-center h-96" style="background-image: url(images/doctor-photo.jpg);"></div>
+        <h3 class="text-xl font-bold mt-4">Expert Medical Practitioners</h3>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <!-- Customer Satisfaction -->
+      <div class="work-with-item relative">
+        <div class="work-with-image bg-cover bg-center h-96" style="background-image: url(images/customer-satisfaction.jpg);"></div>
+        <h3 class="text-xl font-bold mt-4">Customer Satisfaction</h3>
+      </div>
+      <!-- Accommodation -->
+      <div class="work-with-item relative">
+        <div class="work-with-image bg-cover bg-center h-96" style="background-image: url(images/istanbul-travel.jpg);"></div>
+        <h3 class="text-xl font-bold mt-4">Istanbul's Cultural Treasures</h3>
+      </div>
+      <!-- Perfect Surgery -->
+      <div class="work-with-item relative">
+        <div class="work-with-image bg-cover bg-center h-96" style="background-image: url(images/after-operation.jpg);"></div>
+        <h3 class="text-xl font-bold mt-4">Surgical Mastery and Precision</h3>
       </div>
     </div>
   </div>
 </section>
-  
+
+
+
 <!-- Bottom Footer content -->
 <section id="footer" class="bg-blue-500 py-8">
     <div class="container mx-auto px-4">

@@ -21,10 +21,19 @@
   background-position: center;
 }
 
+#contact-form-container {
+  display: block;
+  min-height: 400px; /* Set a minimum height for the form container */
+}
+
 #separator {
   background-color: #ffffff;
 }
 
+#success-message {
+  display: none;
+  margin-bottom: 20px; 
+}
 .contact-us-button {
   background-color: #3b82f6;
   transition: background-color 0.3s ease;
@@ -38,24 +47,36 @@
 <body>
   
 <!-- Top contact header -->
-<div id="contact-header" >
-  <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
+<div id="contact-header">
+  <div
+    class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4"
+  >
     <div class="text-white">
       <span class="mr-2">
         <i class="fas fa-envelope"></i> info@example.com
       </span>
-      <span>
-        <i class="fas fa-phone"></i> +123456789
-      </span>
+      <span> <i class="fas fa-phone"></i> +123456789 </span>
     </div>
     <div class="flex items-center">
-      <a href="https://www.facebook.com/example" class="text-white mr-4" aria-label="Facebook">
+      <a
+        href="https://www.facebook.com/example"
+        class="text-white mr-4"
+        aria-label="Facebook"
+      >
         <i class="fab fa-facebook"></i>
       </a>
-      <a href="https://www.twitter.com/example" class="text-white mr-4" aria-label="Twitter">
+      <a
+        href="https://www.twitter.com/example"
+        class="text-white mr-4"
+        aria-label="Twitter"
+      >
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://www.instagram.com/example" class="text-white" aria-label="Instagram">
+      <a
+        href="https://www.instagram.com/example"
+        class="text-white"
+        aria-label="Instagram"
+      >
         <i class="fab fa-instagram"></i>
       </a>
       <div id="language-switcher" class="relative ml-4">
@@ -63,7 +84,10 @@
           <i class="fas fa-globe mr-2"></i>
           <span class="text-white">English</span>
         </div>
-        <div id="language-list" class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden">
+        <div
+          id="language-list"
+          class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden"
+        >
           <ul>
             <li>
               <a href="#" onclick="changeLanguage('en'); return false;">
@@ -93,86 +117,82 @@
 
 <!-- Navbar -->
 <header id="navbar" class="py-4 px-2">
-  <div class="container mx-auto flex items-center justify-between">
-    <div class="flex items-center">
-      <a href="index.html">
-        <img src="images/logo.png" alt="Company Logo" class="h-12 md:h-16 mr-2">
-      </a>
-    </div>
-    <nav>
-      <ul class="flex space-x-4">
-        <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
-        <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
-        <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
-        <li><a href="why-us.html" class="button-link hover:text-gray-300">Why Us</a></li>
+<div class="container mx-auto flex items-center justify-between">
+<div class="flex items-center">
+  <a href="index.html">
+    <img src="images/logo.png" alt="Company Logo" class="h-12 md:h-16 mr-2">
+  </a>
+</div>
+<nav>
+  <ul class="flex space-x-4">
+    <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
+    <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
+    <li><a href="what-we-do.html" class="button-link hover:text-gray-300">What We Do?</a></li>
+    <li class="relative group">
+      <a href="#" class="button-link hover:text-gray-300 surgeries-link">Surgeries</a>
+      <ul class="absolute hidden bg-white border-t border-gray-300 w-40 py-2 px-4 ">
+        <li><a href="plastic-surgery.html" class="text-blue-600 ">Plastic Surgeries</a></li>
+        <li><a href="hair-transplant.html" class="text-blue-600 ">Hair Transplantation</a></li>
+        <li><a href="dentistry.html" class="text-blue-600 ">Cosmetic Dentistry</a></li>
       </ul>
-    </nav>
-  </div>
+    </li>
+    <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
+    <li><a href="surgeries.html" class="button-link hover:text-gray-300">Why Us</a></li>
+  </ul>
+</nav>
+</div>
 </header>
 
-  <!-- Page Header -->
-  <section id="page-header" class="bg-blue-900 text-white py-40">
-    <div class="container mx-auto text-center">
-      <h1 class="text-5xl font-bold mb-6">Talk to Our Experts - Contact Us</h1>
-      <p class="text-xl text-gray-300">Empowering Lives Through Quality Healthcare </p>
-    </div>
-  </section>
+<!-- Page Header -->
+<section
+    id="page-header"
+    class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center"
+    style="background-image: url(images/contact-us-bg.jpg); margin-top: 90px; z-index: 999;"
+    >
+      <div class="container mx-auto text-center"></div>
+</section>
 
 <!-- Contact section -->
 <section id="contact" class="py-8" style="background-color: #b5b5b5;">
-  <div class="container mx-auto px-4 flex flex-col md:flex-row">
-    <!-- Right Side (Contact Form) -->
-    <div class="container mx-auto px-4 text-center md:w-1/2">
-      <h2 class="text-2xl font-bold mb-4">Contact Us
-        <a href="https://wa.me/1234567890" class="ml-2 text-blue-500 hover:text-blue-600">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </h2>
-      <div id="contact-form-container">
-        <form id="contact-form">
-          <div class="mb-4">
-            <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-          </div>
-          <div class="mb-4">
-            <label for="phone" class="block text-lg font-medium text-gray-700 mb-2">Phone Number</label>
-            <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number" class="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-          </div>
-          <div class="mb-4">
-            <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-          </div>
-          <div class="mb-8">
-            <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
-          </div>
-          <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full">Submit</button>
-        </form>
-      </div>
-      <div id="success-message" class="hidden">
-        <p class="text-xl font-bold mb-4">We got your message and we will reach you as soon as possible!</p>
-      </div>
+  <div class="mx-auto px-4 flex flex-col md:flex-row">
+<!-- Right Side (Contact Form) -->
+<div class="mx-auto px-4 text-center md:w-1/2 md:order-2" id="contact-form-container">
+  <h2 class="text-2xl font-bold mb-4">Contact Us
+    <a href="https://wa.me/1234567890" class="ml-2 text-blue-500 hover:text-blue-600">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </h2>
+  <form id="contact-form">
+    <div class="mb-4">
+      <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
     </div>
-    <!-- Left Side (Video Background) -->
-    <div class="md:w-1/2 hidden md:block">
-      <video autoplay loop muted class="h-auto w-full" style="min-height: 400px; width: 1000px;">
-        <source src="images/bogaz-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="mb-4">
+      <label for="phone" class="block text-lg font-medium text-gray-700 mb-2">Phone Number</label>
+      <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number" class="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+    </div>
+    <div class="mb-4">
+      <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+    </div>
+    <div class="mb-8">
+      <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+    </div>
+    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full">Submit</button>
+  </form>
+  <div id="success-message" class="hidden text-xl font-bold mb-4">
+    We got your message and we will reach you as soon as possible!
+  </div>
+</div>
+
+
+    <!-- Left Side (Image) -->
+    <div class="md:w-1/2 flex-shrink-0 relative">
+      <img src="images/contact-us-photo.jpg" alt="Contact Us Image" class="w-full h-full object-cover">
     </div>
   </div>
 </section>
-
-<script>
-  var input = document.querySelector("#phone-number");
-  var iti = window.intlTelInput(input, {
-    preferredCountries: ['pl', 'us'], // Set preferred countries
-    separateDialCode: true, // Show the country dial code separately
-    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/utils.js" // Include the utility script
-  });
-</script>
-
-
 
 <!-- Bottom Footer content -->
 <section id="footer" class="bg-blue-500 py-8">
@@ -208,3 +228,25 @@
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var contactForm = document.getElementById("contact-form");
+    var contactFormContainer = document.getElementById("contact-form-container");
+    var successMessage = document.getElementById("success-message");
+  
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+  
+      contactFormContainer.style.display = "none";
+      successMessage.style.display = "block";
+    });
+  
+    var input = document.querySelector("#phone-number");
+    var iti = window.intlTelInput(input, {
+      preferredCountries: ['pl', 'us'],
+      separateDialCode: true,
+      utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/utils.js"
+    });
+  });
+  </script>

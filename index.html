@@ -18,57 +18,72 @@
 <body>
   
 <!-- Top contact header -->
-<div id="contact-header" >
-  <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
-    <div class="text-white">
-      <span class="mr-2">
-        <i class="fas fa-envelope"></i> info@example.com
-      </span>
-      <span>
-        <i class="fas fa-phone"></i> +123456789
-      </span>
-    </div>
-    <div class="flex items-center">
-      <a href="https://www.facebook.com/example" class="text-white mr-4" aria-label="Facebook">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://www.twitter.com/example" class="text-white mr-4" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://www.instagram.com/example" class="text-white" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <div id="language-switcher" class="relative ml-4">
-        <div id="current-language" class="flex items-center cursor-pointer">
-          <i class="fas fa-globe mr-2"></i>
-          <span class="text-white">English</span>
+<div id="contact-header">
+      <div
+        class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4"
+      >
+        <div class="text-white">
+          <span class="mr-2">
+            <i class="fas fa-envelope"></i> info@example.com
+          </span>
+          <span> <i class="fas fa-phone"></i> +123456789 </span>
         </div>
-        <div id="language-list" class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden">
-          <ul>
-            <li>
-              <a href="#" onclick="changeLanguage('en'); return false;">
-                <i class="fas fa-flag mr-2"></i>
-                <span>English</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" onclick="changeLanguage('de'); return false;">
-                <i class="fas fa-flag mr-2"></i>
-                <span>German</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" onclick="changeLanguage('fr'); return false;">
-                <i class="fas fa-flag mr-2"></i>
-                <span>French</span>
-              </a>
-            </li>
-            <!-- Add more languages as needed -->
-          </ul>
+        <div class="flex items-center">
+          <a
+            href="https://www.facebook.com/example"
+            class="text-white mr-4"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.twitter.com/example"
+            class="text-white mr-4"
+            aria-label="Twitter"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/example"
+            class="text-white"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <div id="language-switcher" class="relative ml-4">
+            <div id="current-language" class="flex items-center cursor-pointer">
+              <i class="fas fa-globe mr-2"></i>
+              <span class="text-white">English</span>
+            </div>
+            <div
+              id="language-list"
+              class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden"
+            >
+              <ul>
+                <li>
+                  <a href="#" onclick="changeLanguage('en'); return false;">
+                    <i class="fas fa-flag mr-2"></i>
+                    <span>English</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onclick="changeLanguage('de'); return false;">
+                    <i class="fas fa-flag mr-2"></i>
+                    <span>German</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onclick="changeLanguage('fr'); return false;">
+                    <i class="fas fa-flag mr-2"></i>
+                    <span>French</span>
+                  </a>
+                </li>
+                <!-- Add more languages as needed -->
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 </div>
 
 <!-- Navbar -->
@@ -90,6 +105,7 @@
             <li><a href="plastic-surgery.html" class="text-blue-600 ">Plastic Surgeries</a></li>
             <li><a href="hair-transplant.html" class="text-blue-600 ">Hair Transplantation</a></li>
             <li><a href="dentistry.html" class="text-blue-600 ">Cosmetic Dentistry</a></li>
+            
           </ul>
         </li>
         <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>

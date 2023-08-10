@@ -39,25 +39,15 @@
       body {
         font-family: Arial, sans-serif;
       }
-
-      /* Main color */
-      .main-color {
-        color: #1d4e89;
-      }
-
-      .page-headear{
-        margin-top: 130px;
-      }
-
       .grid-container {
         display: flex;
-        justify-content: space-between; /* Align content to the left and right edges */
+        justify-content: space-between; 
       }
 
       /* Left-side menu */
       .menu {
-        background-color: #ffffff;
-        border-radius: 13px;
+        background-color: #36606E;
+        border-radius: 11px;
         margin-left: 2px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: 5px;
@@ -66,12 +56,12 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  padding: 8px 0;
+  padding: 7px 0;
   transition: background-color 0.3s ease-in-out;
-  margin-right: 2%;
+  margin-right: 9%;
   overflow: hidden;
   position: relative;
-  max-width: 200px; /* Adjust the max width as needed */
+  max-width: 200px;
 }
 
 .menu li:before {
@@ -100,22 +90,23 @@
         padding: 20px;
       }
       .description h3 {
+        color: #36606E;
         font-size: 24px;
         font-weight: bold;
       }
       .description p {
         font-size: 16px;
         color: #333;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
       }
 
       .gif-container {
         margin-top: 50px;
         text-align: center;
-        height: 300px; /* Adjust the height as needed */
+        height: 300px;
         overflow: hidden;
       }
-
-      /* Styling for the GIF itself */
       .gif {
         max-width: 100%;
         max-height: 100%;
@@ -129,6 +120,7 @@
         font-family: "Raleway", sans-serif;
       }
       .qna-container h4 {
+        color: #2a5b98;;
         font-size: 18px;
         font-weight: bold;
         padding-top: 5px;
@@ -283,21 +275,21 @@
 
     <!-- Page Header -->
     <section
-      id="page-header"
-      class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center"
-      style="background-image: url(images/plastic-surgery.jpg)"
+    id="page-header"
+    class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center"
+    style="background-image: url(images/plastic-surgery.jpg); margin-top: 90px; z-index: 999;"
     >
       <div class="container mx-auto text-center"></div>
     </section>
 
     <!-- Surgeries Section -->
-    <section id="surgeries" class="py-8">
-      <div class="container mx-auto px-4">
+    <section id="surgeries" class="py-8 bg-gray-200">
+      <div class="container mx-auto px-4 ">
         <div class="grid-container grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Left-side menu -->
           <div class="menu">
             <div class="bg-white rounded shadow p-6">
-              <h3 class="w-60 text-2xl font-bold mb-2">Plastic Surgeries</h3>
+              <h3  id="descriptionplastic"class="w-60 text-2xl font-bold mb-2">Plastic Surgeries</h3>
               <ul>
                 <li
                   class="mb-1 list-disc  hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
@@ -396,13 +388,14 @@
                 >
                   Brazilian Buttlift
                 </li>
+                <hr class="my-2 width border-gray-300" />
               </ul>
             </div>
           </div>
 
           <!-- Right-side description -->
           <div class="description">
-            <h3 class="text-2xl font-bold mb-2" id="surgery-title">
+            <h3 class="text-2xl text-center font-bold mb-2 px-3" id="surgery-title">
               Plastic Surgery
             </h3>
             <p class="text-lg text-gray-700" id="surgery-info">
@@ -416,7 +409,6 @@
             <!-- Questions and Answers -->
             <div class="qna-container" id="questions-container">
               <div id="qna-section" class="mt-8">
-                <!-- Your questions and answers go here -->
               </div>
  
               </div>
@@ -478,11 +470,6 @@
     <!-- Scripts -->
     <script>
       const surgeryDetails = {
-        "plastic-surgery": {
-          title: "Plastic Surgery",
-          description:
-            "With a commitment to your satisfaction and well-being, we are dedicated to helping you achieve the confidence and beauty you deserve. Trust in our professional hands, and embark on a journey to a more radiant and confident you.",
-        },
         "breast-augmentation": {
           title: "Breast Augmentation",
           description:
