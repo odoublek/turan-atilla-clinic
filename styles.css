@@ -1,7 +1,8 @@
 body {
-  max-width: 1600px;
+  max-width: 1400px;
   font-family: Arial, sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 .text-gray-700 {
@@ -16,55 +17,30 @@ body {
   color: #2563eb;
 }
 
-.text-blue-31{
+.text-blue-31 {
   color: #3182ce;
 }
-
-/* Top contact header */
-#contact-header {
-  background-color: #6CA1C4;
-  padding: 0.5rem;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-}
-
-#contact-header .text-white {
-  color: #ffffff;
-}
-
-#contact-header .text-white a {
-  margin-right: 0.5rem;
-}
-
-#contact-header .text-white a:last-child {
-  margin-right: 0;
-}
-
-#contact-header .text-white i {
-  margin-right: 0.25rem;
-}
-
 
 /* Navbar */
 #navbar {
   position: fixed;
-  top: 40px;
-  background-color: #1D4E89;
+  top: 0px;
+  background-color: #ffffff;
   width: 100%;
   color: #ffffff;
   padding: 1rem 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  font-family: "Lora", serif;
 }
 
 #navbar a {
   margin-right: 1rem;
-  color: #ffffff;
+  color: #1d3b71;
 }
 
 #navbar a:hover {
-  color: #cce0ff;
+  color: #17A899;
 }
 
 #navbar .font-bold {
@@ -72,7 +48,7 @@ body {
 }
 
 #navbar #navbar-toggle {
-  color: #a0aec0;
+  color: #17A899;
 }
 
 #navbar #navbar-toggle i {
@@ -93,7 +69,7 @@ body {
 }
 
 #navbar-collapse a:hover {
-  color: #a0aec0;
+  color: #17A899;
 }
 
 #navbar .group:hover > ul {
@@ -105,47 +81,47 @@ body {
   top: 100%;
   left: 0;
   z-index: 10;
-  background-color: #FFFFFF;
-  border: 1px solid #D1D5DB;
+  color: #1d3b71;
+  border: 1px solid #d1d5db;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #navbar .group li {
+  
   padding: 0.5rem 0;
 }
 
 #navbar .group a {
-  color: #1D4E89;
+  color: #1d4e89;
 }
 
 #navbar .group a:hover {
-  color: #cce0ff;
+  color: #17A899;
 }
 
-/* Set the background color for the "Surgeries" dropdown */
 #navbar .group:hover > ul {
   display: block;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 200px;
 }
 
-/* Set the color for the "Surgeries" link */
 #navbar .group .surgeries-link {
-  color: #FFFFFF;
+  color: #1d3b71;
 }
 
-/* Set the hover color for the "Surgeries" link */
+#navbar .group ul .surgeries-link {
+  color: #17A899; 
+}
+
 #navbar .group .surgeries-link:hover {
-  color: #cce0ff;
+  color: #17A899;
 }
-
-
 
 /* Hero Section */
 #hero-section {
   background-repeat: no-repeat;
   background-size: cover;
-    transition: background-image 0.3s ease;
+  transition: background-image 0.3s ease;
   height: 650px;
   margin-top: 80px;
 }
@@ -231,14 +207,19 @@ body {
 .service-button:hover {
   background-color: #2765c9;
 }
+#the-team {
+  background-color: #16a799;
+}
 
 /* Services overview Section */
 #services-overview {
+  font-family: "Nunito", sans-serif;
   padding: 2rem 0;
-  background-color: #83a8d9;
+  background-color: #17a899;
 }
 
 .service-box {
+  position: relative;
   text-align: center;
   background-color: #ffffff;
   border-radius: 0.5rem;
@@ -248,17 +229,17 @@ body {
 }
 
 .service-box:hover {
-  background-color: #ebf8ff; /* Light blue background color on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increased box shadow on hover */
-  color: #3182ce; /* Blue text color on hover */
+  background-color: #ebf8ff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .service-box i {
   font-size: 3rem;
-  color: #3182ce; /* Blue color */
+  color: #1d3b71;
 }
 
 .service-box h3 {
+  color: #1d3b71;
   font-size: 1.875rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -269,21 +250,137 @@ body {
   color: #718096;
 }
 
+/* Learn More button */
+.service-button {
+  position: absolute;
+  bottom: 0.6rem;
+  padding-top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1d3b71;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.15rem;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.service-box:hover .service-button {
+  background-color: #17a899;
+}
+
+/* what we offer section */
+#work-with {
+  font-family: "Nunito", sans-serif;
+  background-color: #5048484e;
+}
+#work-with .work-with-item {
+  font-family: "Nunito", sans-serif;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#work-with .work-with-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.work-with-image {
+  height: 190px;
+  border-radius: 8px;
+}
+.work-with-item {
+  overflow: hidden;
+}
+
+.overlay {
+  background-color: #17a899;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.work-with-item:hover .overlay {
+  opacity: 0.9;
+}
+
+.work-with-item:hover .overlay p {
+  opacity: 1;
+  transform: translateY(-50%);
+}
 /* Testimonials section */
-.testimonial-card {
+#testimonials {
+  background-color: #17a899;
+  padding: 20px 0;
+}
+
+.testimonial-fade-container {
   display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px; 
+}
+
+.testimonial-container {
+  flex: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  box-sizing: border-box; /* Include padding in width calculation */
+  margin-right: 20px; /* Add spacing between testimonials */
+}
+
+.testimonial-container.visible {
+  opacity: 1;
+}
+
+.testimonial {
   background-color: #ffffff;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  margin: 0 20px;
+}
+
+.testimonial.visible {
+  opacity: 1;
+}
+
+.testimonial-group {
+  display: flex;
+  align-items: stretch; /* Make testimonial boxes have equal height */
+  justify-content: center;
+  width: 100%; /* Show only 2 testimonials at a time */
+}
+
+.testimonial-card {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 1.5rem;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial-card.visible {
+  opacity: 1;
 }
 
 .testimonial-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 1.5rem;
 }
 
 .testimonial-photo img {
@@ -291,11 +388,12 @@ body {
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
-  margin-right: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .testimonial-details {
   flex: 1;
+  margin-top: 1rem;
 }
 
 .testimonial-rating {
@@ -303,108 +401,72 @@ body {
 }
 
 .rating-icon {
-  color: #ffd700;
-  font-size: 1rem;
+  color: #ffc107;
+  font-size: 1.5rem;
 }
 
 .testimonial-comment {
-  font-size: 1.125rem;
-  line-height: 1.5;
+  font-size: 1.25rem;
+  line-height: 1.7;
   color: #333333;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .testimonial-author {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #777777;
-}
-
-/* Comparison table */
-#comparison-table {
-  background-color: #003366;
-  color: #ffffff;
-  padding: 8rem 0;
-}
-
-#comparison-table h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
-#comparison-table p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-#comparison-table p:last-child {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.table-container {
-  overflow-x: auto;
-}
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 2rem;
-  color: #003366;
-}
-
-.table th,
-.table td {
-  padding: 1rem 2rem;
-  text-align: center;
-  border-bottom: 1px solid #ffffff;
-}
-
-.table th {
-  background-color: #0778ea;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.table tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-
-.table tr:hover {
-  background-color: #cce0ff;
-  cursor: pointer;
 }
 
 /* Packages Section */
 #packages {
-  background-color: #f9f9f9; /* Choose a color that suits your design */
-  padding: 80px 0;
+  font-family: "Nunito", sans-serif;
+  background-color: #5048484e;
+  padding: 70px 0;
 }
 
 .packages-container {
   display: grid;
+  height: 140%;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  .package-gold {
-    background-color: #ffd700;
-  }
+  gap: 20px;
+}
 
-  .package-platinum {
-    background-color: #c0c0c0;
-  }
+.package-card {
+  width: 100%;
+  height: 120%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
 
-  .package-diamond {
-    background-color: #b9f2ff;
-  }
+.package:hover .package-card {
+  transform: rotateY(180deg);
+}
 
-  .package-custom {
-    background-color: #ffc0cb;
-  }
+.package-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.package-front {
+  background-color: #4c51bf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.package-back {
+  background-color: #ffffff;
+  color: #333;
+  transform: rotateY(180deg);
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid #ccc;
 }
 
 .package h3 {
@@ -413,36 +475,20 @@ body {
   margin-bottom: 16px;
 }
 
-.package p {
-  margin-bottom: 16px;
-}
-
-.package {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 24px;
-}
-
-.package .select-button {
-  display: inline-block;
-  background-color: #4c51bf; /* Choose a color that suits your design */
-  color: #ffffff;
-  font-weight: bold;
-  padding: 12px 24px;
-  border-radius: 9999px;
-  transition: background-color 0.3s ease;
-}
-
-.package .select-button:hover {
-  background-color: #3740a1; /* Choose a color that suits your design */
+/* Additional style for consistent back content */
+.package-back-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* FAQ Section */
 #faq {
-  background-color: #003366;
+  background-color: #17a899; /* Updated background color */
   color: #ffffff;
   padding: 2rem 0;
+  font-family: "Nunito", sans-serif;
 }
 
 #faq h2 {
@@ -461,17 +507,17 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #0056b3;
+  background-color: #3b82f6; /* Your main color */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .accordion-title:hover {
-  background-color: #007bff;
+  background-color: #2563eb; /* Darker shade of your main color */
 }
 
 .accordion-title.active {
-  background-color: #0056b3;
+  background-color: #3b82f6; /* Your main color */
 }
 
 .accordion-title.active h3 {
@@ -490,7 +536,7 @@ body {
 
 .accordion-content {
   padding: 1.5rem;
-  background-color: #0056b3;
+  background-color: #3b82f6; /* Your main color */
   transition: max-height 0.3s ease;
   max-height: 0;
   overflow: hidden;
@@ -504,19 +550,20 @@ body {
 /* Bottom Footer Section */
 #footer {
   background-color: #007bff;
+  font-family: "Nunito", sans-serif;
   padding: 4rem 0;
 }
 
 #footer h3 {
   color: #ffffff;
-  font-size: 1.5rem; /* Adjust the font size as desired */
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 #footer p {
   color: #ffffff;
-  font-size: 1rem; /* Adjust the font size as desired */
+  font-size: 1rem; 
   margin-bottom: 1rem;
 }
 
@@ -535,7 +582,7 @@ body {
 
 #footer i {
   color: #cceeff;
-  font-size: 1rem; 
+  font-size: 1rem;
   margin-right: 0.5rem;
   transition: color 0.3s ease;
 }
@@ -544,26 +591,6 @@ body {
   color: #a8d8ff;
 }
 
-/* Footer */
-#footer {
-  background-color: #1a365d;
-  padding: 2rem 0;
-}
-
-#footer .text-white {
-  color: #ffffff;
-}
-
-#footer a {
-  color: #ffffff;
-  margin-right: 1rem;
-}
-
-#footer a:last-child {
-  margin-right: 0;
-}
-
-/* contact-us.html */
 /* Contact section */
 #contact {
   background-color: #b5b5b5;

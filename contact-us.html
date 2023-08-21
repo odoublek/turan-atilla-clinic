@@ -46,102 +46,68 @@
 
 <body>
   
-<!-- Top contact header -->
-<div id="contact-header">
-  <div
-    class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4"
-  >
-    <div class="text-white">
-      <span class="mr-2">
-        <i class="fas fa-envelope"></i> info@example.com
-      </span>
-      <span> <i class="fas fa-phone"></i> +123456789 </span>
-    </div>
-    <div class="flex items-center">
-      <a
-        href="https://www.facebook.com/example"
-        class="text-white mr-4"
-        aria-label="Facebook"
-      >
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a
-        href="https://www.twitter.com/example"
-        class="text-white mr-4"
-        aria-label="Twitter"
-      >
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a
-        href="https://www.instagram.com/example"
-        class="text-white"
-        aria-label="Instagram"
-      >
-        <i class="fab fa-instagram"></i>
-      </a>
-      <div id="language-switcher" class="relative ml-4">
-        <div id="current-language" class="flex items-center cursor-pointer">
-          <i class="fas fa-globe mr-2"></i>
-          <span class="text-white">English</span>
+    <!-- Navbar -->
+    <header id="navbar" class="py-4 px-2 landing-navbar">
+      <div class="container mx-auto flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="index.html">
+            <img
+              src="images/companylogo.png"
+              alt="Company Logo"
+              class="h-20 md:h-25 mr-3"
+            />
+          </a>
         </div>
-        <div
-          id="language-list"
-          class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden"
-        >
-          <ul>
+        <nav>
+          <ul class="flex space-x-4">
             <li>
-              <a href="#" onclick="changeLanguage('en'); return false;">
-                <i class="fas fa-flag mr-2"></i>
-                <span>English</span>
-              </a>
+              <a href="index.html" class="button-link hover:text-gray-300"
+                >Homepage</a
+              >
             </li>
             <li>
-              <a href="#" onclick="changeLanguage('de'); return false;">
-                <i class="fas fa-flag mr-2"></i>
-                <span>German</span>
-              </a>
+              <a href="contact-us.html" class="button-link hover:text-gray-300"
+                >Contact</a
+              >
             </li>
             <li>
-              <a href="#" onclick="changeLanguage('fr'); return false;">
-                <i class="fas fa-flag mr-2"></i>
-                <span>French</span>
-              </a>
+              <a href="what-we-do.html" class="button-link hover:text-gray-300"
+                >What We Do?</a
+              >
             </li>
-            <!-- Add more languages as needed -->
+            <li class="relative group">
+              <a href="#" class="button-link hover:text-gray-300 surgeries-link"
+                >Surgeries</a
+              >
+              <ul
+                class="absolute hidden bg-white border-t border-gray-300 w-40 py-2 px-4"
+              >
+                <li>
+                  <a href="plastic-surgery.html" class="text-blue-600"
+                    >Plastic Surgeries</a
+                  >
+                </li>
+                <li>
+                  <a href="hair-transplant.html" class="text-blue-600"
+                    >Hair Transplantation</a
+                  >
+                </li>
+                <li>
+                  <a href="dentistry.html" class="text-blue-600"
+                    >Cosmetic Dentistry</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="about-us.html" class="button-link hover:text-gray-300"
+                >About Us</a
+              >
+            </li>
           </ul>
-        </div>
+        </nav>
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- Navbar -->
-<header id="navbar" class="py-4 px-2">
-<div class="container mx-auto flex items-center justify-between">
-<div class="flex items-center">
-  <a href="index.html">
-    <img src="images/logo.png" alt="Company Logo" class="h-12 md:h-16 mr-2">
-  </a>
-</div>
-<nav>
-  <ul class="flex space-x-4">
-    <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
-    <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
-    <li><a href="what-we-do.html" class="button-link hover:text-gray-300">What We Do?</a></li>
-    <li class="relative group">
-      <a href="#" class="button-link hover:text-gray-300 surgeries-link">Surgeries</a>
-      <ul class="absolute hidden bg-white border-t border-gray-300 w-40 py-2 px-4 ">
-        <li><a href="plastic-surgery.html" class="text-blue-600 ">Plastic Surgeries</a></li>
-        <li><a href="hair-transplant.html" class="text-blue-600 ">Hair Transplantation</a></li>
-        <li><a href="dentistry.html" class="text-blue-600 ">Cosmetic Dentistry</a></li>
-      </ul>
-    </li>
-    <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
-    <li><a href="surgeries.html" class="button-link hover:text-gray-300">Why Us</a></li>
-  </ul>
-</nav>
-</div>
-</header>
+    </header>
 
 <!-- Page Header -->
 <section

@@ -72,25 +72,43 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// The team
-function toggleOperations(operationsId, detailsId, button) {
-  var operationsDiv = document.getElementById(operationsId);
-  var detailsDiv = document.getElementById(detailsId);
 
-  if (operationsDiv.style.display === "none") {
-    operationsDiv.style.display = "block";
-    detailsDiv.style.display = "none";
-    button.innerText = "See Doctor Details";
-  } else {
-    operationsDiv.style.display = "none";
-    detailsDiv.style.display = "block";
-    button.innerText = "Check Operations";
+//Testimonial
+document.addEventListener("DOMContentLoaded", function () {
+  const testimonialContainers = document.querySelectorAll(".testimonial-container");
+  const totalTestimonials = testimonialContainers.length;
+
+  function showNextTestimonials() {
+    const currentContainer = testimonialContainers[currentTestimonialIndex];
+    const nextIndex = (currentTestimonialIndex + 1) % totalTestimonials;
+    const nextContainer = testimonialContainers[nextIndex];
+
+    currentContainer.classList.remove("visible");
+    nextContainer.classList.add("visible");
+
+    currentTestimonialIndex = nextIndex;
   }
-}
 
+  let currentTestimonialIndex = 0;
+  testimonialContainers[currentTestimonialIndex].classList.add("visible");
+
+  setInterval(showNextTestimonials, 3000);
+});
+
+// Packages
+const packages = document.querySelectorAll(".package");
+
+packages.forEach((package) => {
+  package.addEventListener("mouseenter", () => {
+    package.classList.add("hovered");
+  });
+
+  package.addEventListener("mouseleave", () => {
+    package.classList.remove("hovered");
+  });
+});
 
 //contact form
-  // Attach submit event listener to the form
   const contactForm = document.querySelector("#contact-form");
   const successMessage = document.querySelector("#success-message");
 
@@ -98,5 +116,4 @@ function toggleOperations(operationsId, detailsId, button) {
     event.preventDefault();
     contactForm.classList.add("hidden");
     successMessage.classList.remove("hidden");
-    // You can add your AJAX/PHP code here to handle form submission on the server-side
   });

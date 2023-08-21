@@ -12,6 +12,7 @@
   <link href="styles.css" rel="stylesheet">
   <script src="script.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
 
 </head>
 <style>
@@ -27,140 +28,109 @@
     background-position: center;
 }
 
-
-#separator {
-  background-color: #ffffff;
-}
-
-.contact-us-button {
-  background-color: #3b82f6;
-  transition: background-color 0.3s ease;
-}
-
-.contact-us-button:hover {
-  background-color: #2563eb;
-}
 </style>
 
 <body>
   
-<!-- Top contact header -->
-<div id="contact-header" >
-  <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
-    <div class="text-white">
-      <span class="mr-2">
-        <i class="fas fa-envelope"></i> info@example.com
-      </span>
-      <span>
-        <i class="fas fa-phone"></i> +123456789
-      </span>
-    </div>
-    <div class="flex items-center">
-      <a href="https://www.facebook.com/example" class="text-white mr-4" aria-label="Facebook">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://www.twitter.com/example" class="text-white mr-4" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://www.instagram.com/example" class="text-white" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <div id="language-switcher" class="relative ml-4">
-        <div id="current-language" class="flex items-center cursor-pointer">
-          <i class="fas fa-globe mr-2"></i>
-          <span class="text-white">English</span>
-        </div>
-        <div id="language-list" class="absolute bg-white mt-2 py-2 px-3 rounded shadow-md hidden">
-          <ul>
-            <li>
-              <a href="#" onclick="changeLanguage('en'); return false;">
-                <i class="fas fa-flag mr-2"></i>
-                <span>English</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" onclick="changeLanguage('de'); return false;">
-                <i class="fas fa-flag mr-2"></i>
-                <span>German</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" onclick="changeLanguage('fr'); return false;">
-                <i class="fas fa-flag mr-2"></i>
-                <span>French</span>
-              </a>
-            </li>
-            <!-- Add more languages as needed -->
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Navbar -->
-<header id="navbar" class="py-4 px-2">
-  <div class="container mx-auto flex items-center justify-between">
-    <div class="flex items-center">
-      <a href="index.html">
-        <img src="images/logo.png" alt="Company Logo" class="h-12 md:h-16 mr-2">
-      </a>
-    </div>
-    <nav>
-      <ul class="flex space-x-4">
-        <li><a href="index.html" class="button-link hover:text-gray-300">Homepage</a></li>
-        <li><a href="contact-us.html" class="button-link hover:text-gray-300">Contact</a></li>
-        <li><a href="what-we-do.html" class="button-link hover:text-gray-300">What We Do?</a></li>
-        <li class="relative group">
-          <a href="#" class="button-link hover:text-gray-300 surgeries-link">Surgeries</a>
-          <ul class="absolute hidden bg-white border-t border-gray-300 w-40 py-2 px-4 ">
-            <li><a href="plastic-surgery.html" class="text-blue-600 ">Plastic Surgeries</a></li>
-            <li><a href="hair-transplant.html" class="text-blue-600 ">Hair Transplantation</a></li>
-            <li><a href="dentistry.html" class="text-blue-600 ">Cosmetic Dentistry</a></li>
-          </ul>
-        </li>
-        <li><a href="about-us.html" class="button-link hover:text-gray-300">About Us</a></li>
-        <li><a href="surgeries.html" class="button-link hover:text-gray-300">Why Us</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-  <!-- Page Header -->
-  <section id="page-header" class="bg-blue-900 text-white py-40">
-    <div class="container mx-auto text-center">
-      <h1 class="text-5xl font-bold mb-6">Welcome to Nova Care</h1>
-      <p class="text-xl text-gray-300">Your Path to Excellence in Medical Treatment</p>
-    </div>
-  </section>
-
-  <!-- Separator Section -->
-  <section id="separator" class="py-12 bg-white">
-    <div class="container mx-auto text-center px-4">
-      <h2 class="text-4xl font-bold mb-8">About Us</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="text-gray-700">
-          <p class="text-lg mb-6">
-            Welcome to Nova Care, your trusted partner for exceptional medical care in the heart of Istanbul. We are a leading medical company specializing in hair transplantation, plastic surgery, and dentistry, dedicated to providing you with top-notch services and full satisfaction guarantees throughout your journey to health and beauty.
-          </p>
-          <p class="text-lg mb-6">
-            At Nova Care, we have established partnerships with renowned doctors in Istanbul, known for their excellence in medical treatments and compassionate patient care. Our network of experienced doctors is carefully selected to ensure you receive the highest standard of treatment, tailored to your specific needs and preferences. With their expertise and the latest technologies, our doctors work hard to achieve exceptional results and fulfill your aspirations.
-          </p>
-          <p class="text-lg mb-6">
-            Choosing Nova Care means choosing transparency, safety, and professionalism. Our team of medical consultants and specialists will be with you every step of the way, offering personalized support and guidance from the initial consultation to post-treatment follow-up. Your well-being and satisfaction are at the core of our values, and we take pride in our commitment to delivering exceptional care. Embark on a transformative journey with us and explore the captivating beauty of Istanbul while receiving world-class medical attention. As a city that straddles two continents, Istanbul offers a unique blend of rich history, vibrant culture, and breathtaking landscapes.
-          </p>
-          <p class="text-lg mb-6">
-            Join us at Nova Care, where your dreams of enhanced well-being and beauty can become a reality. Our invitation extends to all those seeking the best results and a seamless medical journey. We are dedicated to helping you achieve your desired outcomes, and we look forward to being your trusted companion on this remarkable path of self-discovery and rejuvenation. Experience the difference with Nova Care and unlock the potential of a healthier, happier you.
-          </p>
-          <a href="#contact" class="mt-8 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded contact-us-button">
-            Contact Us
+    <!-- Navbar -->
+    <header id="navbar" class="py-4 px-2 landing-navbar">
+      <div class="container mx-auto flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="index.html">
+            <img
+              src="images/companylogo.png"
+              alt="Company Logo"
+              class="h-20 md:h-25 mr-3"
+            />
           </a>
         </div>
-        <div>
-          <img src="images/about-us-image.jpg" alt="About Us" class="mx-auto rounded-lg shadow-lg">
+        <nav>
+          <ul class="flex space-x-4">
+            <li>
+              <a href="index.html" class="button-link hover:text-gray-300"
+                >Homepage</a
+              >
+            </li>
+            <li>
+              <a href="contact-us.html" class="button-link hover:text-gray-300"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a href="what-we-do.html" class="button-link hover:text-gray-300"
+                >What We Do?</a
+              >
+            </li>
+            <li class="relative group">
+              <a href="#" class="button-link hover:text-gray-300 surgeries-link"
+                >Surgeries</a
+              >
+              <ul
+                class="absolute hidden bg-white border-t border-gray-300 w-40 py-2 px-4"
+              >
+                <li>
+                  <a href="plastic-surgery.html" class="text-blue-600"
+                    >Plastic Surgeries</a
+                  >
+                </li>
+                <li>
+                  <a href="hair-transplant.html" class="text-blue-600"
+                    >Hair Transplantation</a
+                  >
+                </li>
+                <li>
+                  <a href="dentistry.html" class="text-blue-600"
+                    >Cosmetic Dentistry</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="about-us.html" class="button-link hover:text-gray-300"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Page Header -->
+    <section
+    id="page-header"
+    class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center"
+    style="background-image: url(images/about-us-bg.jpg); margin-top: 90px; z-index: 999;"
+    >
+      <div class="container mx-auto text-center"></div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="py-12 bg-blue-200">
+      <div class="container mx-auto text-center px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="text-gray-700 font-serif  ">
+            <p class="text-lg mb-6">
+              Welcome to Nova Care, founded by two passionate doctors dedicated to enhancing human health and beauty. We are your trusted partner for exceptional medical care in Istanbul, specializing in hair transplantation, plastic surgery, and dentistry. Our commitment is to deliver top-notch services and ensure your guaranteed satisfaction.
+            </p>
+            <p class="text-lg mb-6">
+              With years of experience and a relentless pursuit of excellence, we have handpicked a network of skilled doctors who excel in treatments and patient care. Through the use of the latest technologies, we achieve exceptional results tailored to your individual needs. Nova Care stands for transparency, safety, and professionalism.
+            </p>
+            <p class="text-lg mb-6">
+              At Nova Care, we believe in a personalized approach. Our team of dedicated medical consultants and specialists provides unwavering support from the initial consultation to the follow-up stages. Your well-being and satisfaction are our utmost priorities. Embark on a transformative journey with us, and as you explore the captivating beauty of Istanbul, rest assured that you'll receive world-class medical attention.
+            </p>
+            <p class="text-lg mb-6">
+              Join us at Nova Care and allow us to turn your dreams of enhanced well-being into reality. Experience the transformative difference and unlock your full potential with Nova Care. Your needs will be expertly handled, and your satisfaction is our unwavering goal.
+            </p>
+            <a href="#contact" class="mt-8 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded contact-us-button">
+              Contact Us
+            </a>
+          </div>
+          <div>
+            <img src="images/about-us.jpg" alt="About Us" class="mx-auto rounded-lg shadow-lg">
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
 
 <!-- Bottom Footer content -->
 <section id="footer" class="bg-blue-500 py-8">
