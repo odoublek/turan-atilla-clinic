@@ -96,17 +96,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Packages
-const packages = document.querySelectorAll(".package");
+const packages = document.querySelectorAll('.package');
 
-packages.forEach((package) => {
-  package.addEventListener("mouseenter", () => {
-    package.classList.add("hovered");
+
+packages.forEach(package => {
+  package.addEventListener('mouseenter', () => {
+    package.querySelector('.package-card').style.transform = 'rotateY(180deg)';
   });
 
-  package.addEventListener("mouseleave", () => {
-    package.classList.remove("hovered");
+  package.addEventListener('mouseleave', () => {
+    package.querySelector('.package-card').style.transform = 'rotateY(0)';
   });
 });
+
 
 //contact form
   const contactForm = document.querySelector("#contact-form");

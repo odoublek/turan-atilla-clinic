@@ -5,27 +5,14 @@ body {
   overflow-x: hidden;
 }
 
-.text-gray-700 {
-  color: #4b5563;
-}
 
-.text-blue-500 {
-  color: #3b82f6;
-}
 
-.text-blue-600 {
-  color: #2563eb;
-}
-
-.text-blue-31 {
-  color: #3182ce;
-}
 
 /* Navbar */
 #navbar {
   position: fixed;
   top: 0px;
-  background-color: #ffffff;
+  background-color: #fffff0;
   width: 100%;
   color: #ffffff;
   padding: 1rem 0;
@@ -40,7 +27,7 @@ body {
 }
 
 #navbar a:hover {
-  color: #17A899;
+  color: #17a899;
 }
 
 #navbar .font-bold {
@@ -48,7 +35,7 @@ body {
 }
 
 #navbar #navbar-toggle {
-  color: #17A899;
+  color: #17a899;
 }
 
 #navbar #navbar-toggle i {
@@ -69,7 +56,7 @@ body {
 }
 
 #navbar-collapse a:hover {
-  color: #17A899;
+  color: #17a899;
 }
 
 #navbar .group:hover > ul {
@@ -87,7 +74,6 @@ body {
 }
 
 #navbar .group li {
-  
   padding: 0.5rem 0;
 }
 
@@ -96,7 +82,7 @@ body {
 }
 
 #navbar .group a:hover {
-  color: #17A899;
+  color: #17a899;
 }
 
 #navbar .group:hover > ul {
@@ -110,11 +96,11 @@ body {
 }
 
 #navbar .group ul .surgeries-link {
-  color: #17A899; 
+  color: #17a899;
 }
 
 #navbar .group .surgeries-link:hover {
-  color: #17A899;
+  color: #17a899;
 }
 
 /* Hero Section */
@@ -207,9 +193,7 @@ body {
 .service-button:hover {
   background-color: #2765c9;
 }
-#the-team {
-  background-color: #16a799;
-}
+
 
 /* Services overview Section */
 #services-overview {
@@ -236,6 +220,7 @@ body {
 .service-box i {
   font-size: 3rem;
   color: #1d3b71;
+  padding-top: -2px;
 }
 
 .service-box h3 {
@@ -248,6 +233,7 @@ body {
 .service-box p {
   font-size: 1.125rem;
   color: #718096;
+  padding-bottom: 10px;
 }
 
 /* Learn More button */
@@ -272,7 +258,8 @@ body {
 /* what we offer section */
 #work-with {
   font-family: "Nunito", sans-serif;
-  background-color: #5048484e;
+
+  background-color: #fffff0;
 }
 #work-with .work-with-item {
   font-family: "Nunito", sans-serif;
@@ -310,6 +297,10 @@ body {
   opacity: 1;
   transform: translateY(-50%);
 }
+
+#work-with .work-with-item h3 {
+  color: #1d3b71;
+}
 /* Testimonials section */
 #testimonials {
   background-color: #17a899;
@@ -321,7 +312,7 @@ body {
   justify-content: center;
   width: 100%;
   overflow: hidden;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .testimonial-container {
@@ -460,6 +451,8 @@ body {
   color: white;
 }
 
+
+
 .package-back {
   background-color: #ffffff;
   color: #333;
@@ -563,7 +556,7 @@ body {
 
 #footer p {
   color: #ffffff;
-  font-size: 1rem; 
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -591,59 +584,6 @@ body {
   color: #a8d8ff;
 }
 
-/* Contact section */
-#contact {
-  background-color: #b5b5b5;
-  padding: 80px 0;
-}
-
-#contact h2 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-#contact-form {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-#contact-form label {
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 20px;
-}
-
-#contact-form textarea {
-  resize: vertical;
-  height: 120px;
-}
-
-#contact-form button[type="submit"] {
-  background-color: #1454a2;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#contact-form button[type="submit"]:hover {
-  background-color: #00b8a9;
-}
 
 #footer {
   background-color: #1454a2;

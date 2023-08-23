@@ -39,17 +39,89 @@
     />
   </head>
   <style>
+    #page-header {
+      background-image: url(images/what-we-do-bg.jpg);
+      background-size: cover;
+      background-position: center bottom 80%;
+      position: relative;
+      height: 600px;
+      margin-bottom: -50px;
+    }
+
+    #page-header .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    #page-header h1 {
+      font-family: "Raleway", sans-serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #1d3b71;
+      margin-top: 2rem;
+    }
+
+    #page-header p {
+      font-family: "Raleway", sans-serif;
+      font-size: 1.25rem;
+      color: #1d3b71;
+      font-style: italic;
+      margin-top: 1rem;
+    }
+
+    #page-header button {
+      margin-top: 1.5rem;
+    }
+
+    #page-header .absolute {
+      left: 1rem;
+      bottom: 1rem;
+      padding: 1rem;
+      border-radius: 0.25rem;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    #page-header .absolute p {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #17a899;
+      margin-bottom: 0.5rem;
+    }
+
+    #page-header .absolute button {
+      font-family: "Raleway", sans-serif;
+      margin-top: 0.5rem;
+      background-color: #17a899;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+
+    #page-header .absolute button:hover {
+      background-color: #1dcab9;
+    }
+
+    #page-header .support-team {
+      font-size: 1.1rem;
+      color: #1d3b71;
+      margin-top: 1rem;
+    }
+
     .top-section {
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 120px 0;
       font-family: "Raleway", serif;
-      opacity: 0; /* Add this to make the section initially invisible */
-      transition: opacity 0.5s ease-in-out; /* Add a transition for opacity */
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      color: #17a899;
+      margin-bottom: -50px;
     }
     .top-section.active {
-      opacity: 1; /* When the section becomes active, make it fully visible */
+      opacity: 1;
     }
     .step-image {
       flex: 1;
@@ -89,7 +161,7 @@
       height: 100%;
       background-color: #17a899;
       width: 0;
-      transition: width 0.3s;
+      transition: width 0.3s, background-color 0.3s;
     }
 
     .step-indicators {
@@ -193,7 +265,7 @@
                 >Surgeries</a
               >
               <ul
-                class="absolute hidden bg-white border-t border-gray-300 w-40 py-2 px-4"
+                class="absolute hidden border-t border-gray-300 w-40 py-2 px-4"
               >
                 <li>
                   <a href="plastic-surgery.html" class="text-blue-600"
@@ -208,6 +280,11 @@
                 <li>
                   <a href="dentistry.html" class="text-blue-600"
                     >Cosmetic Dentistry</a
+                  >
+                </li>
+                <li>
+                  <a href="dentistry.html" class="text-blue-600"
+                    >Obesity Surgeries</a
                   >
                 </li>
               </ul>
@@ -225,15 +302,35 @@
     <!-- Page Header -->
     <section
       id="page-header"
-      class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center"
-      style="
-        background-image: url(images/what-we-do-bg.jpg);
-        margin-top: 90px;
-        z-index: 999;
-      "
+      class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center relative"
+      style="background-image: url(images/what-we-do-bg.jpg)"
     >
-      <div class="container mx-auto text-center"></div>
+      <div class="container mx-auto text-center">
+        <div class="flex items-center justify-start">
+          <div class="w-1/2 pr-8">
+            <h1 class="text-4xl font-semibold">
+              We Are with You on Every Step of Your Journey
+            </h1>
+            <p class="support-team">
+              Our skilled support team and Dr. Turan and Dr. Atilla will ensure
+              that you are fully satisfied on this journey.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="absolute left-0 bottom-0 ml-8 mb-8 bg-opacity-80 p-4 rounded">
+        <p class="text-lg text-white font-bold">
+          Contact us now to get started.
+        </p>
+        <button
+          class="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          onclick="location.href='contact-us.html';"
+        >
+          Contact Us
+        </button>
+      </div>
     </section>
+
     <!-- Roadmap top Section -->
     <section class="top-section">
       <div class="step-image">
@@ -283,6 +380,10 @@
           <div class="step-number">5</div>
           Post Operation
         </div>
+      </div>
+
+      <div class="progress-bar">
+        <div class="bar"></div>
       </div>
     </section>
 
@@ -386,11 +487,31 @@
             image: "images/post-operation.jpg",
           },
         ];
+        let activeStep = 0;
 
-        let activeStep = 0; // Start with the first step as active
+        // Function to update step content based on step index
+        function updateStepContent(index) {
+          stepImage.src = stepInfo[index].image;
+          stepDescription.innerHTML = `
+    <h3 class="text-xl font-semibold mb-2">${stepInfo[index].title}</h3>
+    <p class="text-gray-600 mb-4">${stepInfo[index].description}</p>
+    <div class="blockquote">
+      <blockquote class="text-gray-600 border-l-4 border-teal-400 pl-4">
+        ${stepInfo[index].comment}
+      </blockquote>
+    </div>
+  `;
+        }
+        // Function to update the progress bar based on active step
+        function updateProgressBar() {
+          const progressBarWidth = (activeStep / (totalSteps - 1)) * 100;
+          progressBar.style.width = `${progressBarWidth}%`;
+        }
 
         // Display the content of the first step on page load
         updateStepContent(activeStep);
+        topSection.classList.add("active");
+        updateProgressBar();
 
         stepIndicators.forEach((indicator, index) => {
           indicator.addEventListener("click", () => {
@@ -418,23 +539,12 @@
 
               // Scroll to the top of the step description
               topSection.scrollIntoView({ behavior: "smooth" });
+
+              // Update the progress bar
+              updateProgressBar();
             }, 300);
           });
         });
-
-        // Function to update step content based on step index
-        function updateStepContent(index) {
-          stepImage.src = stepInfo[index].image;
-          stepDescription.innerHTML = `
-    <h3 class="text-xl font-semibold mb-2">${stepInfo[index].title}</h3>
-    <p class="text-gray-600 mb-4">${stepInfo[index].description}</p>
-    <div class="blockquote">
-      <blockquote class="text-gray-600 border-l-4 border-teal-400 pl-4">
-        ${stepInfo[index].comment}
-      </blockquote>
-    </div>
-  `;
-        }
       });
     </script>
   </body>

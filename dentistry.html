@@ -11,10 +11,30 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200&family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.min.js"></script>
     <script
       type="text/javascript"
       src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
     ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js"
       defer
@@ -27,18 +47,112 @@
     <link href="styles.css" rel="stylesheet" />
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+  </head>
 
     <style>
       body {
         font-family: Arial, sans-serif;
       }
+
+      
+      #page-header {
+  background-image: url(images/hair-transplant-bg.jpg);
+  background-size: cover;
+  background-position: center bottom 170%;
+  position: relative;
+  height: 580px;
+  
+}
+
+#page-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+#page-header .flex {
+  justify-content: flex-start;
+}
+
+#page-header .w-1/2 {
+  padding-right: 8%;
+}
+
+#page-header h1 {font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1D3B71;
+}
+
+#page-header p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  color: #17A899;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+#page-header button {
+  margin-top: 1.5rem;
+}
+
+#page-header .absolute {
+  left: 1rem;
+  bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#page-header .absolute p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #17A899;
+  margin-bottom: 0.5rem;
+}
+
+#page-header .absolute button {
+  font-family: "Raleway", sans-serif;
+  margin-top: 0.5rem;
+  background-color: #17A899;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+#page-header .absolute button:hover {
+  background-color: #1dcab9;
+}
+      .grid-container {
+        display: flex;
+        justify-content: space-between; 
+      }
+      /* Left-side menu */
+      .menu {
+        background-color: #17A899;
+        border-radius: 11px;
+        margin-left: 2px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 5px;
+            }
+            .menu li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 7px 0;
+  transition: background-color 0.3s ease-in-out;
+  margin-right: 9%;
+  overflow: hidden;
+  position: relative;
+  max-width: 200px;
+}
+
+
       .grid-container {
         display: flex;
         justify-content: space-between; /* Align content to the left and right edges */
@@ -61,7 +175,7 @@
   margin-right: 9%;
   overflow: hidden;
   position: relative;
-  max-width: 200px;
+  max-width: 200px;font-family: 'Barlow', sans-serif;
 }
 
 .menu li:before {
@@ -90,7 +204,7 @@
         padding: 20px;
       }
       .description h3 {
-        color: #17A899;
+        color: #1D3B71;
         font-size: 24px;
         font-weight: bold;
       }
@@ -206,14 +320,14 @@
     </div>
 
     <!-- Navbar -->
-    <header id="navbar" class="py-4 px-2">
+    <header id="navbar" class="py-4 px-2 landing-navbar">
       <div class="container mx-auto flex items-center justify-between">
         <div class="flex items-center">
           <a href="index.html">
             <img
-              src="images/logo.png"
+              src="images/companylogo.png"
               alt="Company Logo"
-              class="h-12 md:h-16 mr-2"
+              class="h-20 md:h-25 mr-3"
             />
           </a>
         </div>
@@ -239,7 +353,7 @@
                 >Surgeries</a
               >
               <ul
-                class="absolute hidden bg-white border-t border-gray-300 w-40 py-2 px-4"
+                class="absolute hidden border-t border-gray-300 w-40 py-2 px-4"
               >
                 <li>
                   <a href="plastic-surgery.html" class="text-blue-600"
@@ -256,16 +370,16 @@
                     >Cosmetic Dentistry</a
                   >
                 </li>
+                <li>
+                  <a href="dentistry.html" class="text-blue-600"
+                    >Obesity Surgeries</a
+                  >
+                </li>
               </ul>
             </li>
             <li>
               <a href="about-us.html" class="button-link hover:text-gray-300"
                 >About Us</a
-              >
-            </li>
-            <li>
-              <a href="surgeries.html" class="button-link hover:text-gray-300"
-                >Why Us</a
               >
             </li>
           </ul>
@@ -274,12 +388,18 @@
     </header>
 
     <!-- Page Header -->
-    <section
-    id="page-header"
-    class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center"
-    style="background-image: url(images/dentistry-bg.jpg); margin-top: 90px; z-index: 999;"
-    >
-      <div class="container mx-auto text-center"></div>
+    <section id="page-header" class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center relative" style="background-image: url(images/dentistry-bg.jpg);">
+      <div class="container mx-auto text-center">
+        <div class="flex items-center justify-start">
+          <div class="w-1/2 pr-8">
+            <h1 class="text-4xl font-semibold">You're one step away from your dream smile.</h1>
+          </div>
+        </div>
+      </div>
+      <div class="absolute left-0 bottom-0 ml-8 mb-8 bg-opacity-80  p-4 rounded">
+        <p class="text-lg text-white font-bold">Contact us now to get started.</p>
+        <button class="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onclick="location.href='contact-us.html';">Contact Us</button>
+      </div>
     </section>
 
     <!-- Surgeries Section -->
@@ -289,7 +409,6 @@
           <!-- Left-side menu -->
           <div class="menu">
             <div class="bg-white rounded shadow p-6">
-              <h3  id="descriptiondentistry"class="w-60 text-2xl font-bold mb-2">Dentistry</h3>
               <ul>
                 <li
                   class="mb-1 list-disc  hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
