@@ -66,26 +66,28 @@
       z-index: 1;
     }
 
-    #page-header .w-1/2 {
-      padding-right: 8%;
-    }
-
     #page-header h1 {
       font-family: "Raleway", sans-serif;
-      padding-top: 120px;
+      padding-top: 5px;
       font-size: 2.5rem;
       font-weight: bold;
       color: #1d3b71;
+
     }
 
-    #page-header p {
-      font-family: "Raleway", sans-serif;
-      font-size: 1.25rem;
-      color: #1d3b71;
-      font-style: italic;
-      margin-top: 1rem;
-    }
+    .success-message {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1d3b71; 
+    margin-bottom: 1rem;
+  }
 
+  .error-message {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #dc3545; /* Red color for error */
+    margin-bottom: 1rem;
+  }
     #page-header button {
       margin-top: 1.5rem;
     }
@@ -178,6 +180,35 @@
   </style>
 
   <body>
+    
+        <!-- Contact Header -->
+        <div id="contact-header" class="py-2 px-2 bg-gray-800">
+          <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center">
+              <div class="mr-3">
+                <i class="fas fa-phone-alt text-white"></i>
+              </div>
+              <p class="text-white">0538 949 44 41</p>
+            </div>
+            <div>
+              <div id="language-select-container" class="relative">
+                <select
+                id="language-select"
+                class="bg-white border border-gray-400 hover:border-gray-500 px-2 py-1 rounded focus:outline-none focus:shadow-outline"
+              >
+                <option value="en">English</option>
+                <option value="de">German</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="it">Italian</option>
+                <option value="ja">Japanese</option>
+                <option value="ko">Korean</option>
+              </select>
+            </div>
+            </div>
+          </div>
+        </div>
+
     <!-- Navbar -->
     <header id="navbar" class="py-4 px-2 landing-navbar">
       <div class="container mx-auto flex items-center justify-between">
@@ -251,8 +282,7 @@
         <div class="flex items-center justify-start">
           <div class="w-1/2 pr-8">
             <h1 class="text-4xl font-semibold">
-              Our skilled customer experts can't wait to help you throughout
-              your journey.
+              Embark on your beauty journey with our dedicated team
             </h1>
           </div>
         </div>
@@ -270,25 +300,28 @@
           <h2 class="text-2xl font-bold text-111 mb-4">
             Contact Us
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/message/JTKHCED5O2HPO1"
               class="ml-2 text-17A899 hover:text-blue-600"
             >
               <i class="fab fa-whatsapp"></i>
             </a>
             <a
-              href="https://www.facebook.com/yourfacebookpage"
-              class="ml-2 text-17A899 hover:text-blue-600"
-            >
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/yourinstagrampage"
+              href="https://www.instagram.com/drturan.dratilla/"
               class="ml-2 text-17A899 hover:text-blue-600"
             >
               <i class="fab fa-instagram"></i>
             </a>
           </h2>
-          <form id="contact-form">
+          <form
+            id="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="apikey"
+              value="f4369ea2-a82f-4189-a964-56240dfb38ed"
+            />
             <div class="mb-4">
               <label for="name" class="block text-lg font-medium text-111 mb-2"
                 >Name</label
@@ -358,6 +391,22 @@
                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
+            <div class="mb-4">
+              <label
+                for="package"
+                class="block text-lg font-medium text-111 mb-2"
+                >Package</label
+              >
+              <select
+                id="package"
+                name="package"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              >
+                <option value="platinum">Platinum</option>
+                <option value="diamond">Diamond</option>
+                <option value="customized">Customized</option>
+              </select>
+            </div>
             <div class="mb-8">
               <label
                 for="message"
@@ -379,6 +428,15 @@
               Submit
             </button>
           </form>
+
+          <div id="form-status" class="hidden">
+            <p id="success-message" class="text-green-500 success-message">
+              Form submitted successfully. Our agents will contact with you soon.
+            </p>
+            <p id="error-message" class="text-red-500 error-message">
+              An error occurred. Please try again.
+            </p>
+          </div>
         </div>
 
         <!-- Left Side (Image) -->
@@ -392,84 +450,78 @@
       </div>
     </section>
 
-    <!-- Bottom Footer content -->
-    <section id="footer" class="bg-blue-500 py-8">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <div class="text-white">
-            <h3 class="text-xl font-bold mb-4">Follow Us</h3>
-            <p>Stay updated with our latest news and offers:</p>
-            <div class="flex mt-4">
-              <a href="https://www.facebook.com/example" class="mr-4">
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a href="https://www.twitter.com/example" class="mr-4">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="https://www.instagram.com/example">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
+<!-- Bottom Footer content -->
+<section id="footer" class="bg-gray-800 py-6">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap justify-between">
+      <!-- Follow Us -->
+      <div class="text-white mb-4">
+        <h3 class="text-lg font-semibold">Contact Us</h3>
+        <div class="flex items-center mt-2">
+          <div class="mr-2">
+            <a href="https://www.instagram.com/drturan.dratilla/" class="text-gray-400 hover:text-white">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
           </div>
-          <div class="text-white">
-            <h3 class="text-xl font-bold mb-4">Address</h3>
-            <p>123 Main Street<br />City, State ZIP<br />Country</p>
-          </div>
-          <div class="text-white">
-            <div class="flex mt-2 flex-col">
-              <a
-                href="privacy-policy.html"
-                class="text-blue-300 hover:text-blue-200"
-                >Privacy Policy</a
-              >
-              <a
-                href="data-protection-law.html"
-                class="text-blue-300 hover:text-blue-200 mt-2"
-                >Personal Data Protection Law</a
-              >
-              <a
-                href="terms-of-service.html"
-                class="text-blue-300 hover:text-blue-200 mt-2"
-                >Terms of Service</a
-              >
-              <a href="#faq" class="text-blue-300 hover:text-blue-200 mt-2"
-                >F.A.Q</a
-              >
-            </div>
+          <div>
+            <a href="https://wa.me/message/JTKHCED5O2HPO1" class="text-gray-400 hover:text-white">
+              <i class="fab fa-whatsapp text-lg"></i>
+            </a>
           </div>
         </div>
+        <p class="mt-2 text-lg"><i class="fas fa-phone-alt mr-2"></i> 0538 949 55 31</p>
       </div>
-    </section>
-
+      <!-- Legal Links -->
+      <div class="text-white">
+        <p class="mt-2 flex items-center">
+          <i class="fas fa-check mr-2 text-green-500"></i> Privacy Policy
+        </p>
+        <p class="mt-2 flex items-center">
+          <i class="fas fa-check mr-2 text-green-500"></i> Personal Data Protection Law
+        </p>
+        <p class="mt-2 flex items-center">
+          <i class="fas fa-check mr-2 text-green-500"></i> Terms of Service
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        var countryCodeSelect = document.querySelector("#country-code-select");
-        var phoneNumberInput = document.querySelector("#phone-number");
+        const form = document.getElementById("contact-form");
+        const successMessage = document.getElementById("success-message");
+        const errorMessage = document.getElementById("error-message");
+        const formStatus = document.getElementById("form-status");
 
-        countryCodeSelect.addEventListener("change", function () {
-          var selectedCountryCode = countryCodeSelect.value;
-          phoneNumberInput.value = "+" + selectedCountryCode;
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const formData = new FormData(form);
+          const submitButton = form.querySelector('button[type="submit"]');
+          submitButton.disabled = true;
+
+          try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+              method: form.method,
+              body: formData,
+            });
+
+            if (response.ok) {
+              successMessage.style.display = "block";
+              errorMessage.style.display = "none";
+              form.reset();
+            } else {
+              throw new Error("Form submission failed.");
+            }
+          } catch (error) {
+            successMessage.style.display = "none";
+            errorMessage.style.display = "block";
+          } finally {
+            submitButton.disabled = false;
+            formStatus.style.display = "block";
+          }
         });
       });
-
-              countryCodeList.addEventListener("click", function (event) {
-                if (event.target.tagName === "A") {
-                  event.preventDefault();
-                  var selectedCountryCode = event.target.getAttribute("data-country");
-                  phoneNumberInput.value = `+${selectedCountryCode}`;
-                  countryCodeList.classList.add("hidden");
-                }
-              });
-
-              document.addEventListener("click", function (event) {
-                if (
-                  !countryCodeDropdownButton.contains(event.target) &&
-                  !countryCodeList.contains(event.target)
-                ) {
-                  countryCodeList.classList.add("hidden");
-                }
-              });
-            });
     </script>
   </body>
 </html>

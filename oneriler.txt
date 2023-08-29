@@ -2,27 +2,12 @@
 main renk #1D3B71
 secondary renk #17A899
 
-
 mobil ayarlar
 
 siteye dil ekle
 
-navbar altina gradient ekle
-
 hero slider:
 atilerin tanitim videosu
-
-testiomnials duzelt
-testimonial sayfada olcak ve otomatik gecis
-
-contact us:
-Php ekle, sayfayi tamamla
-
-what we do:
-progress bari ayarla
-
-about us:
-canberk ati sirt sirta foto
 
 Surgeries:
 before after fotolar ekle
@@ -30,21 +15,17 @@ before after fotolar ekle
 Obesity surgeries:
 sayfayi bastan yap
 
-testimonials:
-daha fazla ekle, efektleri duzelt
+what we do:
+alttaki roadmap ayalari yap ustune gelince y ye dogru yukari kalsin numara gitsin yazi kalsin
 
-packages:
-customised efekt calismiyo onu duzelt
+surgeries, plastic surgery ver altindaki yaziya bosluk koy
+soldaki menu tikladiginda yaziyi bold yap yada altini falan ciz
 
-bottom footer:
-Kucuk ayarlari cek
 
 
 I have a website for a medical company which provides medical travel for customers around the world. WE provide 4-5 star accommodation, plane tickets to the istanbul,desired information about the medical procedure and we help them and support them during operation they want and being sure that they are satisfued. Our target audience is people from usa or uae, since turkish lira is really cheap compared to dolar,usd and dinar people should understand that the cost of their desired treatment is cheaper than their country with everything included also plus chance of seeing the beauty of istanbul.
 Im using html,css, js and tailwind for this project.
 Currently this website has  different folders( index.html, styles.css, script.js, why-us.html, about-us.html, contact-us.html,hairtransplant.html(information about hairtransplant), plastic-surgery.hmtl, dentistry.html) 
-
-
 
 <option value="93">Afghanistan (+93)</option>
 <option value="355">Albania (+355)</option>

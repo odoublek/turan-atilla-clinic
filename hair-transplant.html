@@ -106,7 +106,6 @@
   bottom: 1rem;
   padding: 1rem;
   border-radius: 0.25rem;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #page-header .absolute p {
@@ -178,8 +177,8 @@
       .description {
         padding: 20px;
       }
-      .description h3 {font-family: 'Barlow', sans-serif;
-       
+      .description h3 {
+        font-family: "Raleway", sans-serif;
         color: #1D3B71;;
         font-size: 24px;
         font-weight: bold;
@@ -225,11 +224,53 @@
         padding-top: 5px;
       }
 
+  .before-after-photos {
+  position: relative; 
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  gap: 10px;
+  margin-top: 20px;
+
+}
+.before-photo,
+.after-photo {
+  max-width: calc(50% - 5px); 
+  height: auto;
+}
 
     </style>
   </head>
 
   <body>
+        <!-- Contact Header -->
+        <div id="contact-header" class="py-2 px-2 bg-gray-800">
+          <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center">
+              <div class="mr-3">
+                <i class="fas fa-phone-alt text-white"></i>
+              </div>
+              <p class="text-white">0538 949 44 41</p>
+            </div>
+            <div>
+              <div id="language-select-container" class="relative">
+                <select
+                id="language-select"
+                class="bg-white border border-gray-400 hover:border-gray-500 px-2 py-1 rounded focus:outline-none focus:shadow-outline"
+              >
+                <option value="en">English</option>
+                <option value="de">German</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="it">Italian</option>
+                <option value="ja">Japanese</option>
+                <option value="ko">Korean</option>
+              </select>
+            </div>
+            </div>
+          </div>
+        </div>
+
     <!-- Navbar -->
     <header id="navbar" class="py-4 px-2 landing-navbar">
       <div class="container mx-auto flex items-center justify-between">
@@ -307,7 +348,6 @@
         </div>
       </div>
       <div class="absolute left-0 bottom-0 ml-8 mb-8 bg-opacity-80  p-4 rounded">
-        <p class="text-lg text-white font-bold">Contact us now to get started.</p>
         <button class="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onclick="location.href='contact-us.html';">Contact Us</button>
       </div>
     </section>
@@ -322,9 +362,9 @@
               <ul>
                 <li
                 class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
-                onclick="showDescription('FUT');"
+                onclick="showDescription('DHI');"
               >
-              FUT (Sapphire option)
+              DHI
               </li>
               <hr class="my-2 border-gray-300" />
               <li
@@ -345,11 +385,20 @@
             </h3>
             <p class="text-lg text-gray-700" id="surgery-info">
               Reclaim your natural hairline and confidence with our advanced hair transplant
-              procedures. Whether you choose Follicular Unit Transplantation (FUT) for maximum
+              procedures. Whether you choose DHI (Direct Hair Implantation) for maximum
               graft yield or Follicular Unit Extraction (FUE) for minimal scarring, our experienced
               specialists are dedicated to restoring your hair's fullness and vitality. Explore
               our personalized hair restoration solutions for a more youthful appearance.
             </p>
+
+  <!-- Before and After Photos -->
+  <div class="before-after-photos">
+
+    <img src="/images/hairtransplan1.jpg" alt="Before Photo" class="before-photo">
+    <img src="/images/hairtransplant2.jpg" alt="After Photo" class="after-photo">
+    <img src="/images/hairtransplant3.jpg" alt="After Photo" class="after-photo">
+    <img src="/images/hairtransplant4.jpg" alt="After Photo" class="after-photo">
+  </div>
 
             <div class="gif-container">  <img class="gif" /></div>
             <!-- Questions and Answers -->
@@ -365,50 +414,38 @@
     </section>
 
     <!-- Bottom Footer content -->
-    <section id="footer" class="bg-blue-500 py-8">
+    <section id="footer" class="bg-gray-800 py-6">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <div class="text-white">
-            <h3 class="text-xl font-bold mb-4">Follow Us</h3>
-            <p>Stay updated with our latest news and offers:</p>
-            <div class="flex mt-4">
-              <a href="https://www.facebook.com/example" class="mr-4">
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a href="https://www.twitter.com/example" class="mr-4">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="https://www.instagram.com/example">
-                <i class="fab fa-instagram"></i>
-              </a>
+        <div class="flex flex-wrap justify-between">
+          <!-- Follow Us -->
+          <div class="text-white mb-4">
+            <h3 class="text-lg font-semibold">Contact Us</h3>
+            <div class="flex items-center mt-2">
+              <div class="mr-2">
+                <a href="https://www.instagram.com/drturan.dratilla/" class="text-gray-400 hover:text-white">
+                  <i class="fab fa-instagram text-lg"></i>
+                </a>
+              </div>
+              <div>
+                <a href="https://wa.me/message/JTKHCED5O2HPO1" class="text-gray-400 hover:text-white">
+                  <i class="fab fa-whatsapp text-lg"></i>
+                </a>
+              </div>
             </div>
+            <p class="mt-2 text-lg"><i class="fas fa-phone-alt mr-2"></i> 0538 949 55 31</p>
           </div>
+          <!-- Legal Links -->
           <div class="text-white">
-            <h3 class="text-xl font-bold mb-4">Address</h3>
-            <p>123 Main Street<br />City, State ZIP<br />Country</p>
+            <p class="mt-2 flex items-center">
+              <i class="fas fa-check mr-2 text-green-500"></i> Privacy Policy
+            </p>
+            <p class="mt-2 flex items-center">
+              <i class="fas fa-check mr-2 text-green-500"></i> Personal Data Protection Law
+            </p>
+            <p class="mt-2 flex items-center">
+              <i class="fas fa-check mr-2 text-green-500"></i> Terms of Service
+            </p>
           </div>
-          <div class="text-white">
-            <div class="flex mt-2 flex-col">
-              <a
-                href="privacy-policy.html"
-                class="text-blue-300 hover:text-blue-200"
-                >Privacy Policy</a
-              >
-              <a
-                href="data-protection-law.html"
-                class="text-blue-300 hover:text-blue-200 mt-2"
-                >Personal Data Protection Law</a
-              >
-              <a
-                href="cookie-policy.html"
-                class="text-blue-300 hover:text-blue-200 mt-2"
-                >Cookie Policy</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="mt-8 text-white text-sm">
-          <p>© 2023 Hair Transplant Company. All rights reserved.</p>
         </div>
       </div>
     </section>
@@ -416,26 +453,26 @@
     <!-- Scripts -->
     <script>
       const surgeryDetails = {
-  "FUT": {
-    title: "FUT Hair Transplant",
+  "DHI": {
+    title: "DHI Hair Transplant",
     description:
-      "Follicular Unit Transplantation (FUT) is a hair transplantation technique that involves the removal of a small strip of scalp from the donor area. The hair follicles are then harvested from the strip and meticulously transplanted into the balding or thinning areas. FUT is known for its high yield of grafts and can be an effective option for individuals seeking significant hair restoration.",
+    "DHI Hair Transplant is an innovative hair restoration technique that involves the precise extraction of individual hair follicles from a donor area. These follicles are carefully implanted into areas experiencing hair thinning or baldness. DHI Hair Transplant stands as an exceptional solution for individuals aiming to achieve substantial hair rejuvenation.",
     gifPath: "/images/fut.jpg",
     questions: [
       {
-        question: "How is FUT hair transplant performed?",
+        question: "How is DHI Hair transplant performed?",
         answer:
-          "During an FUT hair transplant, a strip of scalp is surgically removed from the donor area, usually from the back of the head. The harvested strip is then carefully dissected into individual follicular units, which are tiny groups of hair follicles. These units are then transplanted into the recipient areas using tiny incisions.",
+          "The DHI Hair Transplant procedure begins with the meticulous extraction of individual hair follicles from the donor area. These follicles are then skillfully implanted into the target areas experiencing hair thinning or baldness. The entire process is carried out using specialized instruments to ensure precision and minimal invasiveness",
       },
       {
-        question: "What is the recovery process like for FUT?",
+        question: "What is the recovery process like for DHI Hair Transplant?",
         answer:
-          "After an FUT hair transplant, you may experience some swelling and discomfort in the donor and recipient areas. The stitches from the donor area are typically removed after about 10 days. Over the next few weeks, the transplanted hairs will shed before new hair growth begins. It's important to follow post-operative care instructions to ensure optimal results.",
+          "Following a DHI Hair Transplant, you may experience some mild swelling and discomfort in both the donor and recipient areas. Over the next few weeks, the transplanted hairs will naturally shed before new hair growth begins. Adhering to the provided post-operative care instructions is crucial for achieving optimal results.",
       },
       {
-        question: "Is FUT a suitable option for me?",
+        question: "Is DHI Hair Transplant a suitable option for me?",
         answer:
-          "FUT can be a good option for individuals with larger balding areas and those seeking maximum graft yield in a single session. However, individual suitability varies. Consulting with a qualified hair transplant specialist will help determine the most appropriate technique based on your hair loss pattern and goals.",
+          "DHI Hair Transplant can be an excellent option for individuals seeking effective hair restoration. Consulting with a qualified hair transplant specialist will help determine the most suitable technique based on your unique hair loss pattern and goals. Whether you're dealing with receding hairline or extensive balding, DHI Hair Transplant can offer a tailored solution.",
       },
     ],
   },
@@ -466,49 +503,48 @@
 };
         
 
-      function showDescription(surgeryId) {
-        const selectedSurgery = surgeryDetails[surgeryId];
-        if (selectedSurgery) {
-          const surgeryTitleElement = document.getElementById("surgery-title");
-          const surgeryInfoElement = document.getElementById("surgery-info");
-          const questionsContainer = document.getElementById(
-            "questions-container"
-          );
-          const gifContainer = document.querySelector(".gif-container");
+function showDescription(surgeryId) {
+    const selectedSurgery = surgeryDetails[surgeryId];
+    if (selectedSurgery) {
+      const surgeryTitleElement = document.getElementById("surgery-title");
+      const surgeryInfoElement = document.getElementById("surgery-info");
+      const questionsContainer = document.getElementById("questions-container");
+      const gifContainer = document.querySelector(".gif-container");
+      const beforeAfterPhotosContainer = document.querySelector(".before-after-photos");
 
-          surgeryTitleElement.textContent = selectedSurgery.title;
-          surgeryInfoElement.textContent = selectedSurgery.description;
+      surgeryTitleElement.textContent = selectedSurgery.title;
+      surgeryInfoElement.textContent = selectedSurgery.description;
 
-          // Clear previous questions and answers
-          questionsContainer.innerHTML = "";
+      // Clear previous questions and answers
+      questionsContainer.innerHTML = "";
 
-          // Clear GIF container
-          gifContainer.innerHTML = "";
+      // Display the questions and answers
+      selectedSurgery.questions.forEach((qna) => {
+        const questionElement = document.createElement("h4");
+        questionElement.textContent = qna.question;
+        questionElement.classList.add("qna-font");
 
-          // Display the questions and answers
-          selectedSurgery.questions.forEach((qna) => {
-            const questionElement = document.createElement("h4");
-            questionElement.textContent = qna.question;
-            questionElement.classList.add("qna-font");
+        const answerElement = document.createElement("p");
+        answerElement.textContent = qna.answer;
+        questionElement.classList.add("qna-font");
 
-            const answerElement = document.createElement("p");
-            answerElement.textContent = qna.answer;
-            questionElement.classList.add("qna-font");
+        questionsContainer.appendChild(questionElement);
+        questionsContainer.appendChild(answerElement);
+      });
 
-            questionsContainer.appendChild(questionElement);
-            questionsContainer.appendChild(answerElement);
-          });
+      // Show or hide Before and After photos based on surgery selection
+      beforeAfterPhotosContainer.style.display = "none";
 
-          // Display the GIF if available for the selected surgery
-          if (selectedSurgery.gifPath) {
-            const gifElement = document.createElement("img");
-            gifElement.src = selectedSurgery.gifPath;
-            gifElement.alt = "Surgery GIF";
-            gifElement.className = "gif";
-            gifContainer.appendChild(gifElement);
-          }
-        }
+      // Show or hide GIF based on surgery selection
+      if (selectedSurgery.gifPath) {
+        gifContainer.innerHTML = `<img src="${selectedSurgery.gifPath}" alt="Surgery GIF" class="gif">`;
+        gifContainer.style.display = "block";
+      } else {
+        gifContainer.innerHTML = "";
+        gifContainer.style.display = "none";
       }
+    }
+  }
     </script>
   </body>
 </html>
