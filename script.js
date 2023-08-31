@@ -64,7 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Testimonial
 document.addEventListener("DOMContentLoaded", function () {
-  const testimonialContainers = document.querySelectorAll(".testimonial-container");
+  const testimonialContainers = document.querySelectorAll(
+    ".testimonial-container"
+  );
   const totalTestimonials = testimonialContainers.length;
 
   // Initialize the first two testimonials as visible
@@ -73,7 +75,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showNextTestimonials() {
-    const visibleContainers = document.querySelectorAll(".testimonial-container.visible");
+    const visibleContainers = document.querySelectorAll(
+      ".testimonial-container.visible"
+    );
 
     for (const container of visibleContainers) {
       container.classList.remove("visible");
@@ -91,3 +95,83 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentTestimonialIndex = 0;
   setInterval(showNextTestimonials, 3000);
 });
+
+// translator
+const apiKey = 'AIzaSyA1LL5Hltmj0d3_MCagHYD-zPk7g60RAn8';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const translateButtons = document.querySelectorAll('[data-lang]');
+  
+  translateButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetLanguage = button.getAttribute('data-lang');
+      translatePage(targetLanguage);
+    });
+  });
+});
+
+function removeTranslateEventListeners() {
+  const translateButtons = document.querySelectorAll('[data-lang]');
+  
+  translateButtons.forEach(button => {
+    const newButton = button.cloneNode(true);
+    button.parentNode.replaceChild(newButton, button);
+  });
+}
+
+function translatePage(targetLanguage) {
+  const elementsToTranslate = document.querySelectorAll('.translatable'); // Select elements with the class "translatable"
+  
+  const translator = new Translator(apiKey);
+  
+  translator.translate(targetLanguage, Array.from(elementsToTranslate)).then(translations => {
+    translations.forEach((translation, index) => {
+      elementsToTranslate[index].textContent = translation;
+    });
+  });
+}
+
+class Translator {
+  constructor(apiKey) {
+    this.apiKey = apiKey;
+  }
+
+  async translate(targetLanguage, elements) {
+    const sourceLanguage = 'en'; // Assuming your content is in English
+    
+    const translations = await Promise.all(
+      Array.from(elements).map(element => {
+        const text = element.textContent;
+        return this.googleTranslate(text, sourceLanguage, targetLanguage);
+      })
+    );
+    
+    return translations;
+  }
+
+  googleTranslate(text, sourceLanguage, targetLanguage) {
+    const url = `https://translation.googleapis.com/language/translate/v2?key=${this.apiKey}`;
+    const data = {
+      q: text,
+      source: sourceLanguage,
+      target: targetLanguage,
+      format: 'text'
+    };
+
+    return fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => data.data.translations[0].translatedText)
+    .catch(error => {
+      console.error('Translation error:', error);
+      return text; // Return the original text on error
+    });
+  }
+}
+
+

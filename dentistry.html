@@ -51,6 +51,18 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  integrity="sha384-..."
+  crossorigin="anonymous"
+/>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   </head>
 
     <style>
@@ -159,13 +171,15 @@
 
       /* Left-side menu */
       .menu {
-        background-color:#17A899;
+        background-color: #17A899;
         border-radius: 13px;
         margin-left: 2px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: 5px;
+        height: 750px;
+        
             }
             .menu li {
+              
   display: flex;
   align-items: center;
   margin-bottom: 10px;
@@ -174,7 +188,8 @@
   margin-right: 9%;
   overflow: hidden;
   position: relative;
-  max-width: 200px;font-family: 'Barlow', sans-serif;
+  max-width: 200px;
+  
 }
 
 .menu li:before {
@@ -188,6 +203,7 @@
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   z-index: -1;
+  
 }
 
 .menu li:hover:before {
@@ -203,10 +219,12 @@
         padding: 20px;
       }
       .description h3 {
-        color: #1D3B71;
+        font-family: "Raleway", sans-serif;
+        color: #1D3B71;;
         font-size: 24px;
         font-weight: bold;
       }
+
       .description p {
         font-size: 16px;
         color: #333;
@@ -214,6 +232,9 @@
         font-weight: bold;
       }
 
+      .description img{
+        width: 60%;
+      }
       .gif-container {
         margin-top: 50px;
         text-align: center;
@@ -233,7 +254,7 @@
         font-family: "Raleway", sans-serif;
       }
       .qna-container h4 {
-        color: #17A899;
+        color: #17A899;;
         font-size: 18px;
         font-weight: bold;
         padding-top: 5px;
@@ -243,7 +264,8 @@
         color: #555;
         padding-top: 5px;
       }
-      .before-after-photos {
+
+  .before-after-photos {
   position: relative; 
   display: flex;
   justify-content: space-between;
@@ -258,41 +280,53 @@
   height: auto;
 }
 
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.video-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.video-heading {
+  font-size: 24px;
+  font-weight: bold;
+}
     </style>
   </head>
 
   <body>
 
-        <!-- Contact Header -->
-        <div id="contact-header" class="py-2 px-2 bg-gray-800">
-          <div class="container mx-auto flex items-center justify-between">
-            <div class="flex items-center">
-              <div class="mr-3">
-                <i class="fas fa-phone-alt text-white"></i>
-              </div>
-              <p class="text-white">0538 949 44 41</p>
-            </div>
-            <div>
-              <div id="language-select-container" class="relative">
-                <select
-                id="language-select"
-                class="bg-white border border-gray-400 hover:border-gray-500 px-2 py-1 rounded focus:outline-none focus:shadow-outline"
-              >
-                <option value="en">English</option>
-                <option value="de">German</option>
-                <option value="es">Spanish</option>
-                <option value="fr">French</option>
-                <option value="it">Italian</option>
-                <option value="ja">Japanese</option>
-                <option value="ko">Korean</option>
-              </select>
-            </div>
-            </div>
-          </div>
+  <!-- Contact Header -->
+  <div id="contact-header" class="py-2 px-2 bg-gray-800">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="flex items-center">
+        <div class="mr-3">
+          <i class="fas fa-phone-alt text-white"></i>
         </div>
-
+        <p class="text-white">0538 949 44 41</p>
+      </div>
+      <div>
+        <div class="flex items-center space-x-2">
+          <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none" title="English"></button>
+          <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full  p-1 focus:outline-none" title="Arabic"></button>
+          <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full  p-1 focus:outline-none" title="Spanish"></button>
+          <button data-lang="fr" onclick="translateTo('fr')" class="flag-icon flag-icon-fr rounded-full  p-1 focus:outline-none" title="French"></button>
+          <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full  p-1 focus:outline-none" title="Turkish"></button>
+          <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full  p-1 focus:outline-none" title="German"></button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- Navbar -->
+    <div id="regular-navbar">
     <header id="navbar" class="py-4 px-2 landing-navbar">
       <div class="container mx-auto flex items-center justify-between">
         <div class="flex items-center">
@@ -300,65 +334,66 @@
             <img
               src="images/companylogo.png"
               alt="Company Logo"
-              class="h-20 md:h-25 mr-3"
+              class="h-20 md:h-18 mr-3"
             />
           </a>
         </div>
         <nav>
           <ul class="flex space-x-4">
             <li>
-              <a href="index.html" class="button-link hover:text-gray-300"
+              <a  href="index.html" class="button-link hover:text-gray-300 translatable "
                 >Homepage</a
               >
             </li>
             <li>
-              <a href="contact-us.html" class="button-link hover:text-gray-300"
+              <a href="contact-us.html" class="button-link hover:text-gray-300 translatable"
                 >Contact</a
               >
             </li>
             <li>
-              <a href="what-we-do.html" class="button-link hover:text-gray-300"
+              <a href="what-we-do.html" class="button-link hover:text-gray-300 translatable"
                 >What We Do?</a
               >
             </li>
             <li class="relative group">
-              <a href="#" class="button-link hover:text-gray-300 surgeries-link"
+              <a href="#" class="button-link hover:text-gray-300 surgeries-link translatable"
                 >Surgeries</a
               >
               <ul
                 class="absolute hidden border-t border-gray-300 w-40 py-2 px-4"
               >
                 <li>
-                  <a href="plastic-surgery.html" class="text-blue-600"
+                  <a href="plastic-surgery.html" class="text-blue-600 translatable"
                     >Plastic Surgeries</a
                   >
                 </li>
                 <li>
-                  <a href="hair-transplant.html" class="text-blue-600"
+                  <a href="hair-transplant.html" class="text-blue-600 translatable"
                     >Hair Transplantation</a
                   >
                 </li>
                 <li>
-                  <a href="dentistry.html" class="text-blue-600"
+                  <a href="dentistry.html" class="text-blue-600 translatable"
                     >Cosmetic Dentistry</a
                   >
                 </li>
                 <li>
-                  <a href="dentistry.html" class="text-blue-600"
+                  <a href="dentistry.html" class="text-blue-600 translatable"
                     >Obesity Surgeries</a
                   >
                 </li>
               </ul>
             </li>
             <li>
-              <a href="about-us.html" class="button-link hover:text-gray-300"
+              <a href="about-us.html" class="button-link hover:text-gray-300 translatable"
                 >About Us</a
               >
             </li>
-          </ul>
+
         </nav>
       </div>
     </header>
+    </div>
 
     <!-- Page Header -->
     <section id="page-header" class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center relative" style="background-image: url(images/dentistry-bg.jpg);">
@@ -383,77 +418,77 @@
             <div class="bg-white rounded shadow p-6">
               <ul>
                 <li
-                  class="mb-1 list-disc  hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
+                  class="mb-1 list-disc translatable  hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
                   onclick="showDescription('filling-composite');"
                 >
                 Filling (Composite)
                 </li>
                 <hr class="my-2 border-gray-300" />
                 <li
-                  class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
+                  class="mb-1 list-disc translatable hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
                   onclick="showDescription('root-canal-treatment');"
                 >
                 Root Canal Treatment
                 </li>
                 <hr class="my-2 border-gray-300" />
                 <li
-                  class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
+                  class="mb-1 list-disc translatable hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
                   onclick="showDescription('detertrage');"
                 >
                 Detertrage
                 </li>
                 <hr class="my-2 border-gray-300" />
                 <li
-                  class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
+                  class="mb-1 list-disc translatable hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
                   onclick="showDescription('teeth-whitening');"
                 >
                 Teeth Whitening
                 </li>
                 <hr class="my-2 border-gray-300" />
                 <li
-                  class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
+                  class="mb-1 list-disc translatable hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
                   onclick="showDescription('tooth-extraction');"
                 >
                Tooth Extraction
                 </li>
                 <hr class="my-2 border-gray-300" />
                 <li
-                  class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
+                  class="mb-1 list-disc translatable hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
                   onclick="showDescription('panaromic-film-examination');"
                 >
                 Panaromic Film Examination
                 </li>
                 <hr class="my-2 border-gray-300" />
                 <li
-                  class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
+                  class="mb-1 list-disc translatable hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
                   onclick="showDescription('implant');"
                 >
                 Implant
                 </li>
                 <hr class="my-2 border-gray-300" />
                 <li
-                  class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
+                  class="mb-1 list-disc translatable hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
                   onclick="showDescription('porcelain-crown');"
                 >
                 Porcelain Crown
                 </li>
                 <hr class="my-2 border-gray-300" />
                 <li
-                  class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
+                  class="mb-1 list-disc translatable hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
                   onclick="showDescription('zirconium-crown');"
                 >
                 Zirconium Crown
                 </li>
                 <hr class="my-2 border-gray-300" />
                 <li
-                  class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
+                  class="mb-1 list-disc translatable hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
                   onclick="showDescription('laminate-crown');"
                 >
                 Laminate Crown
                 </li>
                 <hr class="my-2 border-gray-300" />
                 <li
-                  class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
+                  class="mb-1 list-disc translatable hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
                   onclick="showDescription('greft-membrain');"
                 >
                 Greft Membrain 
@@ -466,16 +501,22 @@
 
           <!-- Right-side description -->
           <div class="description">
-            <h3 class="text-2xl text-center font-bold mb-2 px-3" id="surgery-title">
+            <h3 class="text-2xl text-center font-bold mb-2 px-3 translatable" id="surgery-title">
                 Cosmetic Dentistry
             </h3>
-            <p class="text-lg text-gray-700" id="surgery-info">
-                Elevate your smile and oral health with our top-notch cosmetic dentistry
-                services. Our skilled dental professionals are dedicated to creating
-                beautiful, confident smiles that radiate your inner beauty. Experience
-                comprehensive care and personalized treatments for a brighter and healthier
-                grin.
+            <p class="text-lg text-gray-700 translatable" id="surgery-info">
+              Elevate your smile and optimize your oral health through our exceptional cosmetic dentistry services. Our team of highly skilled dental experts is wholly devoted to crafting stunning, confident smiles that exude the inner beauty within you. Immerse yourself in a realm of comprehensive care and tailor-made treatments designed to illuminate your grin with a newfound radiance and vitality.
             </p>
+
+            <div class="video-heading-container">
+              <h3 class="text-xl font-bold video-heading translatable">Check our introduction video</h3>
+            </div>
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/GyNIkHe1ZHQ" frameborder="0" allowfullscreen autoplay=1></iframe>
+            </div>
+            <div class="video-heading-container">
+              <h3 class="text-xl font-bold video-heading translatable">Before After Photos</h3>
+            </div>
 
               <!-- Before and After Photos -->
   <div class="before-after-photos">
@@ -489,8 +530,8 @@
 
             <div class="gif-container">  <img class="gif" /></div>
             <!-- Questions and Answers -->
-            <div class="qna-container" id="questions-container">
-              <div id="qna-section" class="mt-8">
+            <div class="qna-container translatable" id="questions-container">
+              <div id="qna-section translatable" class="mt-8">
               </div>
  
               </div>
@@ -775,7 +816,7 @@
     title: "Greft Membrain",
     description:
       "A graft membrane is a thin, flexible material used in oral surgery to assist in the healing and regeneration of bone and soft tissues. It is commonly used in procedures such as bone grafting, ridge augmentation, and periodontal surgeries.",
-    gifPath: "/images/graft-membrane.jpg",
+    gifPath: "/images/greft-membrain.jpg",
     questions: [
       {
         question: "What is a graft membrane?",
@@ -806,13 +847,21 @@ function showDescription(surgeryId) {
       const questionsContainer = document.getElementById("questions-container");
       const gifContainer = document.querySelector(".gif-container");
       const beforeAfterPhotosContainer = document.querySelector(".before-after-photos");
+      const videoHeadingContainers = document.querySelectorAll(".video-heading-container");
+      const videoContainers = document.querySelectorAll(".video-container");
 
       surgeryTitleElement.textContent = selectedSurgery.title;
       surgeryInfoElement.textContent = selectedSurgery.description;
 
       // Clear previous questions and answers
       questionsContainer.innerHTML = "";
-
+    // Hide the video headings and video containers
+    videoHeadingContainers.forEach(container => {
+      container.style.display = "none";
+    });
+    videoContainers.forEach(container => {
+      container.style.display = "none";
+    });
       // Display the questions and answers
       selectedSurgery.questions.forEach((qna) => {
         const questionElement = document.createElement("h4");
@@ -840,6 +889,54 @@ function showDescription(surgeryId) {
       }
     }
   }
+  function translateSurgeryDetails(targetLanguage) {
+  const surgeryKeys = Object.keys(surgeryDetails);
+  
+  surgeryKeys.forEach(surgeryKey => {
+    const surgery = surgeryDetails[surgeryKey];
+    
+    const elementsToTranslate = [
+      surgery.title,
+      surgery.description,
+      ...surgery.questions.map(qa => qa.question),
+      ...surgery.questions.map(qa => qa.answer),
+    ];
+
+    translateText(targetLanguage, elementsToTranslate).then(translations => {
+      surgery.title = translations[0];
+      surgery.description = translations[1];
+      
+      surgery.questions.forEach((qa, index) => {
+        qa.question = translations[2 + index];
+        qa.answer = translations[2 + surgery.questions.length + index];
+      });
+      
+      // Update the DOM with translated content
+      updateSurgeryContent(surgeryKey, surgery);
+    });
+  });
+}
+function updateSurgeryContent(surgeryKey, surgery) {
+  const contentWrapper = document.querySelector(`[data-key="${surgeryKey}"]`);
+  if (contentWrapper) {
+    const titleElement = contentWrapper.querySelector('.translatable-title');
+    const descriptionElement = contentWrapper.querySelector('.translatable-description');
+    const qaElements = contentWrapper.querySelectorAll('.translatable-qa');
+    
+    if (titleElement && descriptionElement && qaElements.length === surgery.questions.length * 2) {
+      titleElement.textContent = surgery.title;
+      descriptionElement.textContent = surgery.description;
+      
+      surgery.questions.forEach((qa, index) => {
+        const questionElement = qaElements[index * 2];
+        const answerElement = qaElements[index * 2 + 1];
+        
+        questionElement.textContent = qa.question;
+        answerElement.textContent = qa.answer;
+      });
+    }
+  }
+}
     </script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vital Voyages</title>
+    <title>Dr. Turan & Dr. Atilla Clinic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
@@ -42,7 +42,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
       <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -50,38 +50,34 @@
     crossorigin="anonymous"
   />
   <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   </head>
 
   <body>
 
-    <!-- Contact Header -->
-    <div id="contact-header" class="py-2 px-2 bg-gray-800">
-          <div class="container mx-auto flex items-center justify-between">
-            <div class="flex items-center">
-              <div class="mr-3">
-                <i class="fas fa-phone-alt text-white"></i>
-              </div>
-              <p class="text-white">0538 949 44 41</p>
-            </div>
-            <div>
-              <div id="language-select-container" class="relative">
-                <select
-                  id="language-select"
-                  class="bg-white border border-gray-400 hover:border-gray-500 px-2 py-1 rounded focus:outline-none focus:shadow-outline"
-                >
-                  <option value="en" data-flag="us">English</option>
-                  <option value="de" data-flag="de">German</option>
-                  <option value="es" data-flag="es">Spanish</option>
-                  <option value="fr" data-flag="fr">French</option>
-                  <option value="it" data-flag="it">Italian</option>
-                  <option value="ja" data-flag="jp">Japanese</option>
-                  <option value="ko" data-flag="kr">Korean</option>
-                </select>
-                <span id="selected-flag" class="flag-icon"></span>
-              </div>
-            </div>
-          </div>
+  <!-- Contact Header -->
+  <div id="contact-header" class="py-2 px-2 bg-gray-800">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="flex items-center">
+        <div class="mr-3">
+          <i class="fas fa-phone-alt text-white"></i>
+        </div>
+        <p class="text-white">0538 949 44 41</p>
+      </div>
+      <div>
+        <div class="flex items-center space-x-2">
+          <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none" title="English"></button>
+          <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full  p-1 focus:outline-none" title="Arabic"></button>
+          <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full  p-1 focus:outline-none" title="Spanish"></button>
+          <button data-lang="fr" onclick="translateTo('fr')" class="flag-icon flag-icon-fr rounded-full  p-1 focus:outline-none" title="French"></button>
+          <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full  p-1 focus:outline-none" title="Turkish"></button>
+          <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full  p-1 focus:outline-none" title="German"></button>
+        </div>
+      </div>
     </div>
+  </div>
 
     <!-- Navbar -->
     <div id="regular-navbar">
@@ -99,51 +95,51 @@
         <nav>
           <ul class="flex space-x-4">
             <li>
-              <a href="index.html" class="button-link hover:text-gray-300"
+              <a  href="index.html" class="button-link hover:text-gray-300 translatable "
                 >Homepage</a
               >
             </li>
             <li>
-              <a href="contact-us.html" class="button-link hover:text-gray-300"
+              <a href="contact-us.html" class="button-link hover:text-gray-300 translatable"
                 >Contact</a
               >
             </li>
             <li>
-              <a href="what-we-do.html" class="button-link hover:text-gray-300"
+              <a href="what-we-do.html" class="button-link hover:text-gray-300 translatable"
                 >What We Do?</a
               >
             </li>
             <li class="relative group">
-              <a href="#" class="button-link hover:text-gray-300 surgeries-link"
+              <a href="#" class="button-link hover:text-gray-300 surgeries-link translatable"
                 >Surgeries</a
               >
               <ul
                 class="absolute hidden border-t border-gray-300 w-40 py-2 px-4"
               >
                 <li>
-                  <a href="plastic-surgery.html" class="text-blue-600"
+                  <a href="plastic-surgery.html" class="text-blue-600 translatable"
                     >Plastic Surgeries</a
                   >
                 </li>
                 <li>
-                  <a href="hair-transplant.html" class="text-blue-600"
+                  <a href="hair-transplant.html" class="text-blue-600 translatable"
                     >Hair Transplantation</a
                   >
                 </li>
                 <li>
-                  <a href="dentistry.html" class="text-blue-600"
+                  <a href="dentistry.html" class="text-blue-600 translatable"
                     >Cosmetic Dentistry</a
                   >
                 </li>
                 <li>
-                  <a href="dentistry.html" class="text-blue-600"
+                  <a href="dentistry.html" class="text-blue-600 translatable"
                     >Obesity Surgeries</a
                   >
                 </li>
               </ul>
             </li>
             <li>
-              <a href="about-us.html" class="button-link hover:text-gray-300"
+              <a href="about-us.html" class="button-link hover:text-gray-300 translatable"
                 >About Us</a
               >
             </li>
@@ -229,10 +225,10 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div class="service-box bg-white rounded-lg shadow-lg p-6">
             <i class="fas fa-syringe text-3xl text-blue-700 mb-4"></i>
-            <h3 class="text-xl font-bold text-blue-700 mb-2">
+            <h3 class="text-xl font-bold text-blue-700 mb-2 translatable">
               Plastic Surgeries
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600 translatable">
               Our team of highly qualified doctors utilizes state-of-the-art
               technologies to ensure safe and successful procedures. From body
               contouring to facial rejuvenation, we are committed to providing
@@ -241,17 +237,17 @@
             <div class="button-container mt-4">
               <a
                 href="plastic-surgery.html"
-                class="service-button text-blue-900 font-bold"
+                class="service-button text-blue-900 font-bold translatable"
                 >Learn More</a
               >
             </div>
           </div>
           <div class="service-box bg-white rounded-lg shadow-lg p-6">
             <i class="fas fa-utensils text-3xl text-blue-700 mb-4"></i>
-            <h3 class="text-xl font-bold text-blue-700 mb-2">
+            <h3 class="text-xl font-bold text-blue-700 mb-2 translatable">
               Obesity Surgeries
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600 translatable">
               Our specialized medical team offers a range of advanced surgical
               procedures to address obesity and promote healthy living. With
               personalized care and cutting-edge techniques, we are dedicated to
@@ -260,17 +256,17 @@
             <div class="button-container mt-4">
               <a
                 href="surgeries.html"
-                class="service-button text-blue-900 font-bold"
+                class="service-button text-blue-900 font-bold translatable"
                 >Learn More</a
               >
             </div>
           </div>
           <div class="service-box bg-white rounded-lg shadow-lg p-6">
             <i class="fas fa-cut text-3xl text-blue-700 mb-4"></i>
-            <h3 class="text-xl font-bold text-blue-700 mb-2">
+            <h3 class="text-xl font-bold text-blue-700 mb-2 translatable">
               Hair Transplantation
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600 translatable">
               Our skilled experts use the latest technologies and techniques to
               deliver excellent results. Whether you're experiencing male
               pattern baldness or seeking to restore your hairline, we tailor
@@ -279,17 +275,17 @@
             <div class="button-container mt-4">
               <a
                 href="hair-transplant.html"
-                class="service-button text-blue-900 font-bold"
+                class="service-button text-blue-900 font-bold translatable"
                 >Learn More</a
               >
             </div>
           </div>
           <div class="service-box bg-white rounded-lg shadow-lg p-6">
             <i class="fas fa-tooth text-3xl text-blue-700 mb-4"></i>
-            <h3 class="text-xl font-bold text-blue-700 mb-2">
+            <h3 class="text-xl font-bold text-blue-700 mb-2 translatable">
               Cosmetic Dentistry
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600 translatable">
               Our team of experienced dental professionals is dedicated to
               enhancing the beauty and health of your smile. From teeth
               whitening to porcelain veneers, we offer a range of cosmetic
@@ -298,7 +294,7 @@
             <div class="button-container mt-4">
               <a
                 href="dentistry.html"
-                class="service-button text-blue-900 font-bold"
+                class="service-button text-blue-900 font-bold translatable"
                 >Learn More</a
               >
             </div>
@@ -308,9 +304,9 @@
     </section>
 
     <!-- What we Offer With Section -->
-    <section id="work-with" class="py-12 pb-24 bg-gray-300">
+    <section id="work-with" class="py-12 pb-24 bg-gray-300 ">
       <div class="container mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-8" style="font-family: 'Tilt Prism', cursive;" >What We Offer?</h2>
+        <h2 class="text-4xl font-bold text-center mb-8 translatable" style="font-family: 'Tilt Prism', cursive;" >What We Offer?</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- VIP Transportation -->
           <div class="work-with-item relative">
@@ -322,13 +318,13 @@
                 class="overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-300 flex items-center justify-center text-white transform rotate-0 hover:rotate-x-180"
               >
                 <p
-                  class="text-center opacity-0 transition-opacity duration-300"
+                  class="text-center opacity-0 transition-opacity duration-300 translatable "
                 >
                   VIP transportation service for your comfort and convenience.
                 </p>
               </div>
             </div>
-            <h3 class="text-xl font-bold mt-4 text-center">
+            <h3 class="text-xl font-bold mt-4 text-center translatable">
               VIP Transportation
             </h3>
           </div>
@@ -342,13 +338,13 @@
                 class="overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-300 flex items-center justify-center text-white transform rotate-0 hover:rotate-x-180"
               >
                 <p
-                  class="text-center opacity-0 transition-opacity duration-300"
+                  class="text-center opacity-0 transition-opacity duration-300 translatable"
                 >
                   Luxurious accommodations for your stay.
                 </p>
               </div>
             </div>
-            <h3 class="text-xl font-bold mt-4 text-center">Accommodation</h3>
+            <h3 class="text-xl font-bold mt-4 text-center translatable">Accommodation</h3>
           </div>
           <!-- Experienced docs -->
           <div class="work-with-item relative">
@@ -360,13 +356,13 @@
                 class="overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-300 flex items-center justify-center text-white transform rotate-0 hover:rotate-x-180"
               >
                 <p
-                  class="text-center opacity-0 transition-opacity duration-300"
+                  class="text-center opacity-0 transition-opacity duration-300 translatable"
                 >
                   Our team of experienced and skilled medical practitioners.
                 </p>
               </div>
             </div>
-            <h3 class="text-xl font-bold mt-4 text-center">
+            <h3 class="text-xl font-bold mt-4 text-center translatable">
               Expert Medical Practitioners
             </h3>
           </div>
@@ -382,13 +378,13 @@
                 class="overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-300 flex items-center justify-center text-white transform rotate-0 hover:rotate-x-180"
               >
                 <p
-                  class="text-center opacity-0 transition-opacity duration-300"
+                  class="text-center opacity-0 transition-opacity duration-300 translatable"
                 >
                   Ensuring our customers' satisfaction is our top priority.
                 </p>
               </div>
             </div>
-            <h3 class="text-xl font-bold mt-4 text-center">
+            <h3 class="text-xl font-bold mt-4 text-center translatable">
               Customer Satisfaction
             </h3>
           </div>
@@ -402,13 +398,13 @@
                 class="overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-300 flex items-center justify-center text-white transform rotate-0 hover:rotate-x-180"
               >
                 <p
-                  class="text-center opacity-0 transition-opacity duration-300"
+                  class="text-center opacity-0 transition-opacity duration-300 translatable"
                 >
                   Explore Istanbul's rich cultural treasures during your visit.
                 </p>
               </div>
             </div>
-            <h3 class="text-xl font-bold mt-4 text-center">
+            <h3 class="text-xl font-bold mt-4 text-center translatable">
               Istanbul's Cultural Treasures
             </h3>
           </div>
@@ -422,13 +418,13 @@
                 class="overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-300 flex items-center justify-center text-white transform rotate-0 hover:rotate-x-180"
               >
                 <p
-                  class="text-center opacity-0 transition-opacity duration-300"
+                  class="text-center opacity-0 transition-opacity duration-300 translatable"
                 >
                   Achieving surgical mastery and precision in every procedure.
                 </p>
               </div>
             </div>
-            <h3 class="text-xl font-bold mt-4 text-center">
+            <h3 class="text-xl font-bold mt-4 text-center translatable">
               Surgical Mastery and Precision
             </h3>
           </div>
@@ -439,7 +435,7 @@
     <!-- Testimonials section -->
     <section id="testimonials" class="py-8 bg-gray-100">
       <div class="container mx-auto">
-        <h2 class="headline-text text-3xl font-bold text-center mb-4" style="font-family: 'Tilt Prism', cursive;">What Our Clients Say</h2>
+        <h2 class="headline-text text-3xl font-bold text-center mb-4 translatable" style="font-family: 'Tilt Prism', cursive; ">What Our Clients Say</h2>
         <div class="testimonial-slider">
           <!-- Testimonial 1 -->
           <div class="testimonial-container testimonial-1 visible">
@@ -451,7 +447,7 @@
                 <div class="testimonial-details">
                   <div class="testimonial-rating">
                   </div>
-                  <p class="testimonial-comment">
+                  <p class="testimonial-comment translatable">
                     "I had the pleasure of working with this team and their professionalism
                     truly stood out. They provided a total professional service from start to
                     finish, exceeding my expectations. I highly recommend their expertise!"
@@ -472,7 +468,7 @@
                 <div class="testimonial-details">
                   <div class="testimonial-rating">
                   </div>
-                  <p class="testimonial-comment">
+                  <p class="testimonial-comment translatable">
                     "I am truly impressed by the level of dedication and expertise provided by
                     the team. Their commitment to delivering a fully satisfactory service is
                     remarkable. I highly recommend their services to anyone in need!"
@@ -494,7 +490,7 @@
                             <div class="testimonial-rating">
 
                             </div>
-                            <p class="testimonial-comment">
+                            <p class="testimonial-comment translatable">
                               "Collaborating with this team has been an absolute delight. Their professionalism shines brightly throughout every interaction. They delivered an exceptionally professional service from beginning to end, surpassing all my expectations. I wholeheartedly endorse their expertise."
                             </p>
                             <p class="testimonial-author">- John Smith</p>
@@ -514,7 +510,7 @@
                           <div class="testimonial-rating">
 
                           </div>
-                          <p class="testimonial-comment">
+                          <p class="testimonial-comment translatable">
                             "My experience working with this team has been exceptional. Their commitment to professionalism is evident in every step of the process. They delivered a comprehensive and polished service from commencement to conclusion, far surpassing what I anticipated."
                           </p>
                           <p class="testimonial-author">- Olivia Davis</p>
@@ -534,7 +530,7 @@
                       <div class="testimonial-rating">
 
                       </div>
-                      <p class="testimonial-comment">
+                      <p class="testimonial-comment translatable" >
                         "It has been an absolute pleasure collaborating with this team. Their unwavering professionalism truly sets them apart. They provided a consistently top-notch service from start to finish, going above and beyond my expectations. I wholeheartedly recommend their expertise."
                       </p>
                       <p class="testimonial-author">- Emily Johnson</p>
@@ -549,77 +545,72 @@
     <!-- Pricing Table section -->
     <section id="pricing-table" class="py-8 bg-gray-100">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-6 text-center" style="font-family: 'Tilt Prism', cursive;">Packages</h2>
+        <h2 class="text-3xl font-bold mb-6 text-center translatable" style="font-family: 'Tilt Prism', cursive;">Packages</h2>
         <div class="pricing-container grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Platinum Package -->
           <div class="pricing-card">
             <div class="pricing-front">
-              <h3 class="text-xl font-bold mb-4">Platinum Package</h3>
+              <h3 class="text-xl font-bold mb-4 translatable">Platinum Package</h3>
               <hr class="separator">
 
-              <p class="mb-4">
+              <p class="mb-4 translatable">
                 This is for people who want to get the best treatment with affordable prices. 
               </p>
               <hr class="separator">
             </div>
             <div class="pricing-back">
-              <ul class="list-disc pl-6 mb-4">
+              <ul class="list-disc pl-6 mb-4 translatable">
                 <li>VIP transportation</li>
                 <li>4-star hotel</li>
-                <li>Before and after care</li>
-                <li>%100 Satisfaction guarantee</li>
                 <li>Multilingual Medical Advisors</li>
                 <li>Aftercare Products</li>
                 <li>Consultation & Treatment Planning</li>
               </ul>
               <div class="text-center">
-                <a href="contact-us.html" class="select-button">Select</a>
+                <a href="contact-us.html" class="select-button translatable">Select</a>
               </div>
             </div>
           </div>
           <!-- Diamond Package -->
           <div class="pricing-card">
             <div class="pricing-front">
-              <h3 class="text-xl font-bold mb-4">Diamond Package</h3>
+              <h3 class="text-xl font-bold mb-4 translatable">Diamond Package</h3>
               <hr class="separator">
 
-              <p class="mb-4">
+              <p class="mb-4 translatable">
                 This package is designed for people who want to have their medical surgery and enjoy a luxurious experience on Istanbul.
               </p>
               <hr class="separator">
             </div>
             <div class="pricing-back">
-              <ul class="list-disc pl-6 mb-4">
+              <ul class="list-disc pl-6 mb-4 translatable">
                 <li>All benefits from Platinum package</li>
                 <li>5-star hotel</li>
                 <li>24/7 personal support</li>
-                <li>Tourist attractions and guided tours</li>
-                <li>Accompanying person free of charge</li>
               </ul>
               <div class="text-center">
-                <a href="contact-us.html" class="select-button">Select</a>
+                <a href="contact-us.html" class="select-button translatable">Select</a>
               </div>
             </div>
           </div>
           <!-- Customized Package -->
           <div class="pricing-card">
             <div class="pricing-front">
-              <h3 class="text-xl font-bold mb-4">Customized Package</h3>
+              <h3 class="text-xl font-bold mb-4 translatable">Customized Package</h3>
               <hr class="separator">
 
-              <p class="mb-4">
+              <p class="mb-4 translatable">
                 This package is for people who want a specific operation but don't want certain benefits offered by our packages. It's tailored to individual preferences.
               </p>
               <hr class="separator">
             </div>
             <div class="pricing-back">
-              <ul class="list-disc pl-8 mb-6 custom-list">
+              <ul class="list-disc pl-8 mb-6 custom-list translatable">
                 <li>Additional requests</li>
                 <li>No provision fee</li>
                 <li>Consultation with expert doctors</li>
-                <li>Customized benefits</li>
               <div class="text-center">
-                <a href="contact-us.html" class="select-button">Select</a>
+                <a href="contact-us.html" class="select-button translatable">Select</a>
               </div>
             </div>
           </div>
@@ -630,19 +621,19 @@
     <!-- FAQ section -->
     <section id="faq" class="py-8">
       <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-4 text-black p-2" style="font-family: 'Tilt Prism', cursive;">
+        <h2 class="text-3xl font-bold text-center mb-4 text-black p-2 translatable " style="font-family: 'Tilt Prism', cursive;">
           Frequently Asked Questions
         </h2>
         <div class="accordion">
           <div class="accordion-item">
             <div class="accordion-title">
-              <h3 class="text-xl font-bold">
+              <h3 class="text-xl font-bold translatable">
                 What types of medical procedures do you assist with?
               </h3>
               <i class="fas fa-plus plus-minus"></i>
             </div>
-            <div class="accordion-content hidden">
-              <p>
+            <div class="accordion-content hidden ">
+              <p class="translatable" >
                 We specialize in arranging travel and accommodation for various
                 medical procedures, including but not limited to hair
                 transplants, cosmetic surgeries, dental treatments, and obesity surgeries.
@@ -651,13 +642,13 @@
           </div>
           <div class="accordion-item">
             <div class="accordion-title bg-white">
-              <h3 class="text-xl font-bold">
+              <h3 class="text-xl font-bold translatable">
                 Can you help me find a suitable doctor or clinic?
               </h3>
               <i class="fas fa-plus plus-minus"></i>
             </div>
-            <div class="accordion-content hidden bg-white">
-              <p>
+            <div class="accordion-content hidden bg-white ">
+              <p class="translatable">
                 Absolutely! We have partnerships with reputable doctors and
                 clinics in Istanbul. We will connect you with experienced
                 professionals based on your specific medical needs.
@@ -666,13 +657,13 @@
           </div>
           <div class="accordion-item">
             <div class="accordion-title bg-white">
-              <h3 class="text-xl font-bold">
+              <h3 class="text-xl font-bold translatable">
                 What is included in your travel and health package?
               </h3>
               <i class="fas fa-plus plus-minus"></i>
             </div>
             <div class="accordion-content hidden bg-white">
-              <p>
+              <p class="translatable">
                 Our travel and health packages typically include round-trip
                 flights, accommodation, airport transfers, medical appointments,
                 and post-treatment care. Additional services can be customized
@@ -682,13 +673,13 @@
           </div>
           <div class="accordion-item">
             <div class="accordion-title bg-white">
-              <h3 class="text-xl font-bold">
+              <h3 class="text-xl font-bold translatable">
                 How can I request a quote for a travel and health package?
               </h3>
               <i class="fas fa-plus plus-minus"></i>
             </div>
             <div class="accordion-content hidden bg-white">
-              <p>
+              <p class="translatable">
                 To request a quote, please fill out the inquiry form via
                 <a href="contact-us.html" class="contact-link">contact</a> or contact with our customer support team. Provide us with
                 details about your desired procedure and travel preferences, and
@@ -698,13 +689,13 @@
           </div>
           <div class="accordion-item">
             <div class="accordion-title bg-white">
-              <h3 class="text-xl font-bold">
+              <h3 class="text-xl font-bold translatable">
                 Can I book a travel and health package for someone else?
               </h3>
               <i class="fas fa-plus plus-minus"></i>
             </div>
             <div class="accordion-content hidden bg-white">
-              <p>
+              <p class="translatable">
                 Yes, you can book a package on behalf of someone else. Simply
                 provide us with the necessary details of the person who will be
                 undergoing the medical treatment, and we will take care of the
@@ -714,14 +705,14 @@
           </div>
           <div class="accordion-item">
             <div class="accordion-title bg-white">
-              <h3 class="text-xl font-bold">
+              <h3 class="text-xl font-bold translatable">
                 Are the medical facilities you work with accredited and
                 trustworthy?
               </h3>
               <i class="fas fa-plus plus-minus"></i>
             </div>
             <div class="accordion-content hidden bg-white">
-              <p>
+              <p class="translatable">
                 Yes, we partner with accredited and trustworthy medical
                 facilities that meet international standards. We thoroughly
                 assess their qualifications, experience, and patient reviews to
@@ -731,13 +722,13 @@
           </div>
           <div class="accordion-item">
             <div class="accordion-title bg-white">
-              <h3 class="text-xl font-bold">
+              <h3 class="text-xl font-bold translatable">
                 What is the recovery time for common surgeries?
               </h3>
               <i class="fas fa-plus plus-minus"></i>
             </div>
             <div class="accordion-content hidden bg-white">
-              <p>
+              <p class="translatable">
                 Recovery times can vary based on the type of surgery. For more detailed information please check our <a href="#services-overview" class="surgeries-link1">surgeries</a>. You will find general information and questions depending on the operation.
               </p>
             </div>
@@ -752,7 +743,7 @@
         <div class="flex flex-wrap justify-between">
           <!-- Follow Us -->
           <div class="text-white mb-4">
-            <h3 class="text-lg font-semibold">Contact Us</h3>
+            <h3 class="text-lg font-semibold translatable">Contact Us</h3>
             <div class="flex items-center mt-2">
               <div class="mr-2">
                 <a href="https://www.instagram.com/drturan.dratilla/" class="text-gray-400 hover:text-white">
@@ -770,13 +761,13 @@
           <!-- Legal Links -->
           <div class="text-white">
             <p class="mt-2 flex items-center">
-              <i class="fas fa-check mr-2 text-green-500"></i> Privacy Policy
+              <i class="fas fa-check mr-2 text-green-500 translatable"></i> Privacy Policy
             </p>
             <p class="mt-2 flex items-center">
-              <i class="fas fa-check mr-2 text-green-500"></i> Personal Data Protection Law
+              <i class="fas fa-check mr-2 text-green-500 translatable"></i> Personal Data Protection Law
             </p>
             <p class="mt-2 flex items-center">
-              <i class="fas fa-check mr-2 text-green-500"></i> Terms of Service
+              <i class="fas fa-check mr-2 text-green-500 translatable"></i> Terms of Service
             </p>
           </div>
         </div>

@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vital Voyages</title>
+    <title>Dr. Turan & Dr. Atilla Clinic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,27 +18,22 @@
       href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200&family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap"
       rel="stylesheet"
     />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js"
-      defer
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mstranslator/0.2.1/mstranslator.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&family=Caveat&family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&family=Tilt+Prism&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link href="styles.css" rel="stylesheet" />
     <script src="script.js"></script>
@@ -51,6 +42,17 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha384-..."
+    crossorigin="anonymous"
+  />
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   </head>
     <style>
       body {
@@ -135,6 +137,7 @@
         border-radius: 13px;
         margin-left: 2px;
         padding: 5px;
+        height: 190px;
         
             }
             .menu li {
@@ -231,6 +234,8 @@
   flex-wrap: wrap; 
   gap: 10px;
   margin-top: 20px;
+  height: 50%;
+  width: 50;
 
 }
 .before-photo,
@@ -239,39 +244,52 @@
   height: auto;
 }
 
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.video-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.video-heading {
+  font-size: 24px;
+  font-weight: bold;
+}
     </style>
   </head>
 
   <body>
-        <!-- Contact Header -->
-        <div id="contact-header" class="py-2 px-2 bg-gray-800">
-          <div class="container mx-auto flex items-center justify-between">
-            <div class="flex items-center">
-              <div class="mr-3">
-                <i class="fas fa-phone-alt text-white"></i>
-              </div>
-              <p class="text-white">0538 949 44 41</p>
-            </div>
-            <div>
-              <div id="language-select-container" class="relative">
-                <select
-                id="language-select"
-                class="bg-white border border-gray-400 hover:border-gray-500 px-2 py-1 rounded focus:outline-none focus:shadow-outline"
-              >
-                <option value="en">English</option>
-                <option value="de">German</option>
-                <option value="es">Spanish</option>
-                <option value="fr">French</option>
-                <option value="it">Italian</option>
-                <option value="ja">Japanese</option>
-                <option value="ko">Korean</option>
-              </select>
-            </div>
-            </div>
-          </div>
+  <!-- Contact Header -->
+  <div id="contact-header" class="py-2 px-2 bg-gray-800">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="flex items-center">
+        <div class="mr-3">
+          <i class="fas fa-phone-alt text-white"></i>
         </div>
+        <p class="text-white">0538 949 44 41</p>
+      </div>
+      <div>
+        <div class="flex items-center space-x-2">
+          <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none" title="English"></button>
+          <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full  p-1 focus:outline-none" title="Arabic"></button>
+          <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full  p-1 focus:outline-none" title="Spanish"></button>
+          <button data-lang="fr" onclick="translateTo('fr')" class="flag-icon flag-icon-fr rounded-full  p-1 focus:outline-none" title="French"></button>
+          <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full  p-1 focus:outline-none" title="Turkish"></button>
+          <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full  p-1 focus:outline-none" title="German"></button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- Navbar -->
+    <div id="regular-navbar">
     <header id="navbar" class="py-4 px-2 landing-navbar">
       <div class="container mx-auto flex items-center justify-between">
         <div class="flex items-center">
@@ -279,81 +297,83 @@
             <img
               src="images/companylogo.png"
               alt="Company Logo"
-              class="h-20 md:h-25 mr-3"
+              class="h-20 md:h-18 mr-3"
             />
           </a>
         </div>
         <nav>
           <ul class="flex space-x-4">
             <li>
-              <a href="index.html" class="button-link hover:text-gray-300"
+              <a  href="index.html" class="button-link hover:text-gray-300 translatable "
                 >Homepage</a
               >
             </li>
             <li>
-              <a href="contact-us.html" class="button-link hover:text-gray-300"
+              <a href="contact-us.html" class="button-link hover:text-gray-300 translatable"
                 >Contact</a
               >
             </li>
             <li>
-              <a href="what-we-do.html" class="button-link hover:text-gray-300"
+              <a href="what-we-do.html" class="button-link hover:text-gray-300 translatable"
                 >What We Do?</a
               >
             </li>
             <li class="relative group">
-              <a href="#" class="button-link hover:text-gray-300 surgeries-link"
+              <a href="#" class="button-link hover:text-gray-300 surgeries-link translatable"
                 >Surgeries</a
               >
               <ul
                 class="absolute hidden border-t border-gray-300 w-40 py-2 px-4"
               >
                 <li>
-                  <a href="plastic-surgery.html" class="text-blue-600"
+                  <a href="plastic-surgery.html" class="text-blue-600 translatable"
                     >Plastic Surgeries</a
                   >
                 </li>
                 <li>
-                  <a href="hair-transplant.html" class="text-blue-600"
+                  <a href="hair-transplant.html" class="text-blue-600 translatable"
                     >Hair Transplantation</a
                   >
                 </li>
                 <li>
-                  <a href="dentistry.html" class="text-blue-600"
+                  <a href="dentistry.html" class="text-blue-600 translatable"
                     >Cosmetic Dentistry</a
                   >
                 </li>
                 <li>
-                  <a href="dentistry.html" class="text-blue-600"
+                  <a href="dentistry.html" class="text-blue-600 translatable"
                     >Obesity Surgeries</a
                   >
                 </li>
               </ul>
             </li>
             <li>
-              <a href="about-us.html" class="button-link hover:text-gray-300"
+              <a href="about-us.html" class="button-link hover:text-gray-300 translatable"
                 >About Us</a
               >
             </li>
-          </ul>
+
         </nav>
       </div>
     </header>
+    </div>
+
     <!-- Page Header -->
     <section id="page-header" class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center relative" style="background-image: url(images/hair-transplant-bg.jpg);">
       <div class="container mx-auto text-center">
         <div class="flex items-center justify-start">
           <div class="w-1/2 pr-8">
-            <h1 class="text-4xl font-semibold">You're one step away from your dream hair transformation.</h1>
+            <h1 class="text-4xl font-semibold translatable">You're one step away from your dream hair transformation.</h1>
           </div>
         </div>
       </div>
       <div class="absolute left-0 bottom-0 ml-8 mb-8 bg-opacity-80  p-4 rounded">
-        <button class="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onclick="location.href='contact-us.html';">Contact Us</button>
+        <button class="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 translatable" onclick="location.href='contact-us.html';">Contact Us</button>
       </div>
     </section>
 
     <!-- Surgeries Section -->
-    <section id="surgeries" class="py-8 bg-gray-200">
+    <section id="surgeries" class="py-4 bg-gray-200 "  >
       <div class="container mx-auto px-4 ">
         <div class="grid-container grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Left-side menu -->
@@ -380,10 +400,10 @@
 
           <!-- Right-side description -->
           <div class="description">
-            <h3 class="text-2xl text-center font-bold mb-2 px-3" id="surgery-title">
+            <h3 class="text-2xl text-center font-bold mb-2 px-3 translatable" id="surgery-title">
               Hair Transplant
             </h3>
-            <p class="text-lg text-gray-700" id="surgery-info">
+            <p class="text-lg text-gray-700 translatable" id="surgery-info">
               Reclaim your natural hairline and confidence with our advanced hair transplant
               procedures. Whether you choose DHI (Direct Hair Implantation) for maximum
               graft yield or Follicular Unit Extraction (FUE) for minimal scarring, our experienced
@@ -391,9 +411,17 @@
               our personalized hair restoration solutions for a more youthful appearance.
             </p>
 
-  <!-- Before and After Photos -->
-  <div class="before-after-photos">
+            <div class="video-heading-container">
+              <h3 class="text-xl font-bold video-heading translatable">Check our introduction video</h3>
+            </div>
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/GyNIkHe1ZHQ" frameborder="0" allowfullscreen autoplay=1></iframe>
+            </div>
 
+            <div class="video-heading-container">
+              <h3 class="text-xl font-bold video-heading translatable">Before After Photos</h3>
+            </div>
+  <div class="before-after-photos">
     <img src="/images/hairtransplan1.jpg" alt="Before Photo" class="before-photo">
     <img src="/images/hairtransplant2.jpg" alt="After Photo" class="after-photo">
     <img src="/images/hairtransplant3.jpg" alt="After Photo" class="after-photo">
@@ -402,8 +430,8 @@
 
             <div class="gif-container">  <img class="gif" /></div>
             <!-- Questions and Answers -->
-            <div class="qna-container" id="questions-container">
-              <div id="qna-section" class="mt-8">
+            <div class="qna-container translatable" id="questions-container">
+              <div id="qna-section translatable" class="mt-8">
               </div>
  
               </div>
@@ -414,12 +442,12 @@
     </section>
 
     <!-- Bottom Footer content -->
-    <section id="footer" class="bg-gray-800 py-6">
+    <section id="footer" class="bg-gray-800 py-6" style="margin-top: -80px;">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-between">
           <!-- Follow Us -->
           <div class="text-white mb-4">
-            <h3 class="text-lg font-semibold">Contact Us</h3>
+            <h3 class="text-lg font-semibold translatable">Contact Us</h3>
             <div class="flex items-center mt-2">
               <div class="mr-2">
                 <a href="https://www.instagram.com/drturan.dratilla/" class="text-gray-400 hover:text-white">
@@ -504,47 +532,111 @@
         
 
 function showDescription(surgeryId) {
-    const selectedSurgery = surgeryDetails[surgeryId];
-    if (selectedSurgery) {
-      const surgeryTitleElement = document.getElementById("surgery-title");
-      const surgeryInfoElement = document.getElementById("surgery-info");
-      const questionsContainer = document.getElementById("questions-container");
-      const gifContainer = document.querySelector(".gif-container");
-      const beforeAfterPhotosContainer = document.querySelector(".before-after-photos");
+  const selectedSurgery = surgeryDetails[surgeryId];
+  if (selectedSurgery) {
+    const surgeryTitleElement = document.getElementById("surgery-title");
+    const surgeryInfoElement = document.getElementById("surgery-info");
+    const questionsContainer = document.getElementById("questions-container");
+    const gifContainer = document.querySelector(".gif-container");
+    const beforeAfterPhotosContainer = document.querySelector(".before-after-photos");
+    const videoHeadingContainers = document.querySelectorAll(".video-heading-container");
+    const videoContainers = document.querySelectorAll(".video-container");
 
-      surgeryTitleElement.textContent = selectedSurgery.title;
-      surgeryInfoElement.textContent = selectedSurgery.description;
+    surgeryTitleElement.textContent = selectedSurgery.title;
+    surgeryInfoElement.textContent = selectedSurgery.description;
 
-      // Clear previous questions and answers
-      questionsContainer.innerHTML = "";
+    // Clear previous questions and answers
+    questionsContainer.innerHTML = "";
 
-      // Display the questions and answers
-      selectedSurgery.questions.forEach((qna) => {
-        const questionElement = document.createElement("h4");
-        questionElement.textContent = qna.question;
-        questionElement.classList.add("qna-font");
+    // Hide the video headings and video containers
+    videoHeadingContainers.forEach(container => {
+      container.style.display = "none";
+    });
+    videoContainers.forEach(container => {
+      container.style.display = "none";
+    });
 
-        const answerElement = document.createElement("p");
-        answerElement.textContent = qna.answer;
-        questionElement.classList.add("qna-font");
+    // Display the questions and answers
+    selectedSurgery.questions.forEach((qna) => {
+      const questionElement = document.createElement("h4");
+      questionElement.textContent = qna.question;
+      questionElement.classList.add("qna-font");
 
-        questionsContainer.appendChild(questionElement);
-        questionsContainer.appendChild(answerElement);
-      });
+      const answerElement = document.createElement("p");
+      answerElement.textContent = qna.answer;
+      answerElement.classList.add("qna-font");
 
-      // Show or hide Before and After photos based on surgery selection
+      questionsContainer.appendChild(questionElement);
+      questionsContainer.appendChild(answerElement);
+    });
+
+    // Show or hide GIF based on surgery selection
+    if (selectedSurgery.gifPath) {
+      gifContainer.innerHTML = `<img src="${selectedSurgery.gifPath}" alt="Surgery GIF" class="gif">`;
+      gifContainer.style.display = "block";
+    } else {
+      gifContainer.innerHTML = "";
+      gifContainer.style.display = "none";
+    }
+
+    // Show or hide Before and After photos based on surgery selection
+    if (surgeryId === "DHI" || surgeryId === "FUE") {
       beforeAfterPhotosContainer.style.display = "none";
-
-      // Show or hide GIF based on surgery selection
-      if (selectedSurgery.gifPath) {
-        gifContainer.innerHTML = `<img src="${selectedSurgery.gifPath}" alt="Surgery GIF" class="gif">`;
-        gifContainer.style.display = "block";
-      } else {
-        gifContainer.innerHTML = "";
-        gifContainer.style.display = "none";
-      }
+    } else {
+      beforeAfterPhotosContainer.style.display = "block";
     }
   }
+}
+
+  function translateSurgeryDetails(targetLanguage) {
+  const surgeryKeys = Object.keys(surgeryDetails);
+  
+  surgeryKeys.forEach(surgeryKey => {
+    const surgery = surgeryDetails[surgeryKey];
+    
+    const elementsToTranslate = [
+      surgery.title,
+      surgery.description,
+      ...surgery.questions.map(qa => qa.question),
+      ...surgery.questions.map(qa => qa.answer),
+    ];
+
+    translateText(targetLanguage, elementsToTranslate).then(translations => {
+      surgery.title = translations[0];
+      surgery.description = translations[1];
+      
+      surgery.questions.forEach((qa, index) => {
+        qa.question = translations[2 + index];
+        qa.answer = translations[2 + surgery.questions.length + index];
+      });
+      
+      // Update the DOM with translated content
+      updateSurgeryContent(surgeryKey, surgery);
+    });
+  });
+}
+
+function updateSurgeryContent(surgeryKey, surgery) {
+  const contentWrapper = document.querySelector(`[data-key="${surgeryKey}"]`);
+  if (contentWrapper) {
+    const titleElement = contentWrapper.querySelector('.translatable-title');
+    const descriptionElement = contentWrapper.querySelector('.translatable-description');
+    const qaElements = contentWrapper.querySelectorAll('.qa .translatable-qa');
+    
+    if (titleElement && descriptionElement && qaElements.length === surgery.questions.length * 2) {
+      titleElement.textContent = surgery.title;
+      descriptionElement.textContent = surgery.description;
+      
+      surgery.questions.forEach((qa, index) => {
+        const questionElement = qaElements[index * 2];
+        const answerElement = qaElements[index * 2 + 1];
+        
+        questionElement.textContent = qa.question;
+        answerElement.textContent = qa.answer;
+      });
+    }
+  }
+}
     </script>
   </body>
 </html>
