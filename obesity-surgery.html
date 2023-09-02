@@ -58,18 +58,14 @@
       body {
         font-family: Arial, sans-serif;
       }
-      .grid-container {
-        display: flex;
-        justify-content: space-between; /* Align content to the left and right edges */
-      }
-
 
       #page-header {
-  background-image: url(images/hair-transplant-bg.jpg);
+  background-image: url(images/obe.jpg);
   background-size: cover;
-  background-position: center bottom 85%;
+  background-position: center bottom 120%;
   position: relative;
   height: 600px;
+  
 }
 
 #page-header .container {
@@ -81,11 +77,8 @@
   justify-content: flex-start;
 }
 
-#page-header .w-1/2 {
-  padding-right: 8%;
-}
-
-#page-header h1 {font-family: "Raleway", sans-serif;
+#page-header h1 {
+  font-family: "Raleway", sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
   color: #1D3B71;
@@ -131,13 +124,17 @@
 #page-header .absolute button:hover {
   background-color: #1dcab9;
 }
+      .grid-container {
+        display: flex;
+        justify-content: space-between; 
+      }
       /* Left-side menu */
       .menu {
         background-color: #17A899;
         border-radius: 13px;
         margin-left: 2px;
         padding: 5px;
-        height: 190px;
+        height: 250px;
         
             }
             .menu li {
@@ -234,8 +231,6 @@
   flex-wrap: wrap; 
   gap: 10px;
   margin-top: 20px;
-  height: 50%;
-  width: 50;
 
 }
 .before-photo,
@@ -266,6 +261,7 @@
   </head>
 
   <body>
+    
   <!-- Contact Header -->
   <div id="contact-header" class="py-2 px-2 bg-gray-800">
     <div class="container mx-auto flex items-center justify-between">
@@ -360,41 +356,49 @@
   
 
     <!-- Page Header -->
-    <section id="page-header" class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center relative" style="background-image: url(images/hair-transplant-bg.jpg);">
+    <section id="page-header" class="bg-blue-900 text-white py-48 from-blue-900 via-blue-900 to-transparent  bg-center relative" style="background-image: url(images/obe.jpg);">
       <div class="container mx-auto text-center">
         <div class="flex items-center justify-start">
           <div class="w-1/2 pr-8">
-            <h1 class="text-4xl font-semibold translatable">You're one step away from your dream hair transformation.</h1>
+            <h1 class="text-4xl font-semibold translatable">You're one step away from your dream fit.</h1>
           </div>
         </div>
       </div>
-      <div class="absolute left-0 bottom-0 ml-8 mb-8 bg-opacity-80  p-4 rounded">
+      <div class="absolute left-0 bottom-0 ml-8 mb-8  p-4 rounded">
         <button class="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 translatable" onclick="location.href='contact-us.html';">Contact Us</button>
       </div>
     </section>
 
     <!-- Surgeries Section -->
-    <section id="surgeries" class="py-4 bg-gray-200 "  >
+    <section id="surgeries" class="py-8 bg-gray-200">
       <div class="container mx-auto px-4 ">
         <div class="grid-container grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Left-side menu -->
           <div class="menu">
-            <div class="bg-white  p-6">
+            <div class="bg-white rounded shadow p-6">
               <ul>
                 <li
-                class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
-                onclick="showDescription('DHI');"
-              >
-              DHI
-              </li>
-              <hr class="my-2 border-gray-300" />
-              <li
-                  class="mb-1 list-disc  hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer"
-                  onclick="showDescription('FUE');"
+                  class="mb-1 list-disc  hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer translatable "
+                  onclick="showDescription('gastric-sleeve'); hideBeforeAfterPhotos();"
                 >
-                FUE 
+                  Gastric Sleeve
                 </li>
                 <hr class="my-2 border-gray-300" />
+                <li
+                  class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer translatable"
+                  onclick="showDescription('balloon');"
+                >
+                  Balloon
+                </li>
+                <hr class="my-2 border-gray-300" />
+                <li
+                  class="mb-1 list-disc hover:bg-blue-200 transition duration-300 ease-in-out cursor-pointer translatable"
+                  onclick="showDescription('gastric-botox');"
+                >
+                Gastric Botox
+                </li>
+                <hr class="my-2 border-gray-300" />
+
               </ul>
             </div>
           </div>
@@ -402,37 +406,30 @@
           <!-- Right-side description -->
           <div class="description">
             <h3 class="text-2xl text-center font-bold mb-2 px-3 translatable" id="surgery-title">
-              Hair Transplant
+              Obesity Surgery
             </h3>
             <p class="text-lg text-gray-700 translatable" id="surgery-info">
-              Reclaim your natural hairline and confidence with our advanced hair transplant
-              procedures. Whether you choose DHI (Direct Hair Implantation) for maximum
-              graft yield or Follicular Unit Extraction (FUE) for minimal scarring, our experienced
-              specialists are dedicated to restoring your hair's fullness and vitality. Explore
-              our personalized hair restoration solutions for a more youthful appearance.
+  
+With an unwavering dedication to ensuring your absolute satisfaction and holistic well-being, we stand steadfastly committed to assisting you in attaining the level of confidence and beauty that you rightfully deserve. Place your trust in the expertise of our seasoned professionals and embark on an enlightening journey towards unveiling a more radiant, empowered, and self-assured version of yourself.
             </p>
-
-            <div class="video-heading-container">
-              <h3 class="text-xl font-bold video-heading translatable">Check our introduction video</h3>
-            </div>
-            <div class="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/GyNIkHe1ZHQ" frameborder="0" allowfullscreen autoplay=1></iframe>
-            </div>
-
+       
             <div class="video-heading-container">
               <h3 class="text-xl font-bold video-heading translatable">Before After Photos</h3>
             </div>
+            
+  <!-- Before and After Photos -->
   <div class="before-after-photos">
-    <img src="/images/hairtransplan1.jpg" alt="Before Photo" class="before-photo">
-    <img src="/images/hairtransplant2.jpg" alt="After Photo" class="after-photo">
-    <img src="/images/hairtransplant3.jpg" alt="After Photo" class="after-photo">
-    <img src="/images/hairtransplant4.jpg" alt="After Photo" class="after-photo">
+
+    <img src="/images/obesityba1.jpeg" alt="Before Photo" class="before-photo">
+    <img src="/images/obesityba2.jpeg" alt="After Photo" class="after-photo">
+    <img src="/images/obesityba3.jpeg" alt="After Photo" class="after-photo">
+    <img src="/images/obesityba4.jpeg" alt="After Photo" class="after-photo">
   </div>
 
             <div class="gif-container">  <img class="gif" /></div>
             <!-- Questions and Answers -->
             <div class="qna-container translatable" id="questions-container">
-              <div id="qna-section translatable" class="mt-8">
+              <div id="qna-section " class="mt-8">
               </div>
  
               </div>
@@ -443,12 +440,12 @@
     </section>
 
     <!-- Bottom Footer content -->
-    <section id="footer" class="bg-gray-800 py-6" style="margin-top: -80px;">
+    <section id="footer" class="bg-gray-800 py-6">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-between">
           <!-- Follow Us -->
           <div class="text-white mb-4">
-            <h3 class="text-lg font-semibold translatable">Contact Us</h3>
+            <h3 class="text-lg font-semibold">Contact Us</h3>
             <div class="flex items-center mt-2">
               <div class="mr-2">
                 <a href="https://www.instagram.com/drturan.dratilla/" class="text-gray-400 hover:text-white">
@@ -482,113 +479,131 @@
     <!-- Scripts -->
     <script>
       const surgeryDetails = {
-  "DHI": {
-    title: "DHI Hair Transplant",
-    description:
-    "DHI Hair Transplant is an innovative hair restoration technique that involves the precise extraction of individual hair follicles from a donor area. These follicles are carefully implanted into areas experiencing hair thinning or baldness. DHI Hair Transplant stands as an exceptional solution for individuals aiming to achieve substantial hair rejuvenation.",
-    gifPath: "/images/fut.jpg",
-    questions: [
-      {
-        question: "How is DHI Hair transplant performed?",
-        answer:
-          "The DHI Hair Transplant procedure begins with the meticulous extraction of individual hair follicles from the donor area. These follicles are then skillfully implanted into the target areas experiencing hair thinning or baldness. The entire process is carried out using specialized instruments to ensure precision and minimal invasiveness",
-      },
-      {
-        question: "What is the recovery process like for DHI Hair Transplant?",
-        answer:
-          "Following a DHI Hair Transplant, you may experience some mild swelling and discomfort in both the donor and recipient areas. Over the next few weeks, the transplanted hairs will naturally shed before new hair growth begins. Adhering to the provided post-operative care instructions is crucial for achieving optimal results.",
-      },
-      {
-        question: "Is DHI Hair Transplant a suitable option for me?",
-        answer:
-          "DHI Hair Transplant can be an excellent option for individuals seeking effective hair restoration. Consulting with a qualified hair transplant specialist will help determine the most suitable technique based on your unique hair loss pattern and goals. Whether you're dealing with receding hairline or extensive balding, DHI Hair Transplant can offer a tailored solution.",
-      },
-    ],
-  },
+        "gastric-sleeve": {
+title: "Gastric Sleeve Surgery",
+description:
+"Gastric sleeve surgery, also known as sleeve gastrectomy, is a surgical procedure designed to assist individuals in their weight loss journey. This procedure involves the removal of a portion of the stomach to create a smaller, sleeve-shaped stomach. By reducing the stomach's size, gastric sleeve surgery helps limit food intake, leading to significant weight loss. It is an effective solution for individuals struggling with obesity or those who have not achieved sustainable weight loss through other means. Our experienced medical team utilizes advanced techniques to ensure a safe and successful procedure that can improve your overall health and well-being.",
+gifPath: "/images/gastric-sleeve.jpg",
+questions: [
+{
+question: "Who is a suitable candidate for gastric sleeve surgery?",
+answer:
+"Ideal candidates for gastric sleeve surgery are individuals who are severely overweight or obese, with a body mass index (BMI) of 40 or higher, or those with a BMI of 35 or higher with obesity-related health issues. Candidates should also have a strong commitment to making lifestyle changes and have explored other weight loss methods without success.",
+},
+{
+question:
+"How does gastric sleeve surgery promote weight loss?",
+answer:
+"Gastric sleeve surgery promotes weight loss by reducing the size of the stomach, which limits the amount of food a person can consume. This leads to reduced calorie intake and helps patients feel full more quickly, promoting weight loss. Additionally, the procedure may also impact hunger-regulating hormones, further assisting in weight management.",
+},
+{
+question: "What is the recovery time after gastric sleeve surgery?",
+answer:
+"Recovery time after gastric sleeve surgery varies from person to person. In general, patients can expect to stay in the hospital for a few days after the procedure. Full recovery and a return to normal activities typically occur within 2 to 4 weeks. Patients will need to follow a specialized diet and make significant lifestyle changes to ensure successful weight loss and long-term health benefits.",
+},
+],
+},
+"balloon": {
+title: "Gastric Balloon ",
+description:
+"The gastric balloon procedure is a non-surgical weight loss option designed to aid individuals in their journey towards a healthier weight. This minimally invasive procedure involves inserting a deflated balloon into the stomach, which is then inflated to occupy space, creating a feeling of fullness and reducing food intake. The gastric balloon is a temporary solution that helps individuals learn portion control and make healthier food choices. Our skilled medical team utilizes advanced techniques to ensure a safe and effective procedure that can kickstart your weight loss journey.",
+gifPath: "/images/gastric-balloon.jpg",
+questions: [
+{
+question: "Who is a suitable candidate for the gastric balloon procedure?",
+answer:
+"Ideal candidates for the gastric balloon procedure are individuals who are overweight or have a lower body mass index (BMI) but still struggle with weight-related health issues. Candidates should be committed to making lifestyle changes and have not achieved desired weight loss through diet and exercise alone. This procedure is a temporary solution to jumpstart weight loss.",
+},
+{
+question:
+"How does the gastric balloon promote weight loss?",
+answer:
+"The gastric balloon promotes weight loss by physically occupying space in the stomach, which reduces the capacity for food intake. This leads to smaller meal portions and a feeling of fullness, which can help individuals develop healthier eating habits and lose weight. The balloon is typically left in place for about six months.",
+},
+{
+question: "What is the recovery time after the gastric balloon procedure?",
+answer:
+"Recovery time after the gastric balloon procedure is minimal. Most patients can return to their normal activities within a few days. The procedure is non-surgical, so there is no need for hospitalization. However, patients will need to work closely with a healthcare team to develop a dietary and exercise plan to maximize weight loss results during the time the balloon is in place.",
+},
+],
+},
+"gastric-botox": {
+title: "Gastric Botox ",
+description:
+"The gastric Botox procedure is a non-surgical option for individuals looking to manage their weight and control their appetite. This minimally invasive procedure involves the injection of Botox (botulinum toxin) into the stomach lining to temporarily relax the stomach muscles. By doing so, it reduces hunger sensations and helps individuals feel satisfied with smaller meals. The gastric Botox procedure is a short-term solution that can complement other weight loss efforts. Our experienced medical team employs advanced techniques to ensure a safe and effective procedure that can support your weight management goals.",
+gifPath: "/images/gastric-botox.jpg",
+questions: [
+{
+question: "Who is a suitable candidate for the gastric Botox procedure?",
+answer:
+"Ideal candidates for the gastric Botox procedure are individuals who are looking for a non-surgical approach to weight management. Candidates may have a lower body mass index (BMI) but still struggle with overeating and portion control. This procedure is suitable for those committed to making lifestyle changes to support their weight loss journey.",
+},
+{
+question:
+"How does the gastric Botox procedure promote weight loss?",
+answer:
+"The gastric Botox procedure promotes weight loss by temporarily relaxing the stomach muscles, which reduces hunger sensations and increases feelings of fullness with smaller meals. This can help individuals develop better eating habits and portion control. The effects typically last for several months before gradually wearing off.",
+},
+{
+question: "What is the recovery time after the gastric Botox procedure?",
+answer:
+"Recovery time after the gastric Botox procedure is minimal. Most patients can resume their normal activities immediately. Since it is a non-surgical procedure, hospitalization is not required. However, individuals will work closely with healthcare professionals to create a tailored diet and lifestyle plan to maximize the benefits of the procedure while the effects of Botox are active.",
+},
+],
+},
+      };
 
-  "FUE": {
-    title: "FUE Hair Transplant",
-    description:
-      "Follicular Unit Extraction (FUE) is a modern hair transplantation technique that involves the extraction of individual hair follicles from the donor area using a micro-punch tool. These follicles are then transplanted into the recipient areas. FUE is known for its minimal scarring and shorter recovery time, making it a popular choice for many patients.",
-    gifPath: "/images/fue.jpg",
-    questions: [
-      {
-        question: "How does FUE differ from FUT?",
-        answer:
-          "Unlike FUT, FUE doesn't involve the removal of a strip of scalp. Instead, individual follicular units are extracted directly from the donor area, leaving tiny, almost imperceptible scars. FUE allows for a shorter recovery time and doesn't require stitches.",
-      },
-      {
-        question: "What can I expect during the FUE procedure?",
-        answer:
-          "During an FUE procedure, individual follicular units are extracted using a micro-punch tool. These units are then carefully transplanted into the recipient areas. The procedure is performed under local anesthesia, and you may experience minor discomfort during the process.",
-      },
-      {
-        question: "Is FUE suitable for everyone?",
-        answer:
-          "FUE can be a suitable option for individuals with smaller balding areas or those who prefer a minimally invasive technique. However, the suitability of FUE depends on various factors, including the availability of donor hair and the extent of hair loss. Consulting with a skilled hair transplant specialist will help determine the best approach for your specific case.",
-      },
-    ],
-  },
-};
-        
+      function showDescription(surgeryId) {
+    const selectedSurgery = surgeryDetails[surgeryId];
+    if (selectedSurgery) {
+      const surgeryTitleElement = document.getElementById("surgery-title");
+      const surgeryInfoElement = document.getElementById("surgery-info");
+      const questionsContainer = document.getElementById("questions-container");
+      const gifContainer = document.querySelector(".gif-container");
+      const beforeAfterPhotosContainer = document.querySelector(".before-after-photos");
+      const videoHeadingContainers = document.querySelectorAll(".video-heading-container");
+      const videoContainers = document.querySelectorAll(".video-container");
 
-function showDescription(surgeryId) {
-  const selectedSurgery = surgeryDetails[surgeryId];
-  if (selectedSurgery) {
-    const surgeryTitleElement = document.getElementById("surgery-title");
-    const surgeryInfoElement = document.getElementById("surgery-info");
-    const questionsContainer = document.getElementById("questions-container");
-    const gifContainer = document.querySelector(".gif-container");
-    const beforeAfterPhotosContainer = document.querySelector(".before-after-photos");
-    const videoHeadingContainers = document.querySelectorAll(".video-heading-container");
-    const videoContainers = document.querySelectorAll(".video-container");
+      surgeryTitleElement.textContent = selectedSurgery.title;
+      surgeryInfoElement.textContent = selectedSurgery.description;
 
-    surgeryTitleElement.textContent = selectedSurgery.title;
-    surgeryInfoElement.textContent = selectedSurgery.description;
+      // Clear previous questions and answers
+      questionsContainer.innerHTML = "";
 
-    // Clear previous questions and answers
-    questionsContainer.innerHTML = "";
-
-    // Hide the video headings and video containers
+          // Hide the video headings and video containers
     videoHeadingContainers.forEach(container => {
       container.style.display = "none";
     });
     videoContainers.forEach(container => {
       container.style.display = "none";
     });
+      // Display the questions and answers
+      selectedSurgery.questions.forEach((qna) => {
+        const questionElement = document.createElement("h4");
+        questionElement.textContent = qna.question;
+        questionElement.classList.add("qna-font");
 
-    // Display the questions and answers
-    selectedSurgery.questions.forEach((qna) => {
-      const questionElement = document.createElement("h4");
-      questionElement.textContent = qna.question;
-      questionElement.classList.add("qna-font");
+        const answerElement = document.createElement("p");
+        answerElement.textContent = qna.answer;
+        questionElement.classList.add("qna-font");
 
-      const answerElement = document.createElement("p");
-      answerElement.textContent = qna.answer;
-      answerElement.classList.add("qna-font");
+        questionsContainer.appendChild(questionElement);
+        questionsContainer.appendChild(answerElement);
+      });
 
-      questionsContainer.appendChild(questionElement);
-      questionsContainer.appendChild(answerElement);
-    });
-
-    // Show or hide GIF based on surgery selection
-    if (selectedSurgery.gifPath) {
-      gifContainer.innerHTML = `<img src="${selectedSurgery.gifPath}" alt="Surgery GIF" class="gif">`;
-      gifContainer.style.display = "block";
-    } else {
-      gifContainer.innerHTML = "";
-      gifContainer.style.display = "none";
-    }
-
-    // Show or hide Before and After photos based on surgery selection
-    if (surgeryId === "DHI" || surgeryId === "FUE") {
+      // Show or hide Before and After photos based on surgery selection
       beforeAfterPhotosContainer.style.display = "none";
-    } else {
-      beforeAfterPhotosContainer.style.display = "block";
+
+      // Show or hide GIF based on surgery selection
+      if (selectedSurgery.gifPath) {
+        gifContainer.innerHTML = `<img src="${selectedSurgery.gifPath}" alt="Surgery GIF" class="gif">`;
+        gifContainer.style.display = "block";
+      } else {
+        gifContainer.innerHTML = "";
+        gifContainer.style.display = "none";
+      }
     }
   }
-}
-
   function translateSurgeryDetails(targetLanguage) {
   const surgeryKeys = Object.keys(surgeryDetails);
   
@@ -616,13 +631,12 @@ function showDescription(surgeryId) {
     });
   });
 }
-
 function updateSurgeryContent(surgeryKey, surgery) {
   const contentWrapper = document.querySelector(`[data-key="${surgeryKey}"]`);
   if (contentWrapper) {
     const titleElement = contentWrapper.querySelector('.translatable-title');
     const descriptionElement = contentWrapper.querySelector('.translatable-description');
-    const qaElements = contentWrapper.querySelectorAll('.qa .translatable-qa');
+    const qaElements = contentWrapper.querySelectorAll('.translatable-qa');
     
     if (titleElement && descriptionElement && qaElements.length === surgery.questions.length * 2) {
       titleElement.textContent = surgery.title;

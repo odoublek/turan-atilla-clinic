@@ -68,12 +68,12 @@
       </div>
       <div>
         <div class="flex items-center space-x-2">
-          <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none" title="English"></button>
-          <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full  p-1 focus:outline-none" title="Arabic"></button>
-          <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full  p-1 focus:outline-none" title="Spanish"></button>
-          <button data-lang="fr" onclick="translateTo('fr')" class="flag-icon flag-icon-fr rounded-full  p-1 focus:outline-none" title="French"></button>
-          <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full  p-1 focus:outline-none" title="Turkish"></button>
-          <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full  p-1 focus:outline-none" title="German"></button>
+          <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full  p-1 focus:outline-none translatable" title="English"></button>
+          <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full  p-1 focus:outline-none translatable" title="Arabic"></button>
+          <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full  p-1 focus:outline-none translatable" title="Spanish"></button>
+          <button data-lang="fr" onclick="translateTo('fr')" class="flag-icon flag-icon-fr rounded-full  p-1 focus:outline-none translatable" title="French"></button>
+          <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full  p-1 focus:outline-none translatable" title="Turkish"></button>
+          <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full  p-1 focus:outline-none translatable" title="German"></button>
         </div>
       </div>
     </div>
@@ -81,77 +81,81 @@
 
     <!-- Navbar -->
     <div id="regular-navbar">
-    <header id="navbar" class="py-4 px-2 landing-navbar">
-      <div class="container mx-auto flex items-center justify-between">
-        <div class="flex items-center">
-          <a href="index.html">
-            <img
-              src="images/companylogo.png"
-              alt="Company Logo"
-              class="h-20 md:h-18 mr-3"
-            />
-          </a>
+      <header id="navbar" class="py-4 px-2 landing-navbar">
+        <div class="container mx-auto flex items-center justify-between">
+          <div class="flex items-center">
+            <a href="index.html">
+              <img
+                src="images/companylogo.png"
+                alt="Company Logo"
+                class="h-20 md:h-18 mr-3"
+              />
+            </a>
+          </div>
+          <nav>
+            <ul class="flex space-x-4">
+              <li>
+                <a  href="index.html" class="button-link hover:text-gray-300 translatable "
+                  >Homepage</a
+                >
+              </li>
+              <li>
+                <a href="contact-us.html" class="button-link hover:text-gray-300 translatable"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="what-we-do.html" class="button-link hover:text-gray-300 translatable"
+                  >What We Do?</a
+                >
+              </li>
+              <li class="relative group">
+                <a href="#" class="button-link hover:text-gray-300 surgeries-link translatable"
+                  >Surgeries</a
+                >
+                <ul
+                  class="absolute hidden border-t border-gray-300 w-40 py-2 px-4"
+                >
+                  <li>
+                    <a href="plastic-surgery.html" class="text-blue-600 translatable"
+                      >Plastic Surgeries</a
+                    >
+                  </li>
+                  <li>
+                    <a href="hair-transplant.html" class="text-blue-600 translatable"
+                      >Hair Transplantation</a
+                    >
+                  </li>
+                  <li>
+                    <a href="dentistry.html" class="text-blue-600 translatable"
+                      >Cosmetic Dentistry</a
+                    >
+                  </li>
+                  <li>
+                    <a href="obesity-surgery.html" class="text-blue-600 translatable"
+                      >Obesity Surgeries</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="about-us.html" class="button-link hover:text-gray-300 translatable"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav>
-          <ul class="flex space-x-4">
-            <li>
-              <a  href="index.html" class="button-link hover:text-gray-300 translatable "
-                >Homepage</a
-              >
-            </li>
-            <li>
-              <a href="contact-us.html" class="button-link hover:text-gray-300 translatable"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a href="what-we-do.html" class="button-link hover:text-gray-300 translatable"
-                >What We Do?</a
-              >
-            </li>
-            <li class="relative group">
-              <a href="#" class="button-link hover:text-gray-300 surgeries-link translatable"
-                >Surgeries</a
-              >
-              <ul
-                class="absolute hidden border-t border-gray-300 w-40 py-2 px-4"
-              >
-                <li>
-                  <a href="plastic-surgery.html" class="text-blue-600 translatable"
-                    >Plastic Surgeries</a
-                  >
-                </li>
-                <li>
-                  <a href="hair-transplant.html" class="text-blue-600 translatable"
-                    >Hair Transplantation</a
-                  >
-                </li>
-                <li>
-                  <a href="dentistry.html" class="text-blue-600 translatable"
-                    >Cosmetic Dentistry</a
-                  >
-                </li>
-                <li>
-                  <a href="dentistry.html" class="text-blue-600 translatable"
-                    >Obesity Surgeries</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="about-us.html" class="button-link hover:text-gray-300 translatable"
-                >About Us</a
-              >
-            </li>
-
-        </nav>
+      </header>
       </div>
-    </header>
-    </div>
+      
+
     
-    <!-- Mobile Navigation (Hidden on Desktop) -->
-    <div class="md:hidden">
-      <div class="mobile-nav-container">
+<!-- Mobile Navbar with Hamburger Menu -->
+<div id="mobile-navbar" class="md:hidden">
+  <header class="py-4 px-2 landing-navbar">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="flex items-center">
         <a href="index.html">
           <img
             src="images/companylogo.png"
@@ -159,51 +163,52 @@
             class="h-20 md:h-18 mr-3"
           />
         </a>
-        <button
-          id="mobile-menu-toggle"
-          class="mobile-nav-toggle"
-          aria-label="Toggle mobile menu"
-        >
-          <i class="fas fa-bars"></i>
+      </div>
+      <div>
+        <!-- Hamburger Menu Button -->
+        <button id="mobile-menu-button" class="text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
         </button>
       </div>
-
-      <!-- Mobile Menu Content -->
-      <div id="mobile-menu" class="mobile-menu hidden">
-        <ul class="flex flex-col items-center space-y-4 mt-4">
-          <li>
-            <a href="index.html" class="button-link">Homepage</a>
-          </li>
-          <li>
-            <a href="contact-us.html" class="button-link">Contact</a>
-          </li>
-          <li>
-            <a href="what-we-do.html" class="button-link">What We Do?</a>
-          </li>
-          <li class="relative group">
-            <a href="#" class="button-link surgeries-link">Surgeries</a>
-            <ul class="border-t border-gray-300 w-full py-2 px-4">
-              <li>
-                <a href="plastic-surgery.html" class="text-blue-600">Plastic Surgeries</a>
-              </li>
-              <li>
-                <a href="hair-transplant.html" class="text-blue-600">Hair Transplantation</a>
-              </li>
-              <li>
-                <a href="dentistry.html" class="text-blue-600">Cosmetic Dentistry</a>
-              </li>
-              <li>
-                <a href="dentistry.html" class="text-blue-600">Obesity Surgeries</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="about-us.html" class="button-link">About Us</a>
-          </li>
-        </ul>
-      </div>
     </div>
-    
+  </header>
+</div>
+
+<!-- Mobile Menu (Initially Hidden) -->
+<ul id="mobile-menu" class="md:hidden border-t border-gray-300">
+  <li>
+    <a href="index.html" class="block py-3 pl-4 hover:bg-gray-200 translatable">Homepage</a>
+  </li>
+  <li>
+    <a href="contact-us.html" class="block py-3 pl-4 hover:bg-gray-200 translatable">Contact</a>
+  </li>
+  <li>
+    <a href="what-we-do.html" class="block py-3 pl-4 hover:bg-gray-200 translatable">What We Do?</a>
+  </li>
+  <li class="relative group">
+    <a href="#" class="block py-3 pl-4 hover:bg-gray-200 surgeries-link translatable">Surgeries</a>
+    <ul class="absolute hidden bg-white w-40 py-2 px-4 border-t border-gray-300">
+      <li>
+        <a href="plastic-surgery.html" class="text-blue-600 translatable">Plastic Surgeries</a>
+      </li>
+      <li>
+        <a href="hair-transplant.html" class="text-blue-600 translatable">Hair Transplantation</a>
+      </li>
+      <li>
+        <a href="dentistry.html" class="text-blue-600 translatable">Cosmetic Dentistry</a>
+      </li>
+      <li>
+        <a href="obesity-surgery.html" class="text-blue-600 translatable">Obesity Surgeries</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="about-us.html" class="block py-3 pl-4 hover:bg-gray-200 translatable">About Us</a>
+  </li>
+</ul>
+
     <!-- Hero Section-->
     <section id="hero-section" class="py-16">
       <div class="container mx-auto px-4">
@@ -255,7 +260,7 @@
             </p>
             <div class="button-container mt-4">
               <a
-                href="surgeries.html"
+                href="obesity-surgery.html"
                 class="service-button text-blue-900 font-bold translatable"
                 >Learn More</a
               >

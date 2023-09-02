@@ -35,22 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-// Language switcher
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement(
-    { pageLanguage: "en" },
-    "google_translate_element"
-  );
-}
-
-// Load Google Translate script
-function loadGoogleTranslateScript(selectedLanguage) {
-  var script = document.createElement("script");
-  script.type = "text/javascript";
-  script.src =
-    "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-  document.head.appendChild(script);
-}
 
 // mobile settings
 document.addEventListener("DOMContentLoaded", function () {
@@ -98,9 +82,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // translator
 const apiKey = 'AIzaSyA1LL5Hltmj0d3_MCagHYD-zPk7g60RAn8';
-
 document.addEventListener('DOMContentLoaded', () => {
   const translateButtons = document.querySelectorAll('[data-lang]');
+  const elementsToTranslate = document.querySelectorAll('.translatable');
+  
+  // Store the original English content in a data attribute
+  elementsToTranslate.forEach(element => {
+    element.dataset.originalText = element.textContent;
+  });
   
   translateButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -110,68 +99,39 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function removeTranslateEventListeners() {
-  const translateButtons = document.querySelectorAll('[data-lang]');
-  
-  translateButtons.forEach(button => {
-    const newButton = button.cloneNode(true);
-    button.parentNode.replaceChild(newButton, button);
-  });
-}
-
 function translatePage(targetLanguage) {
   const elementsToTranslate = document.querySelectorAll('.translatable'); // Select elements with the class "translatable"
   
-  const translator = new Translator(apiKey);
-  
-  translator.translate(targetLanguage, Array.from(elementsToTranslate)).then(translations => {
-    translations.forEach((translation, index) => {
-      elementsToTranslate[index].textContent = translation;
-    });
+  elementsToTranslate.forEach(element => {
+    const text = element.textContent;
+    
+    if (targetLanguage === 'en') {
+      // Restore the original English content when English is selected
+      element.textContent = element.dataset.originalText;
+    } else {
+      // Translate to the selected language
+      googleTranslate(text, 'en', targetLanguage)
+        .then(translation => {
+          element.textContent = translation;
+        })
+        .catch(error => {
+          console.error('Translation error:', error);
+        });
+    }
   });
 }
 
-class Translator {
-  constructor(apiKey) {
-    this.apiKey = apiKey;
-  }
+function googleTranslate(text, sourceLanguage, targetLanguage) {
+  const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLanguage}&tl=${targetLanguage}&dt=t&q=${text}`;
 
-  async translate(targetLanguage, elements) {
-    const sourceLanguage = 'en'; // Assuming your content is in English
-    
-    const translations = await Promise.all(
-      Array.from(elements).map(element => {
-        const text = element.textContent;
-        return this.googleTranslate(text, sourceLanguage, targetLanguage);
-      })
-    );
-    
-    return translations;
-  }
-
-  googleTranslate(text, sourceLanguage, targetLanguage) {
-    const url = `https://translation.googleapis.com/language/translate/v2?key=${this.apiKey}`;
-    const data = {
-      q: text,
-      source: sourceLanguage,
-      target: targetLanguage,
-      format: 'text'
-    };
-
-    return fetch(url, {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
+  return fetch(url)
     .then(response => response.json())
-    .then(data => data.data.translations[0].translatedText)
+    .then(data => {
+      const translatedText = data[0][0][0];
+      return translatedText;
+    })
     .catch(error => {
       console.error('Translation error:', error);
-      return text; // Return the original text on error
+      return Promise.reject(error);
     });
-  }
 }
-
-
