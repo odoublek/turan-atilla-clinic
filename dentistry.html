@@ -89,9 +89,7 @@
   justify-content: flex-start;
 }
 
-#page-header .w-1/2 {
-  padding-right: 8%;
-}
+
 
 #page-header h1 {font-family: "Raleway", sans-serif;
   font-size: 2.5rem;
@@ -298,32 +296,58 @@
   font-size: 24px;
   font-weight: bold;
 }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .gif-container {
+    width: 200%;
+    height: auto;
+  }
+  .gif-container img {
+    width: 50%;
+  }
+  
+  /* Responsive styles for video container */
+  .video-container {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
     </style>
   </head>
 
   <body>
 
-  <!-- Contact Header -->
-  <div id="contact-header" class="py-2 px-2 bg-gray-800">
-    <div class="container mx-auto flex items-center justify-between">
-      <div class="flex items-center">
-        <div class="mr-3">
-          <i class="fas fa-phone-alt text-white"></i>
+    <!-- Contact Header -->
+    <div id="contact-header" class="py-2 px-2 bg-gray-800">
+      <div class="container mx-auto flex items-center justify-between">
+        <div class="flex items-center">
+          <div class="mr-3">
+            <i class="fas fa-phone-alt mobile-number text-white"></i>
+          </div>
+          <p class="text-white mobile-number">0538 949 44 41</p>
         </div>
-        <p class="text-white">0538 949 44 41</p>
-      </div>
-      <div>
         <div class="flex items-center space-x-2">
-          <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none" title="English"></button>
-          <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full  p-1 focus:outline-none" title="Arabic"></button>
-          <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full  p-1 focus:outline-none" title="Spanish"></button>
-          <button data-lang="fr" onclick="translateTo('fr')" class="flag-icon flag-icon-fr rounded-full  p-1 focus:outline-none" title="French"></button>
-          <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full  p-1 focus:outline-none" title="Turkish"></button>
-          <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full  p-1 focus:outline-none" title="German"></button>
+          <div class="flag-container"> <!-- Flags container -->
+            <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none translatable" title="English"></button>
+            <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full p-1 focus:outline-none translatable" title="Arabic"></button>
+            <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full p-1 focus:outline-none translatable" title="Spanish"></button>
+            <button data-lang="fr" onclick="translateTo('fr')" class="flag-icon flag-icon-fr rounded-full p-1 focus:outline-none translatable" title="French"></button>
+            <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full p-1 focus:outline-none translatable" title="Turkish"></button>
+            <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full p-1 focus:outline-none translatable" title="German"></button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
     <!-- Navbar -->
     <div id="regular-navbar">
@@ -341,7 +365,7 @@
           <nav>
             <ul class="flex space-x-4">
               <li>
-                <a  href="index.html" class="button-link hover:text-gray-300 translatable "
+                <a  href="index.html" class="button-link hover:text-gray-300 translatable"
                   >Homepage</a
                 >
               </li>
@@ -379,7 +403,7 @@
                   </li>
                   <li>
                     <a href="obesity-surgery.html" class="text-blue-600 translatable"
-                      >Obesity Surgeries</a
+                      >Bariatric Surgeries</a
                     >
                   </li>
                 </ul>
@@ -393,8 +417,65 @@
           </nav>
         </div>
       </header>
+    </div>
+      
+    <!-- Mobile Navbar -->
+    <div id="mobile-navbar" class="md:hidden">
+      <div class="container mx-auto">
+        <header class="py-4 px-2 landing-navbar flex justify-between items-center">
+          <div class="flex items-center">
+            <a href="index.html">
+              <img
+                src="images/companylogo.png"
+                alt="Company Logo"
+                class="h-20 md:h-18 mr-3"
+              />
+            </a>
+          </div>
+          <div class="ml-auto flex items-center" id="mobile-menu-container">
+            <!-- Hamburger Menu Button -->
+            <button id="mobile-menu-button" class="text-white align-middle flex items-center">
+              <span class="font-bold mr-2">MENU</span>
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden fixed top-0 right-0 h-full bg-white w-80 z-50 shadow-lg overflow-y-auto">
+          <ul>
+            <li><a href="about-us.html" class="block py-3 px-4 text-gray-800 translatable">About Us</a></li>
+            <li><a href="contact-us.html" class="block py-3 px-4 text-gray-800 translatable">Contact</a></li>
+            <li><a href="what-we-do.html" class="block py-3 px-4 text-gray-800 translatable">What We Do?</a></li>
+            <li>
+              <a href="plastic-surgery.html" class="text-blue-600 translatable"
+                >Plastic Surgeries</a
+              >
+            </li>
+            <li>
+              <a href="hair-transplant.html" class="text-blue-600 translatable"
+                >Hair Transplantation</a
+              >
+            </li>
+            <li>
+              <a href="dentistry.html" class="text-blue-600 translatable"
+                >Cosmetic Dentistry</a
+              >
+            </li>
+            <li>
+              <a href="obesity-surgery.html" class="text-blue-600 translatable"
+                >Bariatric Surgeries</a
+              >
+            </li>
+            <li>
+              <button id="mobile-close-button" class="text-blue-600 translatable">BACK</button>
+            </li>
+          </ul>
+        </div>
       </div>
-  
+    </div>
 
     <!-- Page Header -->
     <section id="page-header" class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center relative" style="background-image: url(images/dentistry-bg.jpg);">
@@ -513,7 +594,9 @@
               <h3 class="text-xl font-bold video-heading translatable">Check our introduction video</h3>
             </div>
             <div class="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/GyNIkHe1ZHQ" frameborder="0" allowfullscreen autoplay=1></iframe>
+              <div class="responsive-iframe">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NeT0fjYewoI" frameborder="0" allowfullscreen autoplay=1></iframe>
+              </div>
             </div>
             <div class="video-heading-container">
               <h3 class="text-xl font-bold video-heading translatable">Before After Photos</h3>
@@ -521,7 +604,6 @@
 
               <!-- Before and After Photos -->
   <div class="before-after-photos">
-
     <img src="/images/dentistba1.jpg" alt="Before Photo" class="before-photo">
     <img src="/images/dentistba2.jpg" alt="After Photo" class="after-photo">
     <img src="/images/dentistba3.jpg" alt="After Photo" class="after-photo">
