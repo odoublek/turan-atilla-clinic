@@ -260,15 +260,41 @@
 
 /* mobile settings */
 @media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Display both columns as one on mobile */
+  }
+
+  .menu {
+    font-size: 14px; 
+  }
+
+  .menu ul {
+    padding-left: 0; 
+    width: 100px;
+  }
+
+  .menu li {
+    margin-bottom: 6px; 
+  }
+
+  .description {
+    font-size: 12px; 
+  }
+
+  .video-heading {
+    font-size: 16px; 
+  }
+
   .gif-container {
     width: 200%;
     height: auto;
   }
-  .gif-container img{
-    width: 50%;
+
+  .gif-container img {
+    width: 55%;
+    height: 120%;
   }
 }
-
     </style>
   </head>
 
@@ -590,7 +616,7 @@ With an unwavering dedication to ensuring your absolute satisfaction and holisti
         <div class="flex flex-wrap justify-between">
           <!-- Follow Us -->
           <div class="text-white mb-4">
-            <h3 class="text-lg font-semibold">Contact Us</h3>
+            <h3 class="text-lg font-semibold translatable">Contact Us</h3>
             <div class="flex items-center mt-2">
               <div class="mr-2">
                 <a href="https://www.instagram.com/drturan.dratilla/" class="text-gray-400 hover:text-white">
@@ -607,20 +633,19 @@ With an unwavering dedication to ensuring your absolute satisfaction and holisti
           </div>
           <!-- Legal Links -->
           <div class="text-white">
-            <p class="mt-2 flex items-center">
-              <i class="fas fa-check mr-2 text-green-500"></i> Privacy Policy
+            <p class="mt-2 flex items-center translatable">
+              <i class="fas fa-check mr-2 text-green-500 "></i> Privacy Policy
             </p>
-            <p class="mt-2 flex items-center">
-              <i class="fas fa-check mr-2 text-green-500"></i> Personal Data Protection Law
+            <p class="mt-2 flex items-center translatable">
+              <i class="fas fa-check mr-2 text-green-500 "></i> Personal Data Protection Law
             </p>
-            <p class="mt-2 flex items-center">
+            <p class="mt-2 flex items-center translatable">
               <i class="fas fa-check mr-2 text-green-500"></i> Terms of Service
             </p>
           </div>
         </div>
       </div>
     </section>
-
     <!-- Scripts -->
     <script>
       const surgeryDetails = {
@@ -1075,6 +1100,7 @@ function updateSurgeryContent(surgeryKey, surgery) {
     }
   }
 }
+
     </script>
   </body>
 </html>

@@ -207,6 +207,7 @@ body {
   }
 
   #mobile-menu-container {
+    margin-top: 15px;
     display: flex;
     margin-right: 1rem;
   }
@@ -902,4 +903,40 @@ body {
 #footer .legal-links i {
   color: #38a169;
   margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  #footer {
+    padding: 20px 0;
+  }
+
+  .text-white {
+    text-align: left; 
+    margin-left: -30px;
+  }
+
+  .text-white h3 {
+    font-size: 18px; 
+  }
+
+  .text-white p {
+    font-size: 14px;
+  }
+
+  .text-white i {
+    font-size: 16px; 
+  }
+
+  .text-white .flex {
+    flex-direction: row; 
+    align-items: center; 
+  }
+
+  .text-white .flex i {
+    margin-right: 10px; 
+  }
+
+  .text-white .flex p {
+    margin: 0; 
+  }
 }
