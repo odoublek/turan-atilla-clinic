@@ -28,23 +28,18 @@ Im using html,css, js and tailwind for this project.
 Currently this website has  different folders( index.html, styles.css, script.js, why-us.html, about-us.html, contact-us.html,hairtransplant.html(information about hairtransplant), plastic-surgery.hmtl, dentistry.html) 
 
 
-
-// mobile settings
-document.addEventListener("DOMContentLoaded", function () {
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  mobileMenuButton.addEventListener("click", function () {
-    // Toggle the 'show' class on the mobile menu
-    mobileMenu.classList.toggle("show");
-
-    // Toggle the 'transform' style on the mobile menu to control its appearance
-    if (mobileMenu.classList.contains("show")) {
-      mobileMenu.style.transform = "translateX(-50%)"; // Center the menu
-      document.body.style.overflow = "hidden"; // Prevent scrolling
-    } else {
-      mobileMenu.style.transform = "translateX(100%)"; // Hide the menu to the right
-      document.body.style.overflow = "auto"; // Enable scrolling
-    }
-  });
-});
+  /* Responsive styles for video container */
+  .video-container {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  

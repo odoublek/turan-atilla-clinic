@@ -24,20 +24,14 @@
       href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mstranslator/0.2.1/mstranslator.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&family=Caveat&family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&family=Tilt+Prism&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&family=Caveat&family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&family=Tilt+Prism&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" />
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -49,10 +43,6 @@
     integrity="sha384-..."
     crossorigin="anonymous"
   />
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
   </head>
     <style>
 
@@ -63,7 +53,7 @@
       #page-header {
   background-image: url(images/obe.jpg);
   background-size: cover;
-  background-position: center bottom 90%;
+  background-position: center bottom 110%;
   position: relative;
   height: 600px;
   
@@ -259,10 +249,39 @@
   font-weight: bold;
 }
 
-
-
 /* Media query for mobile devices */
 @media (max-width: 768px) {
+  #page-header .container {
+    text-align: center; 
+    left: 80px;
+    margin-top: -50px;
+  }
+  #page-header .absolute {
+    left: 120px;
+    text-align: center; 
+  }
+
+  .menu {
+    font-size: 14px; 
+  }
+
+  .menu ul {
+    padding-left: 0; 
+    width: 100px;
+  }
+
+  .menu li {
+    margin-bottom: 6px; 
+  }
+
+  .description {
+    font-size: 12px; 
+  }
+
+  .video-heading {
+    font-size: 16px; 
+  }
+
   .gif-container {
     width: 200%;
     height: auto;
@@ -271,11 +290,25 @@
     width: 50%;
   }
   
-  /* Responsive styles for video container */
+  .menu ul li {
+    font-size: 0.875rem;
+  }
+
+
+  .description h3 {
+    font-size: 1rem; 
+  }
+
+  .description p {
+    font-size: 1rem; 
+  }
   .video-container {
     overflow: hidden;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%; 
+    right: 30px;
     position: relative;
+    width: 130%;
+    height: auto;
   }
   
   .video-container iframe {
@@ -285,30 +318,21 @@
     width: 100%;
     height: 100%;
   }
-  
-  .menu {
-    font-size: 14px;
-  }
-  
-  .menu ul {
-    padding-left: 0;
-    width: 70px;
-  }
-  
-  .menu li {
-    margin-bottom: 6px;
+
+  .before-after-photos {
+    width: 250%;
+    height: auto;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    right: 155px;
   }
 
-  .description {
-    font-size: 14px;
-  }
-  
-  .video-heading {
-    font-size: 16px;
-  }
-  
   .before-after-photos img {
-    width: 80%;
+    width: 70%; 
+    height: 70%; 
+    display: block;
+    margin: 0 2.5%; 
   }
 }
 
@@ -323,7 +347,7 @@
           <div class="mr-3">
             <i class="fas fa-phone-alt mobile-number text-white"></i>
           </div>
-          <p class="text-white mobile-number">0538 949 44 41</p>
+          <p class="text-white mobile-number">+90 541 826 71 88</p>
         </div>
         <div class="flex items-center space-x-2">
           <div class="flag-container"> <!-- Flags container -->
@@ -467,11 +491,11 @@
     </div>
   
     <!-- Page Header -->
-    <section id="page-header" class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center relative" style="background-image: url(images/hair-transplant-bg.jpg);">
+    <section id="page-header" class="bg-blue-900 text-white py-48 bg-gradient-to-t from-blue-900 via-blue-900 to-transparent bg-cover bg-center relative" style="background-image: url(images/hair-transplant-bg2.jpg);">
       <div class="container mx-auto text-center">
         <div class="flex items-center justify-start">
           <div class="w-1/2 pr-8">
-            <h1 class="text-4xl font-semibold translatable">You're one step away from your dream hair transformation.</h1>
+            <h1 class=" headertext text-4xl font-semibold translatable">You're one step away from your dream hair transformation.</h1>
           </div>
         </div>
       </div>
@@ -570,7 +594,7 @@
                 </a>
               </div>
             </div>
-            <p class="mt-2 text-lg"><i class="fas fa-phone-alt mr-2"></i> 0538 949 55 31</p>
+            <p class="mt-2 text-lg"><i class="fas fa-phone-alt mr-2"></i> +90 541 826 71 88</p>
           </div>
           <!-- Legal Links -->
           <div class="text-white">
@@ -748,5 +772,12 @@ function updateSurgeryContent(surgeryKey, surgery) {
   }
 }
     </script>
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>

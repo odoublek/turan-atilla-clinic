@@ -24,20 +24,14 @@
       href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mstranslator/0.2.1/mstranslator.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&family=Caveat&family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&family=Tilt+Prism&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&family=Caveat&family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&family=Tilt+Prism&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" />
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -48,11 +42,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha384-..."
     crossorigin="anonymous"
-  />
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+    />
   </head>
     <style>
       body {
@@ -260,8 +250,15 @@
 
 /* mobile settings */
 @media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Display both columns as one on mobile */
+
+  #page-header .container {
+    text-align: center; 
+    left: 80px;
+    margin-top: -50px;
+  }
+  #page-header .absolute {
+    left: 120px;
+    text-align: center; 
   }
 
   .menu {
@@ -289,11 +286,39 @@
     width: 200%;
     height: auto;
   }
-
   .gif-container img {
-    width: 55%;
-    height: 120%;
+    width: 50%;
   }
+  
+  .menu ul li {
+    font-size: 0.875rem;
+  }
+
+
+  .description h3 {
+    font-size: 1rem; 
+  }
+
+  .description p {
+    font-size: 1rem; 
+  }
+
+  .before-after-photos {
+    width: 250%;
+    height: auto;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    right: 140px;
+  }
+
+  .before-after-photos img {
+    width: 70%; 
+    height: 70%; 
+    display: block;
+    margin: 0 2.5%; 
+  }
+ 
 }
     </style>
   </head>
@@ -307,7 +332,7 @@
           <div class="mr-3">
             <i class="fas fa-phone-alt mobile-number text-white"></i>
           </div>
-          <p class="text-white mobile-number">0538 949 44 41</p>
+          <p class="text-white mobile-number">+90 541 826 71 88</p>
         </div>
         <div class="flex items-center space-x-2">
           <div class="flag-container"> <!-- Flags container -->
@@ -454,7 +479,7 @@
     <section id="page-header" class="bg-blue-900 text-white py-48 from-blue-900 via-blue-900 to-transparent  bg-center relative" style="background-image: url(images/plastic-surgery-bg.jpg);">
       <div class="container mx-auto text-center">
         <div class="flex items-center justify-start">
-          <div class="w-1/2 pr-8">
+          <div class="w-1/2 pr-8 text-container">
             <h1 class="text-4xl font-semibold translatable">You're one step away from your dream look.</h1>
           </div>
         </div>
@@ -590,8 +615,7 @@ With an unwavering dedication to ensuring your absolute satisfaction and holisti
             
   <!-- Before and After Photos -->
   <div class="before-after-photos">
-
-    <img src="/images/plasticba1.jpg" alt="Before Photo" class="before-photo">
+    <img src="/images/plasticba1.jpg" alt="After Photo" class="after-photo">
     <img src="/images/plasticba2.jpg" alt="After Photo" class="after-photo">
     <img src="/images/plasticba3.jpg" alt="After Photo" class="after-photo">
     <img src="/images/plasticba4.jpg" alt="After Photo" class="after-photo">
@@ -629,7 +653,7 @@ With an unwavering dedication to ensuring your absolute satisfaction and holisti
                 </a>
               </div>
             </div>
-            <p class="mt-2 text-lg"><i class="fas fa-phone-alt mr-2"></i> 0538 949 55 31</p>
+            <p class="mt-2 text-lg"><i class="fas fa-phone-alt mr-2"></i> +90 541 826 71 88</p>
           </div>
           <!-- Legal Links -->
           <div class="text-white">
@@ -1102,5 +1126,12 @@ function updateSurgeryContent(surgeryKey, surgery) {
 }
 
     </script>
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>

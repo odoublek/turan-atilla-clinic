@@ -24,20 +24,14 @@
       href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mstranslator/0.2.1/mstranslator.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&family=Caveat&family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&family=Tilt+Prism&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&family=Caveat&family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&family=Tilt+Prism&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" />
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -49,10 +43,6 @@
     integrity="sha384-..."
     crossorigin="anonymous"
   />
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
   </head>
   <style>
     #page-header {
@@ -144,9 +134,9 @@
     }
 
     .step-image img {
-      max-width: 90%;
-      max-height: 400px;
-      margin-left: 40px;
+      max-width: 80%;
+      max-height: auto;
+      margin-left: 50px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
@@ -214,7 +204,7 @@
     .blockquote {
       margin-top: 20px;
       padding: 10px;
-      background-color: #f8f8f8;
+      background-color: #fffff0;
       border-left: 4px solid #17a899;
     }
 
@@ -245,6 +235,42 @@
       }
     }
 
+    /* Mobile settings */
+    @media (max-width: 768px) {
+
+      #page-header {
+    flex-direction: column;
+    text-align: center; 
+    background-position: top 170px ;
+
+  }
+  #page-header .container {
+    text-align: center; 
+    left: 80px;
+
+  }
+  #page-header .absolute {
+    left: 80px;
+    text-align: center; 
+  }
+  #page-header h1 {
+    display: none;
+  }
+  .step-indicators {
+    font-size: 0.875rem; 
+  }
+  .step-description {
+    font-size: 1rem; 
+  }
+  .step-number {
+    font-size: 1rem; 
+  }
+  .step-image img {
+    width: 500px;
+    height: 400px;
+    padding-right: 5px;
+  }
+}
     
   </style>
   <body>
@@ -255,7 +281,7 @@
           <div class="mr-3">
             <i class="fas fa-phone-alt mobile-number text-white"></i>
           </div>
-          <p class="text-white mobile-number">0538 949 44 41</p>
+          <p class="text-white mobile-number">+90 541 826 71 88</p>
         </div>
         <div class="flex items-center space-x-2">
           <div class="flag-container"> <!-- Flags container -->
@@ -489,7 +515,7 @@
                 </a>
               </div>
             </div>
-            <p class="mt-2 text-lg"><i class="fas fa-phone-alt mr-2"></i> 0538 949 55 31</p>
+            <p class="mt-2 text-lg"><i class="fas fa-phone-alt mr-2"></i> +90 541 826 71 88</p>
           </div>
           <!-- Legal Links -->
           <div class="text-white">
@@ -619,5 +645,12 @@
 
       
     </script>
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>

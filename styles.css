@@ -1,9 +1,24 @@
 body {
-  max-width: 1500px;
+  max-width: 100%;
   font-family: Arial, sans-serif;
   line-height: 1.5;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
+
+@media (max-width: 768px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+html {
+  overflow-x: hidden;
+}
+
+
 #contact-header {
   position: fixed;
   top: 0;
@@ -39,33 +54,7 @@ body {
   .pointer-events-none {
     pointer-events: none;
   }
-/* Contact mobile sets */
-@media (max-width: 768px) {
-  #contact-header {
-    position: sticky;
-    top: 0;
-    background-color: #3467c5;
-    color: #17a899;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-  }
-  
-  .mobile-number {
-    display: none;
-  }
 
-  .fas.fa-phone-alt.mobile-number {
-    display: none;
-  }
-
-  .flag-container {
-    margin-right: 7rem;
-  }
-}
 
 /* Navbar */
 #navbar {
@@ -125,7 +114,6 @@ body {
 #navbar .group ul {
   position: absolute;
   top: 100%;
-  left: 0;
   z-index: 10;
   color: #1d3b71;
   border: 1px solid #d1d5db;
@@ -171,13 +159,14 @@ body {
 @media (max-width: 768px) {
   #mobile-navbar {
     position: fixed;
-    top: 0;
     background-color: #ffffff;
-    z-index: 1000;
+    z-index: 1001;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: top 0.3s ease;
-    width: 100%;
-    margin-top: 40px;
+    width: 100%; 
+    left: 0;
+    margin-top: 2rem;
+    overflow: hidden; 
   }
 
   #regular-navbar {
@@ -189,34 +178,11 @@ body {
     font-size: 1.5rem;
   }
 
+
   #mobile-navbar .font-bold {
     color: #1d3b71;
     font-size: 1rem;
     font-weight: bold;
-  }
-
-  #mobile-menu {
-    background-color: #fff;
-    right: 0;
-    position: absolute;
-    top: 0;
-    width: 80%;
-    max-width: 320px;
-    height: 100vh;
-    transition: right 0.3s ease;
-  }
-
-  #mobile-menu-container {
-    margin-top: 15px;
-    display: flex;
-    margin-right: 1rem;
-  }
-
-  #mobile-menu-button {
-    color: #1d3b71;
-    font-size: 1.5rem;
-    margin-right: 0rem;
-    margin-top: 0rem;
   }
 
   #mobile-menu-button .font-bold {
@@ -226,7 +192,8 @@ body {
   #mobile-menu ul {
     list-style: none;
     padding: 0;
-    margin: 0; /* Remove default margin */
+    margin-top: 60px;
+    margin-right: 4rem;
   }
 
   #mobile-menu ul li {
@@ -243,9 +210,6 @@ body {
     margin-top: 20px;
   }
 
-  #mobile-menu a:hover {
-    color: #17a899;
-  }
 
   #mobile-menu button#mobile-close-button {
     color: #1d3b71;
@@ -258,10 +222,10 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    padding-left: 7rem;
+    padding-left: 6rem;
+  
   }
 }
-
 
 /* Hero Section */
 #hero-section {
@@ -334,21 +298,6 @@ body {
   display: none;
 }
 
-/* Mobile Styles for Hero Section */
-@media (max-width: 768px) {
-  #hero-section {
-    height: auto; 
-  }
-  .video-frame {
-    width: 100%; 
-    margin-right: 20px;
-  
-  }
-  .hero-content {
-    display: block; 
-  }
-}
-
 
 /* Services overview Section */
 #services-overview {
@@ -411,19 +360,16 @@ body {
 
 /* Mobile Styles for Services Overview Section */
   @media (max-width: 768px) {
-    .grid-cols-1 {
-      grid-template-columns: 1fr; 
-    }
   
     .service-box {
       margin-bottom: 20px; 
       padding: 1rem; 
       width: 95%;
-      margin-left: 4px;
+      margin-left: 0.80rem;
     }
   
     .service-box i {
-      font-size: 2rem; 
+      font-size: 1.5rem; 
     }
   
     .service-box h3 {
@@ -509,7 +455,7 @@ body {
 
 /* Testimonials section */
 #testimonials {
-  background-color: #17a899;
+  background-color: #fffff0;
   padding: 20px 0;
 }
 
@@ -519,6 +465,7 @@ body {
   width: 100%;
   overflow: hidden;
   margin-bottom: 20px;
+  
 }
 
 .testimonial-container {
@@ -527,6 +474,7 @@ body {
   transition: opacity 0.5s ease-in-out;
   box-sizing: border-box;
   margin-right: 20px;
+  background-color: #7bb6af;
 }
 
 .testimonial-container.visible {
@@ -538,13 +486,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffffff;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
   padding: 1.5rem;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
+
 }
 
 .testimonial-card.visible {
@@ -610,7 +558,7 @@ body {
   .testimonial-container {
     flex: 1;
     width: 100%; 
-    padding-right: 22px;
+    padding-right: 8px;
     margin-bottom: 17px;
   }
 
@@ -620,7 +568,7 @@ body {
 /* Pricing Table Section */
 #pricing-table {
   font-family: "Nunito", sans-serif;
-  background-color: #fffff0;
+  background-color: #17a899;
   padding: 70px 0;
 }
 
@@ -738,11 +686,7 @@ body {
   transform: translateX(-50%);
 }
 
-@media (max-width: 768px) {
-.pricing-card{
-  margin-right: 20px;
-}
-}
+
 
 /* FAQ Section */
 #faq {
@@ -912,7 +856,7 @@ body {
 
   .text-white {
     text-align: left; 
-    margin-left: -30px;
+    margin-left: -55px;
   }
 
   .text-white h3 {
@@ -930,6 +874,7 @@ body {
   .text-white .flex {
     flex-direction: row; 
     align-items: center; 
+    margin-right: 45px;
   }
 
   .text-white .flex i {

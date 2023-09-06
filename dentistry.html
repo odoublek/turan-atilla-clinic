@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vital Voyages</title>
+    <title>Dr. Turan & Dr. Atilla Clinic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,47 +18,31 @@
       href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200&family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap"
       rel="stylesheet"
     />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&family=Caveat&family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&family=Tilt+Prism&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" />
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
-    <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  integrity="sha384-..."
-  crossorigin="anonymous"
-/>
-<script src="https://www.youtube.com/iframe_api"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha384-..."
+    crossorigin="anonymous"
+    />
   </head>
 
     <style>
@@ -299,6 +279,40 @@
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
+  #page-header{
+    background-position: center right 150;
+  }
+  #page-header .container {
+    text-align: center; 
+    left: 80px;
+    margin-top: 20px;
+  }
+  #page-header .absolute {
+    left: 120px;
+    text-align: center; 
+  }
+
+  .menu {
+    font-size: 14px; 
+  }
+
+  .menu ul {
+    padding-left: 0; 
+    width: 115px;
+  }
+
+  .menu li {
+    margin-bottom: 6px; 
+  }
+
+  .description {
+    font-size: 12px; 
+  }
+
+  .video-heading {
+    font-size: 16px; 
+  }
+
   .gif-container {
     width: 200%;
     height: auto;
@@ -307,10 +321,25 @@
     width: 50%;
   }
   
+  .menu ul li {
+    font-size: 0.875rem;
+  }
+
+
+  .description h3 {
+    font-size: 1rem; 
+  }
+
+  .description p {
+    font-size: 1rem; 
+  }
   .video-container {
     overflow: hidden;
     padding-bottom: 56.25%; 
+    right: 30px;
     position: relative;
+    width: 130%;
+    height: auto;
   }
   
   .video-container iframe {
@@ -320,30 +349,21 @@
     width: 100%;
     height: 100%;
   }
-  
-  .menu {
-    font-size: 14px;
-  }
-  
-  .menu ul {
-    padding-left: 0;
-    width: 120px;
-  }
-  
-  .menu li {
-    margin-bottom: 6px;
+
+  .before-after-photos {
+    width: 250%;
+    height: auto;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    right: 140px;
   }
 
-  .description {
-    font-size: 14px;
-  }
-  
-  .video-heading {
-    font-size: 16px;
-  }
-  
   .before-after-photos img {
-    width: 80%;
+    width: 70%; 
+    height: 70%; 
+    display: block;
+    margin: 0 2.5%; 
   }
 }
     </style>
@@ -358,7 +378,7 @@
           <div class="mr-3">
             <i class="fas fa-phone-alt mobile-number text-white"></i>
           </div>
-          <p class="text-white mobile-number">0538 949 44 41</p>
+          <p class="text-white mobile-number">+90 541 826 71 88</p>
         </div>
         <div class="flex items-center space-x-2">
           <div class="flag-container"> <!-- Flags container -->
@@ -667,7 +687,7 @@
                 </a>
               </div>
             </div>
-            <p class="mt-2 text-lg"><i class="fas fa-phone-alt mr-2"></i> 0538 949 55 31</p>
+            <p class="mt-2 text-lg"><i class="fas fa-phone-alt mr-2"></i> +90 541 826 71 88</p>
           </div>
           <!-- Legal Links -->
           <div class="text-white">
@@ -1045,5 +1065,12 @@ function updateSurgeryContent(surgeryKey, surgery) {
   }
 }
     </script>
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>

@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Dr. Turan & Dr. Atilla Clinic</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
       rel="stylesheet"
@@ -24,20 +25,14 @@
       href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mstranslator/0.2.1/mstranslator.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&family=Caveat&family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&family=Tilt+Prism&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&family=Caveat&family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&family=Tilt+Prism&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" />
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -49,24 +44,21 @@
     integrity="sha384-..."
     crossorigin="anonymous"
   />
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <link
+  rel="stylesheet"
+  href="C:\Users\mugiw\OneDrive\Desktop\turanatillaclinic\node_modules\bootstrap"
+/>
   </head>
 
   <body>
 
+
     <!-- Contact Header -->
-    <div id="contact-header" class="py-2 px-2 bg-gray-800">
+    <div id="contact-header" class="bg-blue-600 py-2 px-2">
       <div class="container mx-auto flex items-center justify-between">
-        <div class="flex items-center">
-          <div class="mr-3">
-            <i class="fas fa-phone-alt mobile-number text-white"></i>
-          </div>
-          <p class="text-white mobile-number">0538 949 44 41</p>
-        </div>
-        <div class="flex items-center space-x-2">
-          <div class="flag-container"> <!-- Flags container -->
+        <div class="flex items-center justify-center w-full">
+          <div class="flag-container">
             <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none translatable" title="English"></button>
             <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full p-1 focus:outline-none translatable" title="Arabic"></button>
             <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full p-1 focus:outline-none translatable" title="Spanish"></button>
@@ -74,6 +66,14 @@
             <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full p-1 focus:outline-none translatable" title="Turkish"></button>
             <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full p-1 focus:outline-none translatable" title="German"></button>
           </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-2">
+          <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none translatable" title="English"></button>
+          <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full p-1 focus:outline-none translatable" title="Arabic"></button>
+          <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full p-1 focus:outline-none translatable" title="Spanish"></button>
+          <button data-lang="fr" onclick="translateTo('fr')" class="flag-icon flag-icon-fr rounded-full p-1 focus:outline-none translatable" title="French"></button>
+          <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full p-1 focus:outline-none translatable" title="Turkish"></button>
+          <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full p-1 focus:outline-none translatable" title="German"></button>
         </div>
       </div>
     </div>
@@ -149,9 +149,9 @@
     </div>
       
     <!-- Mobile Navbar -->
-    <div id="mobile-navbar" class="md:hidden">
+    <div id="mobile-navbar" class="md:hidden fixed top-0 w-full bg-white z-50 shadow-lg">
       <div class="container mx-auto">
-        <header class="py-4 px-2 landing-navbar flex justify-between items-center">
+        <header class="py-4 px-2 flex justify-between items-center">
           <div class="flex items-center">
             <a href="index.html">
               <img
@@ -161,17 +161,17 @@
               />
             </a>
           </div>
-          <div class="ml-auto flex items-center" id="mobile-menu-container">
+          <div class="ml-auto flex items-center">
             <!-- Hamburger Menu Button -->
-            <button id="mobile-menu-button" class="text-white align-middle flex items-center">
+            <button id="mobile-menu-button" class="text-blue-600 align-middle flex items-center">
               <span class="font-bold mr-2">MENU</span>
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
           </div>
         </header>
-    
+
         <!-- Mobile Menu (hidden by default) -->
         <div id="mobile-menu" class="hidden fixed top-0 right-0 h-full bg-white w-80 z-50 shadow-lg overflow-y-auto">
           <ul>
@@ -205,13 +205,13 @@
         </div>
       </div>
     </div>
-  
+
     <!-- Hero Section-->
-    <section id="hero-section" class="py-16">
+    <section id="hero-section" class="py-16 relative overflow-hidden">
       <div class="container mx-auto px-4">
         <div class="video-container" id="video-container">
           <iframe
-            class="video-frame"
+            class="video-frame w-full md:w-160 md:h-130"
             id="video-frame"
             src="https://www.youtube.com/embed/h40TR_JkwNE?autoplay=1&controls=0"
             frameborder="0"
@@ -225,44 +225,7 @@
     <section id="services-overview" class="py-8">
       <div class="container mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div class="service-box bg-white rounded-lg shadow-lg p-6">
-            <i class="fas fa-syringe text-3xl text-blue-700 mb-4"></i>
-            <h3 class="text-xl font-bold text-blue-700 mb-2 translatable">
-              Plastic Surgeries
-            </h3>
-            <p class="text-gray-600 translatable">
-              Our team of highly qualified doctors utilizes state-of-the-art
-              technologies to ensure safe and successful procedures. From body
-              contouring to facial rejuvenation, we are committed to providing
-              you with exceptional results and a fast recovery journey.
-            </p>
-            <div class="button-container mt-4">
-              <a
-                href="plastic-surgery.html"
-                class="service-button text-blue-900 font-bold translatable"
-                >Learn More</a
-              >
-            </div>
-          </div>
-          <div class="service-box bg-white rounded-lg shadow-lg p-6">
-            <i class="fas fa-utensils text-3xl text-blue-700 mb-4"></i>
-            <h3 class="text-xl font-bold text-blue-700 mb-2 translatable">
-              Bariatric Surgeries
-            </h3>
-            <p class="text-gray-600 translatable">
-              Our specialized medical team offers a range of advanced surgical
-              procedures to address obesity and promote healthy living. With
-              personalized care and cutting-edge techniques, we are dedicated to
-              helping you achieve your weight loss goals.
-            </p>
-            <div class="button-container mt-4">
-              <a
-                href="obesity-surgery.html"
-                class="service-button text-blue-900 font-bold translatable"
-                >Learn More</a
-              >
-            </div>
-          </div>
+          <!-- Service Box -->
           <div class="service-box bg-white rounded-lg shadow-lg p-6">
             <i class="fas fa-cut text-3xl text-blue-700 mb-4"></i>
             <h3 class="text-xl font-bold text-blue-700 mb-2 translatable">
@@ -278,10 +241,11 @@
               <a
                 href="hair-transplant.html"
                 class="service-button text-blue-900 font-bold translatable"
-                >Learn More</a
-              >
+              >Learn More</a>
             </div>
           </div>
+
+          <!-- Service Box -->
           <div class="service-box bg-white rounded-lg shadow-lg p-6">
             <i class="fas fa-tooth text-3xl text-blue-700 mb-4"></i>
             <h3 class="text-xl font-bold text-blue-700 mb-2 translatable">
@@ -297,18 +261,58 @@
               <a
                 href="dentistry.html"
                 class="service-button text-blue-900 font-bold translatable"
-                >Learn More</a
-              >
+              >Learn More</a>
+            </div>
+          </div>
+
+          <!-- Service Box -->
+          <div class="service-box bg-white rounded-lg shadow-lg p-6">
+            <i class="fas fa-syringe text-3xl text-blue-700 mb-4"></i>
+            <h3 class="text-xl font-bold text-blue-700 mb-2 translatable">
+              Plastic Surgeries
+            </h3>
+            <p class="text-gray-600 translatable">
+              Our team of highly qualified doctors utilizes state-of-the-art
+              technologies to ensure safe and successful procedures. From body
+              contouring to facial rejuvenation, we are committed to providing
+              you with exceptional results and a fast recovery journey.
+            </p>
+            <div class="button-container mt-4">
+              <a
+                href="plastic-surgery.html"
+                class="service-button text-blue-900 font-bold translatable"
+              >Learn More</a>
+            </div>
+          </div>
+
+          <!-- Service Box -->
+          <div class="service-box bg-white rounded-lg shadow-lg p-6">
+            <i class="fas fa-utensils text-3xl text-blue-700 mb-4"></i>
+            <h3 class="text-xl font-bold text-blue-700 mb-2 translatable">
+              Bariatric Surgeries
+            </h3>
+            <p class="text-gray-600 translatable">
+              Our specialized medical team offers a range of advanced surgical
+              procedures to address obesity and promote healthy living. With
+              personalized care and cutting-edge techniques, we are dedicated to
+              helping you achieve your weight loss goals.
+            </p>
+            <div class="button-container mt-4">
+              <a
+                href="obesity-surgery.html"
+                class="service-button text-blue-900 font-bold translatable"
+              >Learn More</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+
     <!-- What we Offer With Section -->
     <section id="work-with" class="py-12 pb-24">
       <div class="container mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-8 translatable" style="font-family: 'Tilt Prism', cursive;">What We Offer?</h2>
+        <h2 class="text-4xl font-bold text-center mb-8 translatable" style="font-family: 'Nunito', sans-serif;">What We Offer?</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- VIP Transportation -->
           <div class="work-with-item-container">
@@ -337,7 +341,7 @@
             <div class="work-with-item relative">
               <div
                 class="work-with-image bg-cover bg-center h-96"
-                style="background-image: url(images/accommodation.jpg)"
+                style="background-image: url(images/accommodation2.jpg)"
               >
                 <div
                   class="overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-300 flex items-center justify-center text-white transform rotate-0 hover:rotate-x-180"
@@ -446,11 +450,85 @@
       </div>
     </section>
 
+    <!-- Pricing Table section -->
+    <section id="pricing-table" class="py-8 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-6 text-center translatable" style="font-family: 'Nunito', sans-serif;">Packages</h2>
+        <div class="pricing-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Platinum Package -->
+          <div class="pricing-card">
+            <div class="pricing-front">
+              <h3 class="text-lg md:text-xl font-bold mb-4 translatable">Platinum Package</h3>
+              <hr class="separator">
+              <p class="text-sm md:text-base mb-4 translatable">
+                This is for people who want to get the best treatment with affordable prices. 
+              </p>
+              <hr class="separator">
+            </div>
+            <div class="pricing-back">
+              <ul class="list-disc pl-6 mb-4 text-sm md:text-base translatable">
+                <li>VIP transportation</li>
+                <li>4-star hotel</li>
+                <li>Multilingual Medical Advisors</li>
+                <li>Aftercare Products</li>
+                <li>Consultation & Treatment Planning</li>
+              </ul>
+              <div class="text-center">
+                <a href="contact-us.html" class="select-button text-sm md:text-base translatable">Select</a>
+              </div>
+            </div>
+          </div>
+          <!-- Diamond Package -->
+          <div class="pricing-card">
+            <div class="pricing-front">
+              <h3 class="text-lg md:text-xl font-bold mb-4 translatable">Diamond Package</h3>
+              <hr class="separator">
+              <p class="text-sm md:text-base mb-4 translatable">
+                This package is designed for people who want to have their medical surgery and enjoy a luxurious experience on Istanbul.
+              </p>
+              <hr class="separator">
+            </div>
+            <div class="pricing-back">
+              <ul class="list-disc pl-6 mb-4 text-sm md:text-base translatable">
+                <li>All benefits from Platinum package</li>
+                <li>5-star hotel</li>
+                <li>24/7 personal support</li>
+              </ul>
+              <div class="text-center">
+                <a href="contact-us.html" class="select-button text-sm md:text-base translatable">Select</a>
+              </div>
+            </div>
+          </div>
+          <!-- Customized Package -->
+          <div class="pricing-card">
+            <div class="pricing-front">
+              <h3 class="text-lg md:text-xl font-bold mb-4 translatable">Customized Package</h3>
+              <hr class="separator">
+              <p class="text-sm md:text-base mb-4 translatable">
+                This package is for people who want a specific operation but don't want certain benefits offered by our packages. It's tailored to individual preferences.
+              </p>
+              <hr class="separator">
+            </div>
+            <div class="pricing-back">
+              <ul class="list-disc pl-8 mb-6 text-sm md:text-base custom-list translatable">
+                <li>Additional requests</li>
+                <li>No provision fee</li>
+                <li>Consultation with expert doctors</li>
+              </ul>
+              <div class="text-center">
+                <a href="contact-us.html" class="select-button text-sm md:text-base translatable">Select</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Testimonials section -->
     <section id="testimonials" class="py-8 ">
       <div class="container mx-auto">
-        <h2 class="headline-text text-3xl font-bold text-center mb-4 translatable" style="font-family: 'Tilt Prism', cursive; ">What Our Clients Say</h2>
-        <div class="testimonial-slider">
+        <h2 class="headline-text text-3xl font-bold text-center mb-4 translatable" style="font-family: 'Nunito', sans-serif;">What Our Clients Say</h2>
+        <div class="testimonial-slider overflow-x-auto">
           <!-- Testimonial 1 -->
           <div class="testimonial-container testimonial-1 visible">
             <div class="testimonial-card">
@@ -459,18 +537,15 @@
                   <img src="images/testimonial1.jpg" alt="Testimonial Photo 1" />
                 </div>
                 <div class="testimonial-details">
-                  <div class="testimonial-rating">
-                  </div>
-                  <p class="testimonial-comment translatable">
-                    "I had the pleasure of working with this team and their professionalism
-                    truly stood out. I highly recommend their expertise!"
+                  <p class="testimonial-comment text-base translatable">
+                    "I had the pleasure of working with this team and their professionalism truly stood out. I highly recommend their expertise!"
                   </p>
-                  <p class="testimonial-author">- Sarah Williams</p>
+                  <p class="testimonial-author text-sm">- Sarah Williams</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <!-- Testimonial 2 -->
           <div class="testimonial-container testimonial-2 visible">
             <div class="testimonial-card">
@@ -479,150 +554,62 @@
                   <img src="images/testimonial2.jpg" alt="Testimonial Photo 2" />
                 </div>
                 <div class="testimonial-details">
-                  <div class="testimonial-rating">
-                  </div>
-                  <p class="testimonial-comment translatable">
-                    "I am truly impressed by the level of dedication and expertise provided by
-                    the team. I highly recommend their services to anyone in need!"
+                  <p class="testimonial-comment text-base translatable">
+                    "I am truly impressed by the level of dedication and expertise provided by the team. I highly recommend their services to anyone in need!"
                   </p>
-                  <p class="testimonial-author">- David Smith</p>
+                  <p class="testimonial-author text-sm">- David Smith</p>
                 </div>
               </div>
             </div>
           </div>
 
-                    <!-- Testimonial 3 -->
-                    <div class="testimonial-container testimonial-3 ">
-                      <div class="testimonial-card">
-                        <div class="testimonial-content">
-                          <div class="testimonial-photo">
-                            <img src="images/testimonial3.jpg" alt="Testimonial Photo 1" />
-                          </div>
-                          <div class="testimonial-details">
-                            <div class="testimonial-rating">
-
-                            </div>
-                            <p class="testimonial-comment translatable">
-                              "Collaborating with this team has been an absolute delight. Their professionalism shines brightly throughout every interaction. I wholeheartedly endorse their expertise."
-                            </p>
-                            <p class="testimonial-author">- John Smith</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-    
-                   <!-- Testimonial 4 -->
-                   <div class="testimonial-container testimonial-4 ">
-                    <div class="testimonial-card">
-                      <div class="testimonial-content">
-                        <div class="testimonial-photo">
-                          <img src="images/testimonial4.jpg" alt="Testimonial Photo 1" />
-                        </div>
-                        <div class="testimonial-details">
-                          <div class="testimonial-rating">
-
-                          </div>
-                          <p class="testimonial-comment translatable">
-                            "My experience working with this team has been exceptional. They delivered a comprehensive service from commencement to conclusion, far surpassing what I anticipated."
-                          </p>
-                          <p class="testimonial-author">- Olivia Davis</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-              <!-- Testimonial 5 -->
-              <div class="testimonial-container testimonial-5 visible">
-                <div class="testimonial-card">
-                  <div class="testimonial-content">
-                    <div class="testimonial-photo">
-                      <img src="images/testimonial5.jpg" alt="Testimonial Photo 1" />
-                    </div>
-                    <div class="testimonial-details">
-                      <div class="testimonial-rating">
-
-                      </div>
-                      <p class="testimonial-comment translatable" >
-                        "It has been an absolute pleasure collaborating with this team. Their unwavering professionalism truly sets them apart. I wholeheartedly recommend their expertise."
-                      </p>
-                      <p class="testimonial-author">- Emily Johnson</p>
-                    </div>
-                  </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonial-container testimonial-3 ">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-photo">
+                  <img src="images/testimonial3.jpg" alt="Testimonial Photo 1" />
+                </div>
+                <div class="testimonial-details">
+                  <p class="testimonial-comment text-base translatable">
+                    "Collaborating with this team has been an absolute delight. Their professionalism shines brightly throughout every interaction. I wholeheartedly endorse their expertise."
+                  </p>
+                  <p class="testimonial-author text-sm">- John Smith</p>
                 </div>
               </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Pricing Table section -->
-    <section id="pricing-table" class="py-8 bg-gray-100">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-6 text-center translatable" style="font-family: 'Tilt Prism', cursive;">Packages</h2>
-        <div class="pricing-container grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Platinum Package -->
-          <div class="pricing-card">
-            <div class="pricing-front">
-              <h3 class="text-xl font-bold mb-4 translatable">Platinum Package</h3>
-              <hr class="separator">
-
-              <p class="mb-4 translatable">
-                This is for people who want to get the best treatment with affordable prices. 
-              </p>
-              <hr class="separator">
             </div>
-            <div class="pricing-back">
-              <ul class="list-disc pl-6 mb-4 translatable">
-                <li>VIP transportation</li>
-                <li>4-star hotel</li>
-                <li>Multilingual Medical Advisors</li>
-                <li>Aftercare Products</li>
-                <li>Consultation & Treatment Planning</li>
-              </ul>
-              <div class="text-center">
-                <a href="contact-us.html" class="select-button translatable">Select</a>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-container testimonial-4 ">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-photo">
+                  <img src="images/testimonial4.jpg" alt="Testimonial Photo 1" />
+                </div>
+                <div class="testimonial-details">
+                  <p class="testimonial-comment text-base translatable">
+                    "My experience working with this team has been exceptional. They delivered a comprehensive service from commencement to conclusion, far surpassing what I anticipated."
+                  </p>
+                  <p class="testimonial-author text-sm">- Olivia Davis</p>
+                </div>
               </div>
             </div>
           </div>
-          <!-- Diamond Package -->
-          <div class="pricing-card">
-            <div class="pricing-front">
-              <h3 class="text-xl font-bold mb-4 translatable">Diamond Package</h3>
-              <hr class="separator">
 
-              <p class="mb-4 translatable">
-                This package is designed for people who want to have their medical surgery and enjoy a luxurious experience on Istanbul.
-              </p>
-              <hr class="separator">
-            </div>
-            <div class="pricing-back">
-              <ul class="list-disc pl-6 mb-4 translatable">
-                <li>All benefits from Platinum package</li>
-                <li>5-star hotel</li>
-                <li>24/7 personal support</li>
-              </ul>
-              <div class="text-center">
-                <a href="contact-us.html" class="select-button translatable">Select</a>
-              </div>
-            </div>
-          </div>
-          <!-- Customized Package -->
-          <div class="pricing-card">
-            <div class="pricing-front">
-              <h3 class="text-xl font-bold mb-4 translatable">Customized Package</h3>
-              <hr class="separator">
-
-              <p class="mb-4 translatable">
-                This package is for people who want a specific operation but don't want certain benefits offered by our packages. It's tailored to individual preferences.
-              </p>
-              <hr class="separator">
-            </div>
-            <div class="pricing-back">
-              <ul class="list-disc pl-8 mb-6 custom-list translatable">
-                <li>Additional requests</li>
-                <li>No provision fee</li>
-                <li>Consultation with expert doctors</li>
-              <div class="text-center">
-                <a href="contact-us.html" class="select-button translatable">Select</a>
+          <!-- Testimonial 5 -->
+          <div class="testimonial-container testimonial-5 visible">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-photo">
+                  <img src="images/testimonial5.jpg" alt="Testimonial Photo 1" />
+                </div>
+                <div class="testimonial-details">
+                  <p class="testimonial-comment text-base translatable" >
+                    "It has been an absolute pleasure collaborating with this team. Their unwavering professionalism truly sets them apart. I wholeheartedly recommend their expertise."
+                  </p>
+                  <p class="testimonial-author text-sm">- Emily Johnson</p>
+                </div>
               </div>
             </div>
           </div>
@@ -633,13 +620,13 @@
     <!-- FAQ section -->
     <section id="faq" class="py-8">
       <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-4 text-black p-2 translatable " style="font-family: 'Tilt Prism', cursive;">
+        <h2 class="text-3xl font-bold text-center mb-4 text-black p-2 translatable " style="font-family: 'Nunito',sans-serif;">
           Frequently Asked Questions
         </h2>
         <div class="accordion">
           <div class="accordion-item">
             <div class="accordion-title">
-              <h3 class="text-xl font-bold translatable">
+              <h3 class="text-base font-bold translatable">
                 What types of medical procedures do you assist with?
               </h3>
               <i class="fas fa-plus plus-minus"></i>
@@ -755,7 +742,7 @@
         <div class="flex flex-wrap justify-between">
           <!-- Follow Us -->
           <div class="text-white mb-4">
-            <h3 class="text-lg font-semibold translatable">Contact Us</h3>
+            <h3 class="text-base font-semibold translatable">Contact Us</h3>
             <div class="flex items-center mt-2">
               <div class="mr-2">
                 <a href="https://www.instagram.com/drturan.dratilla/" class="text-gray-400 hover:text-white">
@@ -768,7 +755,7 @@
                 </a>
               </div>
             </div>
-            <p class="mt-2 text-lg"><i class="fas fa-phone-alt mr-2"></i> 0538 949 55 31</p>
+            <p class="mt-2 text-sm"><i class="fas fa-phone-alt mr-2"></i> +90 541 826 71 88</p>
           </div>
           <!-- Legal Links -->
           <div class="text-white legal-links">
@@ -786,5 +773,13 @@
       </div>
     </section>
 
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="path/to/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
