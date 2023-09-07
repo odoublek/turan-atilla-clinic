@@ -7,7 +7,7 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
@@ -24,25 +24,34 @@
       href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&family=Caveat&family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&family=Tilt+Prism&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&family=Caveat&family=Lora&family=Nunito:wght@200;400&family=Raleway:ital@1&family=Roboto+Slab:wght@500&family=Tilt+Prism&display=swap"
+      rel="stylesheet"
+    />
     <link href="styles.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
-      <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha384-..."
-    crossorigin="anonymous"
-  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-..."
+      crossorigin="anonymous"
+    />
   </head>
   <style>
     #page-header {
@@ -237,61 +246,128 @@
 
     /* Mobile settings */
     @media (max-width: 768px) {
-
       #page-header {
-    flex-direction: column;
-    text-align: center; 
-    background-position: top 170px ;
-
-  }
-  #page-header .container {
-    text-align: center; 
-    left: 80px;
-
-  }
-  #page-header .absolute {
-    left: 80px;
-    text-align: center; 
-  }
-  #page-header h1 {
-    display: none;
-  }
-  .step-indicators {
-    font-size: 0.875rem; 
-  }
-  .step-description {
-    font-size: 1rem; 
-  }
-  .step-number {
-    font-size: 1rem; 
-  }
-  .step-image img {
-    width: 500px;
-    height: 400px;
-    padding-right: 5px;
-  }
-}
-    
+        flex-direction: column;
+        text-align: center;
+        background-position: top 170px;
+      }
+      #page-header .container {
+        text-align: center;
+        left: 80px;
+      }
+      #page-header .absolute {
+        left: 80px;
+        text-align: center;
+      }
+      #page-header h1 {
+        display: none;
+      }
+      .step-indicators {
+        font-size: 0.875rem;
+      }
+      .step-description {
+        font-size: 1rem;
+      }
+      .step-number {
+        font-size: 1rem;
+      }
+      .top-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        background-position: top 170px;
+      }
+      .top-section .step-description {
+        padding: 0;
+      }
+      .step-image img {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+        margin-bottom: 20px;
+      }
+    }
   </style>
   <body>
     <!-- Contact Header -->
-    <div id="contact-header" class="py-2 px-2 bg-gray-800">
+    <div id="contact-header" class="bg-blue-600 py-2 px-2">
       <div class="container mx-auto flex items-center justify-between">
-        <div class="flex items-center">
-          <div class="mr-3">
-            <i class="fas fa-phone-alt mobile-number text-white"></i>
+        <div class="flex items-center justify-center w-full">
+          <div class="flag-container">
+            <button
+              data-lang="en"
+              onclick="translateTo('en')"
+              class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none translatable"
+              title="English"
+            ></button>
+            <button
+              data-lang="ar"
+              onclick="translateTo('ar')"
+              class="flag-icon flag-icon-sa rounded-full p-1 focus:outline-none translatable"
+              title="Arabic"
+            ></button>
+            <button
+              data-lang="es"
+              onclick="translateTo('es')"
+              class="flag-icon flag-icon-es rounded-full p-1 focus:outline-none translatable"
+              title="Spanish"
+            ></button>
+            <button
+              data-lang="fr"
+              onclick="translateTo('fr')"
+              class="flag-icon flag-icon-fr rounded-full p-1 focus:outline-none translatable"
+              title="French"
+            ></button>
+            <button
+              data-lang="tr"
+              onclick="translateTo('tr')"
+              class="flag-icon flag-icon-tr rounded-full p-1 focus:outline-none translatable"
+              title="Turkish"
+            ></button>
+            <button
+              data-lang="de"
+              onclick="translateTo('de')"
+              class="flag-icon flag-icon-de rounded-full p-1 focus:outline-none translatable"
+              title="German"
+            ></button>
           </div>
-          <p class="text-white mobile-number">+90 541 826 71 88</p>
         </div>
-        <div class="flex items-center space-x-2">
-          <div class="flag-container"> <!-- Flags container -->
-            <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none translatable" title="English"></button>
-            <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full p-1 focus:outline-none translatable" title="Arabic"></button>
-            <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full p-1 focus:outline-none translatable" title="Spanish"></button>
-            <button data-lang="fr" onclick="translateTo('fr')" class="flag-icon flag-icon-fr rounded-full p-1 focus:outline-none translatable" title="French"></button>
-            <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full p-1 focus:outline-none translatable" title="Turkish"></button>
-            <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full p-1 focus:outline-none translatable" title="German"></button>
-          </div>
+        <div class="hidden md:flex items-center space-x-2">
+          <button
+            data-lang="en"
+            onclick="translateTo('en')"
+            class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none translatable"
+            title="English"
+          ></button>
+          <button
+            data-lang="ar"
+            onclick="translateTo('ar')"
+            class="flag-icon flag-icon-sa rounded-full p-1 focus:outline-none translatable"
+            title="Arabic"
+          ></button>
+          <button
+            data-lang="es"
+            onclick="translateTo('es')"
+            class="flag-icon flag-icon-es rounded-full p-1 focus:outline-none translatable"
+            title="Spanish"
+          ></button>
+          <button
+            data-lang="fr"
+            onclick="translateTo('fr')"
+            class="flag-icon flag-icon-fr rounded-full p-1 focus:outline-none translatable"
+            title="French"
+          ></button>
+          <button
+            data-lang="tr"
+            onclick="translateTo('tr')"
+            class="flag-icon flag-icon-tr rounded-full p-1 focus:outline-none translatable"
+            title="Turkish"
+          ></button>
+          <button
+            data-lang="de"
+            onclick="translateTo('de')"
+            class="flag-icon flag-icon-de rounded-full p-1 focus:outline-none translatable"
+            title="German"
+          ></button>
         </div>
       </div>
     </div>
@@ -312,34 +388,46 @@
           <nav>
             <ul class="flex space-x-4">
               <li>
-                <a  href="index.html" class="button-link hover:text-gray-300 translatable"
+                <a
+                  href="index.html"
+                  class="button-link hover:text-gray-300 translatable"
                   >Homepage</a
                 >
               </li>
               <li>
-                <a href="contact-us.html" class="button-link hover:text-gray-300 translatable"
+                <a
+                  href="contact-us.html"
+                  class="button-link hover:text-gray-300 translatable"
                   >Contact</a
                 >
               </li>
               <li>
-                <a href="what-we-do.html" class="button-link hover:text-gray-300 translatable"
+                <a
+                  href="what-we-do.html"
+                  class="button-link hover:text-gray-300 translatable"
                   >What We Do?</a
                 >
               </li>
               <li class="relative group">
-                <a href="#" class="button-link hover:text-gray-300 surgeries-link translatable"
+                <a
+                  href="#"
+                  class="button-link hover:text-gray-300 surgeries-link translatable"
                   >Surgeries</a
                 >
                 <ul
                   class="absolute hidden border-t border-gray-300 w-40 py-2 px-4"
                 >
                   <li>
-                    <a href="plastic-surgery.html" class="text-blue-600 translatable"
+                    <a
+                      href="plastic-surgery.html"
+                      class="text-blue-600 translatable"
                       >Plastic Surgeries</a
                     >
                   </li>
                   <li>
-                    <a href="hair-transplant.html" class="text-blue-600 translatable"
+                    <a
+                      href="hair-transplant.html"
+                      class="text-blue-600 translatable"
                       >Hair Transplantation</a
                     >
                   </li>
@@ -349,14 +437,18 @@
                     >
                   </li>
                   <li>
-                    <a href="obesity-surgery.html" class="text-blue-600 translatable"
+                    <a
+                      href="obesity-surgery.html"
+                      class="text-blue-600 translatable"
                       >Bariatric Surgeries</a
                     >
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="about-us.html" class="button-link hover:text-gray-300 translatable"
+                <a
+                  href="about-us.html"
+                  class="button-link hover:text-gray-300 translatable"
                   >About Us</a
                 >
               </li>
@@ -365,11 +457,14 @@
         </div>
       </header>
     </div>
-      
+
     <!-- Mobile Navbar -->
-    <div id="mobile-navbar" class="md:hidden">
+    <div
+      id="mobile-navbar"
+      class="md:hidden fixed top-0 w-full bg-white z-50 shadow-lg"
+    >
       <div class="container mx-auto">
-        <header class="py-4 px-2 landing-navbar flex justify-between items-center">
+        <header class="py-4 px-2 flex justify-between items-center">
           <div class="flex items-center">
             <a href="index.html">
               <img
@@ -379,23 +474,58 @@
               />
             </a>
           </div>
-          <div class="ml-auto flex items-center" id="mobile-menu-container">
+          <div class="ml-auto flex items-center">
             <!-- Hamburger Menu Button -->
-            <button id="mobile-menu-button" class="text-white align-middle flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-blue-600 align-middle flex items-center"
+            >
               <span class="font-bold mr-2">MENU</span>
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              <svg
+                class="w-8 h-8 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
               </svg>
             </button>
           </div>
         </header>
 
         <!-- Mobile Menu (hidden by default) -->
-        <div id="mobile-menu" class="hidden fixed top-0 right-0 h-full bg-white w-80 z-50 shadow-lg overflow-y-auto">
+        <div
+          id="mobile-menu"
+          class="hidden fixed top-0 right-0 h-full bg-white w-80 z-50 shadow-lg overflow-y-auto"
+        >
           <ul>
-            <li><a href="about-us.html" class="block py-3 px-4 text-gray-800 translatable">About Us</a></li>
-            <li><a href="contact-us.html" class="block py-3 px-4 text-gray-800 translatable">Contact</a></li>
-            <li><a href="what-we-do.html" class="block py-3 px-4 text-gray-800 translatable">What We Do?</a></li>
+            <li>
+              <a
+                href="about-us.html"
+                class="block py-3 px-4 text-gray-800 translatable"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact-us.html"
+                class="block py-3 px-4 text-gray-800 translatable"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                href="what-we-do.html"
+                class="block py-3 px-4 text-gray-800 translatable"
+                >What We Do?</a
+              >
+            </li>
             <li>
               <a href="plastic-surgery.html" class="text-blue-600 translatable"
                 >Plastic Surgeries</a
@@ -417,7 +547,12 @@
               >
             </li>
             <li>
-              <button id="mobile-close-button" class="text-blue-600 translatable">BACK</button>
+              <button
+                id="mobile-close-button"
+                class="text-blue-600 translatable"
+              >
+                BACK
+              </button>
             </li>
           </ul>
         </div>
@@ -444,7 +579,6 @@
         </div>
       </div>
       <div class="absolute left-0 bottom-0 ml-8 mb-8 bg-opacity-80 p-4 rounded">
-
         <button
           class="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 translatable"
           onclick="location.href='contact-us.html';"
@@ -455,18 +589,22 @@
     </section>
 
     <!-- Roadmap top Section -->
-    <section class="top-section  ">
-      <div class="step-image">
-        <img src="images/plastic-surgery-woman.jpg" alt="Step Image" />
+    <section class="top-section md:flex md:items-center">
+      <div class="step-image md:w-1/2 md:text-right">
+        <img
+          src="images/plastic-surgery-woman.jpg"
+          alt="Step Image"
+          class="w-full"
+        />
       </div>
-      <div class="step-description translatable ">
-        </div>
-      </div>
+      <div class="step-description md:w-1/2 text-center translatable"></div>
     </section>
 
     <!-- Roadmap bot Section -->
-    <section class="bottom-section">
-      <div class="step-indicators">
+    <section class="bottom-section text-center">
+      <div
+        class="step-indicators md:flex md:flex-col md:items-center md:mb-4 translatable"
+      >
         <div class="step-indicator" data-step="1">
           <div class="step-number translatable">1</div>
           <div class="translatable">Free Consultation</div>
@@ -476,7 +614,7 @@
           <div class="translatable">Confirmation</div>
         </div>
         <div class="step-indicator" data-step="3">
-          <div class="step-number e">3 </div>
+          <div class="step-number e">3</div>
           <div class="translatable">Arrival</div>
         </div>
         <div class="step-indicator" data-step="4">
@@ -491,8 +629,7 @@
 
       <div class="progress-bar">
         <div class="bar"></div>
-        <div class="step-indicators">
-        </div>
+        <div class="step-indicators"></div>
       </div>
     </section>
 
@@ -502,28 +639,37 @@
         <div class="flex flex-wrap justify-between">
           <!-- Follow Us -->
           <div class="text-white mb-4">
-            <h3 class="text-lg font-semibold translatable">Contact Us</h3>
+            <h3 class="text-base font-semibold translatable">Contact Us</h3>
             <div class="flex items-center mt-2">
               <div class="mr-2">
-                <a href="https://www.instagram.com/drturan.dratilla/" class="text-gray-400 hover:text-white">
+                <a
+                  href="https://www.instagram.com/drturan.dratilla/"
+                  class="text-gray-400 hover:text-white"
+                >
                   <i class="fab fa-instagram text-lg"></i>
                 </a>
               </div>
               <div>
-                <a href="https://wa.me/message/JTKHCED5O2HPO1" class="text-gray-400 hover:text-white">
+                <a
+                  href="https://wa.me/message/JTKHCED5O2HPO1"
+                  class="text-gray-400 hover:text-white"
+                >
                   <i class="fab fa-whatsapp text-lg"></i>
                 </a>
               </div>
             </div>
-            <p class="mt-2 text-lg"><i class="fas fa-phone-alt mr-2"></i> +90 541 826 71 88</p>
+            <p class="mt-2 text-sm">
+              <i class="fas fa-phone-alt mr-2"></i> +90 541 826 71 88
+            </p>
           </div>
           <!-- Legal Links -->
-          <div class="text-white">
+          <div class="text-white legal-links">
             <p class="mt-2 flex items-center translatable">
-              <i class="fas fa-check mr-2 text-green-500 "></i> Privacy Policy
+              <i class="fas fa-check mr-2 text-green-500"></i> Privacy Policy
             </p>
             <p class="mt-2 flex items-center translatable">
-              <i class="fas fa-check mr-2 text-green-500 "></i> Personal Data Protection Law
+              <i class="fas fa-check mr-2 text-green-500"></i> Personal Data
+              Protection Law
             </p>
             <p class="mt-2 flex items-center translatable">
               <i class="fas fa-check mr-2 text-green-500"></i> Terms of Service
@@ -532,6 +678,7 @@
         </div>
       </div>
     </section>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const stepIndicators = document.querySelectorAll(".step-indicator");
@@ -543,7 +690,7 @@
         const stepInfo = [
           {
             title: "Step 1: Free Consultation",
-            description :
+            description:
               "Our journey begins with a free consultation where we get to understand your needs and discuss the best approach for your medical journey.",
             comment:
               "My consultation experience was informative and reassuring. The team made me feel comfortable and confident about moving forward. -Emily Johnson",
@@ -586,7 +733,6 @@
 
         // Function to update step content based on step index
         function updateStepContent(index) {
-        
           stepImage.src = stepInfo[index].image;
           stepDescription.innerHTML = `
     <h3 class="text-xl font-semibold mb-2">${stepInfo[index].title}</h3>
@@ -642,15 +788,13 @@
           });
         });
       });
-
-      
     </script>
 
-<script src="script.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://www.youtube.com/iframe_api"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
