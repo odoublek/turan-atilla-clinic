@@ -162,7 +162,7 @@ html {
         border-radius: 13px;
         margin-left: 2px;
         padding: 5px;
-        height: 750px;
+        height: 850px;
         
             }
             .menu li {
@@ -198,7 +198,7 @@ html {
 }
 
       .menu hr {
-        width: 150px; 
+        width: 130px; 
       }
 
       /* Right-side description */
@@ -301,13 +301,20 @@ html {
     text-align: center; 
   }
 
+  #page-header h1{
+    margin-top: 3rem; 
+    font-size: xx-large;
+  }
+
   .menu {
     font-size: 14px; 
+    height: 60%;
   }
+
 
   .menu ul {
     padding-left: 0; 
-    width: 115px;
+    width: 110px;
   }
 
   .menu li {
@@ -316,6 +323,10 @@ html {
 
   .description {
     font-size: 12px; 
+  }
+
+  .menu hr{
+    width: 100%;
   }
 
   .video-heading {
@@ -383,24 +394,16 @@ html {
 
     <!-- Contact Header -->
     <div id="contact-header" class="bg-blue-600 py-2 px-2">
-      <div class="container mx-auto flex items-center justify-between">
-        <div class="flex items-center justify-center w-full">
-          <div class="flag-container">
-            <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none translatable" title="English"></button>
-            <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full p-1 focus:outline-none translatable" title="Arabic"></button>
-            <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full p-1 focus:outline-none translatable" title="Spanish"></button>
-            <button data-lang="fr" onclick="translateTo('fr')" class="flag-icon flag-icon-fr rounded-full p-1 focus:outline-none translatable" title="French"></button>
-            <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full p-1 focus:outline-none translatable" title="Turkish"></button>
-            <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full p-1 focus:outline-none translatable" title="German"></button>
-          </div>
-        </div>
-        <div class="hidden md:flex items-center space-x-2">
+      <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+        <div class="flag-container hidden md:flex items-center space-x-2">
           <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none translatable" title="English"></button>
           <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full p-1 focus:outline-none translatable" title="Arabic"></button>
           <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full p-1 focus:outline-none translatable" title="Spanish"></button>
           <button data-lang="fr" onclick="translateTo('fr')" class="flag-icon flag-icon-fr rounded-full p-1 focus:outline-none translatable" title="French"></button>
           <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full p-1 focus:outline-none translatable" title="Turkish"></button>
-          <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full p-1 focus:outline-none translatable" title="German"></button>
+          <button data-lang="ru" onclick="translateTo('ru')" class="flag-icon flag-icon-ru rounded-full p-1 focus:outline-none translatable" title="Russian"></button>
+          <button data-lang="hi" onclick="translateTo('hi')" class="flag-icon flag-icon-in rounded-full p-1 focus:outline-none translatable" title="Hindu"></button>
+          <button data-lang="zh" onclick="translateTo('cn')" class="flag-icon flag-icon-cn rounded-full p-1 focus:outline-none translatable" title="Chinese"></button>
         </div>
       </div>
     </div>
@@ -549,6 +552,9 @@ html {
 
     <!-- Surgeries Section -->
     <section id="surgeries" class="py-8 bg-gray-200">
+      <div
+      class="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-2"
+    >
       <div class="container mx-auto px-4 ">
         <div class="grid-container grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Left-side menu -->
@@ -642,20 +648,12 @@ html {
             <h3 class=" md:block text-2xl text-center font-bold  translatable" id="surgery-title">
                 Cosmetic Dentistry
             </h3>
-            <div class="w-full md:w-3/4 mx-auto "> 
+            <div class="w-full  mx-auto "> 
               <p class="text-base md:text-lg text-gray-700 translatable" id="surgery-info">
                 Elevate your smile and optimize your oral health through our exceptional cosmetic dentistry services. Our team of highly skilled dental experts is wholly devoted to crafting stunning, confident smiles that exude the inner beauty within you. Immerse yourself in a realm of comprehensive care and tailor-made treatments designed to illuminate your grin with a newfound radiance and vitality.
               </p>
             </div>
 
-            <div class="video-heading-container">
-              <h3 class="text-xl font-bold video-heading translatable">Check our introduction video</h3>
-            </div>
-            <div class="video-container">
-              <div class="responsive-iframe">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/NeT0fjYewoI" frameborder="0" allowfullscreen autoplay=1></iframe>
-              </div>
-            </div>
             <div class="video-heading-container">
               <h3 class="text-xl font-bold video-heading translatable">Before After Photos</h3>
             </div>
@@ -683,41 +681,56 @@ html {
     </section>
 
     <!-- Bottom Footer content -->
-    <section id="footer" class="bg-gray-800 py-6">
+    <footer class="relative bg-main-bg-color pt-8 pb-6">
       <div class="container mx-auto px-4">
-        <div class="flex flex-wrap justify-between">
-          <!-- Follow Us -->
-          <div class="text-white mb-4">
-            <h3 class="text-base font-semibold translatable">Contact Us</h3>
-            <div class="flex items-center mt-2">
-              <div class="mr-2">
-                <a href="https://www.instagram.com/drturan.dratilla/" class="text-gray-400 hover:text-white">
-                  <i class="fab fa-instagram text-lg"></i>
-                </a>
-              </div>
-              <div>
-                <a href="https://wa.me/message/JTKHCED5O2HPO1" class="text-gray-400 hover:text-white">
-                  <i class="fab fa-whatsapp text-lg"></i>
-                </a>
+        <div class="flex flex-wrap text-left lg:text-left">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl font-semibold translatable " style="color: white; font-family:Nunito;" >Stay in Touch with Our Clinic!</h4>
+            <h5 class="text-lg mt-0 mb-2 translatable"style="color: white; font-family:Nunito;" >
+              You can always contact us through our social media
+            </h5>
+            <div class="mt-6 lg:mb-0 mb-6">
+              <a href="https://www.instagram.com/drturan.dratilla/" target="_blank" class="font-normal items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 btn-instagram" >
+                <i class="fab fa-instagram" style="font-size: 24px; color: white;" onmouseover="this.style.color='#17a899'" onmouseout="this.style.color='white'"></i>
+              </a>
+              <a href="https://wa.me/message/JTKHCED5O2HPO1" target="_blank" class=" font-normal items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 btn-whatsapp" >
+                <i class="fab fa-whatsapp" style="font-size: 24px; color: white;" onmouseover="this.style.color='#17a899'" onmouseout="this.style.color='white'"></i>
+              </a>
+            </div>
+            
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto hide-on-mobile">
+                <ul class="list-unstyled">
+                  <li>
+                    <a style="color: white; font-family:Nunito;"onmouseover="this.style.color='#17a899'" onmouseout="this.style.color='white'"  class="font-semibold block pb-2 text-sm translatable"  href="about-us.html">About Us</a>
+                  </li>
+                  <li>
+                    <a style="color: white; font-family:Nunito;"onmouseover="this.style.color='#17a899'" onmouseout="this.style.color='white'"  class="font-semibold block pb-2 text-sm translatable" href="what-we-do.html">What We Do?</a>
+                  </li>
+                  <li>
+                    <a style="color: white; font-family:Nunito;" onmouseover="this.style.color='#17a899'" onmouseout="this.style.color='white'" class="font-semibold block pb-2 text-sm translatable" href="#services-overview">Surgeries</a>
+                  </li>
+                  <li>
+                    <a style="color: white; font-family:Nunito;" onmouseover="this.style.color='#17a899'" onmouseout="this.style.color='white'" class="font-semibold  block pb-2 text-sm translatable" href="contact-us.html">Free Consultation</a>
+                  </li>
+                  
+                </ul>
               </div>
             </div>
-            <p class="mt-2 text-sm"><i class="fas fa-phone-alt mr-2"></i> +90 541 826 71 88</p>
           </div>
-          <!-- Legal Links -->
-          <div class="text-white legal-links">
-            <p class="mt-2 flex items-center translatable">
-              <i class="fas fa-check mr-2 text-green-500 "></i> Privacy Policy
-            </p>
-            <p class="mt-2 flex items-center translatable">
-              <i class="fas fa-check mr-2 text-green-500 "></i> Personal Data Protection Law
-            </p>
-            <p class="mt-2 flex items-center translatable">
-              <i class="fas fa-check mr-2 text-green-500"></i> Terms of Service
-            </p>
+        </div>
+        <hr class="my-6 border-main-bg-color">
+        <div class="flex flex-wrap items-center md:justify-between justify-center">
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-blueGray-500 font-semibold py-1">
+              <span style="color: white; font-family:Nunito;" > Copyright © 2023</span><a style="color: white; font-family:Nunito;" target="_blank"> Dr.Turan & Dr.Atilla Clinic</a>.
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </footer>
 
     <!-- Scripts -->
     <script>

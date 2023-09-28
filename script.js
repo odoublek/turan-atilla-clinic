@@ -1,13 +1,3 @@
-// Hero Slider
-document.addEventListener("DOMContentLoaded", function () {
-  const videoFrame = document.getElementById("video-frame");
-
-  if (window.innerWidth > 768) {
-    setTimeout(() => {
-      videoFrame.src += "&autoplay=1";
-    }, 3000);
-  }
-});
 
 // Navbar dropdown menu
 document.addEventListener("DOMContentLoaded", function () {
@@ -60,45 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
-
-// Testimonial
-document.addEventListener("DOMContentLoaded", function () {
-  const testimonialContainers = document.querySelectorAll(
-    ".testimonial-container"
-  );
-  const totalTestimonials = testimonialContainers.length;
-
-  // Initialize the first two testimonials as visible
-  for (let i = 0; i < 2; i++) {
-    testimonialContainers[i].classList.add("visible");
-  }
-
-  function showNextTestimonials() {
-    const visibleContainers = document.querySelectorAll(
-      ".testimonial-container.visible"
-    );
-
-    for (const container of visibleContainers) {
-      container.classList.remove("visible");
-    }
-
-    for (let i = 0; i < 2; i++) {
-      const nextIndex = (currentTestimonialIndex + i + 1) % totalTestimonials;
-      const nextContainer = testimonialContainers[nextIndex];
-      nextContainer.classList.add("visible");
-    }
-
-    currentTestimonialIndex = (currentTestimonialIndex + 1) % totalTestimonials;
-  }
-
-  let currentTestimonialIndex = 0;
-  setInterval(showNextTestimonials, 3000);
-});
-
 // translator
-const apiKey = "AIzaSyA1LL5Hltmj0d3_MCagHYD-zPk7g60RAn8";
 document.addEventListener("DOMContentLoaded", () => {
   const translateButtons = document.querySelectorAll("[data-lang]");
   const elementsToTranslate = document.querySelectorAll(".translatable");
@@ -152,3 +104,5 @@ function googleTranslate(text, sourceLanguage, targetLanguage) {
       return Promise.reject(error);
     });
 }
+
+

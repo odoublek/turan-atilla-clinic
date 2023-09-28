@@ -44,36 +44,26 @@
     integrity="sha384-..."
     crossorigin="anonymous"
   />
-
   <link
+  href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
   rel="stylesheet"
-  href="C:\Users\mugiw\OneDrive\Desktop\turanatillaclinic\node_modules\bootstrap"
 />
+
   </head>
-
   <body>
-
 
     <!-- Contact Header -->
     <div id="contact-header" class="bg-blue-600 py-2 px-2">
-      <div class="container mx-auto flex items-center justify-between">
-        <div class="flex items-center justify-center w-full">
-          <div class="flag-container">
-            <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none translatable" title="English"></button>
-            <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full p-1 focus:outline-none translatable" title="Arabic"></button>
-            <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full p-1 focus:outline-none translatable" title="Spanish"></button>
-            <button data-lang="fr" onclick="translateTo('fr')" class="flag-icon flag-icon-fr rounded-full p-1 focus:outline-none translatable" title="French"></button>
-            <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full p-1 focus:outline-none translatable" title="Turkish"></button>
-            <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full p-1 focus:outline-none translatable" title="German"></button>
-          </div>
-        </div>
-        <div class="hidden md:flex items-center space-x-2">
+      <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+        <div class="flag-container hidden md:flex items-center space-x-2">
           <button data-lang="en" onclick="translateTo('en')" class="flag-icon flag-icon-us rounded-full p-1 focus:outline-none translatable" title="English"></button>
           <button data-lang="ar" onclick="translateTo('ar')" class="flag-icon flag-icon-sa rounded-full p-1 focus:outline-none translatable" title="Arabic"></button>
           <button data-lang="es" onclick="translateTo('es')" class="flag-icon flag-icon-es rounded-full p-1 focus:outline-none translatable" title="Spanish"></button>
           <button data-lang="fr" onclick="translateTo('fr')" class="flag-icon flag-icon-fr rounded-full p-1 focus:outline-none translatable" title="French"></button>
           <button data-lang="tr" onclick="translateTo('tr')" class="flag-icon flag-icon-tr rounded-full p-1 focus:outline-none translatable" title="Turkish"></button>
-          <button data-lang="de" onclick="translateTo('de')" class="flag-icon flag-icon-de rounded-full p-1 focus:outline-none translatable" title="German"></button>
+          <button data-lang="ru" onclick="translateTo('ru')" class="flag-icon flag-icon-ru rounded-full p-1 focus:outline-none translatable" title="Russian"></button>
+          <button data-lang="hi" onclick="translateTo('hi')" class="flag-icon flag-icon-in rounded-full p-1 focus:outline-none translatable" title="Hindu"></button>
+          <button data-lang="zh" onclick="translateTo('cn')" class="flag-icon flag-icon-cn rounded-full p-1 focus:outline-none translatable" title="Chinese"></button>
         </div>
       </div>
     </div>
@@ -150,7 +140,7 @@
       
     <!-- Mobile Navbar -->
     <div id="mobile-navbar" class="md:hidden fixed top-0 w-full bg-white z-50 shadow-lg">
-      <div class="container mx-auto">
+      <div class="container mx-auto max-w-screen-lg">
         <header class="py-4 px-2 flex justify-between items-center">
           <div class="flex items-center">
             <a href="index.html">
@@ -206,23 +196,98 @@
       </div>
     </div>
 
-    <!-- Hero Section-->
+    <!-- Hero Section -->
     <section id="hero-section" class="py-16 relative overflow-hidden">
-      <div class="container mx-auto px-4">
-        <div class="video-container" id="video-container">
-          <iframe
-            class="video-frame w-full md:w-160 md:h-130"
-            id="video-frame"
-            src="https://www.youtube.com/embed/h40TR_JkwNE?autoplay=1&controls=0"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
+      <div
+      class="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-2"
+    >
+      <div class="mx-auto max-w-full sm:max-w-4xl lg:max-w-6xl px-0 sm:px-6 lg:px-2 py-14 lg:py-14 xl:py-2 flex flex-wrap items-center relative z-10">
+        <!-- Left Image Container with Background -->
+        <div class="w-full sm:w-1/3 bg-transparent text-center canberk-photo">
+          <div class="text-center">
+            <div class="rounded-full w-3/4 sm:w-5/6 mx-auto bg-white p-2">
+              <img src="images/drturan.jpeg" alt="Doctor Turan" class="rounded-full h-auto w-full object-cover" />
+            </div>
+            <div class="text-white font-bold text-xl mt-4 sm:mt-8" style="font-family: Nunito;">Dr. Turan</div>
+          </div>
         </div>
-      </div>
+        <!-- Text and Form in the Middle -->
+        <div class="w-full sm:w-1/2 mt-6 sm:mt-10 text-center pt-8 sm:pt-16 hero-form">
+          <h1 class="text-2xl font-semibold text-white mb-4" style="font-family: Nunito;">We offer  <span style="color: #20decb;">Free Consultation</span> and help through the whole process</h1>
+          <p class="text-base text-white mb-4" style="font-family: Nunito;">Experience excellence with us, enjoy your stay in luxurious hotels, and have hassle-free travel arrangements to Istanbul. Receive comprehensive information about your medical procedure, all while being guided every step of the way by Dr. Turan and Dr. Atilla, the founders of our clinic.</p>
+          <p class="text-base text-white mb-4"  style="font-family: Nunito; font-weight: bolder; font-style: italic;">Fill the inquiry form below and start your medical journey with us!</p>
+          <!-- Contact Form -->
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="mb-6">
+            <input
+              type="hidden"
+              name="apikey"
+              value="085eaf36-f0cb-403b-be6e-c0358c5ae618"
+            />
+            <div class="mb-2">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                class="w-full py-2 px-3 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div class="mb-2">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                class="w-full py-2 px-3 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            
+            <div class="mb-2">
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Your Message"
+                class="w-full py-2 px-3 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></textarea>
+            </div>
+            <button
+            type="submit"
+            class="text-white font-medium py-2 px-3 rounded-md bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            Submit
+          </button>
+          </form>
+        
+          <div id="form-status" class="hidden">
+            <p
+              id="success-message"
+              class="text-white success-message translatable"
+              style="font-family: Nunito; font-weight: bold;"
+            >
+              Form submitted successfully. We will contact you soon.
+            </p>
+            <p id="error-message" class="text-red-500 error-message">
+              An error occurred. Please try again.
+            </p>
+          </div></div>
+
+        <!-- Right Image Container with Background -->
+        <div class="w-full sm:w-1/3 bg-transparent text-center atilla-photo">
+          <div class="text-center">
+            <div class="rounded-full w-3/4 sm:w-5/6 mx-auto bg-white p-2">
+              <img src="images/dratilla.jpeg" alt="Doctor Atilla" class="rounded-full h-auto w-full object-cover" />
+            </div>
+            <div class="text-white font-bold text-xl mt-4 sm:mt-8" style="font-family: Nunito;">Dr. Atilla</div>
+          </div>
+        </div>
     </section>
 
     <!-- Services Overview section -->
     <section id="services-overview" class="py-8">
+      <div
+      class="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-2"
+    >
       <div class="container mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <!-- Service Box -->
@@ -308,9 +373,11 @@
       </div>
     </section>
 
-
     <!-- What we Offer With Section -->
     <section id="work-with" class="py-12 pb-24">
+      <div
+      class="mx-auto max-w-[1340px] px-4 py-12 sm:px-4 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-2"
+    >
       <div class="container mx-auto">
         <h2 class="text-4xl font-bold text-center mb-8 translatable" style="font-family: 'Nunito', sans-serif;">What We Offer?</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -325,7 +392,7 @@
                   class="overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-300 flex items-center justify-center text-white transform rotate-0 hover:rotate-x-180"
                 >
                   <p
-                    class="text-center opacity-0 transition-opacity duration-300 translatable"
+                    class="text-center opacity-0 transition-opacity duration-300 translatable " 
                   >
                     VIP transportation service for your comfort and convenience.
                   </p>
@@ -452,6 +519,9 @@
 
     <!-- Pricing Table section -->
     <section id="pricing-table" class="py-8 bg-gray-100">
+      <div
+      class="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-2"
+    >
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold mb-6 text-center translatable" style="font-family: 'Nunito', sans-serif;">Packages</h2>
         <div class="pricing-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -466,7 +536,7 @@
               <hr class="separator">
             </div>
             <div class="pricing-back">
-              <ul class="list-disc pl-6 mb-4 text-sm md:text-base translatable">
+              <ul class="list-disc pl-8 mb-6 text-sm md:text-base custom-list translatable ">
                 <li>VIP transportation</li>
                 <li>4-star hotel</li>
                 <li>Multilingual Medical Advisors</li>
@@ -489,7 +559,7 @@
               <hr class="separator">
             </div>
             <div class="pricing-back">
-              <ul class="list-disc pl-6 mb-4 text-sm md:text-base translatable">
+              <ul class="list-disc pl-8 mb-6 text-sm md:text-base custom-list translatable">
                 <li>All benefits from Platinum package</li>
                 <li>5-star hotel</li>
                 <li>24/7 personal support</li>
@@ -522,95 +592,459 @@
           </div>
         </div>
       </div>
+    
     </section>
 
     <!-- Testimonials section -->
-    <section id="testimonials" class="py-8 ">
-      <div class="container mx-auto">
-        <h2 class="headline-text text-3xl font-bold text-center mb-4 translatable" style="font-family: 'Nunito', sans-serif;">What Our Clients Say</h2>
-        <div class="testimonial-slider overflow-x-auto">
-          <!-- Testimonial 1 -->
-          <div class="testimonial-container testimonial-1 visible">
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-photo">
-                  <img src="images/testimonial1.jpg" alt="Testimonial Photo 1" />
-                </div>
-                <div class="testimonial-details">
-                  <p class="testimonial-comment text-base translatable">
-                    "I had the pleasure of working with this team and their professionalism truly stood out. I highly recommend their expertise!"
-                  </p>
-                  <p class="testimonial-author text-sm">- Sarah Williams</p>
-                </div>
-              </div>
-            </div>
+    <section id="testimonials" class="bg-gray-50">
+      <div
+        class="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-18"
+      >
+      <div class="flex flex-col items-center sm:flex-row sm:items-end sm:justify-between w-full">
+        <h2
+          class="max-w-xl text-4xl text-sm tracking-tight text-gray-900 sm:text-5xl translatable mt-8 sm:mt-0"
+          style="font-family: 'Nunito', sans-serif;"
+        >
+          What Our Clients Say
+        </h2>
+    
+          <div class="mt-8 flex gap-4 lg:mt-0">
+            <button
+              aria-label="Previous slide"
+              id="keen-slider-previous"
+              class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-blue-600 hover:text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-5 w-5 rtl:rotate-180"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </button>
+    
+            <button
+              aria-label="Next slide"
+              id="keen-slider-next"
+              class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-blue-600 hover:text-white"
+            >
+              <svg
+                class="h-5 w-5 rtl:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5l7 7-7 7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
           </div>
-
-          <!-- Testimonial 2 -->
-          <div class="testimonial-container testimonial-2 visible">
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-photo">
-                  <img src="images/testimonial2.jpg" alt="Testimonial Photo 2" />
+        </div>
+    
+        <div class="-mx-6 mt-8 lg:col-span-2 lg:mx-0">
+          <div id="keen-slider" class="keen-slider">
+            <div class="keen-slider__slide">
+              <blockquote
+                class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+              >
+                <div>
+                  <div class="flex gap-0.5 text-green-500">
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                  </div>
+    
+                  <div class="mt-4" style="font-family: 'Nunito', sans-serif;">
+                    <p class="text-2xl font-bold text-rose-600 sm:text-3xl translatable">
+                      Professional Service
+                    </p>
+    
+                    <p class="mt-4 leading-relaxed italic text-gray-700 translatable">
+                      I totally recommend the service of Dr. Turan and Dr. Atilla. They are professional, funny and hearth warming people. They answered all my questions without hesitation.
+                    </p>
+                  </div>
                 </div>
-                <div class="testimonial-details">
-                  <p class="testimonial-comment text-base translatable">
-                    "I am truly impressed by the level of dedication and expertise provided by the team. I highly recommend their services to anyone in need!"
-                  </p>
-                  <p class="testimonial-author text-sm">- David Smith</p>
-                </div>
-              </div>
+    
+                <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                  &mdash; Emily Johnson
+                </footer>
+              </blockquote>
             </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div class="testimonial-container testimonial-3 ">
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-photo">
-                  <img src="images/testimonial3.jpg" alt="Testimonial Photo 1" />
+            
+            <div class="keen-slider__slide">
+              <blockquote
+                class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+              >
+                <div>
+                  <div class="flex gap-0.5 text-green-500">
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                  </div>
+    
+                  <div class="mt-4" style="font-family: 'Nunito', sans-serif;">
+                    <p class="text-2xl font-bold text-rose-600 sm:text-3xl translatable">
+                      Trusted Service
+                    </p>
+                    <p class="mt-4 leading-relaxed italic text-gray-700 translatable">
+                      I had some doubts at the beginning of the process but after talking with Dr. Turan and Dr. Atilla I knew that i choose the right place! They are great at what they do.
+                    </p>
+                  </div>
                 </div>
-                <div class="testimonial-details">
-                  <p class="testimonial-comment text-base translatable">
-                    "Collaborating with this team has been an absolute delight. Their professionalism shines brightly throughout every interaction. I wholeheartedly endorse their expertise."
-                  </p>
-                  <p class="testimonial-author text-sm">- John Smith</p>
-                </div>
-              </div>
+    
+                <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                  &mdash; Rajesh Patel
+                </footer>
+              </blockquote>
             </div>
-          </div>
-
-          <!-- Testimonial 4 -->
-          <div class="testimonial-container testimonial-4 ">
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-photo">
-                  <img src="images/testimonial4.jpg" alt="Testimonial Photo 1" />
+            <div class="keen-slider__slide">
+              <blockquote
+                class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+              >
+                <div>
+                  <div class="flex gap-0.5 text-green-500">
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                  </div>
+    
+                  <div class="mt-4" style="font-family: 'Nunito', sans-serif;">
+                    <p class="text-2xl font-bold text-rose-600 sm:text-3xl translatable">
+                      Respectful Doctors
+                    </p>
+    
+                    <p class="mt-4 leading-relaxed italic text-gray-700 translatable">
+                      I am not usually a fan of plastic surgeries but as age comes by, I had to try a few things.. The doctors guided me carefully and respected my choices. I had a facelift procedure and I am happy, will leave another review in a few months..
+                    </p>
+                  </div>
                 </div>
-                <div class="testimonial-details">
-                  <p class="testimonial-comment text-base translatable">
-                    "My experience working with this team has been exceptional. They delivered a comprehensive service from commencement to conclusion, far surpassing what I anticipated."
-                  </p>
-                  <p class="testimonial-author text-sm">- Olivia Davis</p>
-                </div>
-              </div>
+    
+                <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                  &mdash; Lalita Balay 
+                </footer>
+              </blockquote>
             </div>
-          </div>
-
-          <!-- Testimonial 5 -->
-          <div class="testimonial-container testimonial-5 visible">
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-photo">
-                  <img src="images/testimonial5.jpg" alt="Testimonial Photo 1" />
+            <div class="keen-slider__slide">
+              <blockquote
+                class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+              >
+                <div>
+                  <div class="flex gap-0.5 text-green-500">
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                  </div>
+    
+                  <div class="mt-4" style="font-family: 'Nunito', sans-serif;">
+                    <p class="text-2xl font-bold text-rose-600 sm:text-3xl translatable">
+                      Great Experience
+                    </p>
+    
+                    <p class="mt-4 leading-relaxed italic text-gray-700 translatable">
+                      If youre looking for a family, not just a clinic which you can handle your medical procedures this is the right place. I totally recommend Dr. Turan and Dr. Atilla Clinic.
+                    </p>
+                  </div>
                 </div>
-                <div class="testimonial-details">
-                  <p class="testimonial-comment text-base translatable" >
-                    "It has been an absolute pleasure collaborating with this team. Their unwavering professionalism truly sets them apart. I wholeheartedly recommend their expertise."
-                  </p>
-                  <p class="testimonial-author text-sm">- Emily Johnson</p>
+    
+                <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                  &mdash; Mustafa Arslan
+                </footer>
+              </blockquote>
+            </div>
+    
+            <div class="keen-slider__slide">
+              <blockquote
+                class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+              >
+                <div>
+                  <div class="flex gap-0.5 text-green-500">
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+    
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                  </div>
+    
+                  <div class="mt-4" style="font-family: 'Nunito', sans-serif;">
+                    <p class="text-2xl font-bold text-rose-600 sm:text-3xl translatable">
+                      Satisfied Result
+                    </p>
+    
+                    <p class="mt-4 leading-relaxed italic text-gray-700 translatable">
+                      It was our first time in istanbul and my first hair transplant, so far so good, the doctors were very respectful to me and my family, thank you!"
+                    </p>
+                  </div>
                 </div>
-              </div>
+    
+                <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                  &mdash; Mohammad Khalid
+                </footer>
+              </blockquote>
             </div>
           </div>
         </div>
@@ -619,6 +1053,9 @@
 
     <!-- FAQ section -->
     <section id="faq" class="py-8">
+      <div
+      class="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-2"
+    >
       <div class="container mx-auto">
         <h2 class="text-3xl font-bold text-center mb-4 text-black p-2 translatable " style="font-family: 'Nunito',sans-serif;">
           Frequently Asked Questions
@@ -626,7 +1063,7 @@
         <div class="accordion">
           <div class="accordion-item">
             <div class="accordion-title">
-              <h3 class="text-base font-bold translatable">
+              <h3 class="text-xl font-bold translatable">
                 What types of medical procedures do you assist with?
               </h3>
               <i class="fas fa-plus plus-minus"></i>
@@ -737,41 +1174,56 @@
     </section>
 
     <!-- Bottom Footer content -->
-    <section id="footer" class="bg-gray-800 py-6">
+    <footer class="relative bg-main-bg-color pt-8 pb-6">
       <div class="container mx-auto px-4">
-        <div class="flex flex-wrap justify-between">
-          <!-- Follow Us -->
-          <div class="text-white mb-4">
-            <h3 class="text-base font-semibold translatable">Contact Us</h3>
-            <div class="flex items-center mt-2">
-              <div class="mr-2">
-                <a href="https://www.instagram.com/drturan.dratilla/" class="text-gray-400 hover:text-white">
-                  <i class="fab fa-instagram text-lg"></i>
-                </a>
-              </div>
-              <div>
-                <a href="https://wa.me/message/JTKHCED5O2HPO1" class="text-gray-400 hover:text-white">
-                  <i class="fab fa-whatsapp text-lg"></i>
-                </a>
+        <div class="flex flex-wrap text-left lg:text-left">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl font-semibold translatable " style="color: white; font-family:Nunito;" >Stay in Touch with Our Clinic!</h4>
+            <h5 class="text-lg mt-0 mb-2 translatable"style="color: white; font-family:Nunito;" >
+              You can always contact us through our social media
+            </h5>
+            <div class="mt-6 lg:mb-0 mb-6">
+              <a href="https://www.instagram.com/drturan.dratilla/" target="_blank" class="font-normal items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 btn-instagram" >
+                <i class="fab fa-instagram" style="font-size: 24px; color: white;" onmouseover="this.style.color='#17a899'" onmouseout="this.style.color='white'"></i>
+              </a>
+              <a href="https://wa.me/message/JTKHCED5O2HPO1" target="_blank" class=" font-normal items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 btn-whatsapp" >
+                <i class="fab fa-whatsapp" style="font-size: 24px; color: white;" onmouseover="this.style.color='#17a899'" onmouseout="this.style.color='white'"></i>
+              </a>
+            </div>
+            
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto hide-on-mobile">
+                <ul class="list-unstyled">
+                  <li>
+                    <a style="color: white; font-family:Nunito;"onmouseover="this.style.color='#17a899'" onmouseout="this.style.color='white'"  class="font-semibold block pb-2 text-sm translatable"  href="about-us.html">About Us</a>
+                  </li>
+                  <li>
+                    <a style="color: white; font-family:Nunito;"onmouseover="this.style.color='#17a899'" onmouseout="this.style.color='white'"  class="font-semibold block pb-2 text-sm translatable" href="what-we-do.html">What We Do?</a>
+                  </li>
+                  <li>
+                    <a style="color: white; font-family:Nunito;" onmouseover="this.style.color='#17a899'" onmouseout="this.style.color='white'" class="font-semibold block pb-2 text-sm translatable" href="#services-overview">Surgeries</a>
+                  </li>
+                  <li>
+                    <a style="color: white; font-family:Nunito;" onmouseover="this.style.color='#17a899'" onmouseout="this.style.color='white'" class="font-semibold  block pb-2 text-sm translatable" href="contact-us.html">Free Consultation</a>
+                  </li>
+                  
+                </ul>
               </div>
             </div>
-            <p class="mt-2 text-sm"><i class="fas fa-phone-alt mr-2"></i> +90 541 826 71 88</p>
           </div>
-          <!-- Legal Links -->
-          <div class="text-white legal-links">
-            <p class="mt-2 flex items-center translatable">
-              <i class="fas fa-check mr-2 text-green-500 "></i> Privacy Policy
-            </p>
-            <p class="mt-2 flex items-center translatable">
-              <i class="fas fa-check mr-2 text-green-500 "></i> Personal Data Protection Law
-            </p>
-            <p class="mt-2 flex items-center translatable">
-              <i class="fas fa-check mr-2 text-green-500"></i> Terms of Service
-            </p>
+        </div>
+        <hr class="my-6 border-main-bg-color">
+        <div class="flex flex-wrap items-center md:justify-between justify-center">
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-blueGray-500 font-semibold py-1">
+              <span style="color: white; font-family:Nunito;" > Copyright © 2023</span><a style="color: white; font-family:Nunito;" target="_blank"> Dr.Turan & Dr.Atilla Clinic</a>.
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </footer>
 
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -780,6 +1232,75 @@
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="path/to/bootstrap/js/bootstrap.min.js"></script>
+
   </body>
+
+
+  <script>
+    // Get the form element
+    const form = document.getElementById('contact-form');
+  
+    // Get the form status elements
+    const formStatus = document.getElementById('form-status');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+  
+    // Add a submit event listener to the form
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Prevent the default form submission behavior
+  
+      // You can add additional form validation here if needed
+      // For example, check if the required fields are filled in.
+  
+      // Simulate a successful submission (remove this in your actual code)
+      const isSubmissionSuccessful = true; // Replace with your form submission logic
+  
+      if (isSubmissionSuccessful) {
+        // Display the success message
+        formStatus.classList.remove('hidden');
+        successMessage.classList.remove('hidden');
+        errorMessage.classList.add('hidden');
+  
+        // Optionally, reset the form after submission
+        form.reset();
+      } else {
+        // Display the error message
+        formStatus.classList.remove('hidden');
+        successMessage.classList.add('hidden');
+        errorMessage.classList.remove('hidden');
+      }
+    });
+  </script>
+  
+  <script type="module">
+    import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+  
+    const keenSlider = new KeenSlider(
+      '#keen-slider',
+      {
+        loop: true,
+        slides: {
+          origin: 'center',
+          perView: 1.25,
+          spacing: 16,
+        },
+        breakpoints: {
+          '(min-width: 1024px)': {
+            slides: {
+              origin: 'auto',
+              perView: 2.5,
+              spacing: 32,
+            },
+          },
+        },
+      },
+      []
+    )
+  
+    const keenSliderPrevious = document.getElementById('keen-slider-previous')
+    const keenSliderNext = document.getElementById('keen-slider-next')
+  
+    keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
+    keenSliderNext.addEventListener('click', () => keenSlider.next())
+  </script>
 </html>
